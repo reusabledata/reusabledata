@@ -1,7 +1,7 @@
 id: orphanet
 source: 'Orphanet portal for rare diseases and orphan drugs'
 source-link: 'http://www.orpha.net'
-status: incomplete
+status: complete
 description: 'Orphanet provides reference information on rare diseases and orphan drugs to help improve the diagnosis, care and treatment of patients with rare diseases.'
 data-field: biomedical
 data-type: human
@@ -13,20 +13,17 @@ data-categories:
 data-access:
     - type: download
       location: http://www.orphadata.org/cgi-bin/index.php/
-    - type: api
-      location: http://www.orpha.net/sparql
 license: unknown
 license-type: unknown
-license-link: 'http://www.orphadata.org/cgi-bin/inc/legal.inc.php'
+license-link: 'http://www.orphadata.org/cgi-bin/index.php'
+license-commentary:
+    - 'Datasets available on request'
+    - 'These datasets are available for free on signature of a Data Transfer Agreement for Academia (consult the catalogue).'
+    - 'These datasets are available for a fee on signature of a Data Transfer Agreement for Industry (consult the catalogue).'
 license-issues:
-    - criteria: A.1.1
-      comment: Some datasets are freely available on signature of a Data Transfer Agreement for Academia or with a fee for Industry. This is odd given the CC-BY-ND license applied to the whole site
-    - criteria: B.1
-      comment: The license itself does not require legal intervention, but some data is not available without permission for access.
     - criteria: D.1.2
       comment: The CC-BY-ND license prevents derivation.
-license-commentary:
-    - '...you are free to copy, distribute, display and make commercial use of these databases in all legislations, provided you give us credit.'
-    - 'However, if you intend to distribute a modified version of one of our databases, you must ask us for permission first.'
+    - criteria: E.1.2
+      comment: The CC-BY-ND license prevents derivation.
 contacts:
     - 'http://www.orphadata.org/cgi-bin/contact.php'
