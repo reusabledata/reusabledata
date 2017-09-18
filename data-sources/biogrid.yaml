@@ -10,8 +10,8 @@ data-categories:
 data-access:
     - type: download
       location: https://thebiogrid.org/download.php
-license: custom
-license-type: custom
+license: 'custom'
+license-type: 'unknown'
 license-link: 'http://wiki.thebiogrid.org/doku.php/terms_and_conditions'
 license-commentary:
     - 'BioGRID interaction data are 100% freely available to both commercial and academic users'
