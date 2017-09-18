@@ -690,6 +690,37 @@
         ]
     },
     {
+        "id": "msigdb",
+        "source": "MSigDB",
+        "source-link": "http://software.broadinstitute.org/gsea/msigdb/index.jsp",
+        "status": "complete",
+        "description": "The Molecular Signatures Database (MSigDB) is a collection of annotated gene sets for use with GSEA software.",
+        "data-field": "biology",
+        "data-type": "gene sets",
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://software.broadinstitute.org/gsea/downloads.jsp"
+            }
+        ],
+        "license": "CC-BY-4.0",
+        "license-type": "permissive",
+        "license-link": "http://software.broadinstitute.org/gsea/msigdb_license_terms.jsp",
+        "license-issues": [
+            {
+                "criteria": "B.2.1",
+                "comment": "The main body of work is under CC-BY 4.0, with filterable additional works under their own terms from KEGG, BioCarta, and AAAS/STKE. While the filtering step is an annoyance, is can likely easily be done given their instructions and would be a one-time process per release."
+            }
+        ],
+        "license-commentary": [
+            "MSigDB v6.0 is available under a Creative Commons style license, plus additional terms for some gene sets",
+            "A user must register before being able to view the downloads for tracking purposes. Easy access after that set is done."
+        ],
+        "contacts": [
+            "http://software.broadinstitute.org/gsea/contact.jsp"
+        ]
+    },
+    {
         "id": "mygene-info",
         "source": "MyGene.info",
         "source-link": "http://mygene.info",
