@@ -1,0 +1,16 @@
+id: fantom5
+source: Fantom5
+source-link: 'http://fantom.gsc.riken.jp/5/'
+status: complete
+description: 'We are complex multicellular organisms composed of ~400 distinct cell types. This diversity of cell types allow us to see, think, hear, fight infections etc. yet all of this is encoded in the same genome. The difference between all these cells is what parts of the genome they use – for instance, neurons use different genes than muscle cells, and therefore they work very differently. In FANTOM5, we have systematically investigated exactly what are the sets of genes used in virtually all cell types across the human body, and the genomic regions which determine where the genes are read from. We aim to use this information to build transcriptional regulatory models for every primary cell type that makes up a human.'
+data-field: biology
+data-type: human
+data-categories:
+    - 'gene expression'
+data-access: []
+license: CC-BY-4.0
+license-type: permissive
+license-link: 'http://fantom.gsc.riken.jp/5/'
+license-commentary: []
+contacts:
+    - fantom-help.gsc@riken.jp

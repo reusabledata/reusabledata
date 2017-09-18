@@ -1,0 +1,29 @@
+id: hpo
+source: 'Human Phenotype Ontology (HPO)'
+source-link: 'http://human-phenotype-ontology.github.io'
+status: complete
+description: 'A curated database of human hereditary syndromes from OMIM, Orphanet, and DECIPHER mapped to classes of the human phenotype ontology. Various meta-attributes such as frequency, references and negations are associated with each annotation. These are presently limited to rare mendelian diseases.'
+data-field: biology
+data-type: human
+data-categories:
+    - 'disease-phenotype association'
+data-access: 
+    - type: download
+      location: http://human-phenotype-ontology.github.io/downloads.html
+license: custom
+license-type: restrictive
+license-link: 'http://human-phenotype-ontology.github.io/license.html'
+license-issues:
+    - criteria: A.2
+      comment: HPO is copyrighted to protect ontologies and all changes must be made by hpo developers.
+    - criteria: D.1.2
+      comment: Restricted downstream use. May not be edited.
+    - criteria: E.1.2
+      comment: Restricted downstream use translates to agents as well.
+license-commentary:
+    - immutability
+    - unclear derivatives
+    - 'That the Human Phenotype Ontology Consortium is acknowledged and cited properly.'
+    - 'That neither the content of the HPO file(s) nor the logical relationships embedded within the HPO file(s) be altered in any way.'
+contacts:
+    - 'http://human-phenotype-ontology.github.io/contact.html'

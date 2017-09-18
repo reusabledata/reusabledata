@@ -1,0 +1,30 @@
+id: flybase
+source: FlyBase
+source-link: 'http://flybase.org'
+status: complete
+description: 'FlyBase is the model organism database providing integrated genetic, genomic, phenomic, and biological data for Drosophila melanogaster.'
+data-field: biology
+data-type: MOD
+data-categories:
+    - 'genotype-phenotype association'
+data-access:
+    - type: download
+      location: http://flybase.org/static_pages/downloads/ID.html
+license: 'all rights reserved'
+license-type: 'copyright'
+license-link: 'http://flybase.org/wiki/FlyBase:About#FlyBase_Copyright'
+license-issues:
+    - criteria: A.2
+      comment: Copyright statement includes 'This publication may be copied for non-commercial, scientific uses by individuals or organizations (including for-profit organizations). FlyBase is freely distributed to the scientific community on the understanding that it will not be used for commercial gain by any organization. Any commercial use of this publication, or any parts thereof, is expressly prohibited without permission in writing from the FlyBase consortium.'
+    - criteria: B.1
+      comment: Copyright statement includes 'Certain portions of FlyBase are copyrighted separately.'
+    - criteria: B.2.1
+      comment: Copyright statement includes 'Certain portions of FlyBase are copyrighted separately.'
+    - criteria: D.1.1
+      comment: As stated copyright may be interpreted by non-legal professional that the contents may be reused/remixed in a non-commercial context.
+    - criteria: E.1.1
+      comment: As stated copyright may be interpreted by non-legal professional that the contents may be reused/remixed in a non-commercial context.
+license-commentary:
+    - "Copyright statement is not co-located with the data source."
+contacts:
+    - 'http://flybase.org/cgi-bin/mailto-fbhelp.html'

@@ -1,0 +1,21 @@
+id: bgee-data
+source: 'BGee (data)'
+source-link: 'http://bgee.org'
+status: complete
+description: 'Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, Affymetrix, in situ hybridization, and EST data).'
+data-field: biomedical 
+data-type: x-species
+data-categories:
+    - 'expression data'
+data-access:
+    - {type: download, location: 'http://bgee.org/?page=doc&action=access'}
+license: unknown
+license-type: unknown
+license-commentary:
+    - 'As of two years ago, they seem to want to migrate over to CC BY, but after some searching, it could not be cited on their main data portal: https://think-lab.github.io/d/82/#15'
+    - 'They do not seem to me looking at the remix affects of licenses of their own data (http://bgee.org/?page=source).'
+    - 'Assuming they have defaulted to ARR.'
+contacts:
+    - Bgee@isb-sib.ch
+license-issues:
+    - {criteria: A.1.2, comment: 'After some search we were unable to determine the license of the non-ontology portions of the BGee data. No explicit license statements were apparent, causing a cascade of criteria violations. In spite of this, access itself is clear, so one star is awarded accordingly for C.'}

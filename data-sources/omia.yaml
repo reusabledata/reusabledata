@@ -1,0 +1,25 @@
+id: omia
+source: 'Online Mendelian Inheritance in Animals (OMIA)'
+source-link: 'http://omia.angis.org.au'
+status: complete
+description: 'Online Mendelian Inheritance in Animals (OMIA) is a catalogue/compendium of inherited disorders, other (single-locus) traits, and genes in 215 (non-model) animal species.'
+data-field: biology
+data-type: 'veterinary x-species'
+data-categories:
+  - 'gene-disease association'
+data-access:
+  - type: download
+    location: http://omia.angis.org.au/download/
+license: standard
+license-type: copyright
+license-link: 'http://sydney.edu.au/disclaimer.html'
+license-issues:
+  - criteria: D.1.2
+    comment: The license seems to be a standard ARR, with no exception for any kind of bulk (re)use.
+  - criteria: E.1.2
+    comment: The license seems to be a standard ARR, with no exception for any kind of bulk (re)use.
+license-commentary:
+  - 'Appears to be the equivalent of Australian ARR with one exception, which looks fairly standard as well. The exception, however, adds little for our use case over ARR.'
+  - 'The order of the copyright statments is: this is under copyright, a couple of groups may use a portion, but besides those no \"material from this site may not be reproduced for commercial purposes without prior written permission of the University of Sydney.\" We are reading this to mean that those specified limited categories may the data for commercial purposes, but all others must contact OMIA.'
+contacts:
+  - http://omia.angis.org.au/contact/

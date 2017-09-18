@@ -1,0 +1,36 @@
+id: gtex
+source: GTEx
+source-link: 'http://www.gtexportal.org'
+status: complete
+description: 'The Genotype-Tissue Expression (GTEx) project aims to provide to the scientific community a resource with which to study human gene expression and regulation and its relationship to genetic variation. This project will collect and analyze multiple human tissues from donors who are also densely genotyped, to assess genetic variation within their genomes. By analyzing global RNA expression within individual tissues and treating the expression levels of genes as quantitative traits, variations in gene expression that are highly correlated with genetic variation can be identified as expression quantitative trait loci, or eQTLs.'
+data-field: biology
+data-type: human
+data-categories:
+  - 'gene expression'
+data-access:
+ - type: download
+   location: https://www.gtexportal.org/home/datasets
+license: custom
+license-type: permissive
+license-link: 'https://www.gtexportal.org/home/documentationPage'
+license-issues:
+  - criteria: A.2
+    comment: Custom license based on the various datasets and NIH Genomic Data Sharing Policy.
+  - criteria: C.1
+    comment: No API or URL to access all data groupings with single action.
+  - criteria: C.2
+    comment: No API or URL and therefore no reasonable and transparent access.
+  - criteria: D.1.1
+    comment: As stated copyright may be interpreted by non-legal professional that the contents may be reused/remixed for research/scientific purposes.
+  - criteria: E.1.1
+    comment: As stated copyright may be interpreted by non-legal professional that the contents may be reused/remixed research/scientific purposes.
+license-commentary:
+  - Protected Data and Raw Data in the portal has not included in evaluation of this resource. See the dbGaP file for score.
+  - The data not under the exceptions listed are under the NIH GDS (https://grants.nih.gov/grants/guide/notice-files/NOT-OD-14-124.html).
+  - "Pilot data set (phs000424.v3.p1) - acceptance of the \"Ft. Lauderdale\" principles of rapid, pre-publication data release (see Sharing Data from Large-Scale Biological Research Projects: A System of Tripartite Responsibility, 2003). The continued success of rapid pre-publication data release relies on the scientific community to respect the data producer’s interest to publish a full analysis of their data first. Secondary users are asked to refrain from submitting manuscripts describing comprehensive analyses until the Consortium has published their analysis."
+  - May 8, 2015 - No restrictions - main manuscript published.
+  - phs000424.v4.p1 - the dataset is subject to 9 months publication restriction starting from the date of the release; no restrictions after Jan 4, 2015.
+  - All datasets from phs00424.v5.p1 forward will follow the NIH GDS policy. This means that once released through dbGaP, there are no restrictions on use or publication. This document and an accompanying table of dataset releases can be found at http://www.gtexportal.org/home/documentationPage.
+  - https://grants.nih.gov/grants/guide/notice-files/NOT-OD-14-124.html
+contacts:
+    - 'http://www.gtexportal.org/home/contact'

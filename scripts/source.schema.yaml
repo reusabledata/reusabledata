@@ -1,0 +1,217 @@
+####
+#### Use kwalify and this schema to validate the config files.
+#### Example usage:
+####    kwalify -E -m ./scripts/source.schema.yaml
+####    kwalify -f ./scripts/source.schema.yaml ./data-sources/bgee.yaml
+####
+type: map
+mapping:
+  ## Unique ID of the resource, biodbcore or NAR preferred.
+  ## But any unique internal ID is usable.
+  ##
+  ## Example usage:
+  ##   "id": foobar
+  "id":
+    type: str
+    required: yes
+    unique: true
+  ## Short label for the resource.
+  ##
+  ## Example usage:
+  ##   "source": FooBar
+  "source":
+    type: str
+    required: yes
+  ## URL for the resource.
+  ##
+  ## Example usage:
+  ##   "source-line": http://foo.bar 
+  "source-link":
+    type: str
+    required: yes
+    pattern: /^(TODO|http(s?)\:\/\/\w[\/\.\-\:\=\?\&\_\+\u0023\w]+)$/
+  ## Whether or not annotation is complete on this resource.
+  ## Current allowable entries are: "complete", "incomplete", and "nonpublic".
+  ##
+  ## Example usage:
+  ##   "status": incomplete 
+  "status":
+    type: str
+    required: yes
+    enum: ["complete", "incomplete", "nonpublic"]
+  ## Full description of the resource.
+  ##
+  ## Example usage:
+  ##   "description": this awesome resource does cool things with beans 
+  "description":
+    type: str
+    required: yes
+  ## Are of research for the resource.
+  ##
+  ## Example usage:
+  ##   "data-field": biomedical
+  "data-field":
+    type: str
+    required: yes
+  ## Type of data the resource contains.
+  ##
+  ## Example usage:
+  ##   "data-type": human phenotype gene associations
+  "data-type":
+    type: str
+    required: yes
+  ## (Optional) tags to describe the resource and its data.
+  ##
+  ## Example usage:
+  ##   "data-categories":
+  ##      - 'food terminology'
+  ##      - 'food ontology' 
+  ##      - 'food associations'
+  "data-categories":
+    type: seq
+    sequence:
+      - type: str
+    required: no
+  ## (Optional) links to resource data.
+  ##
+  ## Example usage:
+  ##   "data-access":
+  ##      - type: api
+  ##        location: http://foo.bar/api-v2
+  ##      - type: api
+  ##        location: http://foo.bar/api-v1
+  ##        label: old api
+  "data-access":
+    type: seq
+    sequence:
+      - type: map
+        mapping:
+          ## (Optional) How the data access point should be differentiated
+          ## from others at a resource. E.g. "expression data" or
+          ## "HPO ontology". Very very optional as this can be a rat's nest.
+          "label":
+            type: str
+            required: no
+          ## The type of data access. Likely: "download" or "api".
+          "type":
+            type: str
+            required: yes
+            enum: ["download", "api"]
+          ## The location of the data access. Do /NOT/ worry about getting the
+          ## perfect and "real" location here; a top-level or informational
+          ## location is fine.
+          "location":
+            type: str
+            required: yes
+            pattern: /^(ht|f)tp(s?)\:\/\/\w[\/\.\-\:\=\?\&\_\+\u0023\w]+$/
+    required: no
+  ## The license that is used.
+  ## Should try and use SPDX where we can: https://spdx.org/licenses/
+  ## or: "unknown", "public domain", "all rights reserved", or "custom".
+  ##
+  ## Example usage:
+  ##   "license": all rights reserved
+  "license":
+    type: str
+    required: yes
+  ## The type of license that is being used. This will be to define
+  ## compatible data pools in the future, only the grossest terms now.
+  ## If you do not know, enter "TODO".
+  ## I.e. "unknown", "copyleft", "permissive", "public domain",
+  ## "copyright", "restrictive", or "closed pool".
+  ##
+  ## Example usage:
+  ##   "license-type": public domain
+  "license-type":
+    type: str
+    required: yes
+    enum: ["unknown", "copyleft", "permissive", "public domain", "copyright", "restrictive", "closed pool"]
+  ## (Optional) link to the resource license.
+  ##
+  ## Example usage:
+  ##   "license-link": http://foo.bar/license
+  "license-link":
+    type: str
+    required: no
+    pattern: /^(TODO|http(s?)\:\/\/\w[\/\.\-\:\=\?\&\_\+\u0023\w]+)$/
+  ## (Optional) Further commentary on the license, possibly including things
+  ## like locations of additional licenses.
+  ##
+  ## Example usage:
+  ##   "license-commentary":
+  ##      - "one thought"
+  ##      - "another thought"
+  "license-commentary":
+    type: seq
+    sequence:
+      - type: str
+    required: no
+  ## (Optional) structured issues with the license.
+  ## For every issue discovered with a resource, there should be a
+  ## corresponding item in the license-issues field that marks the /exact/
+  ## violation, along with any comments. This field can be used by
+  ## resources as the first step to improvement, as well as clarify any
+  ## surrounding circumstances.
+  ## Any issues or thoughts about a resource that do not slot into one
+  ## of the criteria violations can go into the license-commentary field.
+  ##
+  ## Example usage:
+  ##   "license-issues":
+  ##      - criteria: A.1.1
+  ##        comment: me no find
+  "license-issues":
+    type: seq
+    sequence:
+      - type: map
+        mapping:
+          ## The criteria violated. E.g. "A.1.1", "C.2".
+          "criteria":
+            type: str
+            required: yes
+            enum: ['A.1.1', 'A.1.2', 'A.2', 'B.1', 'B.2.1', 'B.2.2', 'C.1', 'C.2', 'D.1.1', 'D.1.2', 'E.1.1', 'E.1.2']
+          ## How the criteria was violated.
+          "comment":
+            type: str
+            required: no
+    required: no
+  ## (Optional) resource contact information, link or email
+  ## or whatever is public.
+  ##
+  ## Example usage:
+  ##   "contacts":
+  ##     - foo@bar.bib
+  ##     - http://foo.bar/contact
+  "contacts":
+    type: seq
+    sequence:
+      - type: str
+    required: no
+  ## (Optional) semi-structured list of supporting grants
+  ##   "grants":
+  ##     - label: NIH Grant for Science 123 
+  ##       url: http://foo.bar 
+  "grants":
+    type: seq
+    sequence:
+      - type: map
+        mapping:
+          ## A string representation of the grant.
+          "label":
+            type: str
+            required: yes
+          ## The URL for grant information.
+          "url":
+            type: str
+            required: no
+            pattern: /^(TODO|http(s?)\:\/\/\w[\/\.\-\:\=\?\&\_\+\u0023\w]+)$/
+    required: no
+  ## "grade" is no long use--scores are generated directly from
+  ## criteria violations.
+  # ## The final grade for the resource, as justified by the violations.
+  # ## This is now auto-generated from the critera violations.
+  # ##
+  # ## Example usage:
+  # ##   "grade": 4.0 
+  # "grade":
+  #   type: number
+  #   required: no

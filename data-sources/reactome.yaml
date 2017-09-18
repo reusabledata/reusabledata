@@ -1,0 +1,24 @@
+id: reactome
+source: Reactome
+source-link: http://www.reactome.org
+status: complete
+description: 'Reactome is a free, open-source, curated and peer reviewed pathway database. Our goal is to provide intuitive bioinformatics tools for the visualization, interpretation and analysis of pathway knowledge to support basic research, genome analysis, modeling, systems biology and education.'
+data-field: biology
+data-type: pathway
+data-categories:
+    - pathway data
+data-access:
+    - type: download
+      location: http://reactome.org/pages/download-data/
+    - type: api
+      location: http://reactome.org/pages/documentation/developer-guide/content-service/
+license: CC-BY-4.0
+license-type: permissive
+license-link: http://www.reactome.org/pages/about/license-agreement/
+license-issues:
+    - criteria: B.2.2
+      comment: KEGG gene and pathway annotations used to construct Reactome Functional Interaction (FI) Network are not licenced CC-BY-4.0. There is a comment that "the recipient may not distribute this data to other users without a license from Pathway Solutions, Inc."
+license-commentary:
+    - The issue with criteria B.2.2 could be rectified if Reactome provided a clean copy of the data that can be redistributed without negotiation.
+contacts:
+    - help@reactome.org

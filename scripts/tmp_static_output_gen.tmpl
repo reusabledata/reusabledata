@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+     <title>(Re)usable Data Project</title>
+    
+     <link rel="shortcut icon" href="logo-circle.ico" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" crossorigin="anonymous">
+     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.0/vue.js"></script> -->
+     <!-- <script type="text/javascript" src="RUD.bundle.js"></script> -->
+
+     <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <!-- <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top"> -->
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" href="index.html#home">
+	<img src="logo-circle.png" height="30" class="d-inline-block align-top" alt="">
+	(Re)usable Data Project
+      </a>
+      
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="index.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Learn more</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <!-- <a class="dropdown-item" href="index.html#home">Home</a> -->
+              <a class="dropdown-item" href="index.html#who-we-are">Who we are</a>
+              <a class="dropdown-item" href="index.html#what-this-is">What this is</a>
+              <a class="dropdown-item" href="index.html#our-criteria">Criteria overview</a>
+              <a class="dropdown-item" href="index.html#our-sources-data">Our sources data</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="index.html" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Evaluation</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown02">
+              <a class="dropdown-item" href="criteria.html" id="nav-crit" aria-haspopup="true" aria-expanded="false">Criteria details</a>
+              <a class="dropdown-item" href="license-types.html" id="nav-lc" aria-haspopup="true" aria-expanded="false">License categories</a>
+              <a class="dropdown-item" href="reading.html" id="nav-rl" aria-haspopup="true" aria-expanded="false">Reading list</a>
+            </div>
+	  </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" id="nav02" aria-haspopup="true" aria-expanded="false">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/reusabledata/reusabledata" id="nav03" aria-haspopup="true" aria-expanded="false">Contact</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0"
+	      action="https://google.com/search"
+	      method="GET">
+          <input class="form-control mr-sm-2"
+		 placeholder="Site search"
+		 type="text"
+		 name="q">
+          <input type="hidden"
+		 name="sitesearch"
+		 value="reusabledata.org">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">&#x1f50d;</button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- start jumbotron -->
+    <div id="home" class="jumbotron">
+      <div class="container">
+	<h1 class="display-3">The (Re)usable Data Project</h1>
+	<div class="row">
+	  <div class="col-xl-9">
+	    <p>
+	      Inspired by the efforts of scientists around the world
+	      and the game-changing efforts of projects like the
+	      Creative Commons, the Wikipedia Foundation, and the Free
+	      Software movement<!-- (e.g. Debian and the FSF) -->, we
+	      hope to engage the larger community in an open and
+	      fruitful discussion on issues concerning the use and
+	      reuse of scientific data, including the balance of
+	      openness and how to make ends meet in an increasingly
+	      competitive environment.
+	    </p>
+	    <p>
+	      If you would like to join our efforts to highlight the
+	      use and reuse of data in the sciences, please feel free
+	      to contact us on
+	      our <a href="https://github.com/reusabledata/reusabledata">tracker<a/>
+	      or create a pull request against
+	      our <a href="https://github.com/reusabledata/reusabledata">repository</a>.
+	    </p>
+	  </div>
+	  <div class="col-xl-3">
+	    <img class="mx-auto d-block" style="height:200px; padding:1em;" src="logo-circle.png" />
+	  </div>
+	</div>
+	
+	<p>
+	  <a class="btn btn-primary btn-lg"
+	     href="#who-we-are" role="button">Learn more »</a>
+	  &nbsp;&nbsp;&nbsp;
+	  <a class="btn btn-success btn-lg"
+	     href="#our-sources-data" role="button">See our data »</a>
+	</p>	    
+      </div>
+    </div>
+    <!-- end jumbotron -->
+    
+    <div id="who-we-are" style="height:32px;"></div>
+    
+    <div class="container">
+
+      <!-- start who we are row -->
+      <div class="row">
+	
+	<div class="col-xl-8">
+	  <div class="card">
+	    <div class="card-block">
+	      <h4 class="card-title">Who we are</h4>
+	      <p>
+		We are not lawyers and this is not legal advice: all
+		institutions and groups have their own perspectives
+		and counsel. We are a group of scientists, engineers,
+		and specialists that are concerned about the use and
+		reuse of increasingly interconnected, derived, and
+		reprocessed data. We want to make sure that
+		data-driven scientific endeavors can work with one
+		another in meaningful ways without undue legal
+		concerns.
+	      </p>
+	      <p>
+		The (Re)usable Data Project is meant provide a
+		resource that looks at some of the issues
+		around the reuse of scientific data and open a
+		conversation about how to deal with them.
+	      </p>
+	      <p>
+		We also want to actively work with the community in
+		considering our criteria and in making sure that our
+		information about scientific data resources is
+		up-to-date and correct. If you have any questions,
+		concerns, or see any problems, please open a ticket on
+		our <a href="https://github.com/reusabledata/reusabledata/issues">GitHub
+		tracker</a>.
+	      </p>
+	      <p>
+		<a class="btn btn-secondary"
+		   href="#what-this-is"
+		   role="button">What this is »</a>
+	      </p>
+  	    </div>
+	  </div>
+	</div>
+	
+	<div class="col-xl-4">
+	  <table height="100%" width="100%">
+	    <tr>
+	      <td style="vertical-align:middle; text-align:center;">
+		<img class="img-fluid" style="" src="we-are-things-400.png" />
+	      </td>
+	    </tr>
+	  </table>
+	</div>
+	
+      </div>
+      <!-- end who we are row -->
+      
+      <!-- spacer -->
+      <div id="what-this-is" style="height:32px;"></div>
+
+      <!-- start what-this-is row -->
+      <div class="row">
+
+	<div class="col-xl-4">
+	  <table height="100%" width="100%">
+	    <tr>
+	      <td style="vertical-align:middle; text-align:center;">
+		<img class="img-fluid" style="" src="puzzle-post-400.png" />
+	      </td>
+	    </tr>
+	  </table>
+	</div>
+	
+	<div class="col-xl-8">
+	  <div class="card">
+	    <div class="card-block">
+	      <h4 class="card-title">What this is</h4>
+	      <p>
+		The initial driving concern of this project is the use
+		and reuse of biological and biomedical data. However,
+		this is a general problem in the scientific community
+		and needs to be addressed directly. <br /> For each
+		resource, using
+		our <a href="criteria.html">criteria</a>, we attempt
+		to objectively assign zero to five stars for how well
+		we believe a resource's data may build upon, edited,
+		modified, and redistributed. <br /> Grossly speaking:
+		
+	      </p>
+	      <p>
+		<ul class="nicer-ul">
+		  <li>
+		    <strong>5 stars</strong>&nbsp;<span style="color:#ffd700;font-size:1.0em">&#x2605&nbsp;&#x2605&nbsp;&#x2605&nbsp;&#x2605&nbsp;&#x2605</span><br />
+		    The license unambiguously allows the unfettered (re)use
+		    and redistribution of the data.
+		  </li>
+		  <li>
+		    <strong>4 stars</strong>&nbsp;<span style="color:green;">&#x2605;&nbsp;&#x2605;&nbsp;&#x2605;&nbsp;&#x2605;</span><br />
+
+		    The license unambiguously allows (re)use and
+		    redistribution of the data under some terms.
+		  </li>
+		  <li>
+		    <strong>3 stars</strong>&nbsp;<span style="color:orange;">&#x2605;&nbsp;&#x2605;&nbsp;&#x2605;</span><br />
+
+		    The license is clearly stated, unambiguous, and of
+		    a standard type, and has clear access, but has
+		    terms that may greatly impact the (re)use and
+		    redistribution of the data.
+
+		  <li>
+		    <strong>2.5 or less stars</strong>&nbsp;<span style="color:red;">&#x2605;&nbsp;&#x2605;</span>&nbsp;&#x00bd;&nbsp;-&nbsp;&#x2205;<br />
+
+		    There are likely issues in definitively finding
+		    the license, ambiguities in the license that
+		    hamper further analysis, issues with clean data
+		    access, or terms that require legal advice.
+		  </li>
+		</ul>
+	      </p>	      
+	      <p>
+		If you see any problems with our determinations or would
+		like to make corrections or clarifications, please open
+		a ticket for us on
+		our <a href="https://github.com/reusabledata/reusabledata/issues">issue
+		  tracker</a>.
+	      </p>
+	      <p>
+		<a class="btn btn-secondary"
+		   href="#our-criteria"
+		   role="button">Our criteria »</a>
+	      </p>
+	    </div>
+	  </div>
+	</div>
+        
+      </div>
+      <!-- end what-this-is row -->
+
+      <!-- spacer -->
+      <div id="our-criteria" style="height:32px;"></div>
+
+      <div class="row">
+	
+	<div class="col-xl-8">
+	  <div class="card">
+	    <div class="card-block">
+	      <h4 class="card-title">Our criteria</h4>
+	      <p>
+		This is a short overview of the criteria that we use
+		when evaluating a resource's data license for use and
+		reuse. We have attempted to balance many needs
+		(credit, mutability, commercialization,
+		redistribution, etc.) and focused on trying to
+		objectively see how licenses can interact across
+		resources.
+	      </p>
+	      <p>
+		To learn more about how we look at resource data
+		licenses, please see
+		our <a href="criteria.html">criteria</a>
+		and <a href="license-types.html">license type</a>
+		pages.
+	      </p>
+	      <p>
+		<ul class="nicer-ul">
+		  <li id="criteria-a">
+		    <strong>Clearly stated</strong><br />
+
+		    A clearly stated, unambiguous, and hopefully
+		    standard, license for data use is critical for any
+		    (re)use of data: if there is no license to be
+		    found, then rights are unclear and one needs to
+		    assume the default: all rights reserved.
+		    <!-- <a href="https://www.copyright.gov/help/faq/faq-general.html">all rights reserved</a>. -->
+		    <a class="btn btn-secondary btn-sm"
+		       role="button"
+		       href="criteria.html#criteria-A">more »</a>
+		  </li>
+		  <li id="criteria-b">
+		    <strong>Comprehensive and non-negotiated</strong><br />
+
+		    Data that is mixed under different licenses, only
+		    partially available, or must be in some way
+		    negotiated creates barriers to the (re)use of
+		    data. <a class="btn btn-secondary btn-sm"
+			     role="button"
+			     href="criteria.html#criteria-B">more »</a>
+		    <!-- cannot be used in not data at all. In -->
+		    <!-- modern data-driven science, the ability to -->
+		    <!-- synthesize data and make the results available for -->
+		    <!-- others to do the same is paramount. -->
+		  </li>
+		  <li id="criteria-c">
+		    <strong>Accessible</strong><br />
+
+		    Data must be accessible in a reasonable and manner
+		    to be useful to the broader
+		    community. <a class="btn btn-secondary btn-sm"
+				  role="button"
+				  href="criteria.html#criteria-C">more »</a>
+		    
+		    <!-- Ideally, data should be able to be used and reused -->
+		    <!-- by anybody for any purpose, academic, commercial, -->
+		    <!-- and anything else.  A counterexample may be -->
+		  </li>
+		  <li id="criteria-d">
+		    <strong>Avoid restrictions on kinds of (re)use</strong><br />
+
+		    Data should be able to be copied, built upon,
+		    edited, and modified as freely as
+		    possible. <a class="btn btn-secondary btn-sm"
+				 role="button"
+				 href="criteria.html#criteria-D">more
+		    »</a>
+
+		    <!-- Of course somebody might choose to close their -->
+		    <!-- data off in the future, but there should be no -->
+		    <!-- language that revokes usage rights retroactively -->
+		    <!-- for the data before that horizon. -->
+		  </li>
+		  <li id="criteria-e">
+		    <strong>Avoid restrictions who may (re)use</strong><br />
+		    
+		    Data should should be available to as many people
+		    as possible for their
+		    (re)use. <a class="btn btn-secondary btn-sm"
+				role="button"
+				href="criteria.html#criteria-E">more
+		    »</a>
+
+		    <!-- An example of this would -->
+		    <!-- be data explicitly released under -->
+		    <!-- the <a href="https://creativecommons.org/licenses/by/4.0/">Creative -->
+		    <!-- Commons 4.0 Attribution 4.0 International -->
+		    <!-- license</a>. -->
+		  </li>
+		</ul>
+	      </p>
+	      <p>
+		<a class="btn btn-secondary"
+		   href="#our-sources-data"
+		   role="button">Our sources data »</a>
+	      </p>
+	    </div>
+	  </div>
+	</div>
+	
+	<div class="col-xl-4">
+	  <table height="100%" width="100%">
+	    <tr>
+	      <td style="vertical-align:middle; text-align:center;">
+		<img class="img-fluid" style="" src="evaluation-400.png" />
+	      </td>
+	    </tr>
+	  </table>
+	</div>
+	
+      </div> <!-- end row -->
+      
+      <!-- spacer -->
+      <div id="our-sources-data" style="height:32px;"></div>
+
+      <div class="row">
+
+	<div class="col-xl-12">
+	  <div class="card">
+	    <div class="card-block">
+	      <h4 class="card-title">Our sources data</h4>
+	      <p class="card-text">
+		
+		{{{ htmltablestr }}}
+	
+	      </p>
+	      <p>
+		<a class="btn btn-secondary"
+		   href="https://github.com/reusabledata/reusabledata"
+		   role="button">Contact us</a>
+	      </p>
+	    </div>
+	  </div>
+	</div>
+	
+      </div><!-- Done row. -->
+
+      <!-- spacer -->
+      <div style="height:32px;"></div>
+      
+      <div class="row">
+	
+	<div id="our-sources-data" class="col-xl-12">
+
+	  <p>
+	    <small>
+	      All copyrightable materials on this site are ©
+	      2017 <a href="http://reusabledata.org/" title="The
+	      (Re)usable Data Project website">the (Re)usable Data
+	      Project</a> under the
+	      <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY
+	      4.0</a> license.
+	    </small>
+	    <br />
+	    <small>
+	    ReusableData.org is funded by the National Center for
+	    Advancing Translational Sciences
+	    (<a href="https://ncats.nih.gov/">NCATS</a>) <a href="http://grantome.com/grant/NIH/OT3-TR002019-01">OT3
+	    TR002019</a> as part of
+	    the <a href="https://ncats.nih.gov/translator">Biomedical
+	    Data Translator project</a>.
+	    </small>
+	    <br />
+	    <small>
+	      The (Re)usable Data Project would like to acknowledge
+	      the assistance of many more people than can be listed
+	      here. Please visit the <a href="/about.html">about
+	      page</a> for the full list.
+	    </small>
+	  </p>
+
+	</div>
+
+      </div><!-- Done container. -->
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var global_data = {{{ jsondata }}};
+      jQuery(document).ready(function(){
+        console.log('Ready...');
+        if( jQuery("#sourcestable") && jQuery("#sourcestable").length ){
+          console.log('Running #sourcetable...');
+          var tbl = jQuery("#sourcestable").DataTable({
+            //{autoWidth: true, "order": [[3, "desc"], [0, "asc"]]}
+            autoWidth: true
+          });
+
+          console.log('...table init...');
+
+          // Initialize for license commentary popups.
+          jQuery(function(){
+            jQuery('[data-toggle="popover"]').popover();
+          });
+          // And on paging redraw (they are separate).
+          tbl.on("draw", function(){
+            //console.log('DataTable draw event');
+            jQuery('[data-toggle="popover"]').popover();
+          });
+
+          console.log('...done.');
+        }
+      });
+    </script>
+
+  </body>
+  
+</html>

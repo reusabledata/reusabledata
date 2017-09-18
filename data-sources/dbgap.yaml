@@ -1,0 +1,38 @@
+id: dbgap
+source: dbGaP (public)
+source-link: 'https://www.ncbi.nlm.nih.gov/gap'
+status: complete
+description: The database of Genotypes and Phenotypes (dbGaP) was developed to archive and distribute the data and results from studies that have investigated the interaction of genotype and phenotype in Humans. Provides authorized access to protected and raw data (e.g., Genotype-Tissue Expression (GTEx) project).
+data-field: biology
+data-type: human
+data-categories:
+    - 'genotype-phenotype'
+data-access:
+  - type: download
+    location: ftp://ftp.ncbi.nlm.nih.gov/dbgap/
+license: unknown
+license-type: unknown
+license-link: 'https://grants.nih.gov/grants/guide/notice-files/NOT-OD-14-124.html'
+license-issues:
+  - criteria: A.1.1
+    comment: Per the dgGaP data use certification, 'The terms and conditions of using dbGaP data vary by study'. All terms and conditions are to align with NIH GDS.
+  - criteria: C.1
+    comment: Cannot access all the data.
+  - criteria: C.2
+    comment: Access methods are not transparent.
+license-commentary:
+  - 'The data seems to include a large amount of identifiable and is controlled as such.'
+  - There also exists unrestricted data and the thus the NIG GDS data use policy is two-tiered.
+  - Controlled-access policy 'https://www.ncbi.nlm.nih.gov/books/NBK99227/'
+  - General data sharing information (see data sharing policy section) 'https://www.ncbi.nlm.nih.gov/books/NBK5296/'
+  - NIH GDS policy tone and language seems non-uniform and more like case-by-case.
+  - Example GTex project submitted policy 'https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?view_pdf&stacc=phs000424.v1.p1'
+  - NIH GDS states 'NIH expects investigators and their institutions to provide basic plans for following this Policy' however we assume the burden stays with data re-reuser to contact source with questions and issues should they arise effecting criteria B.
+  - Regarding institutional affiliation 'https://www.ncbi.nlm.nih.gov/books/NBK45308/'
+  - "A.2: unknown license type due to 'The terms and conditions of using dbGaP data vary by study'."
+  - "B.1: Negotation needed for controlled- access data and license type or terms and conditions unknown."
+  - "B.2.2: Scoping is incomplete as license type or terms and conditions unknown."
+  - "D.1.2: Because the terms and conditions vary by study, cannot comment on downstream reuse/remix."
+  - "E.1.1: Language in the NIH GDS policy may be interpreted by non-legal professional that the contents may be reused by researchers (at NIH or with Institutional affiliation)."
+contacts:
+  - 'https://www.ncbi.nlm.nih.gov/books/NBK5296/'

@@ -1,0 +1,37 @@
+body { 
+    padding-top: 65px; 
+}
+
+.rud-compact-table {
+    line-height: 1.25em;
+    font-size: 0.9em;
+}
+
+.rud-compact-table tbody tr td dl dd small {
+    line-height: 0.0em;
+    /* font-size: 0.85em; */
+}
+
+.one-star {
+    background-color: lightgreen;
+}
+
+.half-star {
+    background-color: aqua;
+}
+
+.no-star {
+    background-color: red;
+}
+
+.done {
+    color: white;
+    background-color: blue;
+}
+
+.nicer-ul {
+    list-style-type: none;
+}
+.nicer-ul li {
+    padding-bottom: 0.5em;
+}

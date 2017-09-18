@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <title>(Re)usable Data Project</title>
+    
+     <link rel="shortcut icon" href="logo-circle.ico" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" crossorigin="anonymous">
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.0/vue.js"></script> -->
+    <!-- <script type="text/javascript" src="RUD.bundle.js"></script> -->
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <!-- <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top"> -->
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" href="index.html#home">
+	<img src="logo-circle.png" height="30" class="d-inline-block align-top" alt="">
+	(Re)usable Data Project
+      </a>
+      
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="index.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Learn more</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <!-- <a class="dropdown-item" href="index.html#home">Home</a> -->
+              <a class="dropdown-item" href="index.html#who-we-are">Who we are</a>
+              <a class="dropdown-item" href="index.html#what-this-is">What this is</a>
+              <a class="dropdown-item" href="index.html#our-criteria">Our criteria</a>
+              <a class="dropdown-item" href="index.html#our-sources-data">Our sources data</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="index.html" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Evaluation</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown02">
+              <a class="dropdown-item" href="criteria.html" id="nav-crit" aria-haspopup="true" aria-expanded="false">Criteria details</a>
+              <a class="dropdown-item" href="license-types.html" id="nav-lc" aria-haspopup="true" aria-expanded="false">License categories</a>
+              <a class="dropdown-item" href="reading.html" id="nav-rl" aria-haspopup="true" aria-expanded="false">Reading list</a>
+            </div>
+	  </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" id="nav02" aria-haspopup="true" aria-expanded="false">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/reusabledata/reusabledata" id="nav03" aria-haspopup="true" aria-expanded="false">Contact</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0"
+	      action="https://google.com/search"
+	      method="GET">
+          <input class="form-control mr-sm-2"
+		 placeholder="Site search"
+		 type="text"
+		 name="q">
+          <input type="hidden"
+		 name="sitesearch"
+		 value="reusabledata.org">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">&#x1f50d;</button>
+        </form>
+      </div>
+    </nav>
+
+    
+    
+    <!-- spacer -->
+    <div style="height:32px;"></div>
+
+    <div class="container"><!-- Start main content container. -->
+      
+      <!-- <div class="row"> -->
+      <!-- 	<div class="col-xl-6"> -->
+      <div class="card">
+	<div class="card-block">
+	  <!-- <h4 class="card-title">What this is</h4> -->
+	  <h1>Star criteria for the (Re)usable Data Project</h1>
+
+<h2><span id="criteria-A">A) License is public, discoverable, and standard</span></h2>
+
+<p><strong>Rationale:</strong> All data sources should publicly state their terms of
+use in an easy-to-find and non-ambiguous manner.</p>
+
+<ul><li><span id="criteria-A.1"><strong>A.1</strong>) Does the resource have a <em>single</em> license?</span><ul><li>Does the resource’s data area itself (if applicable) have any license information?<ul><li>If yes, take note of where license information is found (is discoverable).</li></ul></li><li>Does the resource’s data section have anything license-related in the footer, top-level menu, or "about" page?<ul><li>If yes, note of where license information is found (is discoverable).</li></ul></li><li>Does the resource’s homepage have anything license-related in the footer, top-level menu, or ‘about’ page? Please note that while a copyright statement in the footer of the general website may satisfy <strong>A.1</strong>, there are cases where it may not actually be intended to cover the data.<ul><li>If yes, make note of where license information is found (is discoverable).</li></ul></li><li>Decision point:<ul><li>Yes, I found a single license: → <span class="half-star"><strong>HALF STAR</strong></span> → <a href="#criteria-A.2"><strong>A.2</strong></a></li><li><span id="criteria-A.1.1"><strong>A.1.1</strong></span>) No, I found multiple different licenses (i.e. conflicting licenses) and the data cannot be broken easily into multiple individual resources for separate evaluation; the ambiguity here will short circuit further evaluation of the license: → <span class="no-star"><strong>NO STARS</strong></span> → <a href="#criteria-C"><strong>C <em>and only C</em><span></span></strong></a>, <em>no other stars can be awarded in this case</em>.</li><li><span id="criteria-A.1.2"><strong>A.1.2</strong></span>) No, I could not find license information in a reasonable location (i.e. license is missing); note that while technically the contents are now covered by default copyright protections in the US, the ambiguity here will short circuit further evaluation of the license: → <span class="no-star"><strong>NO STARS</strong></span> → <a href="#criteria-C"><strong>C <em>and only C</em><span></span></strong></a>, <em>no other stars can be awarded in this case</em>.
+<br /><em>Note: If you do NOT find a license or terms using above methods, and happen to find a license using other methods (e.g. via GitHub, Google, etc.), DO make a note of where it was found--we may expand the likely locations in the future. At this point, reasonable discoverability is key for the star, but a found license can still be used when looking at other star criteria. Also note, if you find a single license but it is internally inconsistent, this internal inconsistency is evaluated in <strong>B</strong>, not <strong>A</strong>.</em></li></ul></li></ul></li><li><span id="criteria-A.2"><strong>A.2</strong></span>) Does the resource use a standard license?<ul><li>Yes, it is as standard license: → <span class="half-star"><strong>add HALF STAR to score from A.1</strong></span> → <a href="#criteria-B"><strong>B</strong></a></li><li>No, it is a custom or non-standard license, including public domain declarations: → <span class="no-star"><strong>NO STARS</strong></span> → <a href="#criteria-B"><strong>B</strong></a></li></ul></li><li>Example list of standard licenses; also see <a href="license-types.html">license type</a> discussion:<ul><li>Public domain declaration → No, see <a href="license-types.html#publicdomain">discussion</a></li><li>Any <a href="https://creativecommons.org/licenses/">Creative Commons license</a> → Yes</li><li>Any <a href="https://www.gnu.org/licenses/licenses.html">GNU software or documentation license</a> → Yes, note software license</li><li>Any BSD or MIT type licenses → Yes, note software license</li><li><a href="http://opendatacommons.org/licenses/odbl/1.0">Open Database license</a> → Yes</li></ul></li></ul>
+
+<h2><span id="criteria-B">B) License requires no further negotiation and its scope is both unambiguous and covers all of the data</span></h2>
+
+<p><strong>Rationale:</strong> The licensing terms should be clear for all users without negotiation. If the license allows for non-negotiated reuse, no further legal or human actions should be needed for continuing non-negotiated use of a data resource, except to initially obtain access keys if necessary.</p>
+
+<ul><li><span id="criteria-B.1"><strong>B.1</strong></span>) Does the license clearly define the terms of continuing reuse free of any language that would require human or legal action or negotiation?<ul><li>Yes: → <span class="half-star"><strong>HALF STAR</strong></span> → <a href="#criteria-B/2"><strong>B.2</strong></a></li><li>No: → <span class="no-star"><strong>NO STARS</strong></span> → <a href="#criteria-B.2"><strong>B.2</strong></a></li></ul></li><li><span id="criteria-B.2"><strong>B.2</strong></span>) Is the scoping of the license complete? To determine this, both of these criteria must be met:<ul><li><span id="criteria-B.2.1"><strong>B.2.1</strong></span>) It is comprehensive: does the license apply to all of the data?<ul><li>Example failures include: “Except where noted…” or “Except where prohibited by the original sources” (e.g. ClinVar, EBI, Monarch).</li></ul></li><li><span id="criteria-B.2.2"><strong>B.2.2</strong></span>) It is differentiated: if multiple licenses apply, is it possible to obtain a singly-licensed slice?
+In the case that a resource holds multiple kinds of content (software, ontologies, or data) or if portions of its records are made available under different licenses, is it possible to obtain a “clean” copy of all of the work that <em>can</em> be redistributed without negotiation?<ul><li>Example failures would include: “a reasonable portion of the data may be downloaded and redistributed", etc.</li></ul></li><li>Yes (both <strong>B.2.1</strong> and <strong>B.2.2</strong> criteria are met): → <span class="half-star"><strong>add HALF STAR to score from B.1</strong></span> → <a href="#criteria-C"><strong>C</strong></a></li><li>No (fulfills none or just one of the two B2 criteria): → <span class="no-star"><strong>NO STARS</strong></span> → <a href="#criteria-C"><strong>C</strong></a></li></ul></li><li>Examples for <strong>B.1</strong>:<ul><li>Note: requiring registration may be okay, see <strong>C</strong>.</li><li>License is clearly stated, but requires you to get in touch with the resource’s tech transfer office for a questionnaire → No</li><li>Language such as: “contact our tech transfer office at <code>xyz@example.com</code> for details” → No</li><li>Language that requires you to make your data available to the resource into the future outside of licensing → No</li></ul></li><li>Examples for <strong>B.2</strong>:<ul><li>License applies to partial content, (e.g. onus on user to make determination of the records to which restrictive licensing applies (e.g. ClinVar, EBI, Monarch) → No</li><li>License provides allowances to a vague subest of the data (e.g. a “reasonable portion” may be redistributed) → No</li></ul></li></ul>
+
+<h2><span id="criteria-C">C) The data covered by the license is easily accessible</span></h2>
+
+<p><strong>Rationale:</strong> License without access is almost meaningless. The data provided by a resource needs to be available to research groups in a transparent and reasonable manner. Any particular content grouping at a resource should be available in its entirety with a single action once reasonable accommodations have been made with the data provider.</p>
+
+<ul><li><span id="criteria-C.1"><strong>C.1</strong></span>) Does the resource provide a “reasonable good-faith location” to access all data groupings with a single "action" (see below for examples of what may constitute an "action"), at an API endpoint or URL?<ul><li>Yes: → <span class="half-star"><strong>HALF STAR</strong></span> → <a href="#criteria-C.2"><strong>C.2</strong></a></li><li>No: → <span class="no-star"><strong>NO STARS</strong></span> → <a href="#criteria-C.2"><strong>C.2</strong></a></li></ul></li><li><span id="criteria-C.2"><strong>C.2</strong></span>) Does the resource provide a “reasonable and transparent” method of obtaining access to all APIs or URLs outlined above?<ul><li>Yes: → <span class="half-star"><strong>add HALF STAR to score from C.1</strong></span> → <a href="#criteria-D"><strong>D</strong></a></li><li>No: → <span class="no-star"><strong>NO STARS</strong></span> → <a href="#criteria-D"><strong>D</strong></a></li></ul></li><li>Examples “reasonable good-faith location” for data access:<ul><li>URL access over HTTP of entire data set → Yes</li><li>Dumpable access over API endpoint (e.g. SPARQL dump) → Yes</li><li>A page with a <em>small</em> set of download links for data that will not change in the future → Yes</li><li>A site where one could easily write a script to scrape the data files in a structured way without cooperation → Yes</li><li>Set of HTML-only linked pages with data embedded → No</li></ul></li><li>Examples of “reasonable and transparent” access methods:<ul><li>Unprotected HTTP/S access for an API or downloads → Yes</li><li>Access by API key for analytics → Yes</li><li>Access by API key for access control → No</li><li>Access by API key for access control, but with downloads available allowing timely complete data injest → Yes</li><li>Time/size limited access to data that functionally prevents timely complete data ingest → No</li></ul></li></ul>
+
+<h2><span id="criteria-D">D) License has little or no restrictions on kinds of (re)use</span></h2>
+
+<p><strong>Rationale:</strong> Research groups should have the ability to legally access the data to use in their research, build upon and modify it, and publish their results. Ideally, they should be able to do so freely and without encumbrances (except possibly attribution). Forbidding certain kinds of reuse (or explicitly allowing only a narrow kind of reuse) leaves open questions about what prohibited reuse actually constitutes in practice; this determination may require legal consultation. For example, if the provider forbids "editing" the data, is it a prohibition of the license to use just a fraction of the data? Change the format? Build a tool on top of it? Translate it? Because we nevertheless want to recognize any attempt at openness, we award half stars in this category as long as there are redistribution provisions (not just copy/download).</p>
+
+<ul><li><span id="criteria-D.1"><strong>D.1</strong></span>) Are different types of downstream reuse distinguished as allowable or as forbidden?<ul><li>No, all types of reuse are allowed without negotiation, allowing for "reasonable" attribution and redistribution restrictions (e.g. CC BY 4.0 or a similarly permissive license, see <a href="license-types.html">license types</a>): → <span class="one-star"><strong>ONE STAR</strong></span> → <a href="#criteria-E"><strong>E</strong></a></li><li>Would a non-legal professional reasonably interpret the license to mean that individuals either in "research” or “non-commercial" contexts could work with the data (add to, modify, build on) and redistribute the results without negotiation <em>and without requiring the remixed data to have a specific license</em>?<ul><li><span id="criteria-D.1.1"><strong>D.1.1</strong></span>) Yes: → <span class="half-star"><strong>HALF STAR</strong></span> → <a href="#criteria-E"><strong>E</strong></a></li><li><span id="criteria-D.1.2"><strong>D.1.2</strong></span>) No (e.g. restrictive licenses or all rights reserved, see <a href="license-types.html">license types</a>): → <span class="no-star"><strong>NO STARS</strong></span> → <a href="#criteria-E"><strong>E</strong></a></li></ul></li></ul></li><li>Example restrictions in use and downstream reuse:<ul><li>May not be copied.</li><li>May not be edited (e.g. invariant text clause).</li><li>May not be built upon (e.g. "This license forbids derivative works").</li><li>May not be remixed (i.e. license limitations on how it can be combined with other data sets, such as in the case of the GPL).</li><li>May not be redistributed under same terms.</li><li>May be encumbered by patents.</li><li>May be revocable in some circumstance.</li><li>May be under an embargo until some date or event.</li><li>Note that while "personal use only" arguably prohibits many of the above, this is considered separately in <strong>E</strong> as a function of user, rather than use.</li></ul></li></ul>
+
+<h2><span id="criteria-E">E) License has little or no restrictions on who can (re)use the data</span></h2>
+
+<p><strong>Rationale:</strong> When research groups build on and modify data resources, they should be able to make these new products available for redistribution to other researchers in some unencumbered way, giving them the same opportunities to do the same. Ideally, they should be able to pass on their work freely and redistribute it to any party without restriction. Forbidding certain kinds of people or institutions (or explicitly allowing only a narrow definition of such) leaves open questions about what this means; this determination may require legal consultation. For example, if a license forbids commercial use, it may also prohibit remixing, redistribution, or cost recovery by not-for-profit companies. Because we nevertheless want to recognize any attempt at openness, we award half stars in this category as long as there are redistribution provisions that amount to more than "personal use", which is not clear as to whether it permits sharing/remixing within a research group for academic purposes.</p>
+
+<ul><li><span id="criteria-E.1"><strong>E.1</strong></span>) Are different types of person groups or “agents” distinguished?<ul><li>No, all types of person groups or “agents” are allowed without negotiation, allowing for “reasonable” attribution and redistribution restrictions (e.g. CC BY 4.0 or a similarly permissive license, see <a href="license-types.html">license types</a>): → <span class="one-star"><strong>ONE STAR</strong></span> → <span class="done"><strong>DONE</strong></span></li><li>Would a non-legal professional reasonably interpret the license to mean that individuals either in “research” or “non-commercial” contexts could work with the data (add to, modify, build on) and redistribute the results without negotiation <em>and without requiring the remixed data to have a specific license</em>?<ul><li><span id="criteria-E.1.1"><strong>E.1.1</strong></span>) Yes: → <span class="half-star"><strong>HALF STAR</strong></span> → <span class="done"><strong>DONE</strong></span></li><li><span id="criteria-E.1.2"><strong>E.1.2</strong></span>) No (e.g. restrictive licenses or all rights reserved, see <a href="license-types.html">license types</a>): → <span class="no-star"><strong>NO STARS</strong></span> → <span class="done"><strong>DONE</strong></span></li></ul></li></ul></li><li>Example restrictions on who can (re)use data (a.k.a. discrimination classes); bolded classes are given a half-star exception:<ul><li><strong>Academic</strong>/non-academic: ½</li><li>Commercial/<strong>non-commercial</strong>: ½</li><li><strong>Clinical</strong>/<strong>non-clinical</strong>: ½</li><li>Personal/non-personal: 0</li><li>Profit/non-profit (note: "okay" for non-profit can mean that (re)sale is still permitted): 0</li><li>Employer-specific: 0</li><li>Geographical or export limitations: 0</li><li>Disease-specific / research community-specific: 0</li></ul></li></ul>
+	  <!-- </div> -->
+	</div>
+      </div>
+      <!--   </div> -->
+      <!-- </div> -->
+    
+    <!-- spacer -->
+    <div style="height:32px;"></div>
+    
+    <div class="row">
+	
+	<div id="our-sources-data" class="col-xl-12">
+	  
+	  <p>
+	    <small>
+	      All copyrightable materials on this site are ©
+	      2017 <a href="http://reusabledata.org/" title="The
+	      (Re)usable Data Project website">the (Re)usable Data
+	      Project</a> under the
+	      <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY
+	      4.0</a> license.
+	    </small>
+	    <br />
+	    <small>
+	    ReusableData.org is funded by the National Center for
+	    Advancing Translational Sciences
+	    (<a href="https://ncats.nih.gov/">NCATS</a>) <a href="http://grantome.com/grant/NIH/OT3-TR002019-01">OT3
+	    TR002019</a> as part of
+	    the <a href="https://ncats.nih.gov/translator">Biomedical
+	    Data Translator project</a>.
+	    </small>
+	    <br />
+	    <small>
+	      The (Re)usable Data Project would like to acknowledge
+	      the assistance of many more people than can be listed
+	      here. Please visit the <a href="/about.html">about
+	      page</a> for the full list.
+	    </small>
+	  </p>
+	  
+	</div>
+	
+      </div><!-- Done container. -->
+      
+      <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+      <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+      <script type="text/javascript">
+	var global_data = ;
+	jQuery(document).ready(function(){
+          console.log('Ready...');
+          if( jQuery("#sourcestable") && jQuery("#sourcestable").length ){
+            console.log('Running #sourcetable...');
+            var tbl = jQuery("#sourcestable").DataTable({
+              //{autoWidth: true, "order": [[3, "desc"], [0, "asc"]]}
+              autoWidth: true
+            });
+
+            console.log('...table init...');
+
+            // Initialize for license commentary popups.
+            jQuery(function(){
+              jQuery('[data-toggle="popover"]').popover();
+            });
+	    // And on paging redraw (they are separate).
+	    tbl.on("draw", function(){
+              //console.log('DataTable draw event');
+              jQuery('[data-toggle="popover"]').popover();
+            });
+
+            console.log('...done.');
+          }
+	});
+      </script>
+
+  </body>
+  
+</html>

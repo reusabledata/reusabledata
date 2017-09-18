@@ -1,0 +1,105 @@
+table(id='sourcestable' class='table table-sm table-striped rud-compact-table')
+  thead
+    tr
+      th Name
+      th Tags
+      th Grade
+      th Description
+      th License Info
+      th License Issues
+  tfoot
+    tr
+      th Name
+      th Tags
+      th Grade
+      th Description
+      th License Info
+      th License Issues
+  tbody
+    each source, index in data_sources
+      if source['status'] === 'complete'
+       tr
+         td 
+           a(href=source['source-link']) #{ source.source }
+         td #{ source['data-tags'] }
+         //- case source['grade']
+         case source['grade-automatic']
+           when 5
+             td(style='color:#ffd700;font-size:1.0em;') &#x2605;&nbsp;&#x2605;&nbsp;&#x2605;&nbsp;&#x2605;&nbsp;&#x2605;
+              //- span(style='color:#000000;') (#{ source['grade-automatic'] })
+           when 4.5
+             td
+               span(style="color:green;") &#x2605;&nbsp;&#x2605;&nbsp;&#x2605;&nbsp;&#x2605;&nbsp;
+               span() &#x00bd; 
+               //- span(style='color:#000000;') (#{ source['grade-automatic'] })
+           when 4
+             td
+               span(style="color:green;") &#x2605;&nbsp;&#x2605;&nbsp;&#x2605;&nbsp;&#x2605;
+               //- span(style='color:#000000;') (#{ source['grade-automatic'] })
+           when 3.5
+             td
+               span(style="color:orange;") &#x2605;&nbsp;&#x2605;&nbsp;&#x2605;&nbsp;
+               span() &#x00bd; 
+               //- span(style='color:#000000;') (#{ source['grade-automatic'] })
+           when 3
+             td
+               span(style="color:orange;") &#x2605;&nbsp;&#x2605;&nbsp;&#x2605;
+               //- span(style='color:#000000;') (#{ source['grade-automatic'] })
+           when 2.5
+             td
+               span(style="color:red;") &#x2605;&nbsp;&#x2605;&nbsp;
+               span() &#x00bd; 
+               //- span(style='color:#000000;') (#{ source['grade-automatic'] })
+           when 2
+             td
+               span(style="color:red;") &#x2605;&nbsp;&#x2605;
+               //- span(style='color:#000000;') (#{ source['grade-automatic'] })
+           when 1.5
+             td
+               span(style="color:darkred;") &#x2605;&nbsp;
+               span() &#x00bd; 
+               //- span(style='color:#000000;') (#{ source['grade-automatic'] })
+           when 1
+             td
+               span(style="color:darkred;") &#x2605;
+               //- span(style='color:#000000;') (#{ source['grade-automatic'] })
+           when 0.5
+             td
+               span() &#x00bd; 
+               //- span(style='color:#000000;') (#{ source['grade-automatic'] })
+           when 0
+             td
+               span() &#x2205;
+               //- span(style='color:#000000;') (#{ source['grade-automatic'] })
+           default
+             td
+               strong ?
+               //- span(style='color:#000000;') (#{ source['grade-automatic'] })
+         td #{ source.description }
+         td
+           case source['license-type']
+             when 'public domain'
+               a(href='license-types.html#publicdomain') #{ source['license-type'] }
+             when 'closedpool'
+               a(href='license-types.html#closedpool') #{ source['license-type'] }
+             default
+               a(href='license-types.html#' + source['license-type']) #{ source['license-type'] }
+           span() &nbsp;
+           if source['license-link'] && source['license-link'] !== 'unknown'
+             a(href=source['license-link']) &#x1f517;
+         td
+           if source['license-issues'] && source['license-issues'].length !== 0
+             dl
+               each issue, index in source['license-issues']
+                 dt
+                   a(href='criteria.html#criteria-' + issue.criteria) Criteria&nbsp;#{issue.criteria}
+                 if issue['comment']
+                   dd
+                     small(class="text-muted") #{ issue.comment }
+                 else
+                   span
+                 // button(class="btn btn-secondary btn-sm" role="button" data-toggle="popover" title="License issue" data-html="true" data-placement="left" data-content=issue['comment']) #{ issue['criteria'] }
+           if source['license-commentary'] && source['license-commentary'].length !== 0
+             button(class="btn btn-secondary btn-sm" role="button" data-toggle="popover" title="License commentary" data-html="true" data-placement="left" data-content=source['license-commentary-embeddable']) Commentary
+           else
+             span

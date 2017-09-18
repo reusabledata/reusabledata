@@ -1,0 +1,26 @@
+id: encode
+source: ENCODE
+source-link: https://www.genome.gov/10005107/
+status: complete
+description: 'The Encyclopedia of DNA Elements (ENCODE) Consortium is an international collaboration of research groups funded by the National Human Genome Research Institute (NHGRI). The goal of ENCODE is to build a comprehensive parts list of functional elements in the human genome, including elements that act at the protein and RNA levels, and regulatory elements that control cells and circumstances in which a gene is active.'
+data-field: biology
+data-type: 'genomic resource'
+data-categories:
+    - 'genomic elements'
+data-access:
+    - type: api
+      location: https://www.encodeproject.org/help/rest-api/
+    - type: download
+      location: https://www.ncbi.nlm.nih.gov/geo/info/download.html
+    - type: download
+      location: ftp://ftp.ebi.ac.uk/pub/databases/arrayexpress/data/
+license: custom
+license-type: permissive
+license-link: 'https://www.genome.gov/27528022/encode-consortium-data-release-policy/'
+license-issues:
+     - criteria: A.2
+       comment: "Easy and perfectly (re)usable, yet custom."
+license-commentary:
+    - 'External data users may freely download, analyze and publish results based on any ENCODE data without restrictions as soon as they are released.'
+contacts:
+    - 'https://www.genome.gov/10005049/questions-and-feedback/'

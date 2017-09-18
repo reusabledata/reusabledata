@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <title>(Re)usable Data Project</title>
+    
+     <link rel="shortcut icon" href="logo-circle.ico" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" crossorigin="anonymous">
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.0/vue.js"></script> -->
+    <!-- <script type="text/javascript" src="RUD.bundle.js"></script> -->
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <!-- <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top"> -->
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" href="index.html#home">
+	<img src="logo-circle.png" height="30" class="d-inline-block align-top" alt="">
+	(Re)usable Data Project
+      </a>
+      
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="index.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Learn more</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <!-- <a class="dropdown-item" href="index.html#home">Home</a> -->
+              <a class="dropdown-item" href="index.html#who-we-are">Who we are</a>
+              <a class="dropdown-item" href="index.html#what-this-is">What this is</a>
+              <a class="dropdown-item" href="index.html#our-criteria">Our criteria</a>
+              <a class="dropdown-item" href="index.html#our-sources-data">Our sources data</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="index.html" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Evaluation</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown02">
+              <a class="dropdown-item" href="criteria.html" id="nav-crit" aria-haspopup="true" aria-expanded="false">Criteria details</a>
+              <a class="dropdown-item" href="license-types.html" id="nav-lc" aria-haspopup="true" aria-expanded="false">License categories</a>
+              <a class="dropdown-item" href="reading.html" id="nav-rl" aria-haspopup="true" aria-expanded="false">Reading list</a>
+            </div>
+	  </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" id="nav02" aria-haspopup="true" aria-expanded="false">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/reusabledata/reusabledata" id="nav03" aria-haspopup="true" aria-expanded="false">Contact</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0"
+	      action="https://google.com/search"
+	      method="GET">
+          <input class="form-control mr-sm-2"
+		 placeholder="Site search"
+		 type="text"
+		 name="q">
+          <input type="hidden"
+		 name="sitesearch"
+		 value="reusabledata.org">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">&#x1f50d;</button>
+        </form>
+      </div>
+    </nav>
+
+    
+    
+    <!-- spacer -->
+    <div style="height:32px;"></div>
+
+    <div class="container"><!-- Start main content container. -->
+      
+      <!-- <div class="row"> -->
+      <!-- 	<div class="col-xl-6"> -->
+      <div class="card">
+	<div class="card-block">
+	  <!-- <h4 class="card-title">What this is</h4> -->
+	  <h1>License types for the (Re)usable Data Project</h1>
+
+<p>The exact boundries of various license types is still in flux within the (Re)usable Data Project, and will no doubt be revisited as we better understand the space our communities work in. At its core, we&#39;re wanting to examine pools of (re)use--where things can be mixed and where they must stay separate.</p>
+
+<p>The basic idea is that our <code>permissive</code> licenses can all inter-operate for our range of (re)use. The <code>copyleft</code> (and <code>closedpool</code>) licenses would also theoretically all inter-operation for our use, assuming that everybody all used the same one or had compatible ones, which is a practical non-starter in many domains. <code>restrictive</code>, <code>copyright</code>, and <code>closed pool</code> licenses would all have issues that prevent (re)use.</p>
+
+<p>Naturally, the license landscape is much more complicated than can be sketched with these basic terms. Eventually, we would would like to use more granular terms, essentially a license compatibility ontology, so that a new resources could intelligently knit together what they need with their license, so on. This is just a humble first pass to get the most basic understanding.</p>
+
+<h2><span id="publicdomain">public domain</span></h2>
+
+<p>While a public domain declaration may work well in some jurisdictions, has very good intent, and could be considered "standard", some ambiguities and international portability makes it problematic for our purposes. Please see the Creative Commons discussion for <a href="https://wiki.creativecommons.org/wiki/Public_domain">more detail</a>. This does not include CC0.</p>
+
+<h2><span id="permissive">permissive</span></h2>
+
+<p>A "permissive" license is one that allows reuse in modifying, remixing, and sharing with non-onerous restriction. This category would include CC0 and CC BY 4.0.</p>
+
+<h2><span id="copyleft">copyleft</span></h2>
+
+<p>While the license is very open to use, it&#39;s reuse requires a matching open license for reuse. This category includes GPLs and CC BY SA 4.0.</p>
+
+<h2><span id="closedpool">closed pool</span></h2>
+
+<p>Similar to copyleft, but without the public "open" component; think of a private data pool that members can enjoy if they join.</p>
+
+<h2><span id="restrictive">restrictive</span></h2>
+
+<p>A "restrictive" license is one that may offer more freedoms than the standard US copyright, but is of little use to allowing reasonably flexible (re)use. This category includes CC BY ND 4.0.</p>
+
+<h2><span id="copyright">copyright</span></h2>
+
+<p>This is the standard restrictive default copyright in the US. Within our documentation, we may also refer to this as "ARR" or "all rights reserved".</p>
+
+<h2><span id="unknown">unknown</span></h2>
+
+<p>For this category, the license could not be found for analysis or the terms of the license are so exotic that no analysis can reasonably be done.</p>
+	  <!-- </div> -->
+	</div>
+      </div>
+      <!--   </div> -->
+      <!-- </div> -->
+    
+    <!-- spacer -->
+    <div style="height:32px;"></div>
+    
+    <div class="row">
+	
+	<div id="our-sources-data" class="col-xl-12">
+	  
+	  <p>
+	    <small>
+	      All copyrightable materials on this site are ©
+	      2017 <a href="http://reusabledata.org/" title="The
+	      (Re)usable Data Project website">the (Re)usable Data
+	      Project</a> under the
+	      <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY
+	      4.0</a> license.
+	    </small>
+	    <br />
+	    <small>
+	    ReusableData.org is funded by the National Center for
+	    Advancing Translational Sciences
+	    (<a href="https://ncats.nih.gov/">NCATS</a>) <a href="http://grantome.com/grant/NIH/OT3-TR002019-01">OT3
+	    TR002019</a> as part of
+	    the <a href="https://ncats.nih.gov/translator">Biomedical
+	    Data Translator project</a>.
+	    </small>
+	    <br />
+	    <small>
+	      The (Re)usable Data Project would like to acknowledge
+	      the assistance of many more people than can be listed
+	      here. Please visit the <a href="/about.html">about
+	      page</a> for the full list.
+	    </small>
+	  </p>
+	  
+	</div>
+	
+      </div><!-- Done container. -->
+      
+      <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+      <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+      <script type="text/javascript">
+	var global_data = ;
+	jQuery(document).ready(function(){
+          console.log('Ready...');
+          if( jQuery("#sourcestable") && jQuery("#sourcestable").length ){
+            console.log('Running #sourcetable...');
+            var tbl = jQuery("#sourcestable").DataTable({
+              //{autoWidth: true, "order": [[3, "desc"], [0, "asc"]]}
+              autoWidth: true
+            });
+
+            console.log('...table init...');
+
+            // Initialize for license commentary popups.
+            jQuery(function(){
+              jQuery('[data-toggle="popover"]').popover();
+            });
+	    // And on paging redraw (they are separate).
+	    tbl.on("draw", function(){
+              //console.log('DataTable draw event');
+              jQuery('[data-toggle="popover"]').popover();
+            });
+
+            console.log('...done.');
+          }
+	});
+      </script>
+
+  </body>
+  
+</html>
