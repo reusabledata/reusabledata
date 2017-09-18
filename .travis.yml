@@ -1,0 +1,19 @@
+language: ruby
+rvm: "1.9.3"
+
+# before_install:
+#   - sudo apt-get update -qq
+#   - sudo apt-get install -qq kwalify
+## Possible other way.
+install:
+  - gem install kwalify
+script:
+  ## Quick schema check.
+  - kwalify -E -m ./scripts/source.schema.yaml 2>&1 | tee out.log && grep 'INVALID\|ERROR' out.log; test $? -ne 0
+  - kwalify -E -f ./scripts/source.schema.yaml ./data-sources/*.yaml 2>&1 | tee out.log && grep 'INVALID\|ERROR' out.log; test $? -ne 0
+  # ## "Build" system.
+  # - npm install
+  # - make all
+notifications:
+  email:
+    - sjcarbon@lbl.gov
