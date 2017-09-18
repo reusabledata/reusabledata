@@ -1,0 +1,22 @@
+id: msigdb
+source: MSigDB
+source-link: http://software.broadinstitute.org/gsea/msigdb/index.jsp
+status: incomplete
+description: The Molecular Signatures Database (MSigDB) is a collection of annotated gene sets for use with GSEA software. From this web site, you can
+data-field: biology
+data-type: model organism genome sequences
+data-access: 
+    - type: download
+      location: http://www.wormbase.org/about/userguide#3--10
+    - type: api
+      location: http://www.wormbase.org/about/userguide/for_developers/api-rest#01--10
+license: custom
+license-type: unknown
+license-link: http://www.wormbase.org/about/policies#2--10
+license-issues: 
+   - criteria: A.1.1 
+     comment: A single license is not provided, rather data users are intructed that they are responsible for identifying and complying with licensing and copyright restrictions for each piece of information in the database.
+license-commentary:
+    - Because this no single license is provided, this source can only be awarded a total of 1 stars.  As both components of criteria C were met, 1 star total was awarded.
+contacts:
+    - help@wormbase.org 
