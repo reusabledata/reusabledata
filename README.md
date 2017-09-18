@@ -1,5 +1,9 @@
-# Reusable Data
+# The (Re)usable Data Project
 
-The home repository for the Reusable Data project.
+### Please see
 
-More to come soon.
+http://reusabledata.org
+
+and
+
+https://reusabledata.github.io/reusabledata/
