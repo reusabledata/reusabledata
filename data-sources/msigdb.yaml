@@ -1,22 +1,21 @@
 id: msigdb
 source: MSigDB
 source-link: http://software.broadinstitute.org/gsea/msigdb/index.jsp
-status: incomplete
-description: The Molecular Signatures Database (MSigDB) is a collection of annotated gene sets for use with GSEA software. From this web site, you can
+status: complete
+description: The Molecular Signatures Database (MSigDB) is a collection of annotated gene sets for use with GSEA software.
 data-field: biology
-data-type: model organism genome sequences
+data-type: gene sets
 data-access: 
     - type: download
-      location: http://www.wormbase.org/about/userguide#3--10
-    - type: api
-      location: http://www.wormbase.org/about/userguide/for_developers/api-rest#01--10
-license: custom
-license-type: unknown
-license-link: http://www.wormbase.org/about/policies#2--10
+      location: http://software.broadinstitute.org/gsea/downloads.jsp
+license: CC-BY-4.0
+license-type: permissive
+license-link: http://software.broadinstitute.org/gsea/msigdb_license_terms.jsp
 license-issues: 
-   - criteria: A.1.1 
-     comment: A single license is not provided, rather data users are intructed that they are responsible for identifying and complying with licensing and copyright restrictions for each piece of information in the database.
+   - criteria: B.2.1
+     comment: The main body of work is under CC-BY 4.0, with filterable additional works under their own terms from KEGG, BioCarta, and AAAS/STKE. While the filtering step is an annoyance, is can likely easily be done given their instructions and would be a one-time process per release.
 license-commentary:
-    - Because this no single license is provided, this source can only be awarded a total of 1 stars.  As both components of criteria C were met, 1 star total was awarded.
+    - MSigDB v6.0 is available under a Creative Commons style license, plus additional terms for some gene sets
+    - A user must register before being able to view the downloads for tracking purposes. Easy access after that set is done.
 contacts:
-    - help@wormbase.org 
+    - http://software.broadinstitute.org/gsea/contact.jsp
