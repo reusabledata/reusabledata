@@ -15,6 +15,19 @@ We are grateful to the many original sources of our data for allowing
 their integration.
 
 <hr />
+### Request for community partnership
+
+Because the lack of hassle-free legal integration and redistribution
+of data is a fundamental barrier in science, the community wrote to
+the NIH Scientific Data Council to ask for partnership in helping to
+solve this issue. If you would like to sign
+the
+[letter](https://figshare.com/articles/Request_for_Community_partnership_in_data_resource_licensing_planning/4972709/1),
+please do
+so
+[here]( https://docs.google.com/document/d/1fbwKxnPu5f1YXlMM6UMyfBqHx_Inz86tKzwRFO4W8jQ/edit).
+
+<hr />
 ### Contributors
 
 * *Seth Carbon*, Lawrence Berkeley National Laboratory
