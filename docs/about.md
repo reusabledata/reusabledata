@@ -17,11 +17,17 @@ their integration.
 <hr />
 ### Contributors
 
-More to come soon...
+* *Seth Carbon*, Lawrence Berkeley National Laboratory
+* *Robin Champieux*, Oregon Health & Science University
+* *Melissa Haendel*, Oregon Health & Science University
+* *Julie McMurry*, Oregon Health & Science University
+* *Lilly Winfree*, Oregon Health & Science University
+* *Letisha Wyatt*, Oregon Health & Science University
 
 <hr />
 ### Citation policy
 
-Please use the following citation:
+For the time being, if you wish to cite the (Re)usable Data Project,
+please use the following citation:
 
 The Reusable Data Project. reusabledata.org accessed, source code and data at https://github.com/reusabledata/reusabledata
