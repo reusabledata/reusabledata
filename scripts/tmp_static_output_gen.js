@@ -87,88 +87,136 @@ _debug('data', data_sources);
 // Goose the data so we have a single html-displayable string for the
 // license commentary.
 console.log('===');
+var summary_count = {};
+var summary_total_count = 0;
+var summary_known_count = 0;
+var summary_unknown_count = 0;
+//var summary_group_count = {};
+var summary_violation_group = {
+    "A": {},
+    "B": {},
+    "C": {},
+    "D": {},
+    "E": {}
+};
+var summary_violation = {
+    "A.1.1": [],
+    "A.1.2": [],
+    "A.2": [], 
+    "B.1": [],
+    "B.2.1": [],
+    "B.2.2": [],
+    "C.1": [],
+    "C.2": [],
+    "D.1.1": [],
+    "D.1.2": [],
+    "E.1.1": [],
+    "E.1.2": []
+};
 us.each(data_sources, function(source){
-    var cache = [];
-    us.each(source['license-commentary'], function(comment){
-	cache.push(comment);
-    });
-    source['license-commentary-embeddable'] = cache.join('<hr />');
+    var sid = source['id'];
 
-    var tags_cache = [];
-    if( source['data-field'] ){
-	tags_cache.push(source['data-field']);
-    }
-    if( source['data-type'] ){
-	tags_cache.push(source['data-type']);
-    }
-    us.each(source['data-categories'], function(comment){
-	tags_cache.push(comment);
-    });
-    source['data-tags'] = tags_cache.join(', ');
-
-    ///
-    /// Logic for automatic scoring.
-    ///
-
-    // Unroll the actual criteria violations into a lookup.
-    var s = {};
-    if( source['license-issues'] ){
-	us.each(source['license-issues'], function(li){
-	    s[li['criteria']] = true;
-	});
-    }
-
-    // Start with a possible 5 points.
-    var grade = 5.0;
-
-    // C and only C.
-    function evaluate_C(){
-	if( s['C.1'] ){
-	    grade -= 0.5;
-	}
-	if( s['C.2'] ){
-	    grade -= 0.5;
-	}
-    }
-
-    // Deal with license location short-circuits first.
-    if( s['A.1.1'] ){
-	grade -= 4.0;
-	evaluate_C();
-    }else if( s['A.1.2'] ){
-	grade -= 4.0;
-	evaluate_C();
+    if( source['status'] === 'nonpublic' ){
+	console.log('Skipping non-public: ' + sid);
+    }else if( source['status'] === 'incomplete' ){
+	console.log('Skipping incomplete: ' + sid);
     }else{
 
-	if( s['A.2'] ){
-	    grade -= 0.5;
-	}
-	if( s['B.1'] ){
-	    grade -= 0.5;
-	}
-	if( s['B.2.1'] || s['B.2.2'] ){
-	    grade -= 0.5;
-	}
-	evaluate_C();
-	if( s['D.1.1'] ){
-	    grade -= 0.5;
-	}
-	if( s['D.1.2'] ){
-	    grade -= 1.0;
-	}
-	if( s['E.1.1'] ){
-	    grade -= 0.5;
-	}
-	if( s['E.1.2'] ){
-	    grade -= 1.0;
-	}
-    }
+	var cache = [];
+	us.each(source['license-commentary'], function(comment){
+	    cache.push(comment);
+	});
+	source['license-commentary-embeddable'] = cache.join('<hr />');
 
-    // Do not override "given" grade at this point.
-    source['grade-automatic'] = grade;
+	var tags_cache = [];
+	if( source['data-field'] ){
+	    tags_cache.push(source['data-field']);
+	}
+	if( source['data-type'] ){
+	    tags_cache.push(source['data-type']);
+	}
+	us.each(source['data-categories'], function(comment){
+	    tags_cache.push(comment);
+	});
+	source['data-tags'] = tags_cache.join(', ');
 
-    if( source['status'] === 'complete' ){
+	///
+	/// Logic for automatic scoring and summary stats.
+	///
 
+	// Unroll the actual criteria violations into a lookup.
+	var s = {};
+	if( typeof(summary_count[sid]) === 'undefined' ){
+	    summary_count[sid] = [];
+	}
+	if( source['license-issues'] ){
+	    us.each(source['license-issues'], function(li){
+
+		// Mark as true.
+		s[li['criteria']] = true;
+
+		// Accumulate stat.
+		summary_violation[li['criteria']].push(sid);
+		summary_violation_group[li['criteria'].charAt(0)][sid] = true;
+		summary_count[sid].push(li['criteria']);
+	    });
+	}
+
+	// Start with a possible 5 points.
+	var grade = 5.0;
+
+	// C and only C.
+	var evaluate_C = function(){
+	    if( s['C.1'] ){
+		grade -= 0.5;
+	    }
+	    if( s['C.2'] ){
+		grade -= 0.5;
+	    }
+	};
+
+	// Deal with license location short-circuits first.
+	summary_total_count++;
+	if( s['A.1.1'] && s['A.1.2'] ){
+	    _die('A.1.* violations are mutually exclusive: ' + sid);
+	}else if( s['A.1.1'] ){
+	    grade -= 4.0;
+	    evaluate_C();
+	    summary_unknown_count++;
+	}else if( s['A.1.2'] ){
+	    grade -= 4.0;
+	    evaluate_C();
+	    summary_unknown_count++;
+	}else{
+	    summary_known_count++;
+
+	    if( s['A.2'] ){
+		grade -= 0.5;
+	    }
+	    if( s['B.1'] ){
+		grade -= 0.5;
+	    }
+	    if( s['B.2.1'] || s['B.2.2'] ){
+		grade -= 0.5;
+	    }
+	    evaluate_C();
+	    if( s['D.1.1'] ){
+		grade -= 0.5;
+	    }
+	    if( s['D.1.2'] ){
+		grade -= 1.0;
+	    }
+	    if( s['E.1.1'] ){
+		grade -= 0.5;
+	    }
+	    if( s['E.1.2'] ){
+		grade -= 1.0;
+	    }
+	}
+
+	// Do not override "given" grade at this point.
+	source['grade-automatic'] = grade;
+	
 	// It should not be possible for any type of restrictive
 	// license to get above 3.0.
 	var restrictive_check = '';
@@ -183,9 +231,43 @@ us.each(data_sources, function(source){
 		    source['id'] +'): ' +
 		    grade + ' ' +
 		    restrictive_check);
-      }
+    }
 });
 
+// Summary stats.
+console.log('===');
+//console.log(summary_count);
+us.each(us.keys(summary_count).sort(), function(k){
+    console.log('Violation count (' +
+		k + '): ' +
+		summary_count[k].length + ' [' +
+		summary_count[k].join(', ') + ']');
+});
+console.log('===');
+//console.log(summary_violation_group);
+us.each(us.keys(summary_violation_group).sort(), function(grp){
+
+    var grp_sum = summary_violation_group[grp];
+    var grp_cnt = us.keys(grp_sum).length;
+	
+     var print_str = grp + ': ' + grp_cnt;
+
+    // A is already violated and C is always evaluated.
+    if( grp === 'A' || grp === 'C' ){ 
+	print_str += ' / ' + grp_cnt;
+    }else{
+	print_str += ' / ' + (grp_cnt + summary_unknown_count);
+    }
+
+    console.log('Best/worst violation by a resource in group (' + grp + '): ' +
+		print_str);
+});
+
+console.log('===');
+console.log('Total resources: ' + summary_total_count);
+console.log('Clear resources (no A.1.*): ' + summary_known_count);
+console.log('Unclear resources (yes A.1.*): ' + summary_unknown_count);
+	
 // Pug/Jade for table.
 var html_table_str = pug.renderFile('./scripts/static-table.pug',
 				    {"data_sources": data_sources});
