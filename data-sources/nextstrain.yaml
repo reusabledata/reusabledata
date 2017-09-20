@@ -1,0 +1,19 @@
+id: nextstrain
+source: 'Nextstrain'
+source-link: http://www.nextstrain.org
+status: nonpublic
+description: 'Nextstrain is an open-source project to harness the scientific and public health potential of pathogen genome data. We provide a continually-updated view of publicly available data with powerful analytics and visualizations showing pathogen evolution and epidemic spread. Our goal is to aid epidemiological understanding and improve outbreak response.'
+data-field: biology
+data-type: genomic resource
+data-categories:
+    - 'viral phylogeny'
+    - 'virus evolution'
+data-access: []
+license: unknown
+license-type: unknown
+license-link: 'TODO'
+license-issues: []
+license-commentary:
+    - 'This is apparently not a public data resource: it is consuming open science, but producing nothing for downstream. I have checked the three non-application pages and there is no data, downloads, or copyright beyond software: /, /about, and /methods.'
+    - 'From the site: This work is made possible by the open sharing of genetic data by research groups from all over the world. We gratefully acknowledge their contributions.'
+contacts: []
