@@ -22,4 +22,6 @@ More to come soon...
 <hr />
 ### Citation policy
 
-More to come soon...
+Please use the following citation:
+
+The Reusable Data Project. reusabledata.org accessed, source code and data at https://github.com/reusabledata/reusabledata
