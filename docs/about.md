@@ -28,6 +28,6 @@ their integration.
 ### Citation policy
 
 For the time being, if you wish to cite the (Re)usable Data Project,
-please use the following citation:
+please use the following:
 
 The Reusable Data Project. reusabledata.org accessed, source code and data at https://github.com/reusabledata/reusabledata
