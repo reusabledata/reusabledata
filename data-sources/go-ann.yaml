@@ -1,4 +1,4 @@
-id: go
+id: go-ann
 source: Gene Ontology (annotations)
 source-link: 'http://geneontology.org'
 status: complete
@@ -8,13 +8,14 @@ data-type: x-species
 data-categories:
   - 'gene annotation'
   - 'gene association'
+  - 'biological process'
+  - 'molecular function'
+  - 'cellular component'
 data-access:
   - type: api
     location: http://rdf.geneontology.org
   - type: download
     location: http://geneontology.org/page/download-annotations
-  - type: download
-    location: http://geneontology.org/page/download-ontology
 license: CC-BY-4.0
 license-type: permissive
 license-link: 'http://geneontology.org/page/use-and-license'
