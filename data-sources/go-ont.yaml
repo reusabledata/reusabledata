@@ -1,0 +1,23 @@
+id: go-ont
+source: Gene Ontology (ontology)
+source-link: 'http://geneontology.org'
+status: complete
+description: 'The mission of the GO Consortium is to develop an up-to-date, comprehensive, computational model of biological systems, from the molecular level to larger pathways, cellular and organism-level systems.'
+data-field: biology
+data-type: x-species
+data-categories:
+  - 'ontology'
+  - 'biological process'
+  - 'molecular function'
+  - 'cellular component'
+data-access:
+  - type: api
+    location: http://rdf.geneontology.org
+  - type: download
+    location: http://geneontology.org/page/download-ontology
+license: CC-BY-4.0
+license-type: permissive
+license-link: 'http://geneontology.org/page/use-and-license'
+license-commentary: []
+contacts:
+  - http://help.geneontology.org/
