@@ -1,0 +1,24 @@
+id: civicdb
+source: Clinical Interpretation of Variants in Cancer (CIViC)
+source-link: http://www.civicdb.org
+status: complete
+description: 'CIViC is an open access, open source, community-driven web resource for Clinical Interpretation of Variants in Cancer. Our goal is to enable precision medicine by providing an educational forum for dissemination of knowledge and active discussion of the clinical significance of cancer genome alterations.'
+data-field: biomedical
+data-type: human
+data-categories:
+    - 'cancer'
+    - 'precision medicine'
+    - 'variants'
+    - 'variant disease associations'
+data-access:
+    - type: download
+      location: https://civic.genome.wustl.edu/releases
+    - type: api
+      location: https://griffithlab.github.io/civic-api-docs/
+license: permissive
+license-type: 'CC0'
+license-link: 'https://civic.genome.wustl.edu/about'
+license-issues: []
+license-commentary: []
+contacts:
+    - https://civic.genome.wustl.edu/contact
