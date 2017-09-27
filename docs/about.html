@@ -10,11 +10,11 @@
     
      <link rel="shortcut icon" href="logo-circle.ico" />
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" crossorigin="anonymous">
-    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.0/vue.js"></script> -->
-    <!-- <script type="text/javascript" src="RUD.bundle.js"></script> -->
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" crossorigin="anonymous">
+     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.0/vue.js"></script> -->
+     <!-- <script type="text/javascript" src="RUD.bundle.js"></script> -->
 
-    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
@@ -38,7 +38,7 @@
               <!-- <a class="dropdown-item" href="index.html#home">Home</a> -->
               <a class="dropdown-item" href="index.html#who-we-are">Who we are</a>
               <a class="dropdown-item" href="index.html#what-this-is">What this is</a>
-              <a class="dropdown-item" href="index.html#our-criteria">Our criteria</a>
+              <a class="dropdown-item" href="index.html#our-criteria">Criteria overview</a>
               <a class="dropdown-item" href="index.html#our-sources-data">Our sources data</a>
             </div>
           </li>
@@ -141,7 +141,7 @@ please use the following:</p>
     <div class="row">
 	
 	<div id="our-sources-data" class="col-xl-12">
-	  
+
 	  <p>
 	    <small>
 	      All copyrightable materials on this site are ©
@@ -168,53 +168,53 @@ please use the following:</p>
 	      page</a> for the full list.
 	    </small>
 	  </p>
-	  
+
 	</div>
-	
+
       </div><!-- Done container. -->
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var global_data = ;
+      jQuery(document).ready(function(){
+        console.log('Ready...');
+        if( jQuery("#sourcestable") && jQuery("#sourcestable").length ){
+          console.log('Running #sourcetable...');
+          var tbl = jQuery("#sourcestable").DataTable({
+            //{autoWidth: true, "order": [[3, "desc"], [0, "asc"]]}
+            autoWidth: true
+          });
+
+          console.log('...table init...');
+
+          // Initialize for license commentary popups.
+          jQuery(function(){
+            jQuery('[data-toggle="popover"]').popover();
+          });
+          // And on paging redraw (they are separate).
+          tbl.on("draw", function(){
+            //console.log('DataTable draw event');
+            jQuery('[data-toggle="popover"]').popover();
+          });
+
+          console.log('...done.');
+        }
+      });
+    </script>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106654450-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
       
-      <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-      <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-      <script type="text/javascript">
-	var global_data = ;
-	jQuery(document).ready(function(){
-          console.log('Ready...');
-          if( jQuery("#sourcestable") && jQuery("#sourcestable").length ){
-            console.log('Running #sourcetable...');
-            var tbl = jQuery("#sourcestable").DataTable({
-              //{autoWidth: true, "order": [[3, "desc"], [0, "asc"]]}
-              autoWidth: true
-            });
+      gtag('config', 'UA-106654450-1');
+    </script>
 
-            console.log('...table init...');
-
-            // Initialize for license commentary popups.
-            jQuery(function(){
-              jQuery('[data-toggle="popover"]').popover();
-            });
-	    // And on paging redraw (they are separate).
-	    tbl.on("draw", function(){
-              //console.log('DataTable draw event');
-              jQuery('[data-toggle="popover"]').popover();
-            });
-
-            console.log('...done.');
-          }
-	});
-      </script>
-
-      <!-- Global Site Tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106654450-1"></script>
-      <script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments)};
-	gtag('js', new Date());
-	
-	gtag('config', 'UA-106654450-1');
-      </script>
-      
   </body>
   
 </html>
