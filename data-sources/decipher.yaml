@@ -1,5 +1,5 @@
 id: decipher
-last-curated: 2017-10-12
+last-curated: "2017-10-12"
 source: DECIPHER
 source-link: 'https://decipher.sanger.ac.uk'
 status: complete
@@ -23,15 +23,15 @@ license-link: 'https://decipher.sanger.ac.uk/datasharing'
 license-issues:
   - criteria: A.2
     comment: 'The resource uses an extensive custom license.'
-  - criteria: B.2
+  - criteria: B.1
     comment: There are terms that require possible audits in the future, making future free use something that needs to be negotiated.
   - criteria: C.1 
     comment: This could not be evaluated as no description of access was found.
   - criteria: C.2
     comment: This could not be evaluated as no description of access was found.
-  - criteria: D.1
+  - criteria: D.1.2
     comment: 'Given the numerous restrictions and requirements (e.g. purging, forced QA), it seems that downstream reuse would be problematic, even though there is a carve-out for "research".'
-  - criteria: E.1
+  - criteria: E.1.2
     comment: 'Given the numerous restrictions and requirements (e.g. only "registered" users can have access to the data, etc.), it seems that downstream reuse would be problematic, even though there is a carve-out for "research".'
 license-commentary:
   - "We are evaluating the bulk data access agreement, rather than the data display agreement, which specifically prevents any type of bulk (re)use."
@@ -41,6 +41,6 @@ license-commentary:
   - 'This seems like a "closed pool" type, even though is may just have one member, due to the use of "registered users" in the license.'
   - 'Additional terms of use in citation policy: "Authors who use data from the project must acknowledge DECIPHER using the following wording..."'
 grants:
-  - "Funding for the project was provided by the Wellcome Trust."
+  - label: "Funding for the project was provided by the Wellcome Trust."
 contacts:
   - decipher@sanger.ac.uk
