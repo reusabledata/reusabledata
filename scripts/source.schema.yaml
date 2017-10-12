@@ -15,6 +15,14 @@ mapping:
     type: str
     required: yes
     unique: true
+  ## The ISO 8601 date ofwhen the resource was last curated.
+  ##
+  ## Example usage:
+  ##   "last-curated": 2017-10-12
+  "last-curated":
+    type: str
+    required: no
+    pattern: /^\d\d\d\d\-\d\d\-\d\d$/
   ## Short label for the resource.
   ##
   ## Example usage:
