@@ -1,0 +1,45 @@
+id: decipher
+last-curated: "2017-10-12"
+source: DECIPHER
+source-link: 'https://decipher.sanger.ac.uk'
+status: complete
+description: 'DECIPHER is used by the clinical community to share and compare phenotypic and genotypic data. The DECIPHER database contains data from 24848 patients who have given consent for broad data-sharing; DECIPHER also supports more limited sharing via consortia.'
+data-field: biology
+data-type: human
+data-categories:
+  - 'gene'
+  - 'genotype'
+  - 'rare disease'
+  - 'phenotype'
+  - 'variant'
+  - 'submicroscopic chromosomal imbalance'
+  - 'rare sequence variants'
+data-access: []
+license: custom
+license-type: closed pool
+license-link: 'https://decipher.sanger.ac.uk/datasharing'
+license-issues:
+  - criteria: A.2
+    comment: 'The resource uses an extensive custom license.'
+  - criteria: B.1
+    comment: There are terms that require possible audits in the future, making future free use something that needs to be negotiated.
+  - criteria: C.1 
+    comment: This could not be evaluated as no description of access was found.
+  - criteria: C.2
+    comment: This could not be evaluated as no description of access was found.
+  - criteria: D.1.2
+    comment: 'Given the numerous restrictions and requirements (e.g. purging, forced QA), it seems that downstream reuse would be problematic, even though there is a carve-out for "research".'
+  - criteria: E.1.2
+    comment: 'Given the numerous restrictions and requirements (e.g. only "registered" users can have access to the data, etc.), it seems that downstream reuse would be problematic, even though there is a carve-out for "research".'
+license-commentary:
+  - "We are evaluating the bulk data access agreement, rather than the data display agreement, which specifically prevents any type of bulk (re)use."
+  - "While there are a few data files available at https://decipher.sanger.ac.uk/downloads/data , given the workding and context of the agreement, we believe that this is some other miscellaneous data."
+  - "Data access is mediated through the Data Access Agreement: https://decipher.sanger.ac.uk/files/pdfs/daa.pdf and becoming a registered user."
+  - "A written request is required to be submitted and approved before accessing the data."
+  - 'The DAA requires that accepted users: can only use data for research, cannot attempt to uncloak PII, must have proactive data security, must adhere to Data Protection Act 1998, may only share data with others who have agreed to these terms, allow GRL to do audits, accept required reporting of errors, destroy earlier data versions on update, as well as other (somewhat more "standard") terms.'
+  - 'This seems like a "closed pool" type, even though is may just have one member, due to the use of "registered users" in the license.'
+  - 'Additional terms of use in citation policy: "Authors who use data from the project must acknowledge DECIPHER using the following wording..."'
+grants:
+  - label: "Funding for the project was provided by the Wellcome Trust."
+contacts:
+  - decipher@sanger.ac.uk
