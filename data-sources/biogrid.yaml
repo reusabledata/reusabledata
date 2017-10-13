@@ -19,18 +19,9 @@ license-commentary:
     - 'Use, reproduction, modification, and other intellectual property rights to data stored on the BioGRID Sites will be subject to licensing arrangements that may be approved by BioGRID as applicable to such Content.'
     - 'You agree not to sell, resell, or offer for any commercial purposes, any portion of the BioGRID Sites, use of the BioGRID Sites, or access to the BioGRID Sites.'
     - 'Our designated agent to receive notification of claimed infringement is:  Mr. Terry Donaghue Director Technology Transfer and Industrial Liason 600 University Avenue Toronto, ON, Canada donaghue@mshri.on.ca TEL: 416-586-8225 FAX: 416-586-3110'
+    - 'Unclear if one would need to negotiate: "subject to licensing arrangements that may be approved by BioGRID"'
 license-issues:
     - criteria: A.1.1
       comment: 'multiple licenses found & cannot easily break down sources for separate evaluation'
-    - criteria: A.2
-      comment: "neither \"All rights reserved\", nor \"copyright\" are mentioned, ergo custom"
-    - criteria: B.1
-      comment: 'Unclear if one would need to negotiate: "subject to licensing arrangements that may be approved by BioGRID"'
-    - criteria: B.2.1
-      comment: 'Rights stay with original submitter.'
-    - criteria: D.1.1
-      comment: 'does not mention reuse, only use'
-    - criteria: E.1.1
-      comment: 'does not mention reuse, only use'
 contacts:
     - biogridadmin@gmail.com
