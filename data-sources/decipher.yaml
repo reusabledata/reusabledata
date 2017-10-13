@@ -14,9 +14,7 @@ data-categories:
   - 'variant'
   - 'submicroscopic chromosomal imbalance'
   - 'rare sequence variants'
-data-access:
-  - type: download
-    location: https://decipher.sanger.ac.uk/downloads/data
+data-access: []
 license: custom
 license-type: closed pool
 license-link: 'https://decipher.sanger.ac.uk/datasharing'
@@ -35,6 +33,7 @@ license-issues:
     comment: 'Given the numerous restrictions and requirements (e.g. only "registered" users can have access to the data, etc.), it seems that downstream reuse would be problematic, even though there is a carve-out for "research".'
 license-commentary:
   - "We are evaluating the bulk data access agreement, rather than the data display agreement, which specifically prevents any type of bulk (re)use."
+  - "While there are a few data files available at https://decipher.sanger.ac.uk/downloads/data , given the workding and context of the agreement, we believe that this is some other miscellaneous data."
   - "Data access is mediated through the Data Access Agreement: https://decipher.sanger.ac.uk/files/pdfs/daa.pdf and becoming a registered user."
   - "A written request is required to be submitted and approved before accessing the data."
   - 'The DAA requires that accepted users: can only use data for research, cannot attempt to uncloak PII, must have proactive data security, must adhere to Data Protection Act 1998, may only share data with others who have agreed to these terms, allow GRL to do audits, accept required reporting of errors, destroy earlier data versions on update, as well as other (somewhat more "standard") terms.'
