@@ -1,0 +1,41 @@
+id: monarch
+source: Monarch Initiative
+source-type: integrator
+source-link: 'https://monarchinitiative.org'
+status: complete
+description: 'Integrate, align, and re-distribute cross-species gene, genotype, variant, disease, and phenotype data. Provide a portal for exploration of phenotype-based similarity. Facilitate identification of animal models of human disease through phenotypic similarity. Enable quantitative comparison of cross-species phenotypes. Develop embeddable widgets for data exploration. Influence genotype and phenotype reporting standards. Improve ontologies to better curate genotype-phenotype data.'
+data-field: biology
+data-type: x-species
+data-categories:
+  - 'gene'
+  - 'genotype'
+  - 'disease'
+  - 'phenotype'
+  - 'variant'
+  - 'disease-phenotype associations'
+  - 'genotype-phenotype associations'
+data-access:
+  - type: api
+    location: https://api.monarchinitiative.org/api/
+  - type: download
+    location: https://archive.monarchinitiative.org/latest/
+license: CC-BY-3.0
+license-type: permissive
+license-link: 'https://monarchinitiative.org'
+license-issues:
+  - criteria: B.2.1
+    comment: 'Text in footer: "Except where forbidden by the original sources..."; how these interact is not clear.'
+  - criteria: B.2.2
+    comment: There is no indication of which data has what sources, so reusability cannot be determined.
+  - criteria: C.1
+    comment: The scope of the API is not clear and the data downloads locations are apparently not public.
+  - criteria: D.1.2
+    comment: While the license of original Monarch work is CC-BY-3.0, there is no indication of how this interacts with upstream licenses and what they are.
+  - criteria: E.1.2
+    comment: While the license of original Monarch work is CC-BY-3.0, there is no indication of how this interacts with upstream licenses and what they are.
+license-commentary:
+  - I could not find a direct reference to whether the data found at the API and downloads were complete in scope.
+  - Apparent license found in footer of all pages.
+  - Except where forbidden by the original sources, this work is licensed under a Creative Commons Attribution 3.0 License.
+contacts:
+  - info@monarchinitiative.org
