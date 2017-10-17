@@ -1,4 +1,4 @@
-id: kegg
+id: "kegg-ftp"
 source: 'Kyoto Encyclopedia of Genes and Genomes (KEGG)'
 source-link: http://www.genome.jp/kegg/
 status: complete
