@@ -1,0 +1,38 @@
+id: "kegg-ftp"
+source: 'Kyoto Encyclopedia of Genes and Genomes (KEGG), FTP'
+source-link: http://kegg.jp
+status: complete
+description: 'KEGG is an integrated database resource consisting of the seventeen main databases including systems, genomic, chemical, and health information.'
+data-field: biology
+data-type: 'genomic resource'
+data-categories:
+    - 'gene-pathway association'
+    - 'disease-gene association'
+    - 'orthology'
+data-access:
+    - type: download
+      location: http://www.kegg.jp/kegg/download/
+license: custom
+license-type: restrictive
+license-link: 'http://www.kegg.jp/kegg/legal.html'
+license-issues:
+    - criteria: A.2
+      comment: "For our use case (see commentary), KEGG (FTP) uses custom licensing through NPO Bioinformatics Japan (https://www.bioinformatics.jp/en/keggftp.html)."
+    - criteria: B.1
+      comment: 'According to the organizational use agreement: "Your Product or Service must not allow Your users to obtain KEGG FTP Data, except in small quantities"; many uses would require negotiation here as continuing reuse is unclear.'
+    - criteria: D.1.2
+      comment: 'The licensing terms are too restrictive for reasonable reuse (e.g. B.1 violation above).'
+    - criteria: E.1.2
+      comment: 'Given our interpretation of the licensing terms, there is unlikely to be much ability to freely reuse the KEGG FTP data within any class.'
+license-commentary:
+    - "KEGG (FTP) presents special problems as their licensing depends on variables like academic/non-academic, group/individual, commercial/non-commercial, and location. While the end terms do have some variation, for the sake of convenience, we will act as a non-commercial academic group based in the US wanting to access the entire database. Much curation was then based off of the organizational use agreement: https://www.bioinformatics.jp/docs/subscription_organizational.pdf ."
+    - "Given all of the possible use cases, license verbiage, and special conditions, KEGG (FTP) was exceptionally difficult to curate."
+    - "Academic users license through NPO Bioinformatics Japan (https://www.bioinformatics.jp/en/keggftp.html)."
+    - "Non-academic users license through Pathway Solutions (http://www.pathway.jp/)."
+    - "While there are many possible combinations, any individual or use case should have a single license that they will need to get, giving us a pass on A.1."
+    - "While we did not go through the registration process, C.1 seems like it would be cleared by the directory layout description on http://www.kegg.jp/kegg/download/ ."
+    - "While we did not go through the registration process, C.2 seems like it would be cleared by the implied straighforward FTP access post licensing."
+    - 'Also see KEGG API and KEGG REST resources.'
+last-curated: "2017-10-17"
+contacts:
+    - 'http://www.genome.jp/feedback/'
