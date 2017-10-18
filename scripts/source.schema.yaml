@@ -15,7 +15,7 @@ mapping:
     type: str
     required: yes
     unique: true
-  ## The ISO 8601 date ofwhen the resource was last curated.
+  ## (Optional) The ISO 8601 date of when the resource was last curated.
   ##
   ## Example usage:
   ##   "last-curated": 2017-10-12
@@ -78,7 +78,7 @@ mapping:
   "data-type":
     type: str
     required: yes
-  ## (Optional) tags to describe the resource and its data.
+  ## (Optional) Tags to describe the resource and its data.
   ##
   ## Example usage:
   ##   "data-categories":
@@ -90,7 +90,7 @@ mapping:
     sequence:
       - type: str
     required: no
-  ## (Optional) links to resource data.
+  ## (Optional) Links to resource data.
   ##
   ## Example usage:
   ##   "data-access":
@@ -144,7 +144,7 @@ mapping:
     type: str
     required: yes
     enum: ["unknown", "copyleft", "permissive", "public domain", "copyright", "restrictive", "closed pool"]
-  ## (Optional) link to the resource license.
+  ## (Optional) Link to the resource license.
   ##
   ## Example usage:
   ##   "license-link": http://foo.bar/license
@@ -164,7 +164,7 @@ mapping:
     sequence:
       - type: str
     required: no
-  ## (Optional) structured issues with the license.
+  ## (Optional) Structured issues with the license.
   ## For every issue discovered with a resource, there should be a
   ## corresponding item in the license-issues field that marks the /exact/
   ## violation, along with any comments. This field can be used by
@@ -192,7 +192,7 @@ mapping:
             type: str
             required: no
     required: no
-  ## (Optional) marker noting that there was some extended internal
+  ## (Optional) Marker noting that there was some extended internal
   ## discussion or controversy about the evaluation of the licensing
   ## terms. If this is marked at "true", the controversy, or a link
   ## to a permanent archive of the controversy, must be sufficiently
@@ -204,7 +204,7 @@ mapping:
     type: str
     required: no
     enum: ["true", "false"]
-  ## (Optional) resource contact information, link or email
+  ## (Optional) Resource contact information, link or email
   ## or whatever is public.
   ##
   ## Example usage:
@@ -216,7 +216,7 @@ mapping:
     sequence:
       - type: str
     required: no
-  ## (Optional) semi-structured list of supporting grants
+  ## (Optional) Semi-structured list of supporting grants
   ##   "grants":
   ##     - label: NIH Grant for Science 123 
   ##       url: http://foo.bar 
