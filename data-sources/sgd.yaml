@@ -25,7 +25,7 @@ license-issues:
 license-commentary:
   - 'The license information found was in passing in the "About SGD" paragraph on the SGD Help page at https://sites.google.com/view/yeastgenome-help/about; in its entirety: "...all of the data in SGD are freely accessible to researchers and educators worldwide..."'
   - "Otherwise, a reasonable person might assume that the licensing terms were those of Stanford's Terms of Use (https://www.stanford.edu/site/terms/), linked on most pages and considerably more restrictive."
-last-curated: 2017-10-17
+last-curated: "2017-10-17"
 grants:
   - label: "The SGD is funded by the National Human Genome Research Institute (NHGRI), US National Institutes of Health [5U41HG001315-18].  Funding is also provided by the Gene Ontology Consortium project funded by the NHGRI [2U41HG002273-13] and the InterMOD project [5R01HG004834-04].  The SGD is part of the Department of Genetics at the School of Medicine, Stanford University and located within the Center for Genomics and Personalized Medicine."
 contacts:
