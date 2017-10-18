@@ -33,7 +33,7 @@ license-commentary:
     - "While we did not go through the registration process, C.1 seems like it would be cleared by the directory layout description on http://www.kegg.jp/kegg/download/ ."
     - "While we did not go through the registration process, C.2 seems like it would be cleared by the implied straighforward FTP access post licensing."
     - 'Also see KEGG API and KEGG REST resources.'
-was-controversial: true
+was-controversial: "true"
 last-curated: "2017-10-17"
 contacts:
     - 'http://www.genome.jp/feedback/'
