@@ -192,6 +192,18 @@ mapping:
             type: str
             required: no
     required: no
+  ## (Optional) marker noting that there was some extended internal
+  ## discussion or controversy about the evaluation of the licensing
+  ## terms. If this is marked at "true", the controversy, or a link
+  ## to a permanent archive of the controversy, must be sufficiently
+  ## contained in the "license-commentary" to reconstruct the issues.
+  ##
+  ## Example usage:
+  ##   "was-controversial": true
+  "was-controversial":
+    type: str
+    required: no
+    enum: ["true", "false"]
   ## (Optional) resource contact information, link or email
   ## or whatever is public.
   ##
