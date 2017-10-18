@@ -20,7 +20,7 @@ license-issues:
     comment: "Could not find any clear terms on any searched pages. See commentary."
 license-commentary:
   - 'While there is a linked Terms of Use (https://www.ebi.ac.uk/about/terms-of-use), the "General" (section 1) and "Data Services" (section 1) parts seem to defer to the "data owners"; it is unclear if this is PomBase. No other license information could be found.'
-last-curated: 2017-10-17
+last-curated: "2017-10-17"
 grants:
   - label: "PomBase is funded by the Wellcome Trust [104967/Z/14/Z]."
 contacts:
