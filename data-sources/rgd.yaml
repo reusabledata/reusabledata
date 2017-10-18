@@ -1,0 +1,31 @@
+id: "rgd"
+source: 'Rat Genome Database (RGD)'
+source-link: http://rgd.mcw.edu
+status: complete
+description: "The Rat Genome Database (RGD) was established in 1999 and is the premier site for genetic, genomic, phenotype, and disease data generated from rat research. In addition, it provides easy access to corresponding human and mouse data for cross-species comparisons."
+data-field: biology
+data-type: 'MOD'
+data-categories:
+    - 'genotype-phenotype association'
+    - 'disease-model association'
+    - 'gene expression'
+data-access:
+    - type: download
+      location: ftp://ftp.rgd.mcw.edu/pub/
+    - type: api
+      location: http://rest.rgd.mcw.edu/rgdws/swagger-ui.html
+license: custom
+license-type: permissive
+license-link: 'http://rgd.mcw.edu/wg/home/disclaimer'
+license-issues:
+    - criteria: A.2
+      comment: "The licensing page seems to use custom verbiage."
+    - criteria: E.1.1
+      comment: "The license distinguishes groups, allowing for free use in research. Commercial groups must negotiate."
+license-commentary:
+  - 'The active part of the their license in its entirety is: "This software and data are provided to enhance knowledge and encourage progress in the scientific community and are to be used only for research and educational purposes. Any reproduction or use for commercial purpose is prohibited without the prior express written permission of the Bioinformatics Research Center."'
+last-curated: "2017-10-17"
+grants:
+  - label: "RGD is funded by grant HL64541 from the National Heart, Lung, and Blood Institute on behalf of the NIH."
+contacts:
+  - 'http://rgd.mcw.edu/contact/index.shtml'
