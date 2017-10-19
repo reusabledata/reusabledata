@@ -408,6 +408,43 @@
         ]
     },
     {
+        "id": "dictybase",
+        "source": "dictyBase",
+        "source-link": "http://dictybase.org",
+        "status": "complete",
+        "description": "dictyBase is a database that provides a centralized source of Dictyostelium information for Dictyostelium researchers and Non-Dictyostelium researchers. This includes tutorials, dictyNews, techniques, the Stock Center, genomic and molecular information, colleague infromation, Dictyostelium literature, and much more.",
+        "data-field": "biology",
+        "data-type": "MOD",
+        "data-categories": [
+            "genotype-phenotype association",
+            "disease-model association",
+            "gene expression"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://dictybase.org/Downloads/"
+            }
+        ],
+        "license": "unknown",
+        "license-type": "unknown",
+        "license-link": "TODO",
+        "license-issues": [
+            {
+                "criteria": "A.1.2",
+                "comment": "Could not find any clear terms on any searched pages. See commentary."
+            }
+        ],
+        "license-commentary": [
+            "While there does not seem to be any clear licensing information currently on the site, from a separate conversation (https://github.com/geneontology/noctua/issues/510#issuecomment-334864073), it would seem that this will soon be updated."
+        ],
+        "last-curated": "2017-10-17",
+        "contacts": [
+            "dictybase@northwestern.edu",
+            "http://dictybase.org/db/cgi-bin/dictyBase/suggestion"
+        ]
+    },
+    {
         "id": "encode",
         "source": "ENCODE",
         "source-link": "https://www.genome.gov/10005107/",
