@@ -10,8 +10,7 @@ non-commercial (2) academic (3) group that is (4) based in the US and
 trying to (5) create an aggregating resource, noting that other
 entities may have different results in the license commentary.
 
-## <span id="criteria-A">A) License is public, discoverable, and
-   standard</span>
+## <span id="criteria-A">A) License is public, discoverable, and standard</span>
 
 **Rationale:** All data sources should publicly state their terms of
 use in an easy-to-find and non-ambiguous manner.
