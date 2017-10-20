@@ -1,7 +1,17 @@
 
 # Star criteria for the (Re)usable Data Project
 
-## <span id="criteria-A">A) License is public, discoverable, and standard</span>
+While we try to cover as much of the licensing possibilities of a data
+resource that we can, in a few special cases we may choose a
+particular "hat" to wear while evaluating to prevent a combinatorial
+explosion, which may also reduce the clarity of our curations for the
+community. In these cases, we may take on the role of a (1)
+non-commercial (2) academic (3) group that is (4) based in the US and
+trying to (5) create an aggregating resource, noting that other
+entities may have different results in the license commentary.
+
+## <span id="criteria-A">A) License is public, discoverable, and
+   standard</span>
 
 **Rationale:** All data sources should publicly state their terms of
 use in an easy-to-find and non-ambiguous manner.
