@@ -33,7 +33,7 @@ mapping:
   ## URL for the resource.
   ##
   ## Example usage:
-  ##   "source-line": http://foo.bar 
+  ##   "source-link": http://foo.bar
   "source-link":
     type: str
     required: yes
