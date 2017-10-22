@@ -20,7 +20,7 @@ table(id='sourcestable' class='table table-sm table-striped rud-compact-table')
       if source['status'] === 'complete'
        tr
          td 
-           a(href=source['source-link']) #{ source.source }
+           a(href='source['source-link']') #{ source.source }
          td #{ source['data-tags'] }
          //- case source['grade']
          case source['grade-automatic']

@@ -255,13 +255,3 @@ mapping:
             required: no
             pattern: /^(TODO|http(s?)\:\/\/\w[\/\.\-\:\=\?\&\_\+\u0023\w]+)$/
     required: no
-  ## "grade" is no long use--scores are generated directly from
-  ## criteria violations.
-  # ## The final grade for the resource, as justified by the violations.
-  # ## This is now auto-generated from the critera violations.
-  # ##
-  # ## Example usage:
-  # ##   "grade": 4.0 
-  # "grade":
-  #   type: number
-  #   required: no
