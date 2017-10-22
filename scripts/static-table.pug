@@ -20,9 +20,10 @@ table(id='sourcestable' class='table table-sm table-striped rud-compact-table')
       if source['status'] === 'complete'
        tr
          td 
-           a(href='source['source-link']') #{ source.source }
+           a(href=source['id'] + '.html') #{ source.source }
+           span() &nbsp;           
+           a(href=source['source-link']) &#x1f517;
          td #{ source['data-tags'] }
-         //- case source['grade']
          case source['grade-automatic']
            when 5
              td(style='color:#ffd700;font-size:1.0em;') &#x2605;&nbsp;&#x2605;&nbsp;&#x2605;&nbsp;&#x2605;&nbsp;&#x2605;
