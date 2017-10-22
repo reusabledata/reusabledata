@@ -1,6 +1,6 @@
 
 
-all: index.html criteria.html license-types.html reading.html about.html
+all: index.html criteria.html license-types.html reading.html about.html details_pages
 
 # .PHONY: clean
 # clean:
@@ -22,6 +22,15 @@ compiled.json:
 
 index.html: compiled.json
 	node ./scripts/tmp_static_output_gen.js -i ./data-sources/compiled.json -t ./scripts/tmp_static_output_gen.tmpl -o ./docs/index.html
+
+###
+### All of the details pages are generated from running the compiled
+### JSON through a generator step.
+###
+
+.PHONY: details_pages
+details_pages: compiled.json
+	node ./scripts/details-assemble.js --in ./data-sources/compiled.json --outer-template ./scripts/tmp_static_output_frame.tmpl --body-template ./scripts/tmp_details_pages_output.tmpl --output ./docs
 
 ###
 ### criteria.html is the "standard" md -> partial-doc html -> assembled doc.

@@ -1,0 +1,220 @@
+
+<div class="container">
+
+  <!-- start who we are row -->
+  <div class="row">
+    
+    <div class="col-xl-12">
+
+      <h1 class="card-title">{{ source }} - {{ id }}</h1>
+
+      <p>
+	<dl>
+
+	  <!-- description -->
+	  <dt>
+	    Description
+	  </dt>
+	  <dd>
+	    {{ description }}
+	  </dd>
+
+	  <!-- last-curated -->
+	  <dt>
+	    Last curated
+	  </dt>
+	  <dd>
+	    {{ #last-curated }}
+	    {{ last-curated }}
+	    {{ /last-curated }}
+	    {{ ^last-curated }}
+	    Unknown
+	    {{ /last-curated }}
+	  </dd>
+
+	  <!-- source-link -->
+	  <dt>
+	    Location
+	  </dt>
+	  <dd>
+	    <a href="{{ source-link }}">{{ source-link }}</a>
+	  </dd>
+
+	  <!-- source-type -->
+	  <dt>
+	    Source type
+	  </dt>
+	  <dd>
+	    {{ ^source-type }}
+	    TBD
+	    {{ /source-type }}
+	    {{ #source-type }}
+	    {{ source-type }}
+	    {{ /source-type }}
+	  </dd>
+	  
+	  <!-- status -->
+	  <dt>
+	    Curation status
+	  </dt>
+	  <dd>
+	    {{ status }}
+	  </dd>
+
+	  <!-- data-field -->
+	  <dt>
+	    Field
+	  </dt>
+	  <dd>
+	    {{ data-field }}
+	  </dd>
+
+	  <!-- data-type -->
+	  <dt>
+	    Type
+	  </dt>
+	  <dd>
+	    {{ data-type }}
+	  </dd>
+
+	  <!-- data-categories -->
+	  <dt>
+	    Categories
+	  </dt>
+	  <dd>
+	    {{ ^data-categories }}
+	    TBD
+	    {{ /data-categories }}
+	    {{ #data-categories }}
+	    {{ . }} <br />
+	    {{ /data-categories }}
+	  </dd>
+	  
+	  <!-- data-access -->
+	  <dt>
+	    Access
+	  </dt>
+	  <dd>
+	    {{ ^data-access }}
+	    None
+	    {{ /data-access }}
+	    {{ #data-access }}
+	    <a href="{{ location }}">{{type}}{{ #label }}: {{ label }}{{ /label }}</a> <br />
+	    {{ /data-access }}
+	  </dd>
+	  
+	  <!-- license -->
+	  <dt>
+	    License
+	  </dt>
+	  <dd>
+	    {{ license }}
+	  </dd>
+
+	  <!-- license-type -->
+	  <dt>
+	    License type
+	  </dt>
+	  <dd>
+	    <a href="license-types.html#{{ license-type }}">{{ license-type }}</a>
+	  </dd>
+
+	  <!-- license-link -->
+	  <dt>
+	    License location
+	  </dt>
+	  <dd>
+	    <a href="{{ license-link }}">{{ license-link }}</a>
+	  </dd>
+
+	  <!-- license-hat-used -->
+	  <dt>
+	    Focused curation
+	  </dt>
+	  <dd>
+	    {{ ^license-hat-used }}
+	    false
+	    {{ /license-hat-used }}
+	    {{ #license-hat-used }}
+	    {{ license-hat-used }}
+	    {{ /license-hat-used }}
+	  </dd>
+	  
+	  <!-- license-commentary -->
+	  <dt>
+	    Commentary
+	  </dt>
+	  <dd>
+	    {{ ^license-commentary }}
+	    None
+	    {{ /license-commentary }}
+	    {{ #license-commentary }}
+	    {{ . }} <br />
+	    {{ /license-commentary }}
+	  </dd>
+	  
+	  <!-- license-issues -->
+	  <dt>
+	    Issues
+	  </dt>
+	  <dd>
+	    {{ ^license-issues }}
+	    None
+	    {{ /license-issues }}
+	    {{ #license-issues }}
+	    <a href="criteria.html#criteria-{{ criteria }}">Criteria {{criteria}}</a>: {{ comment }} <br />
+	    {{ /license-issues }}
+	  </dd>
+	  
+	  <!-- was-controversial -->
+	  <dt>
+	    Controversial
+	  </dt>
+	  <dd>
+	    {{ ^was-controversial }}
+	    false
+	    {{ /was-controversial }}
+	    {{ #was-controversial }}
+	    {{ was-controversial }}
+	    {{ /was-controversial }}
+	  </dd>
+	  
+	  <!-- contacts -->
+	  <dt>
+	    Contacts
+	  </dt>
+	  <dd>
+	    {{ ^contacts }}
+	    Unknown
+	    {{ /contacts }}
+	    {{ #contacts }}
+	    {{ . }}  <br />
+	    {{ /contacts }}
+	  </dd>
+	  
+	  <!-- grants -->
+	  <dt>
+	    Grants
+	  </dt>
+	  <dd>
+	    {{ ^grants }}
+	    TBD
+	    {{ /grants }}
+	    {{ #grants }}
+	    {{ ^url }}
+	    {{ label }} <br />
+	    {{ /url }}
+	    {{ #url }}
+	    <a href="{{ url }}">{{ label }}</a> <br />
+	    {{ /url }}
+	    {{ /grants }}
+	  </dd>
+	  
+	</dl>
+      </p>
+      
+    </div>
+    
+  </div> <!-- end row -->
+  
+</div><!-- Done container. -->
