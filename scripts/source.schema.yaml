@@ -15,6 +15,13 @@ mapping:
     type: str
     required: yes
     unique: true
+  ## Full description of the resource.
+  ##
+  ## Example usage:
+  ##   "description": this awesome resource does cool things with beans 
+  "description":
+    type: str
+    required: yes
   ## (Optional) The ISO 8601 date of when the resource was last curated.
   ##
   ## Example usage:
@@ -57,13 +64,6 @@ mapping:
     type: str
     required: yes
     enum: ["complete", "incomplete", "nonpublic"]
-  ## Full description of the resource.
-  ##
-  ## Example usage:
-  ##   "description": this awesome resource does cool things with beans 
-  "description":
-    type: str
-    required: yes
   ## Are of research for the resource.
   ##
   ## Example usage:
