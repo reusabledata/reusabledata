@@ -124,7 +124,12 @@
 	    License location
 	  </dt>
 	  <dd>
+	    {{ ^license-link }}
+	    TBD
+	    {{ /license-link }}
+	    {{ #license-link }}
 	    <a href="{{ license-link }}">{{ license-link }}</a>
+	    {{ /license-link }}
 	  </dd>
 
 	  <!-- license-hat-used -->
