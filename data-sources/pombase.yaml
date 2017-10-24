@@ -1,0 +1,28 @@
+id: "pombase"
+source: 'PomBase'
+source-link: http://pombase.org
+status: complete
+description: "PomBase is a comprehensive database for the fission yeast Schizosaccharomyces pombe, providing structural and functional annotation, literature curation and access to large-scale data sets."
+data-field: biology
+data-type: 'MOD'
+data-categories:
+  - 'genotype-phenotype association'
+  - 'disease-model association'
+  - 'gene expression'
+data-access:
+  - type: download
+    location: http://www.pombase.org/downloads
+license: unknown
+license-type: unknown
+license-link: TODO
+license-issues:
+  - criteria: A.1.2
+    comment: "Could not find any clear terms on any searched pages. See commentary."
+license-commentary:
+  - 'While there is a linked Terms of Use (https://www.ebi.ac.uk/about/terms-of-use), the "General" (section 1) and "Data Services" (section 1) parts seem to defer to the "data owners"; it is unclear if this is PomBase. No other license information could be found.'
+last-curated: "2017-10-17"
+grants:
+  - label: "PomBase is funded by the Wellcome Trust [104967/Z/14/Z]."
+contacts:
+  - 'helpdesk@pombase.org'
+  - 'http://www.pombase.org/feedback'
