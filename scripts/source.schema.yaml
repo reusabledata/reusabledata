@@ -15,10 +15,10 @@ mapping:
     type: str
     required: yes
     unique: true
-  ## Full description of the resource.
+  ## A full description of the resource from the resource itself, if possible.
   ##
   ## Example usage:
-  ##   "description": this awesome resource does cool things with beans 
+  ##   "description": this awesome resource does cool things with beans
   "description":
     type: str
     required: yes
@@ -30,7 +30,7 @@ mapping:
     type: str
     required: no
     pattern: /^\d\d\d\d\-\d\d\-\d\d$/
-  ## Short label for the resource.
+  ## Short internal label for the resource.
   ##
   ## Example usage:
   ##   "source": FooBar
@@ -45,7 +45,7 @@ mapping:
     type: str
     required: yes
     pattern: /^(TODO|http(s?)\:\/\/\w[\/\.\-\:\=\?\&\_\+\u0023\w]+)$/
-  ## How the resource relates to the data it contains.
+  ## (Optional) How the resource relates to the data it contains.
   ## Current allowable entries are: "unknown", "repository", and "source",
   ## and "integrator".
   ##
@@ -59,19 +59,19 @@ mapping:
   ## Current allowable entries are: "complete", "incomplete", and "nonpublic".
   ##
   ## Example usage:
-  ##   "status": incomplete 
+  ##   "status": incomplete
   "status":
     type: str
     required: yes
     enum: ["complete", "incomplete", "nonpublic"]
-  ## Are of research for the resource.
+  ## The area of research for the resource.
   ##
   ## Example usage:
   ##   "data-field": biomedical
   "data-field":
     type: str
     required: yes
-  ## Type of data the resource contains.
+  ## The type of data the resource contains.
   ##
   ## Example usage:
   ##   "data-type": human phenotype gene associations
@@ -83,14 +83,14 @@ mapping:
   ## Example usage:
   ##   "data-categories":
   ##      - 'food terminology'
-  ##      - 'food ontology' 
+  ##      - 'food ontology'
   ##      - 'food associations'
   "data-categories":
     type: seq
     sequence:
       - type: str
     required: no
-  ## (Optional) Links to resource data.
+  ## (Optional) Links to the resource's data.
   ##
   ## Example usage:
   ##   "data-access":
@@ -123,8 +123,8 @@ mapping:
             required: yes
             pattern: /^(ht|f)tp(s?)\:\/\/\w[\/\.\-\:\=\?\&\_\+\u0023\w]+$/
     required: no
-  ## The license that is used.
-  ## Should try and use SPDX where we can: https://spdx.org/licenses/
+  ## The license that is used by the resource.
+  ## We use SPDX where we can (https://spdx.org/licenses/)
   ## or: "unknown", "public domain", "all rights reserved", or "custom".
   ##
   ## Example usage:
@@ -133,9 +133,9 @@ mapping:
     type: str
     required: yes
   ## The type of license that is being used. This will be to define
-  ## compatible data pools in the future, only the grossest terms now.
-  ## If you do not know, enter "TODO".
-  ## I.e. "unknown", "copyleft", "permissive", "public domain",
+  ## compatible data pools in the future; we only use the grossest terms now.
+  ## If it is not known "TODO" is used. Current possible values are:
+  ## "unknown", "copyleft", "permissive", "public domain",
   ## "copyright", "restrictive", or "closed pool".
   ##
   ## Example usage:
@@ -144,7 +144,7 @@ mapping:
     type: str
     required: yes
     enum: ["unknown", "copyleft", "permissive", "public domain", "copyright", "restrictive", "closed pool"]
-  ## (Optional) Link to the resource license.
+  ## (Optional) The link to the resource license.
   ##
   ## Example usage:
   ##   "license-link": http://foo.bar/license
@@ -165,25 +165,13 @@ mapping:
   ## academic (3) group that is (4) based in the US and trying to (5)
   ## create an aggregating resource, noting that other entities may have
   ## different results in the license commentary."
-  ## 
+  ##
   ## Example usage:
   ##   "license-hat-used": "true"
   "license-hat-used":
     type: str
     required: no
     enum: ["true", "false"]
-  ## (Optional) Further commentary on the license, possibly including things
-  ## like locations of additional licenses.
-  ##
-  ## Example usage:
-  ##   "license-commentary":
-  ##      - "one thought"
-  ##      - "another thought"
-  "license-commentary":
-    type: seq
-    sequence:
-      - type: str
-    required: no
   ## (Optional) Structured issues with the license.
   ## For every issue discovered with a resource, there should be a
   ## corresponding item in the license-issues field that marks the /exact/
@@ -212,6 +200,19 @@ mapping:
             type: str
             required: no
     required: no
+  ## (Optional) Further commentary on the license, possibly including
+  ## the though process of the curations and things like locations of
+  ## additional licenses.
+  ##
+  ## Example usage:
+  ##   "license-commentary":
+  ##      - "one thought"
+  ##      - "another thought"
+  "license-commentary":
+    type: seq
+    sequence:
+      - type: str
+    required: no
   ## (Optional) Marker noting that there was some extended internal
   ## discussion or controversy about the evaluation of the licensing
   ## terms. If this is marked at "true", the controversy, or a link
@@ -224,7 +225,7 @@ mapping:
     type: str
     required: no
     enum: ["true", "false"]
-  ## (Optional) Resource contact information, link or email
+  ## (Optional) Resource contact information, link, email,
   ## or whatever is public.
   ##
   ## Example usage:
@@ -236,10 +237,12 @@ mapping:
     sequence:
       - type: str
     required: no
-  ## (Optional) Semi-structured list of supporting grants
+  ## (Optional) Semi-structured list of supporting grants.
+  ##
+  ## Example usage:
   ##   "grants":
-  ##     - label: NIH Grant for Science 123 
-  ##       url: http://foo.bar 
+  ##     - label: NIH Grant for Science 123
+  ##       url: http://foo.bar
   "grants":
     type: seq
     sequence:
