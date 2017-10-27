@@ -18,6 +18,7 @@
 	"npm": ">= 2.15"
     },
     "dependencies": {
+	"glob": "7.1.2",
 	"markdown": "0.5.0",
 	"minimist": "1.2.0",
 	"mustache": "2.3.0",
@@ -42,7 +43,7 @@
     "bundleDependencies": [],
     "private": false,
     "main": null,
-    "bugs": { 
+    "bugs": {
 	"url": "https://github.com/reusabledata/reusabledata/issues"
     },
     "directories": {
