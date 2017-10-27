@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
      <title>BGee (data)(bgee-data)</title>
-    
+
      <link rel="shortcut icon" href="logo-circle.ico" />
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
      <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" crossorigin="anonymous">
@@ -29,7 +29,7 @@
 	<img src="logo-circle.png" height="30" class="d-inline-block align-top" alt="">
 	(Re)usable Data Project
       </a>
-      
+
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown">
@@ -73,196 +73,301 @@
     </nav>
 
     
-    
+
     <!-- spacer -->
     <div style="height:32px;"></div>
 
     <div class="container"><!-- Start main content container. -->
-      
+
       <!-- <div class="row"> -->
       <!-- 	<div class="col-xl-6"> -->
       <div class="card">
 	<div class="card-block">
 	  <!-- <h4 class="card-title">What this is</h4> -->
-	  
-<div class="container">
+	  <!-- -->
+<!-- Please note that this template, whatever the form, should follow -->
+<!-- source.schema.yaml as closely as possible.
+     <!-- -->
 
-  <!-- start who we are row -->
-  <div class="row">
-    
-    <div class="col-xl-12">
+     <div class="container">
 
-      <h1 class="card-title">BGee (data) - bgee-data</h1>
+       <!-- start who we are row -->
+       <div class="row">
 
-      <p>
-	<dl>
+	 <div class="col-xl-12">
 
-	  <!-- description -->
-	  <dt>
-	    Description
-	  </dt>
-	  <dd>
-	    Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, Affymetrix, in situ hybridization, and EST data).
-	  </dd>
+	   <h1 class="card-title">BGee (data) - bgee-data</h1>
 
-	  <!-- last-curated -->
-	  <dt>
-	    Last curated
-	  </dt>
-	  <dd>
-	    Unknown
-	  </dd>
+	   <p>
+	     <dl>
 
-	  <!-- source-link -->
-	  <dt>
-	    Location
-	  </dt>
-	  <dd>
-	    <a href="http:&#x2F;&#x2F;bgee.org">http:&#x2F;&#x2F;bgee.org</a>
-	  </dd>
+	       <!-- description -->
+	       <dt class="explanation-header">
+		 Description
+	       </dt>
+	       <dd class="field-explanation">
+		 A full description of the resource from the resource
+		 itself, if possible.
+	       </dd>
+	       <dd class="curated-data">
+		 Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, Affymetrix, in situ hybridization, and EST data).
+	       </dd>
 
-	  <!-- source-type -->
-	  <dt>
-	    Source type
-	  </dt>
-	  <dd>
-	    TBD
-	  </dd>
-	  
-	  <!-- status -->
-	  <dt>
-	    Curation status
-	  </dt>
-	  <dd>
-	    complete
-	  </dd>
+	       <!-- last-curated -->
+	       <dt class="explanation-header">
+		 Last curated
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) The ISO 8601 date of when the resource was
+		 last curated.
+	       </dd>
+	       <dd class="curated-data">
+		 Unknown
+	       </dd>
 
-	  <!-- data-field -->
-	  <dt>
-	    Field
-	  </dt>
-	  <dd>
-	    biomedical
-	  </dd>
+	       <!-- source-link -->
+	       <dt class="explanation-header">
+		 Location
+	       </dt>
+	       <dd class="field-explanation">
+		 URL for the resource.
+	       </dd>
+	       <dd class="curated-data">
+		 <a href="http:&#x2F;&#x2F;bgee.org">http:&#x2F;&#x2F;bgee.org</a>
+	       </dd>
 
-	  <!-- data-type -->
-	  <dt>
-	    Type
-	  </dt>
-	  <dd>
-	    x-species
-	  </dd>
+	       <!-- source-type -->
+	       <dt class="explanation-header">
+		 Source type
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) How the resource relates to the data it
+		 contains.  Current allowable entries are: "unknown",
+		 "repository", and "source", and "integrator".
+	       </dd>
+	       <dd class="curated-data">
+		 TBD
+	       </dd>
 
-	  <!-- data-categories -->
-	  <dt>
-	    Categories
-	  </dt>
-	  <dd>
-	    expression data <br />
-	  </dd>
-	  
-	  <!-- data-access -->
-	  <dt>
-	    Access
-	  </dt>
-	  <dd>
-	    <a href="http:&#x2F;&#x2F;bgee.org&#x2F;?page&#x3D;doc&amp;action&#x3D;access">download</a> <br />
-	  </dd>
-	  
-	  <!-- license -->
-	  <dt>
-	    License
-	  </dt>
-	  <dd>
-	    unknown
-	  </dd>
+	       <!-- status -->
+	       <dt class="explanation-header">
+		 Curation status
+	       </dt>
+	       <dd class="field-explanation">
+		 Whether or not annotation is complete on this
+		 resource.  Current allowable entries are: "complete",
+		 "incomplete", and "nonpublic".
+	       </dd>
+	       <dd class="curated-data">
+		 complete
+	       </dd>
 
-	  <!-- license-type -->
-	  <dt>
-	    License type
-	  </dt>
-	  <dd>
-	    <a href="license-types.html#unknown">unknown</a>
-	  </dd>
+	       <!-- data-field -->
+	       <dt class="explanation-header">
+		 Field
+	       </dt>
+	       <dd class="field-explanation">
+		 The area of research for the resource.
+	       </dd>
+	       <dd class="curated-data">
+		 biomedical
+	       </dd>
 
-	  <!-- license-link -->
-	  <dt>
-	    License location
-	  </dt>
-	  <dd>
-	    TBD
-	  </dd>
+	       <!-- data-type -->
+	       <dt class="explanation-header">
+		 Type
+	       </dt>
+	       <dd class="field-explanation">
+		 The type of data the resource contains.
+	       </dd>
+	       <dd class="curated-data">
+		 x-species
+	       </dd>
 
-	  <!-- license-hat-used -->
-	  <dt>
-	    Focused curation
-	  </dt>
-	  <dd>
-	    false
-	  </dd>
-	  
-	  <!-- license-commentary -->
-	  <dt>
-	    Commentary
-	  </dt>
-	  <dd>
-	    As of two years ago, they seem to want to migrate over to CC BY, but after some searching, it could not be cited on their main data portal: https:&#x2F;&#x2F;think-lab.github.io&#x2F;d&#x2F;82&#x2F;#15 <br />
-	    They do not seem to me looking at the remix affects of licenses of their own data (http:&#x2F;&#x2F;bgee.org&#x2F;?page&#x3D;source). <br />
-	    Assuming they have defaulted to ARR. <br />
-	  </dd>
-	  
-	  <!-- license-issues -->
-	  <dt>
-	    Issues
-	  </dt>
-	  <dd>
-	    <a href="criteria.html#criteria-A.1.2">Criteria A.1.2</a>: After some search we were unable to determine the license of the non-ontology portions of the BGee data. No explicit license statements were apparent, causing a cascade of criteria violations. In spite of this, access itself is clear, so one star is awarded accordingly for C. <br />
-	  </dd>
-	  
-	  <!-- was-controversial -->
-	  <dt>
-	    Controversial
-	  </dt>
-	  <dd>
-	    false
-	  </dd>
-	  
-	  <!-- contacts -->
-	  <dt>
-	    Contacts
-	  </dt>
-	  <dd>
-	    Bgee@isb-sib.ch  <br />
-	  </dd>
-	  
-	  <!-- grants -->
-	  <dt>
-	    Grants
-	  </dt>
-	  <dd>
-	    TBD
-	  </dd>
-	  
-	</dl>
-      </p>
-      
-    </div>
-    
-  </div> <!-- end row -->
-  
-</div><!-- Done container. -->
+	       <!-- data-categories -->
+	       <dt class="explanation-header">
+		 Categories
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) Tags to describe the resource and its data.
+	       </dd>
+	       <dd class="curated-data">
+		 expression data <br />
+	       </dd>
+
+	       <!-- data-access -->
+	       <dt class="explanation-header">
+		 Access
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) Links to the resource's data.
+	       </dd>
+	       <dd class="curated-data">
+		 <a href="http:&#x2F;&#x2F;bgee.org&#x2F;?page&#x3D;doc&amp;action&#x3D;access">download</a> <br />
+	       </dd>
+
+	       <!-- license -->
+	       <dt class="explanation-header">
+		 License
+	       </dt>
+	       <dd class="field-explanation">
+		  The license that is used by the resource. We use
+		  SPDX where we can (https://spdx.org/licenses/) or:
+		  "unknown", "public domain", "all rights reserved",
+		  or "custom".
+	       </dd>
+	       <dd class="curated-data">
+		 unknown
+	       </dd>
+
+	       <!-- license-type -->
+	       <dt class="explanation-header">
+		 License type
+	       </dt>
+	       <dd class="field-explanation">
+		 The type of license that is being used. This will be
+		 to define compatible data pools in the future; we
+		 only use the grossest terms now.  If it is not known
+		 "TODO" is used. Current possible values are:
+		 "unknown", "copyleft", "permissive", "public domain",
+		 "copyright", "restrictive", or "closed pool".
+	       </dd>
+	       <dd class="curated-data">
+		 <a href="license-types.html#unknown">unknown</a>
+	       </dd>
+
+	       <!-- license-link -->
+	       <dt class="explanation-header">
+		 License location
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) The link to the resource license.
+	       </dd>
+	       <dd class="curated-data">
+		 TBD
+	       </dd>
+
+	       <!-- license-hat-used -->
+	       <dt class="explanation-header">
+		 Focused curation
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) Setting this flag to true indicates that
+		 the licensing was combinatorially complicated enough
+		 (as is the case in some commercial licenses) that the
+		 curator chose to wear a single "hat" during the
+		 process. From the site text: "While we try to cover
+		 as much of the licensing possibilities of a data
+		 resource that we can, in a few cases we may choose a
+		 particular "hat" to wear while evaluating to prevent
+		 a combinatorial explosion, which may also reduce the
+		 clarity of our curations for the community. In these
+		 cases, we may take on the role of a (1)
+		 non-commercial (2) academic (3) group that is (4)
+		 based in the US and trying to (5) create an
+		 aggregating resource, noting that other entities may
+		 have different results in the license commentary."
+	       </dd>
+	       <dd class="curated-data">
+		 false
+	       </dd>
+
+	       <!-- license-issues -->
+	       <dt class="explanation-header">
+		 Issues
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) Structured issues with the license.  For
+		 every issue discovered with a resource, there should
+		 be a corresponding item in the license-issues field
+		 that marks the /exact/ violation, along with any
+		 comments. This field can be used by resources as the
+		 first step to improvement, as well as clarify any
+		 surrounding circumstances.  Any issues or thoughts
+		 about a resource that do not slot into one of the
+		 criteria violations can go into the
+		 license-commentary field.
+	       </dd>
+	       <dd class="curated-data">
+		 <a href="criteria.html#criteria-A.1.2">Criteria A.1.2</a>: After some search we were unable to determine the license of the non-ontology portions of the BGee data. No explicit license statements were apparent, causing a cascade of criteria violations. In spite of this, access itself is clear, so one star is awarded accordingly for C. <br />
+	       </dd>
+
+	       <!-- license-commentary -->
+	       <dt class="explanation-header">
+		 Commentary
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) Further commentary on the license,
+		 possibly including the though process of the
+		 curations and things like locations of additional
+		 licenses.
+	       </dd>
+	       <dd class="curated-data">
+		 &#8226; As of two years ago, they seem to want to migrate over to CC BY, but after some searching, it could not be cited on their main data portal: https:&#x2F;&#x2F;think-lab.github.io&#x2F;d&#x2F;82&#x2F;#15 <br />
+		 &#8226; They do not seem to me looking at the remix affects of licenses of their own data (http:&#x2F;&#x2F;bgee.org&#x2F;?page&#x3D;source). <br />
+		 &#8226; Assuming they have defaulted to ARR. <br />
+	       </dd>
+
+	       <!-- was-controversial -->
+	       <dt class="explanation-header">
+		 Controversial
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) Marker noting that there was some extended
+		 internal discussion or controversy about the
+		 evaluation of the licensing terms. If this is marked
+		 at "true", the controversy, or a link to a permanent
+		 archive of the controversy, must be sufficiently
+		 contained in the "license-commentary" to reconstruct
+		 the issues.
+	       </dd>
+	       <dd class="curated-data">
+		 false
+	       </dd>
+
+	       <!-- contacts -->
+	       <dt class="explanation-header">
+		 Contacts
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) Resource contact information, link, email,
+		 or whatever is public.
+	       </dd>
+	       <dd class="curated-data">
+		 Bgee@isb-sib.ch  <br />
+	       </dd>
+
+	       <!-- grants -->
+	       <dt class="explanation-header">
+		 Grants
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) Semi-structured list of supporting grants.
+	       </dd>
+	       <dd class="curated-data">
+		 TBD
+	       </dd>
+
+	     </dl>
+	   </p>
+
+	 </div>
+
+       </div> <!-- end row -->
+
+     </div><!-- Done container. -->
 
 	  <!-- </div> -->
 	</div>
       </div>
       <!--   </div> -->
       <!-- </div> -->
-    
+
     <!-- spacer -->
     <div style="height:32px;"></div>
-    
+
     <div class="row">
-	
+
 	<div id="our-sources-data" class="col-xl-12">
 
 	  <p>
@@ -295,7 +400,7 @@
 	</div>
 
       </div><!-- Done container. -->
-    
+
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
@@ -334,10 +439,10 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments)};
       gtag('js', new Date());
-      
+
       gtag('config', 'UA-106654450-1');
     </script>
 
   </body>
-  
+
 </html>

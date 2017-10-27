@@ -1,5 +1,5 @@
-body { 
-    padding-top: 65px; 
+body {
+    padding-top: 65px;
 }
 
 .rud-compact-table {
@@ -34,4 +34,19 @@ body {
 }
 .nicer-ul li {
     padding-bottom: 0.5em;
+}
+
+.explanation-header {
+    padding-top: 0.2em;
+}
+
+.field-explanation {
+    font-size: 0.75em;
+}
+
+.curated-data {
+    font-size: 1.05em;
+    font-style: italic;
+    font-weight: 400;
+    padding-left: 1em;
 }
