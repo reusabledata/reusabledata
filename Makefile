@@ -1,6 +1,6 @@
 
 
-all: index.html criteria.html license-types.html reading.html about.html details_pages
+all: index.html criteria.html license-types.html reading.html about.html details_pages sitemap
 
 # .PHONY: clean
 # clean:
@@ -31,6 +31,13 @@ index.html: compiled.json
 .PHONY: details_pages
 details_pages: compiled.json
 	node ./scripts/details-assemble.js --in ./data-sources/compiled.json --outer-template ./scripts/tmp_static_output_frame.tmpl --body-template ./scripts/tmp_details_pages_output.tmpl --output ./docs
+
+###
+### Make a sitemap from the docs directory.
+###
+
+sitemap: details_pages
+	node ./scripts/make-sitemap.js --io ./docs
 
 ###
 ### criteria.html is the "standard" md -> partial-doc html -> assembled doc.
