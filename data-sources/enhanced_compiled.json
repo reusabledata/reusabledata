@@ -1,0 +1,1691 @@
+[
+    {
+        "id": "bgee-data",
+        "source": "BGee (data)",
+        "source-link": "http://bgee.org",
+        "status": "complete",
+        "description": "Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, Affymetrix, in situ hybridization, and EST data).",
+        "data-field": "biomedical",
+        "data-type": "x-species",
+        "data-categories": [
+            "expression data"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://bgee.org/?page=doc&action=access"
+            }
+        ],
+        "license": "unknown",
+        "license-type": "unknown",
+        "license-commentary": [
+            "As of two years ago, they seem to want to migrate over to CC BY, but after some searching, it could not be cited on their main data portal: https://think-lab.github.io/d/82/#15",
+            "They do not seem to me looking at the remix affects of licenses of their own data (http://bgee.org/?page=source).",
+            "Assuming they have defaulted to ARR."
+        ],
+        "contacts": [
+            "Bgee@isb-sib.ch"
+        ],
+        "license-issues": [
+            {
+                "criteria": "A.1.2",
+                "comment": "After some search we were unable to determine the license of the non-ontology portions of the BGee data. No explicit license statements were apparent, causing a cascade of criteria violations. In spite of this, access itself is clear, so one star is awarded accordingly for C."
+            }
+        ],
+        "license-commentary-embeddable": "As of two years ago, they seem to want to migrate over to CC BY, but after some searching, it could not be cited on their main data portal: https://think-lab.github.io/d/82/#15<hr />They do not seem to me looking at the remix affects of licenses of their own data (http://bgee.org/?page=source).<hr />Assuming they have defaulted to ARR.",
+        "data-tags": "biomedical, x-species, expression data",
+        "grade-automatic": 1
+    },
+    {
+        "id": "bgee-ontology",
+        "source": "BGee (ontology)",
+        "source-link": "http://bgee.org",
+        "status": "complete",
+        "description": "Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, Affymetrix, in situ hybridization, and EST data).",
+        "data-field": "biomedical",
+        "data-type": "expression data",
+        "data-categories": [
+            "ontology"
+        ],
+        "data-access": [
+            {
+                "label": "CIO",
+                "type": "download",
+                "location": "https://github.com/BgeeDB/confidence-information-ontology"
+            },
+            {
+                "label": "HO",
+                "type": "download",
+                "location": "https://github.com/BgeeDB/homology-ontology"
+            },
+            {
+                "label": "ASA",
+                "type": "download",
+                "location": "https://github.com/BgeeDB/anatomical-similarity-annotations"
+            }
+        ],
+        "license": "GPL-3.0",
+        "license-type": "copyleft",
+        "license-link": "https://github.com/BgeeDB/",
+        "license-issues": [
+            {
+                "criteria": "D.1.2",
+                "comment": "By using the GPLv3, there may be issues in mixing and redistributing this data with licenses that have incompatible terms."
+            }
+        ],
+        "license-commentary": [
+            "It is somewhat unclear, but apparently all ontology data is under the listed GNU GPL v.3.0; this may be problematic for some types of reuse."
+        ],
+        "contacts": [
+            "Bgee@isb-sib.ch"
+        ],
+        "license-commentary-embeddable": "It is somewhat unclear, but apparently all ontology data is under the listed GNU GPL v.3.0; this may be problematic for some types of reuse.",
+        "data-tags": "biomedical, expression data, ontology",
+        "grade-automatic": 4
+    },
+    {
+        "id": "biogrid",
+        "source": "BioGRID",
+        "source-link": "https://thebiogrid.org",
+        "status": "incomplete",
+        "description": "interaction",
+        "data-field": "biology",
+        "data-type": "x-species",
+        "data-categories": [
+            "protein-protein interaction"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "https://thebiogrid.org/download.php"
+            }
+        ],
+        "license": "unknown",
+        "license-type": "unknown",
+        "license-link": "http://wiki.thebiogrid.org/doku.php/terms_and_conditions",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "neither \"All rights reserved\", nor \"copyright\" are mentioned, ergo custom"
+            },
+            {
+                "criteria": "B.2.1",
+                "comment": "Rights stay with original submitter."
+            },
+            {
+                "criteria": "D.1.1"
+            },
+            {
+                "criteria": "E.1.1"
+            }
+        ],
+        "license-commentary": [
+            "All information, data, text, software, music, sound, photographs, graphics, video, messages, or any other materials whatsoever (collectively, “Content”), whether publicly posted or privately transmitted, is the sole responsibility of the person from whom such Content originated. This means that the user, and not BioGRID, is entirely responsible for all Content that he or she uploads, posts, emails or otherwise transmits via the BioGRID Sites.",
+            "Use, reproduction, modification, and other intellectual property rights to data stored on the BioGRID Sites will be subject to licensing arrangements that may be approved by BioGRID as applicable to such Content.",
+            "You agree not to sell, resell, or offer for any commercial purposes, any portion of the BioGRID Sites, use of the BioGRID Sites, or access to the BioGRID Sites.",
+            "Our designated agent to receive notification of claimed infringement is:  Mr. Terry Donaghue Director Technology Transfer and Industrial Liason 600 University Avenue Toronto, ON, Canada donaghue@mshri.on.ca TEL: 416-586-8225 FAX: 416-586-3110"
+        ],
+        "contacts": [
+            "biogridadmin@gmail.com"
+        ]
+    },
+    {
+        "id": "civicdb",
+        "source": "Clinical Interpretation of Variants in Cancer (CIViC)",
+        "source-link": "http://www.civicdb.org",
+        "status": "complete",
+        "description": "CIViC is an open access, open source, community-driven web resource for Clinical Interpretation of Variants in Cancer. Our goal is to enable precision medicine by providing an educational forum for dissemination of knowledge and active discussion of the clinical significance of cancer genome alterations.",
+        "data-field": "biomedical",
+        "data-type": "human",
+        "data-categories": [
+            "cancer",
+            "precision medicine",
+            "variants",
+            "variant disease associations"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "https://civic.genome.wustl.edu/releases"
+            },
+            {
+                "type": "api",
+                "location": "https://griffithlab.github.io/civic-api-docs/"
+            }
+        ],
+        "license": "CC0",
+        "license-type": "permissive",
+        "license-link": "https://civic.genome.wustl.edu/about",
+        "license-issues": [],
+        "license-commentary": [],
+        "contacts": [
+            "https://civic.genome.wustl.edu/contact"
+        ],
+        "license-commentary-embeddable": "",
+        "data-tags": "biomedical, human, cancer, precision medicine, variants, variant disease associations",
+        "grade-automatic": 5
+    },
+    {
+        "id": "clinvar",
+        "source": "ClinVar",
+        "source-link": "TODO",
+        "status": "incomplete",
+        "description": "ClinVar archives and aggregates information about relationships among variation and human health. ClinVar collects reports of variants found in patient samples, assertions made regarding their clinical significance, information about the submitter, and other supporting data.",
+        "data-field": "biomedical",
+        "data-type": "human",
+        "data-categories": [
+            "disease-gene association",
+            "variant-disease association",
+            "variant definitions"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "https://www.ncbi.nlm.nih.gov/clinvar/docs/ftp_primer/"
+            }
+        ],
+        "license": "unknown",
+        "license-type": "public domain",
+        "license-link": "http://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "public domain"
+            },
+            {
+                "criteria": "B.1"
+            },
+            {
+                "criteria": "B.2.1"
+            },
+            {
+                "criteria": "B.2.2"
+            }
+        ],
+        "license-commentary": [
+            "Information that is created by or for the US government on this site is within the public domain. Public domain information on the National Library of Medicine (NLM) Web pages may be freely distributed and copied. However, it is requested that in any subsequent use of this work, NLM be given appropriate acknowledgment.",
+            "NOTE: This site contains resources which incorporate material contributed or licensed by individuals, companies, or organizations that may be protected by U.S. and foreign copyright laws. These include, but are not limited to PubMed Health (see PubMed Health Copyright and Restrictions Notice), PubMed Central (PMC) (see PMC Copyright Notice), Bookshelf (see Bookshelf Copyright Notice), OMIM (see OMIM Copyright Status), and PubChem. All persons reproducing, redistributing, or making commercial use of this information are expected to adhere to the terms and conditions asserted by the copyright holder. Transmission or reproduction of protected items beyond that allowed by fair use (PDF) as defined in the copyright laws requires the written permission of the copyright owners."
+        ],
+        "contacts": [
+            "info@ncbi.nlm.nih.gov"
+        ]
+    },
+    {
+        "id": "coriell-institute",
+        "source": "Coriell Institute for Medical Research",
+        "source-link": "https://coriell.org/",
+        "status": "nonpublic",
+        "description": "The Coriell Cell Repositories provide essential research reagents to the scientific community by establishing, verifying, maintaining, and distributing cell cultures and DNA derived from cell cultures. These collections, supported by funds from the National Institutes of Health (NIH) and several foundations, are extensively utilized by research scientists around the world. NINDS and NIGMS cell line catalog. NIGMS samples represent a variety of disease states, chromosomal abnormalities, apparently healthy individuals and many distinct human populations. NINDS samples are drawn from subjects with cerebrovascular disease, epilepsy, motor neuron disease, Parkinsonism and Tourette Syndrome, as well as controls.",
+        "data-field": "biology",
+        "data-type": "human",
+        "data-categories": [
+            "disease-model association"
+        ],
+        "data-access": [],
+        "license": "unknown",
+        "license-type": "unknown",
+        "license-link": "https://www.coriell.org/legal-notice",
+        "license-issues": [
+            {
+                "criteria": "A.1.2",
+                "comment": "See license commentary."
+            },
+            {
+                "criteria": "C.1",
+                "comment": "No on-site data."
+            },
+            {
+                "criteria": "C.2",
+                "comment": "No on-site data."
+            }
+        ],
+        "license-commentary": [
+            "After searching, https://coriell.org, https://catalog.coriell.org, and (for example) https://catalog.coriell.org/1/NHGRI, we could find no information on a publicly available data resource beyond Excel spreadsheets.",
+            "For example, from https://catalog.coriell.org/1/NHGRI/FAQs : The NHGRI Repository at Coriell is the sample repository for the International HapMap Project and the 1000 Genomes Project. We provide cell lines and DNA, but do not house the data for these projects. Data associated with these samples can be found at the following project websites...",
+            "This resource has no stars due to no data, possibly due to Coriell not actually being a proper upstream data resource; this doesn not reflect the main work or Coriell."
+        ],
+        "contacts": [
+            "communications@coriell.org"
+        ]
+    },
+    {
+        "id": "ctd",
+        "source": "Comparative Toxicogenomics Database (CTD)",
+        "source-link": "http://ctdbase.org",
+        "status": "complete",
+        "description": "CTD promotes understanding about the effects of environmental chemicals on human health by integrating data from curated scientific literature to describe chemical interactions with genes and proteins, and associations between diseases and chemicals, and diseases and genes/proteins.",
+        "data-field": "biology",
+        "data-type": "x-species",
+        "data-categories": [
+            "disease-gene association"
+        ],
+        "data-access": [
+            {
+                "type": "api",
+                "location": "http://ctdbase.org/tools/batchQuery.go"
+            },
+            {
+                "type": "download",
+                "location": "http://ctdbase.org/downloads/"
+            }
+        ],
+        "license": "custom",
+        "license-type": "restrictive",
+        "license-link": "http://ctdbase.org/about/legal.jsp",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "Custom license with interesting use restrictions."
+            },
+            {
+                "criteria": "B.1",
+                "comment": "For quality control purposes, you must provide CTD with periodic access to your publication of our data."
+            },
+            {
+                "criteria": "D.1.2",
+                "comment": "Given the four statements in the Additional Terms of Data Use, notably number 4, it looks like any downstream user would have to renegotiate with CTD."
+            },
+            {
+                "criteria": "E.1.1",
+                "comment": "Without negotiation: \"It is to be used only for research and educational purposes.\""
+            }
+        ],
+        "license-commentary": [
+            "There are statements made in the Additional Terms of Data Use that would make it very difficult to re-use the data provided without a air amount o coordination with the resource and changes to information handling."
+        ],
+        "contacts": [
+            "http://ctdbase.org/help/contact.go"
+        ],
+        "license-commentary-embeddable": "There are statements made in the Additional Terms of Data Use that would make it very difficult to re-use the data provided without a air amount o coordination with the resource and changes to information handling.",
+        "data-tags": "biology, x-species, disease-gene association",
+        "grade-automatic": 2.5
+    },
+    {
+        "id": "dbgap",
+        "source": "dbGaP (public)",
+        "source-link": "https://www.ncbi.nlm.nih.gov/gap",
+        "status": "complete",
+        "description": "The database of Genotypes and Phenotypes (dbGaP) was developed to archive and distribute the data and results from studies that have investigated the interaction of genotype and phenotype in Humans. Provides authorized access to protected and raw data (e.g., Genotype-Tissue Expression (GTEx) project).",
+        "data-field": "biology",
+        "data-type": "human",
+        "data-categories": [
+            "genotype-phenotype"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "ftp://ftp.ncbi.nlm.nih.gov/dbgap/"
+            }
+        ],
+        "license": "unknown",
+        "license-type": "unknown",
+        "license-link": "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-14-124.html",
+        "license-issues": [
+            {
+                "criteria": "A.1.1",
+                "comment": "Per the dgGaP data use certification, 'The terms and conditions of using dbGaP data vary by study'. All terms and conditions are to align with NIH GDS."
+            },
+            {
+                "criteria": "C.1",
+                "comment": "Cannot access all the data."
+            },
+            {
+                "criteria": "C.2",
+                "comment": "Access methods are not transparent."
+            }
+        ],
+        "license-commentary": [
+            "The data seems to include a large amount of identifiable and is controlled as such.",
+            "There also exists unrestricted data and the thus the NIG GDS data use policy is two-tiered.",
+            "Controlled-access policy 'https://www.ncbi.nlm.nih.gov/books/NBK99227/'",
+            "General data sharing information (see data sharing policy section) 'https://www.ncbi.nlm.nih.gov/books/NBK5296/'",
+            "NIH GDS policy tone and language seems non-uniform and more like case-by-case.",
+            "Example GTex project submitted policy 'https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?view_pdf&stacc=phs000424.v1.p1'",
+            "NIH GDS states 'NIH expects investigators and their institutions to provide basic plans for following this Policy' however we assume the burden stays with data re-reuser to contact source with questions and issues should they arise effecting criteria B.",
+            "Regarding institutional affiliation 'https://www.ncbi.nlm.nih.gov/books/NBK45308/'",
+            "A.2: unknown license type due to 'The terms and conditions of using dbGaP data vary by study'.",
+            "B.1: Negotation needed for controlled- access data and license type or terms and conditions unknown.",
+            "B.2.2: Scoping is incomplete as license type or terms and conditions unknown.",
+            "D.1.2: Because the terms and conditions vary by study, cannot comment on downstream reuse/remix.",
+            "E.1.1: Language in the NIH GDS policy may be interpreted by non-legal professional that the contents may be reused by researchers (at NIH or with Institutional affiliation)."
+        ],
+        "contacts": [
+            "https://www.ncbi.nlm.nih.gov/books/NBK5296/"
+        ],
+        "license-commentary-embeddable": "The data seems to include a large amount of identifiable and is controlled as such.<hr />There also exists unrestricted data and the thus the NIG GDS data use policy is two-tiered.<hr />Controlled-access policy 'https://www.ncbi.nlm.nih.gov/books/NBK99227/'<hr />General data sharing information (see data sharing policy section) 'https://www.ncbi.nlm.nih.gov/books/NBK5296/'<hr />NIH GDS policy tone and language seems non-uniform and more like case-by-case.<hr />Example GTex project submitted policy 'https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?view_pdf&stacc=phs000424.v1.p1'<hr />NIH GDS states 'NIH expects investigators and their institutions to provide basic plans for following this Policy' however we assume the burden stays with data re-reuser to contact source with questions and issues should they arise effecting criteria B.<hr />Regarding institutional affiliation 'https://www.ncbi.nlm.nih.gov/books/NBK45308/'<hr />A.2: unknown license type due to 'The terms and conditions of using dbGaP data vary by study'.<hr />B.1: Negotation needed for controlled- access data and license type or terms and conditions unknown.<hr />B.2.2: Scoping is incomplete as license type or terms and conditions unknown.<hr />D.1.2: Because the terms and conditions vary by study, cannot comment on downstream reuse/remix.<hr />E.1.1: Language in the NIH GDS policy may be interpreted by non-legal professional that the contents may be reused by researchers (at NIH or with Institutional affiliation).",
+        "data-tags": "biology, human, genotype-phenotype",
+        "grade-automatic": 0
+    },
+    {
+        "id": "decipher",
+        "last-curated": "2017-10-12",
+        "source": "DECIPHER",
+        "source-link": "https://decipher.sanger.ac.uk",
+        "status": "complete",
+        "description": "DECIPHER is used by the clinical community to share and compare phenotypic and genotypic data. The DECIPHER database contains data from 24848 patients who have given consent for broad data-sharing; DECIPHER also supports more limited sharing via consortia.",
+        "data-field": "biology",
+        "data-type": "human",
+        "data-categories": [
+            "gene",
+            "genotype",
+            "rare disease",
+            "phenotype",
+            "variant",
+            "submicroscopic chromosomal imbalance",
+            "rare sequence variants"
+        ],
+        "data-access": [],
+        "license": "custom",
+        "license-type": "closed pool",
+        "license-link": "https://decipher.sanger.ac.uk/datasharing",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "The resource uses an extensive custom license."
+            },
+            {
+                "criteria": "B.1",
+                "comment": "There are terms that require possible audits in the future, making future free use something that needs to be negotiated."
+            },
+            {
+                "criteria": "C.1",
+                "comment": "This could not be evaluated as no description of access was found."
+            },
+            {
+                "criteria": "C.2",
+                "comment": "This could not be evaluated as no description of access was found."
+            },
+            {
+                "criteria": "D.1.2",
+                "comment": "Given the numerous restrictions and requirements (e.g. purging, forced QA), it seems that downstream reuse would be problematic, even though there is a carve-out for \"research\"."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "Given the numerous restrictions and requirements (e.g. only \"registered\" users can have access to the data, etc.), it seems that downstream reuse would be problematic, even though there is a carve-out for \"research\"."
+            }
+        ],
+        "license-commentary": [
+            "We are evaluating the bulk data access agreement, rather than the data display agreement, which specifically prevents any type of bulk (re)use.",
+            "While there are a few data files available at https://decipher.sanger.ac.uk/downloads/data , given the workding and context of the agreement, we believe that this is some other miscellaneous data.",
+            "Data access is mediated through the Data Access Agreement: https://decipher.sanger.ac.uk/files/pdfs/daa.pdf and becoming a registered user.",
+            "A written request is required to be submitted and approved before accessing the data.",
+            "The DAA requires that accepted users: can only use data for research, cannot attempt to uncloak PII, must have proactive data security, must adhere to Data Protection Act 1998, may only share data with others who have agreed to these terms, allow GRL to do audits, accept required reporting of errors, destroy earlier data versions on update, as well as other (somewhat more \"standard\") terms.",
+            "This seems like a \"closed pool\" type, even though is may just have one member, due to the use of \"registered users\" in the license.",
+            "Additional terms of use in citation policy: \"Authors who use data from the project must acknowledge DECIPHER using the following wording...\""
+        ],
+        "grants": [
+            {
+                "label": "Funding for the project was provided by the Wellcome Trust."
+            }
+        ],
+        "contacts": [
+            "decipher@sanger.ac.uk"
+        ],
+        "license-commentary-embeddable": "We are evaluating the bulk data access agreement, rather than the data display agreement, which specifically prevents any type of bulk (re)use.<hr />While there are a few data files available at https://decipher.sanger.ac.uk/downloads/data , given the workding and context of the agreement, we believe that this is some other miscellaneous data.<hr />Data access is mediated through the Data Access Agreement: https://decipher.sanger.ac.uk/files/pdfs/daa.pdf and becoming a registered user.<hr />A written request is required to be submitted and approved before accessing the data.<hr />The DAA requires that accepted users: can only use data for research, cannot attempt to uncloak PII, must have proactive data security, must adhere to Data Protection Act 1998, may only share data with others who have agreed to these terms, allow GRL to do audits, accept required reporting of errors, destroy earlier data versions on update, as well as other (somewhat more \"standard\") terms.<hr />This seems like a \"closed pool\" type, even though is may just have one member, due to the use of \"registered users\" in the license.<hr />Additional terms of use in citation policy: \"Authors who use data from the project must acknowledge DECIPHER using the following wording...\"",
+        "data-tags": "biology, human, gene, genotype, rare disease, phenotype, variant, submicroscopic chromosomal imbalance, rare sequence variants",
+        "grade-automatic": 1
+    },
+    {
+        "id": "dictybase",
+        "source": "dictyBase",
+        "source-link": "http://dictybase.org",
+        "status": "complete",
+        "description": "dictyBase is a database that provides a centralized source of Dictyostelium information for Dictyostelium researchers and Non-Dictyostelium researchers. This includes tutorials, dictyNews, techniques, the Stock Center, genomic and molecular information, colleague infromation, Dictyostelium literature, and much more.",
+        "data-field": "biology",
+        "data-type": "MOD",
+        "data-categories": [
+            "genotype-phenotype association",
+            "disease-model association",
+            "gene expression"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://dictybase.org/Downloads/"
+            }
+        ],
+        "license": "unknown",
+        "license-type": "unknown",
+        "license-link": "TODO",
+        "license-issues": [
+            {
+                "criteria": "A.1.2",
+                "comment": "Could not find any clear terms on any searched pages. See commentary."
+            }
+        ],
+        "license-commentary": [
+            "While there does not seem to be any clear licensing information currently on the site, from a separate conversation (https://github.com/geneontology/noctua/issues/510#issuecomment-334864073), it would seem that this will soon be updated."
+        ],
+        "last-curated": "2017-10-17",
+        "contacts": [
+            "dictybase@northwestern.edu",
+            "http://dictybase.org/db/cgi-bin/dictyBase/suggestion"
+        ],
+        "license-commentary-embeddable": "While there does not seem to be any clear licensing information currently on the site, from a separate conversation (https://github.com/geneontology/noctua/issues/510#issuecomment-334864073), it would seem that this will soon be updated.",
+        "data-tags": "biology, MOD, genotype-phenotype association, disease-model association, gene expression",
+        "grade-automatic": 1
+    },
+    {
+        "id": "encode",
+        "source": "ENCODE",
+        "source-link": "https://www.genome.gov/10005107/",
+        "status": "complete",
+        "description": "The Encyclopedia of DNA Elements (ENCODE) Consortium is an international collaboration of research groups funded by the National Human Genome Research Institute (NHGRI). The goal of ENCODE is to build a comprehensive parts list of functional elements in the human genome, including elements that act at the protein and RNA levels, and regulatory elements that control cells and circumstances in which a gene is active.",
+        "data-field": "biology",
+        "data-type": "genomic resource",
+        "data-categories": [
+            "genomic elements"
+        ],
+        "data-access": [
+            {
+                "type": "api",
+                "location": "https://www.encodeproject.org/help/rest-api/"
+            },
+            {
+                "type": "download",
+                "location": "https://www.ncbi.nlm.nih.gov/geo/info/download.html"
+            },
+            {
+                "type": "download",
+                "location": "ftp://ftp.ebi.ac.uk/pub/databases/arrayexpress/data/"
+            }
+        ],
+        "license": "custom",
+        "license-type": "permissive",
+        "license-link": "https://www.genome.gov/27528022/encode-consortium-data-release-policy/",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "Easy and perfectly (re)usable, yet custom."
+            }
+        ],
+        "license-commentary": [
+            "External data users may freely download, analyze and publish results based on any ENCODE data without restrictions as soon as they are released."
+        ],
+        "contacts": [
+            "https://www.genome.gov/10005049/questions-and-feedback/"
+        ],
+        "license-commentary-embeddable": "External data users may freely download, analyze and publish results based on any ENCODE data without restrictions as soon as they are released.",
+        "data-tags": "biology, genomic resource, genomic elements",
+        "grade-automatic": 4.5
+    },
+    {
+        "id": "fantom5",
+        "source": "Fantom5",
+        "source-link": "http://fantom.gsc.riken.jp/5/",
+        "status": "complete",
+        "description": "We are complex multicellular organisms composed of ~400 distinct cell types. This diversity of cell types allow us to see, think, hear, fight infections etc. yet all of this is encoded in the same genome. The difference between all these cells is what parts of the genome they use – for instance, neurons use different genes than muscle cells, and therefore they work very differently. In FANTOM5, we have systematically investigated exactly what are the sets of genes used in virtually all cell types across the human body, and the genomic regions which determine where the genes are read from. We aim to use this information to build transcriptional regulatory models for every primary cell type that makes up a human.",
+        "data-field": "biology",
+        "data-type": "human",
+        "data-categories": [
+            "gene expression"
+        ],
+        "data-access": [],
+        "license": "CC-BY-4.0",
+        "license-type": "permissive",
+        "license-link": "http://fantom.gsc.riken.jp/5/",
+        "license-commentary": [],
+        "contacts": [
+            "fantom-help.gsc@riken.jp"
+        ],
+        "license-commentary-embeddable": "",
+        "data-tags": "biology, human, gene expression",
+        "grade-automatic": 5
+    },
+    {
+        "id": "flybase",
+        "source": "FlyBase",
+        "source-link": "http://flybase.org",
+        "status": "complete",
+        "description": "FlyBase is the model organism database providing integrated genetic, genomic, phenomic, and biological data for Drosophila melanogaster.",
+        "data-field": "biology",
+        "data-type": "MOD",
+        "data-categories": [
+            "genotype-phenotype association"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://flybase.org/static_pages/downloads/ID.html"
+            }
+        ],
+        "license": "all rights reserved",
+        "license-type": "copyright",
+        "license-link": "http://flybase.org/wiki/FlyBase:About#FlyBase_Copyright",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "Copyright statement includes 'This publication may be copied for non-commercial, scientific uses by individuals or organizations (including for-profit organizations). FlyBase is freely distributed to the scientific community on the understanding that it will not be used for commercial gain by any organization. Any commercial use of this publication, or any parts thereof, is expressly prohibited without permission in writing from the FlyBase consortium.'"
+            },
+            {
+                "criteria": "B.1",
+                "comment": "Copyright statement includes 'Certain portions of FlyBase are copyrighted separately.'"
+            },
+            {
+                "criteria": "B.2.1",
+                "comment": "Copyright statement includes 'Certain portions of FlyBase are copyrighted separately.'"
+            },
+            {
+                "criteria": "D.1.1",
+                "comment": "As stated copyright may be interpreted by non-legal professional that the contents may be reused/remixed in a non-commercial context."
+            },
+            {
+                "criteria": "E.1.1",
+                "comment": "As stated copyright may be interpreted by non-legal professional that the contents may be reused/remixed in a non-commercial context."
+            }
+        ],
+        "license-commentary": [
+            "Copyright statement is not co-located with the data source."
+        ],
+        "contacts": [
+            "http://flybase.org/cgi-bin/mailto-fbhelp.html"
+        ],
+        "license-commentary-embeddable": "Copyright statement is not co-located with the data source.",
+        "data-tags": "biology, MOD, genotype-phenotype association",
+        "grade-automatic": 2.5
+    },
+    {
+        "id": "go-ann",
+        "source": "Gene Ontology (annotations)",
+        "source-link": "http://geneontology.org",
+        "status": "complete",
+        "description": "The mission of the GO Consortium is to develop an up-to-date, comprehensive, computational model of biological systems, from the molecular level to larger pathways, cellular and organism-level systems.",
+        "data-field": "biology",
+        "data-type": "x-species",
+        "data-categories": [
+            "gene annotation",
+            "gene association",
+            "biological process",
+            "molecular function",
+            "cellular component"
+        ],
+        "data-access": [
+            {
+                "type": "api",
+                "location": "http://rdf.geneontology.org"
+            },
+            {
+                "type": "download",
+                "location": "http://geneontology.org/page/download-annotations"
+            }
+        ],
+        "license": "CC-BY-4.0",
+        "license-type": "permissive",
+        "license-link": "http://geneontology.org/page/use-and-license",
+        "license-commentary": [],
+        "contacts": [
+            "http://help.geneontology.org/"
+        ],
+        "license-commentary-embeddable": "",
+        "data-tags": "biology, x-species, gene annotation, gene association, biological process, molecular function, cellular component",
+        "grade-automatic": 5
+    },
+    {
+        "id": "go-ont",
+        "source": "Gene Ontology (ontology)",
+        "source-link": "http://geneontology.org",
+        "status": "complete",
+        "description": "The mission of the GO Consortium is to develop an up-to-date, comprehensive, computational model of biological systems, from the molecular level to larger pathways, cellular and organism-level systems.",
+        "data-field": "biology",
+        "data-type": "x-species",
+        "data-categories": [
+            "ontology",
+            "biological process",
+            "molecular function",
+            "cellular component"
+        ],
+        "data-access": [
+            {
+                "type": "api",
+                "location": "http://rdf.geneontology.org"
+            },
+            {
+                "type": "download",
+                "location": "http://geneontology.org/page/download-ontology"
+            }
+        ],
+        "license": "CC-BY-4.0",
+        "license-type": "permissive",
+        "license-link": "http://geneontology.org/page/use-and-license",
+        "license-commentary": [],
+        "contacts": [
+            "http://help.geneontology.org/"
+        ],
+        "license-commentary-embeddable": "",
+        "data-tags": "biology, x-species, ontology, biological process, molecular function, cellular component",
+        "grade-automatic": 5
+    },
+    {
+        "id": "gtex",
+        "source": "GTEx",
+        "source-link": "http://www.gtexportal.org",
+        "status": "complete",
+        "description": "The Genotype-Tissue Expression (GTEx) project aims to provide to the scientific community a resource with which to study human gene expression and regulation and its relationship to genetic variation. This project will collect and analyze multiple human tissues from donors who are also densely genotyped, to assess genetic variation within their genomes. By analyzing global RNA expression within individual tissues and treating the expression levels of genes as quantitative traits, variations in gene expression that are highly correlated with genetic variation can be identified as expression quantitative trait loci, or eQTLs.",
+        "data-field": "biology",
+        "data-type": "human",
+        "data-categories": [
+            "gene expression"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "https://www.gtexportal.org/home/datasets"
+            }
+        ],
+        "license": "custom",
+        "license-type": "permissive",
+        "license-link": "https://www.gtexportal.org/home/documentationPage",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "Custom license based on the various datasets and NIH Genomic Data Sharing Policy."
+            },
+            {
+                "criteria": "C.1",
+                "comment": "No API or URL to access all data groupings with single action."
+            },
+            {
+                "criteria": "C.2",
+                "comment": "No API or URL and therefore no reasonable and transparent access."
+            },
+            {
+                "criteria": "D.1.1",
+                "comment": "As stated copyright may be interpreted by non-legal professional that the contents may be reused/remixed for research/scientific purposes."
+            },
+            {
+                "criteria": "E.1.1",
+                "comment": "As stated copyright may be interpreted by non-legal professional that the contents may be reused/remixed research/scientific purposes."
+            }
+        ],
+        "license-commentary": [
+            "Protected Data and Raw Data in the portal has not included in evaluation of this resource. See the dbGaP file for score.",
+            "The data not under the exceptions listed are under the NIH GDS (https://grants.nih.gov/grants/guide/notice-files/NOT-OD-14-124.html).",
+            "Pilot data set (phs000424.v3.p1) - acceptance of the \"Ft. Lauderdale\" principles of rapid, pre-publication data release (see Sharing Data from Large-Scale Biological Research Projects: A System of Tripartite Responsibility, 2003). The continued success of rapid pre-publication data release relies on the scientific community to respect the data producer’s interest to publish a full analysis of their data first. Secondary users are asked to refrain from submitting manuscripts describing comprehensive analyses until the Consortium has published their analysis.",
+            "May 8, 2015 - No restrictions - main manuscript published.",
+            "phs000424.v4.p1 - the dataset is subject to 9 months publication restriction starting from the date of the release; no restrictions after Jan 4, 2015.",
+            "All datasets from phs00424.v5.p1 forward will follow the NIH GDS policy. This means that once released through dbGaP, there are no restrictions on use or publication. This document and an accompanying table of dataset releases can be found at http://www.gtexportal.org/home/documentationPage.",
+            "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-14-124.html"
+        ],
+        "contacts": [
+            "http://www.gtexportal.org/home/contact"
+        ],
+        "license-commentary-embeddable": "Protected Data and Raw Data in the portal has not included in evaluation of this resource. See the dbGaP file for score.<hr />The data not under the exceptions listed are under the NIH GDS (https://grants.nih.gov/grants/guide/notice-files/NOT-OD-14-124.html).<hr />Pilot data set (phs000424.v3.p1) - acceptance of the \"Ft. Lauderdale\" principles of rapid, pre-publication data release (see Sharing Data from Large-Scale Biological Research Projects: A System of Tripartite Responsibility, 2003). The continued success of rapid pre-publication data release relies on the scientific community to respect the data producer’s interest to publish a full analysis of their data first. Secondary users are asked to refrain from submitting manuscripts describing comprehensive analyses until the Consortium has published their analysis.<hr />May 8, 2015 - No restrictions - main manuscript published.<hr />phs000424.v4.p1 - the dataset is subject to 9 months publication restriction starting from the date of the release; no restrictions after Jan 4, 2015.<hr />All datasets from phs00424.v5.p1 forward will follow the NIH GDS policy. This means that once released through dbGaP, there are no restrictions on use or publication. This document and an accompanying table of dataset releases can be found at http://www.gtexportal.org/home/documentationPage.<hr />https://grants.nih.gov/grants/guide/notice-files/NOT-OD-14-124.html",
+        "data-tags": "biology, human, gene expression",
+        "grade-automatic": 2.5
+    },
+    {
+        "id": "hpo",
+        "source": "Human Phenotype Ontology (HPO)",
+        "source-link": "http://human-phenotype-ontology.github.io",
+        "status": "complete",
+        "description": "A curated database of human hereditary syndromes from OMIM, Orphanet, and DECIPHER mapped to classes of the human phenotype ontology. Various meta-attributes such as frequency, references and negations are associated with each annotation. These are presently limited to rare mendelian diseases.",
+        "data-field": "biology",
+        "data-type": "human",
+        "data-categories": [
+            "disease-phenotype association"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://human-phenotype-ontology.github.io/downloads.html"
+            }
+        ],
+        "license": "custom",
+        "license-type": "restrictive",
+        "license-link": "http://human-phenotype-ontology.github.io/license.html",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "HPO is copyrighted to protect ontologies and all changes must be made by hpo developers."
+            },
+            {
+                "criteria": "D.1.2",
+                "comment": "Restricted downstream use. May not be edited."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "Restricted downstream use translates to agents as well."
+            }
+        ],
+        "license-commentary": [
+            "immutability",
+            "unclear derivatives",
+            "That the Human Phenotype Ontology Consortium is acknowledged and cited properly.",
+            "That neither the content of the HPO file(s) nor the logical relationships embedded within the HPO file(s) be altered in any way."
+        ],
+        "contacts": [
+            "http://human-phenotype-ontology.github.io/contact.html"
+        ],
+        "license-commentary-embeddable": "immutability<hr />unclear derivatives<hr />That the Human Phenotype Ontology Consortium is acknowledged and cited properly.<hr />That neither the content of the HPO file(s) nor the logical relationships embedded within the HPO file(s) be altered in any way.",
+        "data-tags": "biology, human, disease-phenotype association",
+        "grade-automatic": 2.5
+    },
+    {
+        "id": "impc",
+        "source": "International Mouse Phenotyping Consortium (IMPC)",
+        "source-link": "http://www.mousephenotype.org",
+        "status": "complete",
+        "description": "The International Mouse Phenotyping Consortium (IMPC) is generating a knockout mouse strain for every protein coding gene by using the embryonic stem cell resource generated by the International Knockout Mouse Consortium (IKMC). Systematic broad-based phenotyping is performed by each IMPC center using standardized procedures found within the International Mouse Phenotyping Resource of Standardised Screens (IMPReSS) resource. Gene-to-phenotype associations are made by a versioned statistical analysis.",
+        "data-field": "biology",
+        "data-type": "mouse",
+        "data-categories": [
+            "genotype-phenotype association"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "ftp://ftp.ebi.ac.uk/pub/databases/impc/latest/"
+            },
+            {
+                "type": "api",
+                "location": "http://www.mousephenotype.org/data/documentation/data-access"
+            }
+        ],
+        "license": "all rights reserved",
+        "license-type": "copyright",
+        "license-link": null,
+        "license-issues": [
+            {
+                "criteria": "A.1.2",
+                "comment": "Could not find licensing information in a reasonable location. Determined ARR by default."
+            },
+            {
+                "criteria": "D.1.2",
+                "comment": "Restricted downstream use per ARR."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "All downstream agents restricted per ARR."
+            }
+        ],
+        "license-commentary": [
+            "Had to google to find the data use agreement page. Could not locate from browsing the website. 'http://www.mousephenotype.org/about-impc/additional-information/data-use-agreement'",
+            "When the first major Project paper on these analyses is published, then researchers inside and outside the Project are free to present and publish using the Project data for these and other analyses.",
+            "Perhaps the license page was removed because of publications and lifting of embargo as described above. Which defaults to ARR since no other license was found."
+        ],
+        "contacts": [
+            "http://www.mousephenotype.org/contact-us"
+        ],
+        "license-commentary-embeddable": "Had to google to find the data use agreement page. Could not locate from browsing the website. 'http://www.mousephenotype.org/about-impc/additional-information/data-use-agreement'<hr />When the first major Project paper on these analyses is published, then researchers inside and outside the Project are free to present and publish using the Project data for these and other analyses.<hr />Perhaps the license page was removed because of publications and lifting of embargo as described above. Which defaults to ARR since no other license was found.",
+        "data-tags": "biology, mouse, genotype-phenotype association",
+        "grade-automatic": 1
+    },
+    {
+        "id": "kegg-ftp",
+        "source": "Kyoto Encyclopedia of Genes and Genomes (KEGG), FTP",
+        "source-link": "http://kegg.jp",
+        "status": "complete",
+        "description": "KEGG is an integrated database resource consisting of the seventeen main databases including systems, genomic, chemical, and health information.",
+        "data-field": "biology",
+        "data-type": "genomic resource",
+        "data-categories": [
+            "gene-pathway association",
+            "disease-gene association",
+            "orthology"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://www.kegg.jp/kegg/download/"
+            }
+        ],
+        "license": "custom",
+        "license-type": "restrictive",
+        "license-link": "http://www.kegg.jp/kegg/legal.html",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "For our use case (see commentary), KEGG (FTP) uses custom licensing through NPO Bioinformatics Japan (https://www.bioinformatics.jp/en/keggftp.html)."
+            },
+            {
+                "criteria": "B.1",
+                "comment": "According to the organizational use agreement: \"Your Product or Service must not allow Your users to obtain KEGG FTP Data, except in small quantities\"; many uses would require negotiation here as continuing reuse is unclear."
+            },
+            {
+                "criteria": "D.1.2",
+                "comment": "The licensing terms are too restrictive for reasonable reuse (e.g. B.1 violation above)."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "Given our interpretation of the licensing terms, there is unlikely to be much ability to freely reuse the KEGG FTP data within any class."
+            }
+        ],
+        "license-commentary": [
+            "KEGG (FTP) presents special problems as their licensing depends on variables like academic/non-academic, group/individual, commercial/non-commercial, and location. While the end terms do have some variation, for the sake of convenience, we will act as a non-commercial academic group based in the US wanting to access the entire database. Much curation was then based off of the organizational use agreement: https://www.bioinformatics.jp/docs/subscription_organizational.pdf .",
+            "Given all of the possible use cases, license verbiage, and special conditions, KEGG (FTP) was exceptionally difficult to curate.",
+            "Academic users license through NPO Bioinformatics Japan (https://www.bioinformatics.jp/en/keggftp.html).",
+            "Non-academic users license through Pathway Solutions (http://www.pathway.jp/).",
+            "While there are many possible combinations, any individual or use case should have a single license that they will need to get, giving us a pass on A.1.",
+            "While we did not go through the registration process, C.1 seems like it would be cleared by the directory layout description on http://www.kegg.jp/kegg/download/ .",
+            "While we did not go through the registration process, C.2 seems like it would be cleared by the implied straighforward FTP access post licensing.",
+            "Also see KEGG API and KEGG REST resources."
+        ],
+        "was-controversial": "true",
+        "last-curated": "2017-10-17",
+        "contacts": [
+            "http://www.genome.jp/feedback/"
+        ],
+        "license-commentary-embeddable": "KEGG (FTP) presents special problems as their licensing depends on variables like academic/non-academic, group/individual, commercial/non-commercial, and location. While the end terms do have some variation, for the sake of convenience, we will act as a non-commercial academic group based in the US wanting to access the entire database. Much curation was then based off of the organizational use agreement: https://www.bioinformatics.jp/docs/subscription_organizational.pdf .<hr />Given all of the possible use cases, license verbiage, and special conditions, KEGG (FTP) was exceptionally difficult to curate.<hr />Academic users license through NPO Bioinformatics Japan (https://www.bioinformatics.jp/en/keggftp.html).<hr />Non-academic users license through Pathway Solutions (http://www.pathway.jp/).<hr />While there are many possible combinations, any individual or use case should have a single license that they will need to get, giving us a pass on A.1.<hr />While we did not go through the registration process, C.1 seems like it would be cleared by the directory layout description on http://www.kegg.jp/kegg/download/ .<hr />While we did not go through the registration process, C.2 seems like it would be cleared by the implied straighforward FTP access post licensing.<hr />Also see KEGG API and KEGG REST resources.",
+        "data-tags": "biology, genomic resource, gene-pathway association, disease-gene association, orthology",
+        "grade-automatic": 2
+    },
+    {
+        "id": "mgi",
+        "source": "Mouse Genome Informatics (MGI)",
+        "source-link": "http://www.informatics.jax.org/",
+        "status": "complete",
+        "description": "MGI is the international database resource for the laboratory mouse, providing integrated genetic, genomic, and biological data to facilitate the study of human health and disease.",
+        "data-field": "biology",
+        "data-type": "MOD",
+        "data-categories": [
+            "genotype-phenotype association",
+            "disease-model association",
+            "gene expression"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://www.informatics.jax.org/downloads/reports/index.html"
+            }
+        ],
+        "license": "custom",
+        "license-type": "permissive",
+        "license-link": "http://www.informatics.jax.org/mgihome/other/copyright.shtml",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "Custom license."
+            },
+            {
+                "criteria": "E.1.1",
+                "comment": "distinguishes groups, allowing for research/academic. Commercial groups can negotiate."
+            }
+        ],
+        "license-commentary": [
+            "-This software and data are provided to enhance knowledge and encourage progress in the scientific community and are to be used only for research and educational purposes.",
+            "-Any reproduction or use for commercial purpose is prohibited without the prior express written permission of the Jackson Laboratory."
+        ],
+        "contacts": [
+            "http://www.informatics.jax.org/mgihome/support/mgi_inbox.shtml"
+        ],
+        "license-commentary-embeddable": "-This software and data are provided to enhance knowledge and encourage progress in the scientific community and are to be used only for research and educational purposes.<hr />-Any reproduction or use for commercial purpose is prohibited without the prior express written permission of the Jackson Laboratory.",
+        "data-tags": "biology, MOD, genotype-phenotype association, disease-model association, gene expression",
+        "grade-automatic": 4
+    },
+    {
+        "id": "monarch",
+        "source": "Monarch Initiative",
+        "source-type": "integrator",
+        "source-link": "https://monarchinitiative.org",
+        "status": "complete",
+        "description": "Integrate, align, and re-distribute cross-species gene, genotype, variant, disease, and phenotype data. Provide a portal for exploration of phenotype-based similarity. Facilitate identification of animal models of human disease through phenotypic similarity. Enable quantitative comparison of cross-species phenotypes. Develop embeddable widgets for data exploration. Influence genotype and phenotype reporting standards. Improve ontologies to better curate genotype-phenotype data.",
+        "data-field": "biology",
+        "data-type": "x-species",
+        "data-categories": [
+            "gene",
+            "genotype",
+            "disease",
+            "phenotype",
+            "variant",
+            "disease-phenotype associations",
+            "genotype-phenotype associations"
+        ],
+        "data-access": [
+            {
+                "type": "api",
+                "location": "https://api.monarchinitiative.org/api/"
+            },
+            {
+                "type": "download",
+                "location": "https://archive.monarchinitiative.org/latest/"
+            }
+        ],
+        "license": "CC-BY-3.0",
+        "license-type": "permissive",
+        "license-link": "https://monarchinitiative.org",
+        "license-issues": [
+            {
+                "criteria": "B.2.1",
+                "comment": "Text in footer: \"Except where forbidden by the original sources...\"; how these interact is not clear."
+            },
+            {
+                "criteria": "B.2.2",
+                "comment": "There is no indication of which data has what sources, so reusability cannot be determined."
+            },
+            {
+                "criteria": "C.1",
+                "comment": "The scope of the API is not clear and the data downloads locations are apparently not public."
+            },
+            {
+                "criteria": "D.1.2",
+                "comment": "While the license of original Monarch work is CC-BY-3.0, there is no indication of how this interacts with upstream licenses and what they are."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "While the license of original Monarch work is CC-BY-3.0, there is no indication of how this interacts with upstream licenses and what they are."
+            }
+        ],
+        "license-commentary": [
+            "I could not find a direct reference to whether the data found at the API and downloads were complete in scope.",
+            "Apparent license found in footer of all pages.",
+            "Except where forbidden by the original sources, this work is licensed under a Creative Commons Attribution 3.0 License."
+        ],
+        "contacts": [
+            "info@monarchinitiative.org"
+        ],
+        "license-commentary-embeddable": "I could not find a direct reference to whether the data found at the API and downloads were complete in scope.<hr />Apparent license found in footer of all pages.<hr />Except where forbidden by the original sources, this work is licensed under a Creative Commons Attribution 3.0 License.",
+        "data-tags": "biology, x-species, gene, genotype, disease, phenotype, variant, disease-phenotype associations, genotype-phenotype associations",
+        "grade-automatic": 2
+    },
+    {
+        "id": "mpd",
+        "source": "Mouse Phenome Database (MPD)",
+        "source-link": "https://phenome.jax.org/",
+        "status": "complete",
+        "description": "The Mouse Phenome Database is a collaborative standardized collection of measured data on laboratory mouse strains, and includes: baseline phenotype data sets; studies of drug, diet, disease and aging effect; protocols, projects, and publications; and SNP, variation and gene expression studies. MPD collects data for classical inbred strains, other fixed-genotype strains, derived lines and populations that are openly acquirable (strain panel examples). Strains can be from JAX-Mice or from any other vendor that\\'s a recognized breeding source.",
+        "data-field": "biology",
+        "data-type": "MOD",
+        "data-categories": [
+            "genotype (strain)-phenotype association"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://phenome.jax.org/downloads"
+            }
+        ],
+        "license": "custom",
+        "license-type": "permissive",
+        "license-link": "http://phenome.jax.org/about/termsofuse",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "Custom license, yet consistent."
+            }
+        ],
+        "license-commentary": [
+            "-MPD data contributors waive copyright and related rights, making their data freely available whereby MPD users may freely build upon, enhance and reuse those data for any purpose without restriction. Scholarly citation norms must be followed for content reuse.",
+            "-The Jackson Laboratory\\'s web site privacy policy applies to all use of this resource.",
+            "-The Mouse Phenome Database (MPD) is an NIH-funded data sharing repository and adheres to the NIH Genomic Data Sharing Policy.",
+            "-Any reproduction of JAX(R) Mice mouse images is prohibited without prior express written permission (see the JAX(R) Mice Terms of Use for details).",
+            "-Data contributors and data users may not use MPD in any unlawful manner, or in any manner that would impair MPD\\'s services, security or functionality. Automated usage (webcrawlers and similar) must observe each page\\'s \"meta robots\" html tags and space requests by ≥ 2 seconds. We reserve the right to block violators and to take any other action as we deem necessary."
+        ],
+        "contacts": [
+            "phenome@jax.org"
+        ],
+        "license-commentary-embeddable": "-MPD data contributors waive copyright and related rights, making their data freely available whereby MPD users may freely build upon, enhance and reuse those data for any purpose without restriction. Scholarly citation norms must be followed for content reuse.<hr />-The Jackson Laboratory\\'s web site privacy policy applies to all use of this resource.<hr />-The Mouse Phenome Database (MPD) is an NIH-funded data sharing repository and adheres to the NIH Genomic Data Sharing Policy.<hr />-Any reproduction of JAX(R) Mice mouse images is prohibited without prior express written permission (see the JAX(R) Mice Terms of Use for details).<hr />-Data contributors and data users may not use MPD in any unlawful manner, or in any manner that would impair MPD\\'s services, security or functionality. Automated usage (webcrawlers and similar) must observe each page\\'s \"meta robots\" html tags and space requests by ≥ 2 seconds. We reserve the right to block violators and to take any other action as we deem necessary.",
+        "data-tags": "biology, MOD, genotype (strain)-phenotype association",
+        "grade-automatic": 4.5
+    },
+    {
+        "id": "msigdb",
+        "source": "MSigDB",
+        "source-link": "http://software.broadinstitute.org/gsea/msigdb/index.jsp",
+        "status": "complete",
+        "description": "The Molecular Signatures Database (MSigDB) is a collection of annotated gene sets for use with GSEA software.",
+        "data-field": "biology",
+        "data-type": "gene sets",
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://software.broadinstitute.org/gsea/downloads.jsp"
+            }
+        ],
+        "license": "CC-BY-4.0",
+        "license-type": "permissive",
+        "license-link": "http://software.broadinstitute.org/gsea/msigdb_license_terms.jsp",
+        "license-issues": [
+            {
+                "criteria": "B.2.1",
+                "comment": "The main body of work is under CC-BY 4.0, with filterable additional works under their own terms from KEGG, BioCarta, and AAAS/STKE. While the filtering step is an annoyance, is can likely easily be done given their instructions and would be a one-time process per release."
+            }
+        ],
+        "license-commentary": [
+            "MSigDB v6.0 is available under a Creative Commons style license, plus additional terms for some gene sets",
+            "A user must register before being able to view the downloads for tracking purposes. Easy access after that set is done."
+        ],
+        "contacts": [
+            "http://software.broadinstitute.org/gsea/contact.jsp"
+        ],
+        "license-commentary-embeddable": "MSigDB v6.0 is available under a Creative Commons style license, plus additional terms for some gene sets<hr />A user must register before being able to view the downloads for tracking purposes. Easy access after that set is done.",
+        "data-tags": "biology, gene sets",
+        "grade-automatic": 4.5
+    },
+    {
+        "id": "mygene-info",
+        "source": "MyGene.info",
+        "source-link": "http://mygene.info",
+        "status": "complete",
+        "description": "MyGene.info provides simple-to-use REST web services to query/retrieve gene annotation data.",
+        "data-field": "biology",
+        "data-type": "genomic resource",
+        "data-categories": [
+            "gene definition"
+        ],
+        "data-access": [
+            {
+                "type": "api",
+                "location": "http://mygene.info/v3/api"
+            }
+        ],
+        "license": "copyright",
+        "license-type": "copyright",
+        "license-link": "http://mygene.info/terms/",
+        "license-commentary": [
+            "MyGene.info may contain information from third party websites, which may or may not be marked with the name of the source. Such information does not necessarily represent the views or opinions of TSRI, and TSRI shall have no responsibility whatsoever for such information.",
+            "You also agree that you will ensure that any copies of documents you generate by using MyGene.info shall retain and display all copyright and other proprietary notices contained therein.",
+            "TSRI shall have no responsibility whatsoever for such information [from 3rd party websites].",
+            "Nothing contained herein shall be construed as conferring by implication, estoppel or otherwise any license or right under any patent, trademark or other intellectual property of TSRI or any third party. Except as expressly provided above, nothing contained herein shall be construed as conferring any right or license under any TSRI copyrights."
+        ],
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "Custom license, but consistent."
+            },
+            {
+                "criteria": "B.2.1",
+                "comment": "Scope is incomplete - they claim no responsibility for data from other sources on their site."
+            },
+            {
+                "criteria": "D.1.2",
+                "comment": "No re-use allowed, just use."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "No re-use allowed, just use."
+            }
+        ],
+        "contacts": [
+            "help@mygene.info"
+        ],
+        "license-commentary-embeddable": "MyGene.info may contain information from third party websites, which may or may not be marked with the name of the source. Such information does not necessarily represent the views or opinions of TSRI, and TSRI shall have no responsibility whatsoever for such information.<hr />You also agree that you will ensure that any copies of documents you generate by using MyGene.info shall retain and display all copyright and other proprietary notices contained therein.<hr />TSRI shall have no responsibility whatsoever for such information [from 3rd party websites].<hr />Nothing contained herein shall be construed as conferring by implication, estoppel or otherwise any license or right under any patent, trademark or other intellectual property of TSRI or any third party. Except as expressly provided above, nothing contained herein shall be construed as conferring any right or license under any TSRI copyrights.",
+        "data-tags": "biology, genomic resource, gene definition",
+        "grade-automatic": 2
+    },
+    {
+        "id": "ncbi-gene",
+        "source": "National Center for Biotechnology Information (Gene)",
+        "source-link": "https://www.ncbi.nlm.nih.gov/gene/",
+        "status": "complete",
+        "description": "Gene integrates information from a wide range of species. A record may include nomenclature, Reference Sequences (RefSeqs), maps, pathways, variations, phenotypes, and links to genome-, phenotype-, and locus-specific resources worldwide.",
+        "data-field": "biology",
+        "data-type": "genomic resource",
+        "data-categories": [
+            "gene definition",
+            "taxon definition",
+            "gene-publication association"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "ftp://ftp.ncbi.nih.gov/gene/"
+            }
+        ],
+        "license": "custom",
+        "license-type": "unknown",
+        "license-link": "http://www.ncbi.nlm.nih.gov/home/about/policies.shtml",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "The license apparently uses language to declare something similar to \"public domain\", but with the caveat that it may contain data that is otherwise."
+            },
+            {
+                "criteria": "B.1",
+                "comment": "This is judged to be a violation as any (re)use would depend on negotiating with all upstream copyright holders, which are not presented."
+            },
+            {
+                "criteria": "B.2.1",
+                "comment": "It is implied that their license does not cover all data."
+            },
+            {
+                "criteria": "B.2.2",
+                "comment": "Could not find an explicit \"clean\" version of the data in the downloads."
+            },
+            {
+                "criteria": "D.1.2",
+                "comment": "There is no apparent way to guarantee usage without possibly violating copyright."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "There is no apparent way to guarantee usage without possibly violating copyright."
+            }
+        ],
+        "license-commentary": [
+            "We specifically avoided the more general operation of the EUtils suite, focusing on the provided downloads.",
+            "The following statements from the license page seem to support a custom \"hands off\" approach. To was difficult to decide if this was \"restrictive\" or \"unknown.",
+            "...NCBI itself places no restrictions on the use or distribution of the data contained therein. Nor do we accept data when the submitter has requested restrictions on reuse or redistribution...",
+            "...some submitters of the original data...may claim patent, copyright, or other intellectual property rights in all or a portion of the data (that has been submitted)...",
+            "...NCBI cannot provide comment or unrestricted permission concerning the use, copying, or distribution of the information contained in the molecular databases..."
+        ],
+        "contacts": [
+            "info@ncbi.nlm.nih.gov"
+        ],
+        "license-commentary-embeddable": "We specifically avoided the more general operation of the EUtils suite, focusing on the provided downloads.<hr />The following statements from the license page seem to support a custom \"hands off\" approach. To was difficult to decide if this was \"restrictive\" or \"unknown.<hr />...NCBI itself places no restrictions on the use or distribution of the data contained therein. Nor do we accept data when the submitter has requested restrictions on reuse or redistribution...<hr />...some submitters of the original data...may claim patent, copyright, or other intellectual property rights in all or a portion of the data (that has been submitted)...<hr />...NCBI cannot provide comment or unrestricted permission concerning the use, copying, or distribution of the information contained in the molecular databases...",
+        "data-tags": "biology, genomic resource, gene definition, taxon definition, gene-publication association",
+        "grade-automatic": 1.5
+    },
+    {
+        "id": "nextstrain",
+        "source": "Nextstrain",
+        "source-link": "http://www.nextstrain.org",
+        "status": "nonpublic",
+        "description": "Nextstrain is an open-source project to harness the scientific and public health potential of pathogen genome data. We provide a continually-updated view of publicly available data with powerful analytics and visualizations showing pathogen evolution and epidemic spread. Our goal is to aid epidemiological understanding and improve outbreak response.",
+        "data-field": "biology",
+        "data-type": "genomic resource",
+        "data-categories": [
+            "viral phylogeny",
+            "virus evolution"
+        ],
+        "data-access": [],
+        "license": "unknown",
+        "license-type": "unknown",
+        "license-link": "TODO",
+        "license-issues": [],
+        "license-commentary": [
+            "This is apparently not a public data resource: it is consuming open science, but producing nothing for downstream. I have checked the three non-application pages and there is no data, downloads, or copyright beyond software: /, /about, and /methods.",
+            "From the site: This work is made possible by the open sharing of genetic data by research groups from all over the world. We gratefully acknowledge their contributions."
+        ],
+        "contacts": []
+    },
+    {
+        "id": "omia",
+        "source": "Online Mendelian Inheritance in Animals (OMIA)",
+        "source-link": "http://omia.angis.org.au",
+        "status": "complete",
+        "description": "Online Mendelian Inheritance in Animals (OMIA) is a catalogue/compendium of inherited disorders, other (single-locus) traits, and genes in 215 (non-model) animal species.",
+        "data-field": "biology",
+        "data-type": "veterinary x-species",
+        "data-categories": [
+            "gene-disease association"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://omia.angis.org.au/download/"
+            }
+        ],
+        "license": "standard",
+        "license-type": "copyright",
+        "license-link": "http://sydney.edu.au/disclaimer.html",
+        "license-issues": [
+            {
+                "criteria": "D.1.2",
+                "comment": "The license seems to be a standard ARR, with no exception for any kind of bulk (re)use."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "The license seems to be a standard ARR, with no exception for any kind of bulk (re)use."
+            }
+        ],
+        "license-commentary": [
+            "Appears to be the equivalent of Australian ARR with one exception, which looks fairly standard as well. The exception, however, adds little for our use case over ARR.",
+            "The order of the copyright statments is: this is under copyright, a couple of groups may use a portion, but besides those no \\\"material from this site may not be reproduced for commercial purposes without prior written permission of the University of Sydney.\\\" We are reading this to mean that those specified limited categories may the data for commercial purposes, but all others must contact OMIA."
+        ],
+        "contacts": [
+            "http://omia.angis.org.au/contact/"
+        ],
+        "license-commentary-embeddable": "Appears to be the equivalent of Australian ARR with one exception, which looks fairly standard as well. The exception, however, adds little for our use case over ARR.<hr />The order of the copyright statments is: this is under copyright, a couple of groups may use a portion, but besides those no \\\"material from this site may not be reproduced for commercial purposes without prior written permission of the University of Sydney.\\\" We are reading this to mean that those specified limited categories may the data for commercial purposes, but all others must contact OMIA.",
+        "data-tags": "biology, veterinary x-species, gene-disease association",
+        "grade-automatic": 3
+    },
+    {
+        "id": "omim",
+        "source": "Mendelian Inheritance in Man (OMIM)",
+        "source-link": "https://www.omim.org",
+        "status": "complete",
+        "description": "OMIM is a comprehensive, authoritative compendium of human genes and genetic phenotypes with full-text, referenced overviews that contains information on all known mendelian disorders and over 12,000 genes. OMIM focuses on the relationship between phenotype and genotype.",
+        "data-field": "biomedical",
+        "data-type": "human",
+        "data-categories": [
+            "disease-phenotype association",
+            "gene-disease association",
+            "variant-disease association"
+        ],
+        "data-access": [
+            {
+                "type": "api",
+                "location": "https://omim.org/api"
+            },
+            {
+                "type": "download",
+                "location": "https://omim.org/downloads/"
+            }
+        ],
+        "license": "unknown",
+        "license-type": "restrictive",
+        "license-link": "http://www.omim.org/help/agreement",
+        "license-issues": [
+            {
+                "criteria": "A.1.1",
+                "comment": "There are different licenses for different portions of the data, and for different types of users."
+            },
+            {
+                "criteria": "C.2",
+                "comment": "The data is only available after registering"
+            }
+        ],
+        "license-commentary": [
+            "See also: https://omim.org/downloads/",
+            "From https://omim.org/help/agreement: This Use Agreement applies to any individual, institution, or organization that uses OMIM.org through its front end, including its mirror sites, the OMIM.org API, or downloads of OMIM data from the site. By accessing and using OMIM you agree to be bound by all the terms and conditions set forth in this USE AGREEMENT. This USE AGREEMENT shall constitute a legally binding agreement between the user and Johns Hopkins University (hereinafter \\\"JHU\\\").",
+            "From https://omim.org/help/copyright: The OMIM® database including the collective data contained therein is the property of the Johns Hopkins University, which holds the copyright thereto.",
+            "Custom license with use restrictions.",
+            "Research and educational use of OMIM is encouraged, and single-user academic, non-profit, and governmental agencies can register below for access without a license. For-profit companies or anyone planning to redisplay or incorporate OMIM data into software MUST secure a license to obtain access to these files."
+        ],
+        "contacts": [
+            "JHTT-Communications@jhmi.edu"
+        ],
+        "license-commentary-embeddable": "See also: https://omim.org/downloads/<hr />From https://omim.org/help/agreement: This Use Agreement applies to any individual, institution, or organization that uses OMIM.org through its front end, including its mirror sites, the OMIM.org API, or downloads of OMIM data from the site. By accessing and using OMIM you agree to be bound by all the terms and conditions set forth in this USE AGREEMENT. This USE AGREEMENT shall constitute a legally binding agreement between the user and Johns Hopkins University (hereinafter \\\"JHU\\\").<hr />From https://omim.org/help/copyright: The OMIM® database including the collective data contained therein is the property of the Johns Hopkins University, which holds the copyright thereto.<hr />Custom license with use restrictions.<hr />Research and educational use of OMIM is encouraged, and single-user academic, non-profit, and governmental agencies can register below for access without a license. For-profit companies or anyone planning to redisplay or incorporate OMIM data into software MUST secure a license to obtain access to these files.",
+        "data-tags": "biomedical, human, disease-phenotype association, gene-disease association, variant-disease association",
+        "grade-automatic": 0.5
+    },
+    {
+        "id": "orphanet",
+        "source": "Orphanet portal for rare diseases and orphan drugs",
+        "source-link": "http://www.orpha.net",
+        "status": "complete",
+        "description": "Orphanet provides reference information on rare diseases and orphan drugs to help improve the diagnosis, care and treatment of patients with rare diseases.",
+        "data-field": "biomedical",
+        "data-type": "human",
+        "data-categories": [
+            "disease-gene association",
+            "disease-phenotype association",
+            "disease classification",
+            "ontology"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://www.orphadata.org/cgi-bin/index.php/"
+            }
+        ],
+        "license": "unknown",
+        "license-type": "unknown",
+        "license-link": "http://www.orphadata.org/cgi-bin/index.php",
+        "license-commentary": [
+            "Datasets available on request",
+            "These datasets are available for free on signature of a Data Transfer Agreement for Academia (consult the catalogue).",
+            "These datasets are available for a fee on signature of a Data Transfer Agreement for Industry (consult the catalogue)."
+        ],
+        "license-issues": [
+            {
+                "criteria": "D.1.2",
+                "comment": "The CC-BY-ND license prevents derivation."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "The CC-BY-ND license prevents derivation."
+            }
+        ],
+        "contacts": [
+            "http://www.orphadata.org/cgi-bin/contact.php"
+        ],
+        "license-commentary-embeddable": "Datasets available on request<hr />These datasets are available for free on signature of a Data Transfer Agreement for Academia (consult the catalogue).<hr />These datasets are available for a fee on signature of a Data Transfer Agreement for Industry (consult the catalogue).",
+        "data-tags": "biomedical, human, disease-gene association, disease-phenotype association, disease classification, ontology",
+        "grade-automatic": 3
+    },
+    {
+        "id": "orphanet-open",
+        "source": "Orphanet portal for rare diseases and orphan drugs (open access subset)",
+        "source-link": "http://www.orpha.net",
+        "status": "complete",
+        "description": "Orphanet provides reference information on rare diseases and orphan drugs to help improve the diagnosis, care and treatment of patients with rare diseases.",
+        "data-field": "biomedical",
+        "data-type": "human",
+        "data-categories": [
+            "disease-gene association",
+            "disease-phenotype association",
+            "disease classification",
+            "ontology"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://www.orphadata.org/cgi-bin/index.php/"
+            },
+            {
+                "type": "api",
+                "location": "http://www.orpha.net/sparql"
+            }
+        ],
+        "license": "https://creativecommons.org/licenses/by-nd/3.0/",
+        "license-type": "restrictive",
+        "license-link": "http://www.orphadata.org/cgi-bin/inc/legal.inc.php",
+        "license-commentary": [
+            "...you are free to copy, distribute, display and make commercial use of these databases in all legislations, provided you give us credit.",
+            "However, if you intend to distribute a modified version of one of our databases, you must ask us for permission first.",
+            "Users from Academia can obtain access for free via signature of a data transfer agreement",
+            "Freely-accesssible dataset"
+        ],
+        "license-issues": [
+            {
+                "criteria": "D.1.2",
+                "comment": "The CC-BY-ND license prevents derivation."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "The CC-BY-ND license prevents derivation."
+            }
+        ],
+        "contacts": [
+            "http://www.orphadata.org/cgi-bin/contact.php"
+        ],
+        "license-commentary-embeddable": "...you are free to copy, distribute, display and make commercial use of these databases in all legislations, provided you give us credit.<hr />However, if you intend to distribute a modified version of one of our databases, you must ask us for permission first.<hr />Users from Academia can obtain access for free via signature of a data transfer agreement<hr />Freely-accesssible dataset",
+        "data-tags": "biomedical, human, disease-gene association, disease-phenotype association, disease classification, ontology",
+        "grade-automatic": 3
+    },
+    {
+        "id": "panther",
+        "source": "Protein ANalysis THrough Evolutionary Relationships Classification System (PANTHER)",
+        "source-link": "http://pantherdb.org/",
+        "status": "complete",
+        "description": "The PANTHER (Protein ANalysis THrough Evolutionary Relationships) Classification System was designed to classify proteins (and their genes) according to evolutionary family/subfamily, molecular function, biological process, and pathway. The PANTHER Classifications are the result of human curation as well as sophisticated bioinformatics algorithms.",
+        "data-field": "biology",
+        "data-type": "genomic resource",
+        "data-categories": [
+            "orthology"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://pantherdb.org/downloads/index.jsp"
+            }
+        ],
+        "license": "all rights reserved",
+        "license-type": "copyright",
+        "license-issues": [
+            {
+                "criteria": "D.1.2",
+                "comment": "Given the all rights reserved copyright statement, any downstream reuse would require negotiation."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "Given the all rights reserved copyright statement, all user/agent types would need to negotiate downstream reuse."
+            }
+        ],
+        "license-commentary": [
+            "There is an alternate curation for this resource that bases itself off of 'http://www.pantherdb.org/tou.jsp', which was found using a narrow Google search and not given consideration due to the difficulties in finding it--we have found no access to this document yet except for the Google search.",
+            "Considering the alternate license, downloads are under a permissive minimal license that states '...as long as the following copyright statement is placed at the top of each file: Copyright © 2005 SRI International', which besides being likely out of data, is custom and does not cover APIs, remixing, and the like. It is hard to interpret the consequences of this license."
+        ],
+        "contacts": [
+            "feedback@pantherdb.org",
+            "pdthomas@usc.edu"
+        ],
+        "license-commentary-embeddable": "There is an alternate curation for this resource that bases itself off of 'http://www.pantherdb.org/tou.jsp', which was found using a narrow Google search and not given consideration due to the difficulties in finding it--we have found no access to this document yet except for the Google search.<hr />Considering the alternate license, downloads are under a permissive minimal license that states '...as long as the following copyright statement is placed at the top of each file: Copyright © 2005 SRI International', which besides being likely out of data, is custom and does not cover APIs, remixing, and the like. It is hard to interpret the consequences of this license.",
+        "data-tags": "biology, genomic resource, orthology",
+        "grade-automatic": 3
+    },
+    {
+        "id": "pombase",
+        "source": "PomBase",
+        "source-link": "http://pombase.org",
+        "status": "complete",
+        "description": "PomBase is a comprehensive database for the fission yeast Schizosaccharomyces pombe, providing structural and functional annotation, literature curation and access to large-scale data sets.",
+        "data-field": "biology",
+        "data-type": "MOD",
+        "data-categories": [
+            "genotype-phenotype association",
+            "disease-model association",
+            "gene expression"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://www.pombase.org/downloads"
+            }
+        ],
+        "license": "unknown",
+        "license-type": "unknown",
+        "license-link": "TODO",
+        "license-issues": [
+            {
+                "criteria": "A.1.2",
+                "comment": "Could not find any clear terms on any searched pages. See commentary."
+            }
+        ],
+        "license-commentary": [
+            "While there is a linked Terms of Use (https://www.ebi.ac.uk/about/terms-of-use), the \"General\" (section 1) and \"Data Services\" (section 1) parts seem to defer to the \"data owners\"; it is unclear if this is PomBase. No other license information could be found."
+        ],
+        "last-curated": "2017-10-17",
+        "grants": [
+            {
+                "label": "PomBase is funded by the Wellcome Trust [104967/Z/14/Z]."
+            }
+        ],
+        "contacts": [
+            "helpdesk@pombase.org",
+            "http://www.pombase.org/feedback"
+        ],
+        "license-commentary-embeddable": "While there is a linked Terms of Use (https://www.ebi.ac.uk/about/terms-of-use), the \"General\" (section 1) and \"Data Services\" (section 1) parts seem to defer to the \"data owners\"; it is unclear if this is PomBase. No other license information could be found.",
+        "data-tags": "biology, MOD, genotype-phenotype association, disease-model association, gene expression",
+        "grade-automatic": 1
+    },
+    {
+        "id": "reactome",
+        "source": "Reactome",
+        "source-link": "http://www.reactome.org",
+        "status": "complete",
+        "description": "Reactome is a free, open-source, curated and peer reviewed pathway database. Our goal is to provide intuitive bioinformatics tools for the visualization, interpretation and analysis of pathway knowledge to support basic research, genome analysis, modeling, systems biology and education.",
+        "data-field": "biology",
+        "data-type": "pathway",
+        "data-categories": [
+            "pathway data"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://reactome.org/pages/download-data/"
+            },
+            {
+                "type": "api",
+                "location": "http://reactome.org/pages/documentation/developer-guide/content-service/"
+            }
+        ],
+        "license": "CC-BY-4.0",
+        "license-type": "permissive",
+        "license-link": "http://www.reactome.org/pages/about/license-agreement/",
+        "license-issues": [
+            {
+                "criteria": "B.2.2",
+                "comment": "KEGG gene and pathway annotations used to construct Reactome Functional Interaction (FI) Network are not licenced CC-BY-4.0. There is a comment that \"the recipient may not distribute this data to other users without a license from Pathway Solutions, Inc.\""
+            }
+        ],
+        "license-commentary": [
+            "The issue with criteria B.2.2 could be rectified if Reactome provided a clean copy of the data that can be redistributed without negotiation."
+        ],
+        "contacts": [
+            "help@reactome.org"
+        ],
+        "license-commentary-embeddable": "The issue with criteria B.2.2 could be rectified if Reactome provided a clean copy of the data that can be redistributed without negotiation.",
+        "data-tags": "biology, pathway, pathway data",
+        "grade-automatic": 4.5
+    },
+    {
+        "id": "rgd",
+        "source": "Rat Genome Database (RGD)",
+        "source-link": "http://rgd.mcw.edu",
+        "status": "complete",
+        "description": "The Rat Genome Database (RGD) was established in 1999 and is the premier site for genetic, genomic, phenotype, and disease data generated from rat research. In addition, it provides easy access to corresponding human and mouse data for cross-species comparisons.",
+        "data-field": "biology",
+        "data-type": "MOD",
+        "data-categories": [
+            "genotype-phenotype association",
+            "disease-model association",
+            "gene expression"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "ftp://ftp.rgd.mcw.edu/pub/"
+            },
+            {
+                "type": "api",
+                "location": "http://rest.rgd.mcw.edu/rgdws/swagger-ui.html"
+            }
+        ],
+        "license": "custom",
+        "license-type": "permissive",
+        "license-link": "http://rgd.mcw.edu/wg/home/disclaimer",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "The licensing page seems to use custom verbiage."
+            },
+            {
+                "criteria": "E.1.1",
+                "comment": "The license distinguishes groups, allowing for free use in research. Commercial groups must negotiate."
+            }
+        ],
+        "license-commentary": [
+            "The active part of the their license in its entirety is: \"This software and data are provided to enhance knowledge and encourage progress in the scientific community and are to be used only for research and educational purposes. Any reproduction or use for commercial purpose is prohibited without the prior express written permission of the Bioinformatics Research Center.\""
+        ],
+        "last-curated": "2017-10-17",
+        "grants": [
+            {
+                "label": "RGD is funded by grant HL64541 from the National Heart, Lung, and Blood Institute on behalf of the NIH."
+            }
+        ],
+        "contacts": [
+            "http://rgd.mcw.edu/contact/index.shtml"
+        ],
+        "license-commentary-embeddable": "The active part of the their license in its entirety is: \"This software and data are provided to enhance knowledge and encourage progress in the scientific community and are to be used only for research and educational purposes. Any reproduction or use for commercial purpose is prohibited without the prior express written permission of the Bioinformatics Research Center.\"",
+        "data-tags": "biology, MOD, genotype-phenotype association, disease-model association, gene expression",
+        "grade-automatic": 4
+    },
+    {
+        "id": "sgd",
+        "source": "Saccharomyces Genome Database (SGD)",
+        "source-link": "https://yeastgenome.org/",
+        "status": "complete",
+        "description": "The Saccharomyces Genome Database (SGD) provides comprehensive integrated biological information for the budding yeast Saccharomyces cerevisiae along with search and analysis tools to explore these data, enabling the discovery of functional relationships between sequence and gene products in fungi and higher organisms.",
+        "data-field": "biology",
+        "data-type": "MOD",
+        "data-categories": [
+            "genotype-phenotype association",
+            "disease-model association",
+            "gene expression"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "https://www.yeastgenome.org/download-data"
+            },
+            {
+                "type": "api",
+                "location": "https://yeastmine.yeastgenome.org/yeastmine/api.do"
+            }
+        ],
+        "license": "custom",
+        "license-type": "permissive",
+        "license-link": "https://sites.google.com/view/yeastgenome-help/about",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "The licensing uses custom verbiage, as well as being somewhat hidden. See commentary."
+            },
+            {
+                "criteria": "E.1.1",
+                "comment": "The license distinguishes groups, allowing for free use in research and education. There is no statement for other groups."
+            }
+        ],
+        "license-commentary": [
+            "The license information found was in passing in the \"About SGD\" paragraph on the SGD Help page at https://sites.google.com/view/yeastgenome-help/about; in its entirety: \"...all of the data in SGD are freely accessible to researchers and educators worldwide...\"",
+            "Otherwise, a reasonable person might assume that the licensing terms were those of Stanford's Terms of Use (https://www.stanford.edu/site/terms/), linked on most pages and considerably more restrictive."
+        ],
+        "was-controversial": "true",
+        "last-curated": "2017-10-17",
+        "grants": [
+            {
+                "label": "The SGD is funded by the National Human Genome Research Institute (NHGRI), US National Institutes of Health [5U41HG001315-18].  Funding is also provided by the Gene Ontology Consortium project funded by the NHGRI [2U41HG002273-13] and the InterMOD project [5R01HG004834-04].  The SGD is part of the Department of Genetics at the School of Medicine, Stanford University and located within the Center for Genomics and Personalized Medicine."
+            }
+        ],
+        "contacts": [
+            "https://www.yeastgenome.org/suggestion",
+            "sgd-helpdesk@lists.stanford.edu"
+        ],
+        "license-commentary-embeddable": "The license information found was in passing in the \"About SGD\" paragraph on the SGD Help page at https://sites.google.com/view/yeastgenome-help/about; in its entirety: \"...all of the data in SGD are freely accessible to researchers and educators worldwide...\"<hr />Otherwise, a reasonable person might assume that the licensing terms were those of Stanford's Terms of Use (https://www.stanford.edu/site/terms/), linked on most pages and considerably more restrictive.",
+        "data-tags": "biology, MOD, genotype-phenotype association, disease-model association, gene expression",
+        "grade-automatic": 4
+    },
+    {
+        "id": "wormbase",
+        "source": "WormBase",
+        "source-link": "http://www.wormbase.org",
+        "status": "complete",
+        "description": "WormBase is an international consortium dedicated to providing the research community with accurate, current, accessible information concerning the genetics, genomics and biology of C. elegans and related nematodes.",
+        "data-field": "biology",
+        "data-type": "model organism genome sequences",
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://www.wormbase.org/about/userguide#3--10"
+            },
+            {
+                "type": "api",
+                "location": "http://www.wormbase.org/about/userguide/for_developers/api-rest#01--10"
+            }
+        ],
+        "license": "custom",
+        "license-type": "unknown",
+        "license-link": "http://www.wormbase.org/about/policies#2--10",
+        "license-issues": [
+            {
+                "criteria": "A.1.1",
+                "comment": "A single license is not provided, rather data users are intructed that they are responsible for identifying and complying with licensing and copyright restrictions for each piece of information in the database."
+            }
+        ],
+        "license-commentary": [
+            "Because this no single license is provided, this source can only be awarded a total of 1 stars.  As both components of criteria C were met, 1 star total was awarded."
+        ],
+        "contacts": [
+            "help@wormbase.org"
+        ],
+        "license-commentary-embeddable": "Because this no single license is provided, this source can only be awarded a total of 1 stars.  As both components of criteria C were met, 1 star total was awarded.",
+        "data-tags": "biology, model organism genome sequences",
+        "grade-automatic": 1
+    },
+    {
+        "id": "zfin",
+        "source": "Zebrafish Information Network (ZFIN)",
+        "source-link": "http://zfin.org",
+        "status": "complete",
+        "description": "The Zebrafish Information Resource is the community database resource for the laboratory use of zebrafish which develops and supports integrated zebrafish genetic, genomic and developmental information, maintains the definitive reference data sets of zebrafish research information toward facilitation of the use of zebrafish as a model for human biology.",
+        "data-field": "biology",
+        "data-type": "model organism database",
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://zfin.org/downloads"
+            }
+        ],
+        "license": "custom",
+        "license-type": "restrictive",
+        "license-link": "http://zfin.org/warranty.html",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "Custom license with non academic and non research use restrictions."
+            },
+            {
+                "criteria": "B.1",
+                "comment": "The license explicity requires intervention for downstream reuse and redistribution."
+            },
+            {
+                "criteria": "D.1.2",
+                "comment": "The license requires written permission for redistribution."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "The license requires written premission for redistribution even for academic and non commerical parties."
+            }
+        ],
+        "license-commentary": [
+            "-ZFIN Software and Data are provided to enhance knowledge and encourage progress in the scientific community, and are to be used only for research and educational purposes. ZFIN reserves all rights not expressly granted. Further, ZFIN retains all rights, title, and interest in and to the Software and Data. Any reproduction or use for a commercial purpose is prohibited without the prior express written permission of ZFIN. Distribution of the Software or Data to any third party, without a separate written agreement with ZFIN, is prohibited."
+        ],
+        "contacts": [
+            "jknight@zfin.org"
+        ],
+        "license-commentary-embeddable": "-ZFIN Software and Data are provided to enhance knowledge and encourage progress in the scientific community, and are to be used only for research and educational purposes. ZFIN reserves all rights not expressly granted. Further, ZFIN retains all rights, title, and interest in and to the Software and Data. Any reproduction or use for a commercial purpose is prohibited without the prior express written permission of ZFIN. Distribution of the Software or Data to any third party, without a separate written agreement with ZFIN, is prohibited.",
+        "data-tags": "biology, model organism database",
+        "grade-automatic": 2
+    }
+]
