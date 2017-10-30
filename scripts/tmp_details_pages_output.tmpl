@@ -15,6 +15,24 @@
 	   <p>
 	     <dl>
 
+	       <!-- SPECIAL: grade-automatic -->
+	       <dt class="explanation-header">
+		 Grade
+	       </dt>
+	       <dd class="field-explanation">
+		 The grade for the resource as automatically
+		 determined by the <a href="criteria.html">criteria
+		 violations</a>.
+	       </dd>
+	       <dd class="curated-data">
+		 {{ #grade-automatic }}
+		 {{ grade-automatic }}
+		 {{ /grade-automatic }}
+		 {{ ^grade-automatic }}
+		 Cannot be determined with current information
+		 {{ /grade-automatic }}
+	       </dd>
+
 	       <!-- description -->
 	       <dt class="explanation-header">
 		 Description
