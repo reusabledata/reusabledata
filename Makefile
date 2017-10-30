@@ -30,8 +30,8 @@ index.html enhanced_compiled.json: compiled.json
 ###
 
 .PHONY: details_pages
-details_pages: compiled.json
-	node ./scripts/details-assemble.js --in ./data-sources/compiled.json --outer-template ./scripts/tmp_static_output_frame.tmpl --body-template ./scripts/tmp_details_pages_output.tmpl --output ./docs
+details_pages: enhanced_compiled.json
+	node ./scripts/details-assemble.js --in ./data-sources/enhanced_compiled.json --outer-template ./scripts/tmp_static_output_frame.tmpl --body-template ./scripts/tmp_details_pages_output.tmpl --output ./docs
 
 ###
 ### Make a sitemap from the docs directory.
