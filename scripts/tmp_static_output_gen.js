@@ -3,7 +3,7 @@
 //// one-page app.
 ////
 //// Example usage:
-////  node ./scripts/tmp_static_output_gen.js -i ./data-sources/compiled.json -t ./scripts/tmp_static_output_gen.tmpl -o ./docs/index.html
+////  node ./scripts/tmp_static_output_gen.js -i ./data-sources/compiled.json -t ./scripts/tmp_static_output_gen.tmpl -o ./docs/index.html -s ./data-sources/enhanced_compiled.json
 ////
 
 var us = require('underscore');
@@ -20,7 +20,7 @@ var pug = require('pug');
 var each = us.each;
 
 function _ll(arg1){
-    console.log(arg1); 
+    console.log(arg1);
 }
 
 var debug = false;
@@ -77,6 +77,14 @@ if( ! out_file ){
     _debug('Will use output file: ' + out_file);
 }
 
+//
+var score_file = argv['s'] || argv['scores'];
+if( ! score_file ){
+    _die('Option (s|scores) is required.');
+}else{
+    _debug('Will use score output file: ' + score_file);
+}
+
 ///
 /// Main.
 ///
@@ -102,7 +110,7 @@ var summary_violation_group = {
 var summary_violation = {
     "A.1.1": [],
     "A.1.2": [],
-    "A.2": [], 
+    "A.2": [],
     "B.1": [],
     "B.2.1": [],
     "B.2.2": [],
@@ -216,7 +224,7 @@ us.each(data_sources, function(source){
 
 	// Do not override "given" grade at this point.
 	source['grade-automatic'] = grade;
-	
+
 	// It should not be possible for any type of restrictive
 	// license to get above 3.0.
 	var restrictive_check = '';
@@ -249,11 +257,11 @@ us.each(us.keys(summary_violation_group).sort(), function(grp){
 
     var grp_sum = summary_violation_group[grp];
     var grp_cnt = us.keys(grp_sum).length;
-	
+
      var print_str = grp + ': ' + grp_cnt;
 
     // A is already violated and C is always evaluated.
-    if( grp === 'A' || grp === 'C' ){ 
+    if( grp === 'A' || grp === 'C' ){
 	print_str += ' / ' + grp_cnt;
     }else{
 	print_str += ' / ' + (grp_cnt + summary_unknown_count);
@@ -267,7 +275,7 @@ console.log('===');
 console.log('Total resources: ' + summary_total_count);
 console.log('Clear resources (no A.1.*): ' + summary_known_count);
 console.log('Unclear resources (yes A.1.*): ' + summary_unknown_count);
-	
+
 // Pug/Jade for table.
 var html_table_str = pug.renderFile('./scripts/static-table.pug',
 				    {"data_sources": data_sources});
@@ -284,6 +292,8 @@ var outstr = mustache.render(template, {
     "tabledata": data_sources
 });
 
+// Write out index.html.
 fs.writeFileSync(out_file, outstr);
 
-
+// Write out scores.json.
+fs.writeFileSync(score_file, JSON.stringify(data_sources, null, 4));

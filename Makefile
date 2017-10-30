@@ -1,6 +1,6 @@
 
 
-all: index.html criteria.html license-types.html reading.html about.html details_pages sitemap
+all: index.html criteria.html license-types.html reading.html about.html enhanced_compiled.json details_pages sitemap
 
 # .PHONY: clean
 # clean:
@@ -20,8 +20,9 @@ check:
 compiled.json:
 	node ./scripts/yamls2json.js -i ./data-sources/ -o ./data-sources/compiled.json
 
-index.html: compiled.json
-	node ./scripts/tmp_static_output_gen.js -i ./data-sources/compiled.json -t ./scripts/tmp_static_output_gen.tmpl -o ./docs/index.html
+## The also makes
+index.html enhanced_compiled.json: compiled.json
+	node ./scripts/tmp_static_output_gen.js -i ./data-sources/compiled.json -t ./scripts/tmp_static_output_gen.tmpl -o ./docs/index.html -s ./data-sources/enhanced_compiled.json
 
 ###
 ### All of the details pages are generated from running the compiled
