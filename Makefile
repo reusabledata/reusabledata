@@ -21,8 +21,8 @@ compiled.json:
 	node ./scripts/yamls2json.js -i ./data-sources/ -o ./data-sources/compiled.json
 
 ## The also makes
-index.html enhanced_compiled.json: compiled.json
-	node ./scripts/tmp_static_output_gen.js -i ./data-sources/compiled.json -t ./scripts/tmp_static_output_gen.tmpl -o ./docs/index.html -s ./data-sources/enhanced_compiled.json
+index.html enhanced_compiled.json summary_graph.json: compiled.json
+	node ./scripts/tmp_static_output_gen.js -i ./data-sources/compiled.json -t ./scripts/tmp_static_output_gen.tmpl -o ./docs/index.html -s ./data-sources/enhanced_compiled.json -j ./data-sources/summary_graph.json
 
 ###
 ### All of the details pages are generated from running the compiled

@@ -3,7 +3,7 @@
 //// one-page app.
 ////
 //// Example usage:
-////  node ./scripts/tmp_static_output_gen.js -i ./data-sources/compiled.json -t ./scripts/tmp_static_output_gen.tmpl -o ./docs/index.html -s ./data-sources/enhanced_compiled.json
+////  node ./scripts/tmp_static_output_gen.js -i ./data-sources/compiled.json -t ./scripts/tmp_static_output_gen.tmpl -o ./docs/index.html -s ./data-sources/enhanced_compiled.json -j ./data-sources/summary_graph.json
 ////
 
 var us = require('underscore');
@@ -83,6 +83,14 @@ if( ! score_file ){
     _die('Option (s|scores) is required.');
 }else{
     _debug('Will use score output file: ' + score_file);
+}
+
+//
+var summary_graph_file = argv['j'] || argv['julie'];
+if( ! summary_graph_file ){
+    _die('Option (j|julie) is required.');
+}else{
+    _debug('Will use summary graph output file: ' + summary_graph_file);
 }
 
 ///
@@ -253,6 +261,8 @@ us.each(us.keys(summary_count).sort(), function(k){
 });
 console.log('===');
 //console.log(summary_violation_group);
+// Data for Julie.
+var jdata = [];
 us.each(us.keys(summary_violation_group).sort(), function(grp){
 
     var grp_sum = summary_violation_group[grp];
@@ -262,9 +272,31 @@ us.each(us.keys(summary_violation_group).sort(), function(grp){
 
     // A is already violated and C is always evaluated.
     if( grp === 'A' || grp === 'C' ){
+	// Immediate output.
 	print_str += ' / ' + grp_cnt;
-    }else{
+
+	// Save data.
+    	var jset_ac = [
+	    grp,
+	    (summary_total_count - grp_cnt),
+	    "0",
+	    grp_cnt
+	];
+	//console.log(jset_ac.join("\t"));
+	jdata.push(jset_ac);
+}else{
+	// Immediate output.
 	print_str += ' / ' + (grp_cnt + summary_unknown_count);
+
+	// Save data.
+	var jset_else = [
+	    grp,
+	    (summary_total_count -grp_cnt -summary_unknown_count),
+	    summary_unknown_count,
+	    grp_cnt
+	];
+	//console.log(jset_else.join("\t"));
+	jdata.push(jset_else);
     }
 
     console.log('Best/worst violation by a resource in group (' + grp + '): ' +
@@ -276,28 +308,10 @@ console.log('Total resources: ' + summary_total_count);
 console.log('Clear resources (no A.1.*): ' + summary_known_count);
 console.log('Unclear resources (yes A.1.*): ' + summary_unknown_count);
 
-// Data for Julie.
 console.log('===');
 console.log('Category\tNo violations\tUnknown\tHas a violation');
-us.each(us.keys(summary_violation_group).sort(), function(grp){
-
-    var grp_sum = summary_violation_group[grp];
-    var grp_cnt = us.keys(grp_sum).length;
-
-    // A is already violated and C is always evaluated.
-    if( grp === 'A' || grp === 'C' ){
-	console.log(grp + "\t" +
-		    (summary_total_count - grp_cnt) + "\t" +
-		    "0" + "\t" +
-		    grp_cnt);
-    }else{
-	console.log(grp + "\t" +
-		    (summary_total_count -grp_cnt -summary_unknown_count) +"\t"+
-		    summary_unknown_count + "\t" +
-		    grp_cnt);
-    }
-
-});
+us.each(jdata, function(jd){ console.log(jd.join("\t")); });
+console.log(jdata);
 
 // Pug/Jade for table.
 var html_table_str = pug.renderFile('./scripts/static-table.pug',
@@ -318,5 +332,8 @@ var outstr = mustache.render(template, {
 // Write out index.html.
 fs.writeFileSync(out_file, outstr);
 
-// Write out scores.json.
+// Write out scores .json.
 fs.writeFileSync(score_file, JSON.stringify(data_sources, null, 4));
+
+// Write out summary graph .json.
+fs.writeFileSync(summary_graph_file, JSON.stringify(jdata, null, 4));
