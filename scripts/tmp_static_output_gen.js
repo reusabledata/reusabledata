@@ -276,6 +276,29 @@ console.log('Total resources: ' + summary_total_count);
 console.log('Clear resources (no A.1.*): ' + summary_known_count);
 console.log('Unclear resources (yes A.1.*): ' + summary_unknown_count);
 
+// Data for Julie.
+console.log('===');
+console.log('Category\tNo violations\tUnknown\tHas a violation');
+us.each(us.keys(summary_violation_group).sort(), function(grp){
+
+    var grp_sum = summary_violation_group[grp];
+    var grp_cnt = us.keys(grp_sum).length;
+
+    // A is already violated and C is always evaluated.
+    if( grp === 'A' || grp === 'C' ){
+	console.log(grp + "\t" +
+		    (summary_total_count - grp_cnt) + "\t" +
+		    "0" + "\t" +
+		    grp_cnt);
+    }else{
+	console.log(grp + "\t" +
+		    (summary_total_count -grp_cnt -summary_unknown_count) +"\t"+
+		    summary_unknown_count + "\t" +
+		    grp_cnt);
+    }
+
+});
+
 // Pug/Jade for table.
 var html_table_str = pug.renderFile('./scripts/static-table.pug',
 				    {"data_sources": data_sources});
