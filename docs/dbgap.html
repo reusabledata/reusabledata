@@ -460,7 +460,18 @@
         if( jQuery("#summarygraph") && jQuery("#summarygraph").length ){
           console.log('...summary graph init...');
 
-          var layout = {barmode: 'stack', title: 'High-level summary of our curated data sources'};
+          var layout = {
+            title: 'High-level summary of our curated data sources',
+            //width: 500,
+            //height: 300,
+            paper_bgcolor: "rgb(236, 238, 239)",
+            plot_bgcolor: "rgb(236, 238, 239)",
+            xaxis: {
+               tickangle: -45
+               //tickangle: -15
+            },
+            barmode: 'stack'
+          };
           Plotly.newPlot('summarygraph', global_summary_data, layout);
 
           console.log('...done.');
