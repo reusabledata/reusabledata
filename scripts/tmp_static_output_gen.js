@@ -316,6 +316,14 @@ console.log(jdata);
 
 // Convert into something for plotly.js.
 var jdata_plotly = [];
+//var xstack = ['A', 'B', 'C', 'D', 'E'];
+var xstack = [
+    'Clearly stated',
+    'Comprehensive and<br>non-negotiated',
+    'Accessible',
+    'Avoid restrictions on<br>kinds of (re)use',
+    'Avoid restrictions on<br>who may (re)use'
+];
 
 // No violations/pass.
 var pass_stack = [];
@@ -323,10 +331,10 @@ us.each(jdata, function(jd){
     pass_stack.push(jd[1]);
 });
 jdata_plotly.push({
-    'x': ['A', 'B', 'C', 'D', 'E'],
+    'x': xstack,
     'y': pass_stack,
     'name': 'No violations',
-    'marker': {color: 'rgb(0, 128, 0)'},
+    'marker': {color: 'rgb(8,150,72)'},
     'type': 'bar'
 });
 
@@ -336,10 +344,10 @@ us.each(jdata, function(jd){
     unknown_stack.push(jd[2]);
 });
 jdata_plotly.push({
-    'x': ['A', 'B', 'C', 'D', 'E'],
+    'x': xstack,
     'y': unknown_stack,
     'name': 'Unknown',
-    'marker': {color: 'rgb(128, 128, 0)'},
+    'marker': {color: 'rgb(19,99,163)'},
     'type': 'bar'
 });
 
@@ -349,10 +357,10 @@ us.each(jdata, function(jd){
     vio_stack.push(jd[3]);
 });
 jdata_plotly.push({
-    'x': ['A', 'B', 'C', 'D', 'E'],
+    'x': xstack,
     'y': vio_stack,
     'name': 'Have a violation',
-    'marker': {color: 'rgb(128, 0, 0)'},
+    'marker': {color: 'rgb(144,24,26)'},
     'type': 'bar'
 });
 

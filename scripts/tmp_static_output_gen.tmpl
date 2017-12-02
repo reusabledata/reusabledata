@@ -101,14 +101,34 @@
 	    <img class="mx-auto d-block" style="height:200px; padding:1em;" src="logo-circle.png" />
 	  </div>
 	</div>
-
-	<p>
-	  <a class="btn btn-primary btn-lg"
-	     href="#who-we-are" role="button">Learn more »</a>
-	  &nbsp;&nbsp;&nbsp;
-	  <a class="btn btn-success btn-lg"
-	     href="#our-sources-data" role="button">See our data »</a>
-	</p>
+	<div class="row">
+	  <div class="col-xl-3">
+	    <table height="100%" width="100%">
+	      <tr>
+		<td style="vertical-align:middle; text-align:center;">
+		  <p style="">
+		    <a class="btn btn-secondary btn-lg"
+		       href="#who-we-are"
+		       role="button">Learn more »</a>
+		  </p>
+		  <p>
+		    <a class="btn btn-primary btn-lg"
+		       href="#our-sources-data"
+		       role="button">See our data »</a>
+		  </p>
+		  <p>
+		    <a class="btn btn-success btn-lg"
+		       href="https://github.com/reusabledata/reusabledata/issues"
+		       role="button">Join us »</a>
+		  </p>
+		</td>
+	      </tr>
+	    </table>
+	  </div>
+	  <div class="col-xl-9">
+	      <div class="mx-auto d-block" id="summarygraph"></div>
+	  </div>
+	</div>
       </div>
     </div>
     <!-- end jumbotron -->
@@ -339,7 +359,7 @@
 		    <!-- for the data before that horizon. -->
 		  </li>
 		  <li id="criteria-e">
-		    <strong>Avoid restrictions who may (re)use (E)</strong><br />
+		    <strong>Avoid restrictions on who may (re)use (E)</strong><br />
 
 		    Data should should be available to as many people
 		    as possible for their
@@ -355,12 +375,6 @@
 		    <!-- license</a>. -->
 		  </li>
 		</ul>
-	      </p>
-
-	      <div id="summarygraph"></div>
-
-	      <p>
-		For in-depth information, please start with:
 	      </p>
 
 	      <p>
@@ -481,7 +495,18 @@
         if( jQuery("#summarygraph") && jQuery("#summarygraph").length ){
           console.log('...summary graph init...');
 
-          var layout = {barmode: 'stack', title: 'High-level summary of our curated data sources'};
+          var layout = {
+            title: 'High-level summary of our curated data sources',
+            //width: 500,
+            //height: 300,
+            paper_bgcolor: "rgb(236, 238, 239)",
+            plot_bgcolor: "rgb(236, 238, 239)",
+            xaxis: {
+               tickangle: -45
+               //tickangle: -15
+            },
+            barmode: 'stack'
+          };
           Plotly.newPlot('summarygraph', global_summary_data, layout);
 
           console.log('...done.');
