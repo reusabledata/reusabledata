@@ -430,8 +430,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script>
     <script type="text/javascript">
       var global_data = ;
+      var global_summary_data = ;
       jQuery(document).ready(function(){
         console.log('Ready...');
         if( jQuery("#sourcestable") && jQuery("#sourcestable").length ){
@@ -452,6 +454,14 @@
             //console.log('DataTable draw event');
             jQuery('[data-toggle="popover"]').popover();
           });
+
+          console.log('...done.');
+        }
+        if( jQuery("#summarygraph") && jQuery("#summarygraph").length ){
+          console.log('...summary graph init...');
+
+          var layout = {barmode: 'stack', title: 'High-level summary of our curated data sources'};
+          Plotly.newPlot('summarygraph', global_summary_data, layout);
 
           console.log('...done.');
         }
