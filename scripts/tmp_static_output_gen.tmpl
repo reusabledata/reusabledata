@@ -242,6 +242,7 @@
 		our <a href="https://github.com/reusabledata/reusabledata/issues">issue
 		  tracker</a>.
 	      </p>
+
 	      <p>
 		<a class="btn btn-secondary"
 		   href="#our-criteria"
@@ -272,6 +273,7 @@
 		objectively see how licenses can interact across
 		resources.
 	      </p>
+
 	      <p>
 		To learn more about how we look at resource data
 		licenses, please see
@@ -282,7 +284,7 @@
 	      <p>
 		<ul class="nicer-ul">
 		  <li id="criteria-a">
-		    <strong>Clearly stated</strong><br />
+		    <strong>Clearly stated (A)</strong><br />
 
 		    A clearly stated, unambiguous, and hopefully
 		    standard, license for data use is critical for any
@@ -295,7 +297,7 @@
 		       href="criteria.html#criteria-A">more »</a>
 		  </li>
 		  <li id="criteria-b">
-		    <strong>Comprehensive and non-negotiated</strong><br />
+		    <strong>Comprehensive and non-negotiated (B)</strong><br />
 
 		    Data that is mixed under different licenses, only
 		    partially available, or must be in some way
@@ -309,7 +311,7 @@
 		    <!-- others to do the same is paramount. -->
 		  </li>
 		  <li id="criteria-c">
-		    <strong>Accessible</strong><br />
+		    <strong>Accessible (C)</strong><br />
 
 		    Data must be accessible in a reasonable and manner
 		    to be useful to the broader
@@ -322,7 +324,7 @@
 		    <!-- and anything else.  A counterexample may be -->
 		  </li>
 		  <li id="criteria-d">
-		    <strong>Avoid restrictions on kinds of (re)use</strong><br />
+		    <strong>Avoid restrictions on kinds of (re)use (D)</strong><br />
 
 		    Data should be able to be copied, built upon,
 		    edited, and modified as freely as
@@ -337,7 +339,7 @@
 		    <!-- for the data before that horizon. -->
 		  </li>
 		  <li id="criteria-e">
-		    <strong>Avoid restrictions who may (re)use</strong><br />
+		    <strong>Avoid restrictions who may (re)use (E)</strong><br />
 
 		    Data should should be available to as many people
 		    as possible for their
@@ -354,6 +356,13 @@
 		  </li>
 		</ul>
 	      </p>
+
+	      <div id="summarygraph"></div>
+
+	      <p>
+		For in-depth information, please start with:
+	      </p>
+
 	      <p>
 		<a class="btn btn-secondary"
 		   href="#our-sources-data"
@@ -442,8 +451,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script>
     <script type="text/javascript">
       var global_data = {{{ jsondata }}};
+      var global_summary_data = {{{ summarydata }}};
       jQuery(document).ready(function(){
         console.log('Ready...');
         if( jQuery("#sourcestable") && jQuery("#sourcestable").length ){
@@ -464,6 +475,14 @@
             //console.log('DataTable draw event');
             jQuery('[data-toggle="popover"]').popover();
           });
+
+          console.log('...done.');
+        }
+        if( jQuery("#summarygraph") && jQuery("#summarygraph").length ){
+          console.log('...summary graph init...');
+
+          var layout = {barmode: 'stack', title: 'High-level summary of our curated data sources'};
+          Plotly.newPlot('summarygraph', global_summary_data, layout);
 
           console.log('...done.');
         }

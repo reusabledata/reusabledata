@@ -263,6 +263,7 @@ console.log('===');
 //console.log(summary_violation_group);
 // Data for Julie.
 var jdata = [];
+var jdata_plotly = [];
 us.each(us.keys(summary_violation_group).sort(), function(grp){
 
     var grp_sum = summary_violation_group[grp];
@@ -284,7 +285,7 @@ us.each(us.keys(summary_violation_group).sort(), function(grp){
 	];
 	//console.log(jset_ac.join("\t"));
 	jdata.push(jset_ac);
-}else{
+    }else{
 	// Immediate output.
 	print_str += ' / ' + (grp_cnt + summary_unknown_count);
 
@@ -313,6 +314,50 @@ console.log('Category\tNo violations\tUnknown\tHas a violation');
 us.each(jdata, function(jd){ console.log(jd.join("\t")); });
 console.log(jdata);
 
+// Convert into something for plotly.js.
+var jdata_plotly = [];
+
+// No violations/pass.
+var pass_stack = [];
+us.each(jdata, function(jd){
+    pass_stack.push(jd[1]);
+});
+jdata_plotly.push({
+    'x': ['A', 'B', 'C', 'D', 'E'],
+    'y': pass_stack,
+    'name': 'No violations',
+    'marker': {color: 'rgb(0, 128, 0)'},
+    'type': 'bar'
+});
+
+// Unknown.
+var unknown_stack = [];
+us.each(jdata, function(jd){
+    unknown_stack.push(jd[2]);
+});
+jdata_plotly.push({
+    'x': ['A', 'B', 'C', 'D', 'E'],
+    'y': unknown_stack,
+    'name': 'Unknown',
+    'marker': {color: 'rgb(128, 128, 0)'},
+    'type': 'bar'
+});
+
+// Has at least one violation.
+var vio_stack = [];
+us.each(jdata, function(jd){
+    vio_stack.push(jd[3]);
+});
+jdata_plotly.push({
+    'x': ['A', 'B', 'C', 'D', 'E'],
+    'y': vio_stack,
+    'name': 'Have a violation',
+    'marker': {color: 'rgb(128, 0, 0)'},
+    'type': 'bar'
+});
+
+
+
 // Pug/Jade for table.
 var html_table_str = pug.renderFile('./scripts/static-table.pug',
 				    {"data_sources": data_sources});
@@ -325,6 +370,7 @@ _debug('template', template);
 
 var outstr = mustache.render(template, {
     "jsondata": JSON.stringify(data_sources),
+    "summarydata": JSON.stringify(jdata_plotly),
     "htmltablestr": html_table_str,
     "tabledata": data_sources
 });

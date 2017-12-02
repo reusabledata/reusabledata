@@ -20,7 +20,7 @@ check:
 compiled.json:
 	node ./scripts/yamls2json.js -i ./data-sources/ -o ./data-sources/compiled.json
 
-## The also makes
+## Make enhanced data files, as well as final index.
 index.html enhanced_compiled.json summary_graph.json: compiled.json
 	node ./scripts/tmp_static_output_gen.js -i ./data-sources/compiled.json -t ./scripts/tmp_static_output_gen.tmpl -o ./docs/index.html -s ./data-sources/enhanced_compiled.json -j ./data-sources/summary_graph.json
 
