@@ -22,8 +22,7 @@ license-issues:
     comment: 'CC BY-ND prevents some types of reuse, such and modification and redistribution.'
   - criteria: 'E.1.2'
     comment: 'CC BY-ND prevents all parties from reusing the data.'
-license-commentary:
-  - ''
+license-commentary: []
 was-controversial: "false"
 contacts:
   - 'help@uniprot.org'
