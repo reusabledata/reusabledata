@@ -1,5 +1,5 @@
 id: 'bto'
-description: 'def: 'A structured controlled vocabulary for the source of an enzyme. It comprises terms of tissues, cell lines, cell types and cell cultures from uni- and multicellular organisms.'
+description: 'A structured controlled vocabulary for the source of an enzyme. It comprises terms of tissues, cell lines, cell types and cell cultures from uni- and multicellular organisms.'
 last-curated: '2017-12-03'
 source: 'BRENDA Tissue Ontology'
 source-link: 'http://bto.brenda-enzymes.org/'
