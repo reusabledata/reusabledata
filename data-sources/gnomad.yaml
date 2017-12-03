@@ -1,0 +1,33 @@
+id: 'gnomad'
+description: ' The Genome Aggregation Database (gnomAD), is a coalition of investigators seeking to aggregate and harmonize exome and genome sequencing data from a variety of large-scale sequencing projects, and to make summary data available for the wider scientific community. In its first release, which contained exclusively exome data, it was known as the Exome Aggregation Consortium (ExAC).'
+last-curated: '2017-12-03'
+source: 'Genome Aggregation Database (gnomAD)'
+source-link: 'http://gnomad.broadinstitute.org/'
+source-type: "integrator"
+status: "complete"
+data-field: 'biology'
+data-type: 'human'
+data-categories:
+  - 'exome sequencing data'
+  - 'genome sequencing data'
+  - 'disease-specific genetic studies'
+  - 'population genetic studies'
+data-access:
+  - type: download
+    location: 'http://gnomad.broadinstitute.org/downloads'
+license: "ODbL 1.0"
+license-type: "copyleft"
+license-link: 'http://gnomad.broadinstitute.org/terms'
+license-hat-used: "false"
+license-issues:
+  - criteria: 'D.1.1'
+    comment: 'While extremely open, the ODbL does restrict the ability to mix and redistribute with data without similar terms.'
+license-commentary:
+  - 'All data available under: https://opendatacommons.org/licenses/odbl/1.0/'
+was-controversial: "false"
+contacts:
+  - 'http://gnomad.broadinstitute.org/contact'
+grants:
+  - label: 'NIGMS R01 GM104371 (PI: MacArthur)'
+  - label: 'NIDDK U54 DK105566 (PIs: MacArthur and Neale)'
+  - label: 'The vast majority of the data storage, computing resources, and human effort used to generate this call set were donated by the Broad Institute.'
