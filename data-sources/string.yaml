@@ -1,0 +1,21 @@
+id: string
+source: STRING
+source-link: 'https://string-db.org'
+status: complete
+description: 'STRING is a database of known and predicted protein-protein interactions. The interactions include direct (physical) and indirect (functional) associations; they stem from computational prediction, from knowledge transfer between organisms, and from interactions aggregated from other (primary) databases.'
+data-field: biology
+data-type: cross-species
+data-categories:
+    - 'protein-protein interaction'
+    - 'protein families'
+data-access:
+  - type: download
+    location: 'https://string-db.org/cgi/download.pl'
+license: CC-BY-4.0
+license-type: permissive
+license-link: 'https://string-db.org/cgi/access.pl'
+license-commentary:
+  - 'While there are APIs available, we skipped evaluation as they explicitly state they are now meant for bulk use and downloads are available anyways.'
+last-curated: "2017-12-03"
+contacts:
+- https://string-db.org/cgi/support.pl
