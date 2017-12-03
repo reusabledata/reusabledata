@@ -11,7 +11,8 @@ data-categories: []
 data-access:
   - type: download
     location: 'http://'
-license: "unknown", "copyleft", "permissive", "public domain", "copyright", "restrictive", "closed pool"
+license: ""
+license-type: "unknown", "copyleft", "permissive", "public domain", "copyright", "restrictive", "closed pool"
 license-link: 'http://'
 license-hat-used: "true", "false"
 license-issues:
