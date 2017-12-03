@@ -1,0 +1,29 @@
+id: 'oncokb'
+source: 'OncoKB'
+source-link: "http://oncokb.org"
+status: complete
+description: "OncoKB is a precision oncology knowledge base and contains information about the effects and treatment implications of specific cancer gene alterations. It is developed and maintained by the Knowledge Systems group in the Marie Josée and Henry R. Kravis Center for Molecular Oncology at Memorial Sloan Kettering Cancer Center (MSK), in partnership with Quest Diagnostics."
+data-field: biology
+data-type: 'human'
+data-categories:
+  - 'variants'
+  - 'cancer genes'
+  - 'gene expression'
+data-access:
+  - type: download
+    location: 'http://oncokb.org/#/dataAccess'
+license: custom
+license-type: restrictive
+license-link: 'http://oncokb.org/#/terms'
+license-issues:
+  - criteria: A.2
+    comment: "While custom, the terms are quite clear."
+  - criteria: D.1
+    comment: 'Restrictions on type of use appear in the license, even or research:"You may copy, reproduce, or create derivative works of the Content only if:...you are using the Content only to replicate OncoKB locally, whether in whole or in part; or you are aggregating the Content with other data of similar nature for the purposes of advancing cancer research."'
+  - criteria: E.1
+    comment: 'Restrictions exist on who may use the data: "You may copy, reproduce, or create derivative works of the Content only if: you are a researcher or a non-profit entity; and..."'
+license-commentary:
+  - 'While there does not seem to be any clear licensing information currently on the site, from a separate conversation (https://github.com/geneontology/noctua/issues/510#issuecomment-334864073), it would seem that this will soon be updated.'
+last-curated: "2017-12-03"
+contacts:
+  - 'team@oncokb.org'
