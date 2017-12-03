@@ -1,0 +1,29 @@
+id: 'bto'
+description: 'def: 'A structured controlled vocabulary for the source of an enzyme. It comprises terms of tissues, cell lines, cell types and cell cultures from uni- and multicellular organisms.'
+last-curated: '2017-12-03'
+source: 'BRENDA Tissue Ontology'
+source-link: 'http://bto.brenda-enzymes.org/'
+source-type: "source"
+status: "complete", "incomplete", "nonpublic"
+data-field: 'biology'
+data-type: 'ontology'
+data-categories: 
+  - 'enzyme sources'
+data-access:
+  - type: download
+    location: 'http://www.brenda-enzymes.info/ontology/tissue/tree/update/update_files/BrendaTissueOBO'
+license: "permissive"
+license-link: 'http://www.brenda-enzymes.info/ontology/tissue/tree/update/update_files/BrendaTissueOBO'
+license-hat-used: "false"
+license-issues:
+  - criteria: 'C.2'
+    comment: 'Once one knows the location of the BTO (ontology file), access is fine. However, we were unable to locate the ontology file after some searching through the main BRENDA website and most text would imply there is no free ontology file to be had.'
+license-commentary:
+  - 'The relatively high score is due to knowing where the ontology exists and knowing to look at the header--normal use of the site seems to lead around restricted APIs webpages containing; the free ontology file is hiding in there.'
+  - 'Typcial of this is: "Use of this online version of BRENDA is free for academic research only. Commercial use or download access requires a license. See terms of use." (http://bto.brenda-enzymes.org/copy.php)'
+  - 'The "CC-BY" declaration in the ontology file header should be versioned or linked.'
+was-controversial: "false"
+contacts:
+  - 'http://support.brenda-enzymes.org/open.php'
+grants:
+  - label: 'This work was supported by the European Union: (FELICS: Free European Life-Science Information and Computational Services: 021902 (RII3); SLING: Serving Life-science Information for the Next Generation: 226073).'
