@@ -1,0 +1,31 @@
+id: 'uniprotkb'
+description: 'The mission of UniProt is to provide the scientific community with a comprehensive, high-quality and freely accessible resource of protein sequence and functional information. Includes: UniProtKB, UniRef, UniParc, and Proteomes.'
+last-curated: '2017-12-03'
+source: 'UniProt'
+source-link: 'http://www.uniprot.org'
+source-type: "source"
+status: "complete", "incomplete", "nonpublic"
+data-field: 'biology'
+data-type: 'sequence'
+data-categories:
+  - 'protein sequence'
+  - 'protein function'
+data-access:
+  - type: download
+    location: 'http://www.uniprot.org/downloads'
+license: "CC BY-ND 3.0"
+license-type: "restrictive"
+license-link: 'http://www.uniprot.org/help/license'
+license-hat-used: "false"
+license-issues:
+  - criteria: 'D.1.2'
+    comment: 'CC BY-ND prevents some types of reuse, such and modification and redistribution.'
+  - criteria: 'E.1.2'
+    comment: 'CC BY-ND prevents all parties from reusing the data.'
+license-commentary:
+  - ''
+was-controversial: "false"
+contacts:
+  - 'help@uniprot.org'
+grants:
+  - label: 'UniProt is supported by the National Institutes of Health (NIH), National Human Genome Research Institute (NHGRI) and National Institute of General Medical Sciences (NIGMS) grant U41HG007822. Additional support for the EMBL-EBI's involvement in UniProt comes from European Molecular Biology Laboratory (EMBL), the British Heart Foundation (BHF) (RG/13/5/30112), the Parkinson's Disease United Kingdom (PDUK) GO grant G-1307, and the NIH GO grant U41HG02273. UniProt activities at the SIB are additionally supported by the Swiss Federal Government through the State Secretariat for Education, Research and Innovation SERI. PIR's UniProt activities are also supported by the NIH grants R01GM080646, G08LM010720, and P20GM103446, and the National Science Foundation (NSF) grant DBI-1062520.'
