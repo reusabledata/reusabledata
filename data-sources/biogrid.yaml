@@ -2,26 +2,21 @@ id: biogrid
 source: BioGRID
 source-link: 'https://thebiogrid.org'
 status: complete
-description: interaction
+description: 'BioGRID is an interaction repository with data compiled through comprehensive curation efforts. Our current index is version 3.4.155 and searches 63,959 publications for 1,507,991 protein and genetic interactions, 27,785 chemical associations and 38,559 post translational modifications from major model organism species. All data are freely provided via our search index and available for download in standardized formats.'
 data-field: biology
-data-type: x-species
+data-type: cross-species
 data-categories:
     - 'protein-protein interaction'
 data-access:
     - type: download
-      location: https://thebiogrid.org/download.php
-license: 'custom'
-license-type: 'unknown'
-license-link: 'http://wiki.thebiogrid.org/doku.php/terms_and_conditions'
+      location: 'https://downloads.thebiogrid.org/BioGRID'
+license: 'MIT'
+license-type: 'permissive'
+license-link: 'https://downloads.thebiogrid.org/BioGRID'
 license-commentary:
-    - 'BioGRID interaction data are 100% freely available to both commercial and academic users'
-    - 'All information, data, text, software, music, sound, photographs, graphics, video, messages, or any other materials whatsoever (collectively, “Content”), whether publicly posted or privately transmitted, is the sole responsibility of the person from whom such Content originated. This means that the user, and not BioGRID, is entirely responsible for all Content that he or she uploads, posts, emails or otherwise transmits via the BioGRID Sites.'
-    - 'Use, reproduction, modification, and other intellectual property rights to data stored on the BioGRID Sites will be subject to licensing arrangements that may be approved by BioGRID as applicable to such Content.'
-    - 'You agree not to sell, resell, or offer for any commercial purposes, any portion of the BioGRID Sites, use of the BioGRID Sites, or access to the BioGRID Sites.'
-    - 'Our designated agent to receive notification of claimed infringement is:  Mr. Terry Donaghue Director Technology Transfer and Industrial Liason 600 University Avenue Toronto, ON, Canada donaghue@mshri.on.ca TEL: 416-586-8225 FAX: 416-586-3110'
-    - 'Unclear if one would need to negotiate: "subject to licensing arrangements that may be approved by BioGRID"'
-license-issues:
-    - criteria: A.1.1
-      comment: 'multiple licenses found & cannot easily break down sources for separate evaluation'
+    - 'We are considering the terms on the downloads page to be the most specific and correct ones. While there are additional terms as http://wiki.thebiogrid.org/doku.php/terms_and_conditions, these appear to belikely related to the wiki and non-data content.'
+    - 'Please use the file navigator below to browse and download archived BioGRID project files. All data provided are 100% freely available to both academic and commercial users under the MIT License, and are provided WITHOUT ANY WARRANTY. If you have any questions, please feel free to contact us. Publications are requested to please cite the original contributing authors (where applicable) and also: Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. Biogrid: A General Repository for Interaction Datasets. Nucleic Acids Res. Jan 1, 2006; 34:D535-9.'
+license-issues: []
+last-curated: "2017-12-03"
 contacts:
     - biogridadmin@gmail.com
