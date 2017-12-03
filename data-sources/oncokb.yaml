@@ -18,9 +18,9 @@ license-link: 'http://oncokb.org/#/terms'
 license-issues:
   - criteria: A.2
     comment: "While custom, the terms are quite clear."
-  - criteria: D.1
+  - criteria: D.1.1
     comment: 'Restrictions on type of use appear in the license, even or research:"You may copy, reproduce, or create derivative works of the Content only if:...you are using the Content only to replicate OncoKB locally, whether in whole or in part; or you are aggregating the Content with other data of similar nature for the purposes of advancing cancer research."'
-  - criteria: E.1
+  - criteria: E.1.1
     comment: 'Restrictions exist on who may use the data: "You may copy, reproduce, or create derivative works of the Content only if: you are a researcher or a non-profit entity; and..."'
 license-commentary:
   - 'While there does not seem to be any clear licensing information currently on the site, from a separate conversation (https://github.com/geneontology/noctua/issues/510#issuecomment-334864073), it would seem that this will soon be updated.'
