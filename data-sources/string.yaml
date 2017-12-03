@@ -18,4 +18,4 @@ license-commentary:
   - 'While there are APIs available, we skipped evaluation as they explicitly state they are now meant for bulk use and downloads are available anyways.'
 last-curated: "2017-12-03"
 contacts:
-- https://string-db.org/cgi/support.pl
+  - 'https://string-db.org/cgi/support.pl'
