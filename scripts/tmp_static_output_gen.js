@@ -360,7 +360,8 @@ jdata_plotly.push({
     'x': xstack,
     'y': vio_stack,
     'name': 'Have a violation',
-    'marker': {color: 'rgb(144,24,26)'},
+    'marker': {color: 'rgb(128,128,128)'},
+    //'marker': {color: 'rgb(144,24,26)'},
     'type': 'bar'
 });
 
