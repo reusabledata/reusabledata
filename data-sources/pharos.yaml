@@ -1,0 +1,35 @@
+id: 'pharos'
+description: ''
+last-curated: '2017-12-03'
+source: 'Pharos'
+source-link: 'https://pharos.nih.gov/'
+source-type: "integrator"
+status: "complete"
+data-field: 'biology'
+data-type: ''
+data-categories:
+  - 'disease'
+  - 'targets'
+  - 'ligands'
+data-access:
+  - type: api
+    location: 'https://pharos.nih.gov/idg/api'
+  - type: download
+    location: 'http://juniper.health.unm.edu/tcrd/download/'
+license: "CC BY-SA 4.0"
+license-type: "copyleft"
+license-link: 'http://juniper.health.unm.edu/tcrd/download/README'
+license-hat-used: "false"
+license-issues:
+  - criteria: 'A.1.1'
+    comment: 'While any novel data is under a CC license, the integrated resources are under whatever license the upstream is, with the user expected to sort it out.'
+license-commentary:
+  - 'Unfortunately, the API ToS link leads to a bad (404-type) Swagger page.'
+  - 'From the license page: "Please note that TCRD incoporates many data sources with a variety of associated licenses...Users of the TCRD downloads are resposible for compliance with these licenses."
+  - 'Given the variety and terms of the upstream resources, the inconsistency is not unexpected.'
+was-controversial: "false"
+contacts:
+  - 'pharos@mail.nih.gov'
+grants:
+  - label: 'Pharos is the user interface to the Knowledge Management Center (KMC) for the Illuminating the Druggable Genome (IDG) program funded by the National Institutes of Health (NIH) Common Fund. (Grant No. 5U54CA189205-02).'
+    url: 'https://projectreporter.nih.gov/project_info_details.cfm?aid=8898033&icde=28628127&ddparam=&ddvalue=&ddsub=&cr=3&csb=default&cs=ASC'
