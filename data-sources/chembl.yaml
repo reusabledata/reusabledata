@@ -1,0 +1,38 @@
+id: 'chembl'
+description: 'ChEMBL is a database of bioactive drug-like small molecules, it contains 2-D structures, calculated properties (e.g. logP, Molecular Weight, Lipinski Parameters, etc.) and abstracted bioactivities (e.g. binding constants, pharmacology and ADMET data).'
+last-curated: '2017-12-03'
+source: 'ChEMBL'
+source-link: 'https://www.ebi.ac.uk/chembl/'
+source-type: "source"
+status: "complete"
+data-field: 'biology'
+data-type: 'biochemical'
+data-categories:
+  - 'bioactive drug-like small molecules'
+data-access:
+  - type: download
+    location: 'https://www.ebi.ac.uk/chembl/downloads'
+  - type: api
+    location: 'https://www.ebi.ac.uk/chembl/ws'
+license: "CC SA 3.0 Unported"
+license-type: "copyleft"
+license-link: 'ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_23/LICENSE'
+license-hat-used: "false"
+license-issues:
+  - criteria: 'D.1.2'
+    comment: 'CC SA prevents some types of reuse, such and modification and redistribution with data from different license types.'
+  - criteria: 'E.1.2'
+    comment: 'CC SA prevents all parties from reusing the data as D.1.2.'
+license-commentary:
+  - 'There was no centralized licensing/terms information on the main site, but all download FTP directories we looked at contained terms for the CC SA 3.0; we used as single example as the license link.'
+was-controversial: "false"
+contacts:
+  - 'https://www.ebi.ac.uk/support/'
+grants:
+  - label: '2014-2019: The ChEMBL Database, Wellcome Trust (Strategic Award WT104104/Z/14/Z).'
+  - label: '2009-date: The member states of EMBL.'
+  - label: '2016-2022: European Commission Horizon 2020 Toxicity Testing and Risk Assessment in the 21 st Century EU-ToxRisk (681002)'
+  - label: '2015-2019: Coordinated Research Infrastructures Building Enduring Life-science Services CORBEL (654248)'
+  - label: '2014-2017: The Knowledge Management Center (KMC) for the Illuminating the Druggable Genome (IDG) program funded by the National Institutes of Health (NIH) Common Fund. (Grant No. U54CA189205)'
+  - label: '2014-2017: The Center for Therapeutic Target Validation (CTTV008)'
+  - label: '2013-2018: European Commission FP7 HeCaTos – Safety prediction (602156)'
