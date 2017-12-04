@@ -44,7 +44,7 @@ mapping:
   "source-link":
     type: str
     required: yes
-    pattern: /^(TODO|http(s?)\:\/\/\w[\/\.\-\:\=\?\&\_\+\u0023\w]+)$/
+    pattern: /^(TODO|(ht|f)tp(s?)\:\/\/\w[\/\.\-\:\=\?\&\_\+\u0023\w]+)$/
   ## (Optional) How the resource relates to the data it contains.
   ## Current allowable entries are: "unknown", "repository", and "source",
   ## and "integrator".
@@ -151,7 +151,7 @@ mapping:
   "license-link":
     type: str
     required: no
-    pattern: /^(TODO|http(s?)\:\/\/\w[\/\.\-\:\=\?\&\_\+\u0023\w]+)$/
+    pattern: /^(TODO|(ht|f)tp(s?)\:\/\/\w[\/\.\-\:\=\?\&\_\+\u0023\w]+)$/
   ## (Optional) Setting this flag to true indicates that the licensing
   ## was combinatorially complicated enough (as is the case in some
   ## commercial licenses) that the curator chose to wear a single
@@ -256,5 +256,5 @@ mapping:
           "url":
             type: str
             required: no
-            pattern: /^(TODO|http(s?)\:\/\/\w[\/\.\-\:\=\?\&\_\+\u0023\w]+)$/
+            pattern: /^(TODO|(ht|f)tp(s?)\:\/\/\w[\/\.\-\:\=\?\&\_\+\u0023\w]+)$/
     required: no
