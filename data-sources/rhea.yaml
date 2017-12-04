@@ -1,0 +1,30 @@
+id: 'rhea'
+description: 'Rhea is an expert curated resource of biochemical reactions designed for the annotation of enzymes and genome-scale metabolic networks and models. Rhea uses the ChEBI (Chemical Entities of Biological Interest) ontology of small molecules to precisely describe reactions participants and their chemical structures. All reactions are balanced for mass and charge and are linked to source literature, metabolic resources and other functional vocabularies such as the enzyme classification of the NC-IUBMB.'
+last-curated: '2017-12-03'
+source: 'Rhea'
+source-link: 'http://www.rhea-db.org'
+source-type: "source"
+status: "complete"
+data-field: 'biology'
+data-type: 'biochemical'
+data-categories:
+  - 'enzymes'
+  - 'metabolic networks'
+  - 'reactions'
+data-access:
+  - type: download
+    location: 'http://www.rhea-db.org/download'
+  - type: api
+    location: 'http://www.rhea-db.org/webservice'
+license: "CC BY 4.0"
+license-type: "permissive"
+license-link: 'http://www.rhea-db.org/licensedisclaimer'
+license-hat-used: "false"
+license-issues: []
+license-commentary: []
+was-controversial: "false"
+contacts:
+  - 'http://www.rhea-db.org/feedback'
+grants:
+  - label: 'Rhea development and curation activities at the SIB are supported by the Swiss Federal Government through the State Secretariat for Education, Research and Innovation (SERI), and by the SystemsX.ch, The Swiss Initiative in Systems Biology.'
+  - label: 'Rhea curation was partially supported by MICROME (an EU Framework Programme 7 Collaborative Project. Grant Agreement Number 222886-2).'
