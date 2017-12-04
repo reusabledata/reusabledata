@@ -20,7 +20,7 @@ license-link: 'http://drugcentral.org/privacy'
 license-hat-used: "false"
 license-issues:
   - criteria: D.1.2
-comment: 'By using a copyleft-style license, there may be issues in mixing and redistributing this data with licenses that have incompatible terms.'
+    comment: 'By using a copyleft-style license, there may be issues in mixing and redistributing this data with licenses that have incompatible terms.'
 license-commentary:
   - 'While there is upstream data integtration, there seems to be no mention of upstream licenses or terms. Not necessarily our issue here.'
 was-controversial: "false"
