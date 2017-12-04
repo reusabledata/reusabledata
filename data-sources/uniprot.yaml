@@ -4,7 +4,7 @@ last-curated: '2017-12-03'
 source: 'UniProt'
 source-link: 'http://www.uniprot.org'
 source-type: "source"
-status: "complete", "incomplete", "nonpublic"
+status: "complete"
 data-field: 'biology'
 data-type: 'sequence'
 data-categories:
