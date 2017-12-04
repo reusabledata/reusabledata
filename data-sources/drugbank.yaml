@@ -1,0 +1,36 @@
+id: 'drugbank'
+description: 'The DrugBank database is a unique bioinformatics and cheminformatics resource that combines detailed drug data with comprehensive drug target information.'
+last-curated: '2017-12-03'
+source: 'DrugBank'
+source-link: 'https://www.drugbank.ca'
+source-type: "source"
+status: "complete"
+data-field: 'pharmacology'
+data-type: 'drug'
+data-categories:
+  - 'bioinformatics'
+  - 'cheminformatics'
+  - 'drugs'
+  - 'drug-protein interactions'
+  - 'targets'
+  - 'pathways'
+data-access:
+  - type: download
+    location: 'https://www.drugbank.ca/releases/latest'
+license: "CC NC 4.0"
+license-type: "restrictive"
+license-link: 'https://www.drugbank.ca/releases/latest'
+license-hat-used: "false"
+license-issues:
+  - criteria: 'D.1.1'
+    comment: 'The NC license allows for liberal non-commercial reuse.'
+  - criteria: 'E.1.1'
+    comment: 'The NC license allows for non-commercial reuse with other non-commercial interests.'
+license-commentary:
+  - 'This seems to ba a standard NC/commercial licensing split, with DrugBank+ supporting commerical licensing for fees.'
+  - 'To download, one must sign up for an account (https://www.drugbank.ca/public_users); possibly for tracking/analytics.'
+was-controversial: "false"
+contacts:
+  - 'support@drugbankplus.com'
+grants:
+  - label: "This project is supported by the Canadian Institutes of Health Research (award #111062), Alberta Innovates - Health Solutions, and by The Metabolomics Innovation Centre (TMIC), a nationally-funded research and core facility that supports a wide range of cutting-edge metabolomic studies. TMIC is funded by Genome Alberta, Genome British Columbia, and Genome Canada, a not-for-profit organization that is leading Canada\'s national genomics strategy with funding from the federal government. Maintenance, support, and commercial licensing is provided by OMx Personal Health Analytics, Inc. Designed by Educe Design & Innovation Inc."
