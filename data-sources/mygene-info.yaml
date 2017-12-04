@@ -10,8 +10,8 @@ data-categories:
 data-access:
     - type: api
       location: http://mygene.info/v3/api
-license: copyright
-license-type: copyright
+license: custom
+license-type: restrictive
 license-link: http://mygene.info/terms/
 license-commentary:
   - 'MyGene.info may contain information from third party websites, which may or may not be marked with the name of the source. Such information does not necessarily represent the views or opinions of TSRI, and TSRI shall have no responsibility whatsoever for such information.'
