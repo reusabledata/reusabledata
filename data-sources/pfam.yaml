@@ -1,0 +1,29 @@
+id: 'pfam'
+description: 'The Pfam database is a large collection of protein families, each represented by multiple sequence alignments and hidden Markov models (HMMs).'
+last-curated: '2017-12-03'
+source: 'Pfam'
+source-link: 'http://pfam.xfam.org'
+source-type: "repository"
+status: "complete"
+data-field: 'biology'
+data-type: 'protein familys'
+data-categories:
+  - 'protein family alignments'
+  - 'HMMs'
+data-access:
+  - type: download
+    location: 'ftp://ftp.ebi.ac.uk/pub/databases/Pfam/'
+license: "CC0"
+license-type: "permissive"
+license-link: 'http://pfam.xfam.org/about'
+license-hat-used: "false"
+license-issues: []
+license-commentary: []
+was-controversial: "false"
+contacts:
+  - 'pfam-help@ebi.ac.uk'
+grants:
+  - label: "EMBL is EMBL-EBI\'s parent organisation. It provides core funding (staff, space, equipment) for Pfam."
+  - label: 'The Wellcome Trust has supported Pfam since the database inception, via core funding when based at the Wellcome Trust Sanger Institute. As well as providing and maintaining the campus on which the EMBL-EBI is located, the Wellcome Trust also now provides significant funding for Pfam (grant 108433/Z/15/Z). The current grant runs from October 2015 to September 2020.
+  - label: 'BBSRC currently supports Pfam activities via the grants (BB/L024136/1 and BB/N00521X/1).'
+  - label: 'The Howard Hughes Medical Institute supports the Eddy group.'
