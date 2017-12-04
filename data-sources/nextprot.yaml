@@ -1,0 +1,36 @@
+id: 'nextprot'
+description: 'Developed by the SIB Swiss Institute of Bioinformatics neXtProt is a comprehensive human-centric discovery platform, offering its users a seamless integration of and navigation through protein-related data.'
+last-curated: '2017-12-03'
+source: 'neXtProt'
+source-link: 'https://www.nextprot.org'
+source-type: "integrator"
+status: "complete"
+data-field: 'biology'
+data-type: 'human'
+data-categories:
+  - 'protein-related data'
+  - 'protein functional data'
+  - 'protein-protein interaction'
+  - 'sub-cellular location'
+data-access:
+  - type: download
+    location: 'ftp://ftp.nextprot.org/pub/'
+  - type: api
+    location: 'http://api.nextprot.org'
+  - type: api
+    location: 'http://sparql.nextprot.org'
+  - type: api
+    location: 'http://snorql.nextprot.org'
+license: "CC BY-ND 3.0"
+license-type: "restrictive"
+license-link: 'ftp://ftp.nextprot.org/pub/README'
+license-hat-used: "false"
+license-issues:
+  - criteria: 'D.1.2'
+    comment: 'CC BY-ND prevents some types of reuse, such and modification and redistribution.'
+  - criteria: 'E.1.2'
+    comment: 'CC BY-ND prevents all parties from reusing the data.'
+license-commentary: []
+was-controversial: "false"
+contacts:
+  - 'support@nextprot.org'
