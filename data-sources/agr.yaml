@@ -1,0 +1,32 @@
+id: 'agr'
+description: 'The primary mission of the Alliance of Genome Resources (the Alliance) is to develop and maintain sustainable genome information resources that facilitate the use of diverse model organisms in understanding the genetic and genomic basis of human biology, health and disease.'
+last-curated: '2017-12-03'
+source: 'Alliance of Genome Resources (AGR)'
+source-link: 'http://www.alliancegenome.org'
+source-type: "unknown"
+status: "complete"
+data-field: 'biology'
+data-type: 'MOD'
+data-categories:
+  - 'functional annotation'
+  - 'disease-gene association'
+data-access: []
+#  - type: download
+#    location: 'http://'
+license: "upknown"
+license-type: "unknown"
+license-link: 'TODO'
+license-hat-used: "false"
+license-issues:
+  - criteria: 'A.1.2'
+    comment: 'No licensing information could be found after some searching.'
+  - criteria: 'C.1'
+    comment: 'Besides the various search and details pages that allowed downloads, there seemed to be no API, centralized downloads, or other products.'
+  - criteria: 'C.2'
+    comment: 'From our search, the only way to extract bulk data would be to crawl and page scrape from random walks.'
+license-commentary: []
+was-controversial: "false"
+contacts:
+  - 'info@alliancegenome.org'
+grants:
+  - label: 'NIH NHGRI U41 HG02223E'
