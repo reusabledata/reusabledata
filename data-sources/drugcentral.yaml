@@ -1,0 +1,28 @@
+id: 'drugcentral'
+description: 'DrugCentral provides information on active ingredients chemical entities, pharmaceutical products, drug mode of action, indications, pharmacologic action. We monitor FDA, EMA, and PMDA for new drug approval on regular basis to ensure currency of the resource.'
+last-curated: '2017-12-03'
+source: 'DrugCentral'
+source-link: 'http://drugcentral.org'
+source-type: "integrator"
+status: "complete"
+data-field: 'phamacology'
+data-type: 'drug-target interaction'
+data-categories:
+  - 'chemical structure of drugs'
+  - 'drug'
+  - 'diseaase'
+data-access:
+  - type: download
+    location: 'http://drugcentral.org/download'
+license: "CC BY-SA 4.0"
+license-type: "copyleft"
+license-link: 'http://drugcentral.org/privacy'
+license-hat-used: "false"
+license-issues:
+  - criteria: D.1.2
+comment: 'By using a copyleft-style license, there may be issues in mixing and redistributing this data with licenses that have incompatible terms.'
+license-commentary:
+  - 'While there is upstream data integtration, there seems to be no mention of upstream licenses or terms. Not necessarily our issue here.'
+was-controversial: "false"
+contacts:
+  - 'For questions and comments please contact Oleg Ursu or Jayme Holmes.'
