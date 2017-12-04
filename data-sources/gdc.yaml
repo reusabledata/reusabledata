@@ -1,0 +1,35 @@
+id: 'gdc'
+description: 'The NCI\'s Genomic Data Commons (GDC) provides the cancer research community with a unified data repository that enables data sharing across cancer genomic studies in support of precision medicine.'
+last-curated: '2017-12-03'
+source: 'Genomic Data Commons (GDC)'
+source-link: 'https://gdc.cancer.gov/'
+source-type: "repository"
+status: "complete"
+data-field: 'biology'
+data-type: 'human'
+data-categories:
+  - 'cancer genome'
+  - 'variants'
+  - 'mRNA and miRNA sequence data'
+data-access:
+  - type: download
+    location: 'https://gdc.cancer.gov/access-data/gdc-data-transfer-tool'
+  - type: api
+    location: 'https://gdc.cancer.gov/developers/gdc-application-programming-interface-api'
+license: "unknown"
+license-type: "unknown"
+#license-link: 'http://'
+license-hat-used: "false"
+license-issues:
+  - criteria: 'A.1.2'
+    comment: 'After searching around GDC and cancer.gov, no centralized licensing or terms could be found.'
+license-commentary:
+  - 'After much searching, no centralized or clear terms could be found.'
+  - 'When accessing individual files, there was metadata such as \"Access\": \"open\", so it would seem that any terms, if they did exist, would unlikely be complete.'
+  - 'The initial click-through contains some worrying verbiage: \"You are accessing a U.S. Government web site which may contain information that...is intended for Government authorized use only. Unauthorized attempts to...use of this web site may result in disciplinary action, civil, and/or criminal penalties...\"'
+  - 'Some data would seem to require additional controls: \"GDC data is stored in a secure FISMA-compliant facility. Access to controlled data requires authorization via dbGaP. See Data Access Processes and Tools for more information.\"'
+  - 'While some terms information was found at https://www.cancer.gov/policies/copyright-reuse, it seemed to be about site content rather than data.'
+  - 'While licensing information could not be found, access was not problematic.'
+was-controversial: "false"
+contacts:
+  - 'support@nci-gdc.datacommons.io'
