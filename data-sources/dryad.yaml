@@ -1,0 +1,22 @@
+id: 'dryad'
+description: 'DataDryad.org is a curated general-purpose repository that makes the data underlying scientific publications discoverable, freely reusable, and citable. Dryad has integrated data submission for a growing list of journals; submission of data from other publications is also welcome.'
+last-curated: '2017-12-05'
+source: 'Dryad Digital Repository'
+source-link: 'https://datadryad.org'
+source-type: "repository"
+status: "complete"
+data-field: 'general'
+data-type: 'any'
+data-categories: []
+data-access:
+  - type: download
+    location: 'http://'
+license: "CC0-1.0"
+license-type: "permissive"
+license-link: 'https://datadryad.org/pages/policies#publication'
+license-hat-used: "false"
+license-issues: []
+license-commentary: []
+was-controversial: "false"
+contacts:
+  - 'help@datadryad.org'
