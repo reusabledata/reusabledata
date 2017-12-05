@@ -16,7 +16,7 @@ data-access:
     location: 'https://pharos.nih.gov/idg/api'
   - type: download
     location: 'http://juniper.health.unm.edu/tcrd/download/'
-license: "CC BY-SA 4.0"
+license: "CC-BY-SA-4.0"
 license-type: "copyleft"
 license-link: 'http://juniper.health.unm.edu/tcrd/download/README'
 license-hat-used: "false"
