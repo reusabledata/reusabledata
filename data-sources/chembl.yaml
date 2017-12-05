@@ -14,7 +14,7 @@ data-access:
     location: 'https://www.ebi.ac.uk/chembl/downloads'
   - type: api
     location: 'https://www.ebi.ac.uk/chembl/ws'
-license: "CC SA 3.0 Unported"
+license: "CC-BY-SA-3.0"
 license-type: "copyleft"
 license-link: 'ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_23/LICENSE'
 license-hat-used: "false"
