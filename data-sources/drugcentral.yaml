@@ -14,7 +14,7 @@ data-categories:
 data-access:
   - type: download
     location: 'http://drugcentral.org/download'
-license: "CC BY-SA 4.0"
+license: "CC-BY-SA-4.0"
 license-type: "copyleft"
 license-link: 'http://drugcentral.org/privacy'
 license-hat-used: "false"
