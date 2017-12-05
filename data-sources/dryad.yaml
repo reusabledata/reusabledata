@@ -8,15 +8,17 @@ status: "complete"
 data-field: 'general'
 data-type: 'any'
 data-categories: []
-data-access:
-  - type: download
-    location: 'http://'
+data-access: []
 license: "CC0-1.0"
 license-type: "permissive"
 license-link: 'https://datadryad.org/pages/policies#publication'
 license-hat-used: "false"
-license-issues: []
-license-commentary: []
+license-issues:
+  - criteria: 'C.1'
+    comment: 'While the data could be accessed semi-manually through search and download, there did not seem to be any bulk access mechanisms available.'
+license-commentary:
+  - 'The C \"issue\" may be a product of the primary mission as a citable repository rather than as a primary aggregating resource.'
+  - 'No C.2 violation was considered as all access was open, there was just no centralized bulk access.'
 was-controversial: "false"
 contacts:
   - 'help@datadryad.org'
