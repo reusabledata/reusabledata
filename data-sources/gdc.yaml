@@ -1,5 +1,5 @@
 id: 'gdc'
-description: 'The NCI\'s Genomic Data Commons (GDC) provides the cancer research community with a unified data repository that enables data sharing across cancer genomic studies in support of precision medicine.'
+description: "The NCI\'s Genomic Data Commons (GDC) provides the cancer research community with a unified data repository that enables data sharing across cancer genomic studies in support of precision medicine."
 last-curated: '2017-12-03'
 source: 'Genomic Data Commons (GDC)'
 source-link: 'https://gdc.cancer.gov/'
