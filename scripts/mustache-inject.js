@@ -20,7 +20,7 @@ var pug = require('pug');
 var each = us.each;
 
 function _ll(arg1){
-    console.log(arg1); 
+    console.log(arg1);
 }
 
 var debug = false;
@@ -81,6 +81,22 @@ if( ! title_str ){
     title_str = '(Re)usable Data Project';
 }
 
+// data json filename as string
+var compiled_data = "{}";
+var data_fname = argv['c'] || argv['compiled'];
+if( data_fname ){
+    compiled_data = JSON.parse(fs.readFileSync(data_fname, 'utf-8'));
+    compiled_data = JSON.stringify(compiled_data);
+}
+
+// summary json filename as string
+var summary_data = "{}";
+var summary_fname = argv['s'] || argv['summary'];
+if( summary_fname ){
+    summary_data = JSON.parse(fs.readFileSync(summary_fname, 'utf-8'));
+    summary_data = JSON.stringify(summary_data);
+}
+
 // outfile
 var out_file = argv['o'] || argv['out'];
 if( ! out_file ){
@@ -98,9 +114,11 @@ var template = fs.readFileSync(in_tmpl, 'utf-8');
 _debug('template', template);
 
 var outstr = mustache.render(template, {
-  "title": title_str, 
-  "jumbotron": in_jumbotron,
-  "body": in_body
+  "title": title_str,
+    "jumbotron": in_jumbotron,
+    "body": in_body,
+    "jsondata": compiled_data,
+    "summarydata": summary_data
 });
 
 fs.writeFileSync(out_file, outstr);
