@@ -28,4 +28,6 @@ was-controversial: "false"
 contacts:
   - 'http://gnomad.broadinstitute.org/contact'
 grants:
-  - 
+  - label: 'NIGMS R01 GM104371 (PI: MacArthur)'
+  - label: 'NIDDK U54 DK105566 (PIs: MacArthur and Neale)'
+  - label: 'The vast majority of the data storage, computing resources, and human effort used to generate this call set were donated by the Broad Institute.' 
