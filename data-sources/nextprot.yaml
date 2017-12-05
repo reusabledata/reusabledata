@@ -21,7 +21,7 @@ data-access:
     location: 'http://sparql.nextprot.org'
   - type: api
     location: 'http://snorql.nextprot.org'
-license: "CC BY-ND 3.0"
+license: "CC-BY-ND-3.0"
 license-type: "restrictive"
 license-link: 'ftp://ftp.nextprot.org/pub/README'
 license-hat-used: "false"
