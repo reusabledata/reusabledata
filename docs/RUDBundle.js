@@ -37352,7 +37352,9 @@ var each = us.each;
 ///
 var InteractionViewer = function(global_data, graph_id){
 
-    var graph_layout = 'cose-bilkent'; // default
+    //var graph_layout = 'cose-bilkent'; // default
+    var graph_layout = 'circle'; // default
+    //var graph_layout = 'cose-bilkent'; // default
 
     var DEBUG = true;
     function ll(str){
@@ -37411,8 +37413,33 @@ var InteractionViewer = function(global_data, graph_id){
 	var nlbl = n['source'];
 	var lic = n['license'];
 
-	if( lic === 'CC0-1.0' ){ // pd-ish /can/ go into everything
-	    each( us.keys(license2idlist), function(okay_lic){
+	if( lic === 'CC0-1.0' ){ // pd-ish only take pd-ish
+	    //each( us.keys(license2idlist), function(okay_lic){
+		each( license2idlist['CC0-1.0'], function(cohort_id){
+		    if( nid !== cohort_id ){
+			// Push edge data.
+			elements.push({
+			    group: 'edges',
+			    data: {
+				//id: ,
+				source: nid,
+				target: cohort_id,
+				predicate: 'ability_to_reuse',
+				label: 'could reuse',
+				color: '#009999',
+				glyph: 'triangle'
+			    }
+			});
+		    }
+		});
+	    //});
+	}
+	if( lic === 'CC-BY-4.0' || lic === 'CC-BY-3.0' || lic === 'CC-BY' || lic === 'MIT'){
+	    each( ['CC0-1.0',
+		   'CC-BY-4.0',
+		   'CC-BY-3.0',
+		   'CC-BY',
+		   'MIT'], function(okay_lic){
 		each( license2idlist[okay_lic], function(cohort_id){
 		    if( nid !== cohort_id ){
 			// Push edge data.
@@ -37422,8 +37449,8 @@ var InteractionViewer = function(global_data, graph_id){
 				//id: ,
 				source: nid,
 				target: cohort_id,
-				predicate: 'remixes_with',
-				label: 'can remix into',
+				predicate: 'ability_to_reuse',
+				label: 'could reuse',
 				color: '#009999',
 				glyph: 'triangle'
 			    }
@@ -37432,10 +37459,11 @@ var InteractionViewer = function(global_data, graph_id){
 		});
 	    });
 	}
-	if( lic === 'CC-BY-4.0' || lic === 'CC-BY-3.0' || lic === 'CC-BY' || lic === 'MIT'){
-	    each( ['CC-BY-4.0',
+	if( lic === 'CC-BY-SA-4.0' || lic === 'CC-BY-SA-3.0' || lic === 'GPL-3.0' || lic ===  'ODbL-1.0'){ // SAs can take eachother and anything weaker
+	    each( ['CC0-1.0',
+		   'CC-BY-4.0',
+		   'CC-BY-3.0',
 		   'CC-BY',
-		   'MIT',
 		   'CC-BY-SA-4.0',
 		   'CC-BY-SA-3.0',
 		   'GPL-3.0',
@@ -37449,8 +37477,8 @@ var InteractionViewer = function(global_data, graph_id){
 				//id: ,
 				source: nid,
 				target: cohort_id,
-				predicate: 'remixes_with',
-				label: 'can remix into',
+				predicate: 'ability_to_reuse',
+				label: 'could reuse',
 				color: '#009999',
 				glyph: 'triangle'
 			    }
@@ -37459,11 +37487,12 @@ var InteractionViewer = function(global_data, graph_id){
 		});
 	    });
 	}
-	if( lic === 'CC-BY-SA-4.0' || lic === 'CC-BY-SA-3.0' || lic === 'GPL-3.0' || lic ===  'ODbL-1.0'){
-	    each( ['CC-BY-SA-4.0',
-		   'CC-BY-SA-3.0',
-		   'GPL-3.0',
-		   'ODbL-1.0'], function(okay_lic){
+	if( lic === 'CC-BY-NC-4.0'){ // NC can take anything "weaker"
+	    each( ['CC-BY-4.0',
+		   'CC-BY-3.0',
+		   'CC-BY',
+		   'MIT',
+		   'CC0-1.0'], function(okay_lic){
 		each( license2idlist[okay_lic], function(cohort_id){
 		    if( nid !== cohort_id ){
 			// Push edge data.
@@ -37473,8 +37502,29 @@ var InteractionViewer = function(global_data, graph_id){
 				//id: ,
 				source: nid,
 				target: cohort_id,
-				predicate: 'remixes_with',
-				label: 'can remix into',
+				predicate: 'ability_to_reuse',
+				label: 'could reuse',
+				color: '#009999',
+				glyph: 'triangle'
+			    }
+			});
+		    }
+		});
+	    });
+	}
+	if( lic === 'CC-BY-ND-3.0' || lic === 'custom' || lic === 'unknown' ||  lic === 'all rights reserved' ){ // all can take cc0
+	    each( ['CC0-1.0'], function(okay_lic){
+		each( license2idlist[okay_lic], function(cohort_id){
+		    if( nid !== cohort_id ){
+			// Push edge data.
+			elements.push({
+			    group: 'edges',
+			    data: {
+				//id: ,
+				source: nid,
+				target: cohort_id,
+				predicate: 'ability_to_reuse',
+				label: 'could reuse',
 				color: '#009999',
 				glyph: 'triangle'
 			    }
