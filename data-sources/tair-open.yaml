@@ -15,7 +15,7 @@ data-categories:
 data-access:
   - type: download
     location: 'http://www.arabidopsis.org/download/index.jsp'
-license: "CC BY 4.0"
+license: "CC-BY-4.0"
 license-type: "permissive"
 license-link: 'http://www.arabidopsis.org/download_files/Public_Data_Releases/README.txt'
 license-hat-used: "false"
