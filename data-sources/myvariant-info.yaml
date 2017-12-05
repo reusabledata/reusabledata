@@ -2,7 +2,7 @@ id: 'myvariant-info'
 description: 'MyVariant.info provides simple-to-use REST web services to query/retrieve variant annotation data, aggregated from many popular data resources.'
 last-curated: '2017-12-03'
 source: 'MyVariant.info'
-source-link: 'http://http://myvariant.info/'
+source-link: 'http://myvariant.info/'
 source-type: "integrator"
 status: "complete"
 data-field: 'biology'
