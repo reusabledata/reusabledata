@@ -79,3 +79,14 @@ about.html.seed:
 
 about.html: about.html.seed
 	node ./scripts/mustache-inject.js --template ./scripts/tmp_static_output_frame.tmpl --body ./docs/about.html.seed -o ./docs/about.html
+
+###
+### interaction.html is an HTML seed + JS build -> assembled doc/app.
+###
+
+RUDBundle.js:
+	npm install
+	npm run build
+
+interaction.html: RUDBundle.js enhanced_compiled.json
+	node ./scripts/mustache-inject.js --template ./scripts/tmp_static_output_frame.tmpl --body ./docs/interaction.pre -c ./data-sources/enhanced_compiled.json -o ./docs/interaction.html

@@ -18,6 +18,8 @@
 	"npm": ">= 2.15"
     },
     "dependencies": {
+	"cytoscape": "3.2.6",
+	"cytoscape-cose-bilkent": "2.1.0",
 	"glob": "7.1.2",
 	"markdown": "0.5.0",
 	"minimist": "1.2.0",
@@ -49,7 +51,7 @@
     "directories": {
     },
     "scripts": {
-	"build": "./node_modules/.bin/browserify src/RUD.js -o docs/RUDBundle.js",
+	"build": "./node_modules/.bin/browserify src/RUD.js --standalone RUD -o docs/RUDBundle.js",
 	"check": "kwalify -E -f ./scripts/source.schema.yaml ./data-sources/*.yaml",
 	"yamls2json": "node ./scripts/yamls2json.js -i ./data-sources/ -o ./data-sources/compiled.json",
 	"json2yamls": "node ./scripts/json2yamls.js -i ./data-sources/compiled.json -o ./data-sources/",
