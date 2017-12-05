@@ -15,7 +15,7 @@ data-access:
       location: https://civic.genome.wustl.edu/releases
     - type: api
       location: https://griffithlab.github.io/civic-api-docs/
-license: CC0
+license: CC0-1.0
 license-type: permissive
 license-link: 'https://civic.genome.wustl.edu/about'
 license-issues: []
