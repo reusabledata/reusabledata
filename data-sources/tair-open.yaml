@@ -1,0 +1,27 @@
+id: 'tair-open'
+description: 'The Arabidopsis Information Resource (TAIR) maintains a database of genetic and molecular biology data for the model higher plant Arabidopsis thaliana.'
+last-curated: '2017-12-03'
+source: 'The Arabidopsis Information Resource (TAIR, public)'
+source-link: 'http://www.arabidopsis.org/'
+source-type: "source"
+status: "complete"
+data-field: 'biology'
+data-type: 'MOD'
+data-categories:
+  - 'sequence'
+  - 'gene structure'
+  - 'gene expression'
+  - 'functional annotation'
+data-access:
+  - type: download
+    location: 'http://www.arabidopsis.org/download/index.jsp'
+license: "CC BY 4.0"
+license-type: "permissive"
+license-link: 'http://www.arabidopsis.org/download_files/Public_Data_Releases/README.txt'
+license-hat-used: "false"
+license-issues: []
+license-commentary:
+  - 'This curation is for the post one-year embargo window data; data within that window is available for a subscription. The data sets are clearly separately available.'
+was-controversial: "false"
+contacts:
+  - 'curator@arabidopsis.org'
