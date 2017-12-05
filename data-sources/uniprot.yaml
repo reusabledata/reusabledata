@@ -13,7 +13,7 @@ data-categories:
 data-access:
   - type: download
     location: 'http://www.uniprot.org/downloads'
-license: "CC BY-ND 3.0"
+license: "CC-BY-ND-3.0"
 license-type: "restrictive"
 license-link: 'http://www.uniprot.org/help/license'
 license-hat-used: "false"
