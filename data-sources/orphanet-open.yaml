@@ -15,7 +15,7 @@ data-access:
       location: http://www.orphadata.org/cgi-bin/index.php/
     - type: api
       location: http://www.orpha.net/sparql
-license: https://creativecommons.org/licenses/by-nd/3.0/
+license: CC-BY-ND-3.0
 license-type: restrictive
 license-link: 'http://www.orphadata.org/cgi-bin/inc/legal.inc.php'
 license-commentary:
