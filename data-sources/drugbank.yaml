@@ -17,7 +17,7 @@ data-categories:
 data-access:
   - type: download
     location: 'https://www.drugbank.ca/releases/latest'
-license: "CC NC 4.0"
+license: "CC-BY-NC-4.0"
 license-type: "restrictive"
 license-link: 'https://www.drugbank.ca/releases/latest'
 license-hat-used: "false"
