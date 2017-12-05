@@ -16,7 +16,7 @@ data-access:
     location: 'http://www.rhea-db.org/download'
   - type: api
     location: 'http://www.rhea-db.org/webservice'
-license: "CC BY 4.0"
+license: "CC-BY-4.0"
 license-type: "permissive"
 license-link: 'http://www.rhea-db.org/licensedisclaimer'
 license-hat-used: "false"
