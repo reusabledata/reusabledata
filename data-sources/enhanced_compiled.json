@@ -1,5 +1,52 @@
 [
     {
+        "id": "agr",
+        "description": "The primary mission of the Alliance of Genome Resources (the Alliance) is to develop and maintain sustainable genome information resources that facilitate the use of diverse model organisms in understanding the genetic and genomic basis of human biology, health and disease.",
+        "last-curated": "2017-12-03",
+        "source": "Alliance of Genome Resources (AGR)",
+        "source-link": "http://www.alliancegenome.org",
+        "source-type": "unknown",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "MOD",
+        "data-categories": [
+            "functional annotation",
+            "disease-gene association"
+        ],
+        "data-access": [],
+        "license": "upknown",
+        "license-type": "unknown",
+        "license-link": "TODO",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "A.1.2",
+                "comment": "No licensing information could be found after some searching."
+            },
+            {
+                "criteria": "C.1",
+                "comment": "Besides the various search and details pages that allowed downloads, there seemed to be no API, centralized downloads, or other products."
+            },
+            {
+                "criteria": "C.2",
+                "comment": "From our search, the only way to extract bulk data would be to crawl and page scrape from random walks."
+            }
+        ],
+        "license-commentary": [],
+        "was-controversial": "false",
+        "contacts": [
+            "info@alliancegenome.org"
+        ],
+        "grants": [
+            {
+                "label": "NIH NHGRI U41 HG02223E"
+            }
+        ],
+        "license-commentary-embeddable": "",
+        "data-tags": "biology, MOD, functional annotation, disease-gene association",
+        "grade-automatic": 0
+    },
+    {
         "id": "bgee-data",
         "source": "BGee (data)",
         "source-link": "http://bgee.org",
@@ -87,47 +134,153 @@
         "id": "biogrid",
         "source": "BioGRID",
         "source-link": "https://thebiogrid.org",
-        "status": "incomplete",
-        "description": "interaction",
+        "status": "complete",
+        "description": "BioGRID is an interaction repository with data compiled through comprehensive curation efforts. Our current index is version 3.4.155 and searches 63,959 publications for 1,507,991 protein and genetic interactions, 27,785 chemical associations and 38,559 post translational modifications from major model organism species. All data are freely provided via our search index and available for download in standardized formats.",
         "data-field": "biology",
-        "data-type": "x-species",
+        "data-type": "cross-species",
         "data-categories": [
             "protein-protein interaction"
         ],
         "data-access": [
             {
                 "type": "download",
-                "location": "https://thebiogrid.org/download.php"
+                "location": "https://downloads.thebiogrid.org/BioGRID"
             }
         ],
-        "license": "unknown",
-        "license-type": "unknown",
-        "license-link": "http://wiki.thebiogrid.org/doku.php/terms_and_conditions",
+        "license": "MIT",
+        "license-type": "permissive",
+        "license-link": "https://downloads.thebiogrid.org/BioGRID",
+        "license-commentary": [
+            "Please note the somewhat quirky use of the MIT software license.",
+            "We are considering the terms on the downloads page to be the most specific and correct ones. While there are additional terms as http://wiki.thebiogrid.org/doku.php/terms_and_conditions, these appear to belikely related to the wiki and non-data content.",
+            "Please use the file navigator below to browse and download archived BioGRID project files. All data provided are 100% freely available to both academic and commercial users under the MIT License, and are provided WITHOUT ANY WARRANTY. If you have any questions, please feel free to contact us. Publications are requested to please cite the original contributing authors (where applicable) and also: Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. Biogrid: A General Repository for Interaction Datasets. Nucleic Acids Res. Jan 1, 2006; 34:D535-9."
+        ],
+        "license-issues": [],
+        "last-curated": "2017-12-03",
+        "contacts": [
+            "biogridadmin@gmail.com"
+        ],
+        "license-commentary-embeddable": "Please note the somewhat quirky use of the MIT software license.<hr />We are considering the terms on the downloads page to be the most specific and correct ones. While there are additional terms as http://wiki.thebiogrid.org/doku.php/terms_and_conditions, these appear to belikely related to the wiki and non-data content.<hr />Please use the file navigator below to browse and download archived BioGRID project files. All data provided are 100% freely available to both academic and commercial users under the MIT License, and are provided WITHOUT ANY WARRANTY. If you have any questions, please feel free to contact us. Publications are requested to please cite the original contributing authors (where applicable) and also: Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. Biogrid: A General Repository for Interaction Datasets. Nucleic Acids Res. Jan 1, 2006; 34:D535-9.",
+        "data-tags": "biology, cross-species, protein-protein interaction",
+        "grade-automatic": 5
+    },
+    {
+        "id": "bto",
+        "description": "A structured controlled vocabulary for the source of an enzyme. It comprises terms of tissues, cell lines, cell types and cell cultures from uni- and multicellular organisms.",
+        "last-curated": "2017-12-03",
+        "source": "BRENDA Tissue Ontology",
+        "source-link": "http://bto.brenda-enzymes.org/",
+        "source-type": "source",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "ontology",
+        "data-categories": [
+            "enzyme sources"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://www.brenda-enzymes.info/ontology/tissue/tree/update/update_files/BrendaTissueOBO"
+            }
+        ],
+        "license": "CC-BY",
+        "license-type": "permissive",
+        "license-link": "http://www.brenda-enzymes.info/ontology/tissue/tree/update/update_files/BrendaTissueOBO",
+        "license-hat-used": "false",
         "license-issues": [
             {
-                "criteria": "A.2",
-                "comment": "neither \"All rights reserved\", nor \"copyright\" are mentioned, ergo custom"
-            },
-            {
-                "criteria": "B.2.1",
-                "comment": "Rights stay with original submitter."
-            },
-            {
-                "criteria": "D.1.1"
-            },
-            {
-                "criteria": "E.1.1"
+                "criteria": "C.2",
+                "comment": "Once one knows the location of the BTO (ontology file), access is fine. However, we were unable to locate the ontology file after some searching through the main BRENDA website; most text would imply there is no free ontology file to be had."
             }
         ],
         "license-commentary": [
-            "All information, data, text, software, music, sound, photographs, graphics, video, messages, or any other materials whatsoever (collectively, “Content”), whether publicly posted or privately transmitted, is the sole responsibility of the person from whom such Content originated. This means that the user, and not BioGRID, is entirely responsible for all Content that he or she uploads, posts, emails or otherwise transmits via the BioGRID Sites.",
-            "Use, reproduction, modification, and other intellectual property rights to data stored on the BioGRID Sites will be subject to licensing arrangements that may be approved by BioGRID as applicable to such Content.",
-            "You agree not to sell, resell, or offer for any commercial purposes, any portion of the BioGRID Sites, use of the BioGRID Sites, or access to the BioGRID Sites.",
-            "Our designated agent to receive notification of claimed infringement is:  Mr. Terry Donaghue Director Technology Transfer and Industrial Liason 600 University Avenue Toronto, ON, Canada donaghue@mshri.on.ca TEL: 416-586-8225 FAX: 416-586-3110"
+            "The relatively high score is due to knowing where the ontology exists and knowing to look at the header--normal use of the site seems to lead around restricted APIs webpages containing; the free ontology file is hiding in there.",
+            "Typcial of this is: \\\"Use of this online version of BRENDA is free for academic research only. Commercial use or download access requires a license. See terms of use.\\\" (http://bto.brenda-enzymes.org/copy.php)",
+            "The \\\"CC-BY\\\" declaration in the ontology file header should be versioned or linked."
         ],
+        "was-controversial": "false",
         "contacts": [
-            "biogridadmin@gmail.com"
-        ]
+            "http://support.brenda-enzymes.org/open.php"
+        ],
+        "grants": [
+            {
+                "label": "This work was supported by the European Union: (FELICS: Free European Life-Science Information and Computational Services: 021902 (RII3); SLING: Serving Life-science Information for the Next Generation: 226073)."
+            }
+        ],
+        "license-commentary-embeddable": "The relatively high score is due to knowing where the ontology exists and knowing to look at the header--normal use of the site seems to lead around restricted APIs webpages containing; the free ontology file is hiding in there.<hr />Typcial of this is: \\\"Use of this online version of BRENDA is free for academic research only. Commercial use or download access requires a license. See terms of use.\\\" (http://bto.brenda-enzymes.org/copy.php)<hr />The \\\"CC-BY\\\" declaration in the ontology file header should be versioned or linked.",
+        "data-tags": "biology, ontology, enzyme sources",
+        "grade-automatic": 4.5
+    },
+    {
+        "id": "chembl",
+        "description": "ChEMBL is a database of bioactive drug-like small molecules, it contains 2-D structures, calculated properties (e.g. logP, Molecular Weight, Lipinski Parameters, etc.) and abstracted bioactivities (e.g. binding constants, pharmacology and ADMET data).",
+        "last-curated": "2017-12-03",
+        "source": "ChEMBL",
+        "source-link": "https://www.ebi.ac.uk/chembl/",
+        "source-type": "source",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "biochemical",
+        "data-categories": [
+            "bioactive drug-like small molecules"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "https://www.ebi.ac.uk/chembl/downloads"
+            },
+            {
+                "type": "api",
+                "location": "https://www.ebi.ac.uk/chembl/ws"
+            }
+        ],
+        "license": "CC SA 3.0 Unported",
+        "license-type": "copyleft",
+        "license-link": "ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_23/LICENSE",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "D.1.2",
+                "comment": "CC SA prevents some types of reuse, such and modification and redistribution with data from different license types."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "CC SA prevents all parties from reusing the data as D.1.2."
+            }
+        ],
+        "license-commentary": [
+            "There was no centralized licensing/terms information on the main site, but all download FTP directories we looked at contained terms for the CC SA 3.0; we used as single example as the license link."
+        ],
+        "was-controversial": "false",
+        "contacts": [
+            "https://www.ebi.ac.uk/support/"
+        ],
+        "grants": [
+            {
+                "label": "2014-2019: The ChEMBL Database, Wellcome Trust (Strategic Award WT104104/Z/14/Z)."
+            },
+            {
+                "label": "2009-date: The member states of EMBL."
+            },
+            {
+                "label": "2016-2022: European Commission Horizon 2020 Toxicity Testing and Risk Assessment in the 21 st Century EU-ToxRisk (681002)"
+            },
+            {
+                "label": "2015-2019: Coordinated Research Infrastructures Building Enduring Life-science Services CORBEL (654248)"
+            },
+            {
+                "label": "2014-2017: The Knowledge Management Center (KMC) for the Illuminating the Druggable Genome (IDG) program funded by the National Institutes of Health (NIH) Common Fund. (Grant No. U54CA189205)"
+            },
+            {
+                "label": "2014-2017: The Center for Therapeutic Target Validation (CTTV008)"
+            },
+            {
+                "label": "2013-2018: European Commission FP7 HeCaTos – Safety prediction (602156)"
+            }
+        ],
+        "license-commentary-embeddable": "There was no centralized licensing/terms information on the main site, but all download FTP directories we looked at contained terms for the CC SA 3.0; we used as single example as the license link.",
+        "data-tags": "biology, biochemical, bioactive drug-like small molecules",
+        "grade-automatic": 3
     },
     {
         "id": "civicdb",
@@ -466,6 +619,103 @@
         "grade-automatic": 1
     },
     {
+        "id": "drugbank",
+        "description": "The DrugBank database is a unique bioinformatics and cheminformatics resource that combines detailed drug data with comprehensive drug target information.",
+        "last-curated": "2017-12-03",
+        "source": "DrugBank",
+        "source-link": "https://www.drugbank.ca",
+        "source-type": "source",
+        "status": "complete",
+        "data-field": "pharmacology",
+        "data-type": "drug",
+        "data-categories": [
+            "bioinformatics",
+            "cheminformatics",
+            "drugs",
+            "drug-protein interactions",
+            "targets",
+            "pathways"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "https://www.drugbank.ca/releases/latest"
+            }
+        ],
+        "license": "CC NC 4.0",
+        "license-type": "restrictive",
+        "license-link": "https://www.drugbank.ca/releases/latest",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "D.1.1",
+                "comment": "The NC license allows for liberal non-commercial reuse."
+            },
+            {
+                "criteria": "E.1.1",
+                "comment": "The NC license allows for non-commercial reuse with other non-commercial interests."
+            }
+        ],
+        "license-commentary": [
+            "This seems to ba a standard NC/commercial licensing split, with DrugBank+ supporting commerical licensing for fees.",
+            "To download, one must sign up for an account (https://www.drugbank.ca/public_users); possibly for tracking/analytics."
+        ],
+        "was-controversial": "false",
+        "contacts": [
+            "support@drugbankplus.com"
+        ],
+        "grants": [
+            {
+                "label": "This project is supported by the Canadian Institutes of Health Research (award #111062), Alberta Innovates - Health Solutions, and by The Metabolomics Innovation Centre (TMIC), a nationally-funded research and core facility that supports a wide range of cutting-edge metabolomic studies. TMIC is funded by Genome Alberta, Genome British Columbia, and Genome Canada, a not-for-profit organization that is leading Canada\\'s national genomics strategy with funding from the federal government. Maintenance, support, and commercial licensing is provided by OMx Personal Health Analytics, Inc. Designed by Educe Design & Innovation Inc."
+            }
+        ],
+        "license-commentary-embeddable": "This seems to ba a standard NC/commercial licensing split, with DrugBank+ supporting commerical licensing for fees.<hr />To download, one must sign up for an account (https://www.drugbank.ca/public_users); possibly for tracking/analytics.",
+        "data-tags": "pharmacology, drug, bioinformatics, cheminformatics, drugs, drug-protein interactions, targets, pathways",
+        "grade-automatic": 4
+    },
+    {
+        "id": "drugcentral",
+        "description": "DrugCentral provides information on active ingredients chemical entities, pharmaceutical products, drug mode of action, indications, pharmacologic action. We monitor FDA, EMA, and PMDA for new drug approval on regular basis to ensure currency of the resource.",
+        "last-curated": "2017-12-03",
+        "source": "DrugCentral",
+        "source-link": "http://drugcentral.org",
+        "source-type": "integrator",
+        "status": "complete",
+        "data-field": "phamacology",
+        "data-type": "drug-target interaction",
+        "data-categories": [
+            "chemical structure of drugs",
+            "drug",
+            "diseaase"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://drugcentral.org/download"
+            }
+        ],
+        "license": "CC BY-SA 4.0",
+        "license-type": "copyleft",
+        "license-link": "http://drugcentral.org/privacy",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "D.1.2",
+                "comment": "By using a copyleft-style license, there may be issues in mixing and redistributing this data with licenses that have incompatible terms."
+            }
+        ],
+        "license-commentary": [
+            "While there is upstream data integtration, there seems to be no mention of upstream licenses or terms. Not necessarily our issue here."
+        ],
+        "was-controversial": "false",
+        "contacts": [
+            "For questions and comments please contact Oleg Ursu or Jayme Holmes."
+        ],
+        "license-commentary-embeddable": "While there is upstream data integtration, there seems to be no mention of upstream licenses or terms. Not necessarily our issue here.",
+        "data-tags": "phamacology, drug-target interaction, chemical structure of drugs, drug, diseaase",
+        "grade-automatic": 4
+    },
+    {
         "id": "encode",
         "source": "ENCODE",
         "source-link": "https://www.genome.gov/10005107/",
@@ -583,6 +833,110 @@
         "license-commentary-embeddable": "Copyright statement is not co-located with the data source.",
         "data-tags": "biology, MOD, genotype-phenotype association",
         "grade-automatic": 2.5
+    },
+    {
+        "id": "gdc",
+        "description": "The NCI\\'s Genomic Data Commons (GDC) provides the cancer research community with a unified data repository that enables data sharing across cancer genomic studies in support of precision medicine.",
+        "last-curated": "2017-12-03",
+        "source": "Genomic Data Commons (GDC)",
+        "source-link": "https://gdc.cancer.gov/",
+        "source-type": "repository",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "human",
+        "data-categories": [
+            "cancer genome",
+            "variants",
+            "mRNA and miRNA sequence data"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"
+            },
+            {
+                "type": "api",
+                "location": "https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
+            }
+        ],
+        "license": "unknown",
+        "license-type": "unknown",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "A.1.2",
+                "comment": "After searching around GDC and cancer.gov, no centralized licensing or terms could be found."
+            }
+        ],
+        "license-commentary": [
+            "After much searching, no centralized or clear terms could be found.",
+            "When accessing individual files, there was metadata such as \\\"Access\\\": \\\"open\\\", so it would seem that any terms, if they did exist, would unlikely be complete.",
+            "The initial click-through contains some worrying verbiage: \\\"You are accessing a U.S. Government web site which may contain information that...is intended for Government authorized use only. Unauthorized attempts to...use of this web site may result in disciplinary action, civil, and/or criminal penalties...\\\"",
+            "Some data would seem to require additional controls: \\\"GDC data is stored in a secure FISMA-compliant facility. Access to controlled data requires authorization via dbGaP. See Data Access Processes and Tools for more information.\\\"",
+            "While some terms information was found at https://www.cancer.gov/policies/copyright-reuse, it seemed to be about site content rather than data.",
+            "While licensing information could not be found, access was not problematic."
+        ],
+        "was-controversial": "false",
+        "contacts": [
+            "support@nci-gdc.datacommons.io"
+        ],
+        "license-commentary-embeddable": "After much searching, no centralized or clear terms could be found.<hr />When accessing individual files, there was metadata such as \\\"Access\\\": \\\"open\\\", so it would seem that any terms, if they did exist, would unlikely be complete.<hr />The initial click-through contains some worrying verbiage: \\\"You are accessing a U.S. Government web site which may contain information that...is intended for Government authorized use only. Unauthorized attempts to...use of this web site may result in disciplinary action, civil, and/or criminal penalties...\\\"<hr />Some data would seem to require additional controls: \\\"GDC data is stored in a secure FISMA-compliant facility. Access to controlled data requires authorization via dbGaP. See Data Access Processes and Tools for more information.\\\"<hr />While some terms information was found at https://www.cancer.gov/policies/copyright-reuse, it seemed to be about site content rather than data.<hr />While licensing information could not be found, access was not problematic.",
+        "data-tags": "biology, human, cancer genome, variants, mRNA and miRNA sequence data",
+        "grade-automatic": 1
+    },
+    {
+        "id": "gnomad",
+        "description": " The Genome Aggregation Database (gnomAD), is a coalition of investigators seeking to aggregate and harmonize exome and genome sequencing data from a variety of large-scale sequencing projects, and to make summary data available for the wider scientific community. In its first release, which contained exclusively exome data, it was known as the Exome Aggregation Consortium (ExAC).",
+        "last-curated": "2017-12-03",
+        "source": "Genome Aggregation Database (gnomAD)",
+        "source-link": "http://gnomad.broadinstitute.org/",
+        "source-type": "integrator",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "human",
+        "data-categories": [
+            "exome sequencing data",
+            "genome sequencing data",
+            "disease-specific genetic studies",
+            "population genetic studies"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://gnomad.broadinstitute.org/downloads"
+            }
+        ],
+        "license": "ODbL 1.0",
+        "license-type": "copyleft",
+        "license-link": "http://gnomad.broadinstitute.org/terms",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "D.1.1",
+                "comment": "While extremely open, the ODbL does restrict the ability to mix and redistribute with data without similar terms."
+            }
+        ],
+        "license-commentary": [
+            "All data available under: https://opendatacommons.org/licenses/odbl/1.0/"
+        ],
+        "was-controversial": "false",
+        "contacts": [
+            "http://gnomad.broadinstitute.org/contact"
+        ],
+        "grants": [
+            {
+                "label": "NIGMS R01 GM104371 (PI: MacArthur)"
+            },
+            {
+                "label": "NIDDK U54 DK105566 (PIs: MacArthur and Neale)"
+            },
+            {
+                "label": "The vast majority of the data storage, computing resources, and human effort used to generate this call set were donated by the Broad Institute."
+            }
+        ],
+        "license-commentary-embeddable": "All data available under: https://opendatacommons.org/licenses/odbl/1.0/",
+        "data-tags": "biology, human, exome sequencing data, genome sequencing data, disease-specific genetic studies, population genetic studies",
+        "grade-automatic": 4.5
     },
     {
         "id": "go-ann",
@@ -1068,8 +1422,8 @@
                 "location": "http://mygene.info/v3/api"
             }
         ],
-        "license": "copyright",
-        "license-type": "copyright",
+        "license": "custom",
+        "license-type": "restrictive",
         "license-link": "http://mygene.info/terms/",
         "license-commentary": [
             "MyGene.info may contain information from third party websites, which may or may not be marked with the name of the source. Such information does not necessarily represent the views or opinions of TSRI, and TSRI shall have no responsibility whatsoever for such information.",
@@ -1100,6 +1454,62 @@
         ],
         "license-commentary-embeddable": "MyGene.info may contain information from third party websites, which may or may not be marked with the name of the source. Such information does not necessarily represent the views or opinions of TSRI, and TSRI shall have no responsibility whatsoever for such information.<hr />You also agree that you will ensure that any copies of documents you generate by using MyGene.info shall retain and display all copyright and other proprietary notices contained therein.<hr />TSRI shall have no responsibility whatsoever for such information [from 3rd party websites].<hr />Nothing contained herein shall be construed as conferring by implication, estoppel or otherwise any license or right under any patent, trademark or other intellectual property of TSRI or any third party. Except as expressly provided above, nothing contained herein shall be construed as conferring any right or license under any TSRI copyrights.",
         "data-tags": "biology, genomic resource, gene definition",
+        "grade-automatic": 2
+    },
+    {
+        "id": "myvariant-info",
+        "description": "MyVariant.info provides simple-to-use REST web services to query/retrieve variant annotation data, aggregated from many popular data resources.",
+        "last-curated": "2017-12-03",
+        "source": "MyVariant.info",
+        "source-link": "http://myvariant.info/",
+        "source-type": "integrator",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "genomic resource",
+        "data-categories": [
+            "variants",
+            "variant annotation"
+        ],
+        "data-access": [
+            {
+                "type": "api",
+                "location": "http://myvariant.info/docs/"
+            }
+        ],
+        "license": "custom",
+        "license-type": "restrictive",
+        "license-link": "http://myvariant.info/terms/",
+        "license-hat-used": "false",
+        "license-commentary": [
+            "MyVariant.info may contain information from third party websites, which may or may not be marked with the name of the source. Such information does not necessarily represent the views or opinions of TSRI, and TSRI shall have no responsibility whatsoever for such information.",
+            "You also agree that you will ensure that any copies of documents you generate by using MyVariant.info shall retain and display all copyright and other proprietary notices contained therein.",
+            "TSRI shall have no responsibility whatsoever for such information [from 3rd party websites].",
+            "Nothing contained herein shall be construed as conferring by implication, estoppel or otherwise any license or right under any patent, trademark or other intellectual property of TSRI or any third party. Except as expressly provided above, nothing contained herein shall be construed as conferring any right or license under any TSRI copyrights."
+        ],
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "Custom license, but consistent."
+            },
+            {
+                "criteria": "B.2.1",
+                "comment": "Scope is incomplete - they claim no responsibility for data from other sources on their site."
+            },
+            {
+                "criteria": "D.1.2",
+                "comment": "No re-use allowed, just use."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "No re-use allowed, just use."
+            }
+        ],
+        "was-controversial": "false",
+        "contacts": [
+            "help@myvariant.info"
+        ],
+        "license-commentary-embeddable": "MyVariant.info may contain information from third party websites, which may or may not be marked with the name of the source. Such information does not necessarily represent the views or opinions of TSRI, and TSRI shall have no responsibility whatsoever for such information.<hr />You also agree that you will ensure that any copies of documents you generate by using MyVariant.info shall retain and display all copyright and other proprietary notices contained therein.<hr />TSRI shall have no responsibility whatsoever for such information [from 3rd party websites].<hr />Nothing contained herein shall be construed as conferring by implication, estoppel or otherwise any license or right under any patent, trademark or other intellectual property of TSRI or any third party. Except as expressly provided above, nothing contained herein shall be construed as conferring any right or license under any TSRI copyrights.",
+        "data-tags": "biology, genomic resource, variants, variant annotation",
         "grade-automatic": 2
     },
     {
@@ -1163,6 +1573,63 @@
         "license-commentary-embeddable": "We specifically avoided the more general operation of the EUtils suite, focusing on the provided downloads.<hr />The following statements from the license page seem to support a custom \"hands off\" approach. To was difficult to decide if this was \"restrictive\" or \"unknown.<hr />...NCBI itself places no restrictions on the use or distribution of the data contained therein. Nor do we accept data when the submitter has requested restrictions on reuse or redistribution...<hr />...some submitters of the original data...may claim patent, copyright, or other intellectual property rights in all or a portion of the data (that has been submitted)...<hr />...NCBI cannot provide comment or unrestricted permission concerning the use, copying, or distribution of the information contained in the molecular databases...",
         "data-tags": "biology, genomic resource, gene definition, taxon definition, gene-publication association",
         "grade-automatic": 1.5
+    },
+    {
+        "id": "nextprot",
+        "description": "Developed by the SIB Swiss Institute of Bioinformatics neXtProt is a comprehensive human-centric discovery platform, offering its users a seamless integration of and navigation through protein-related data.",
+        "last-curated": "2017-12-03",
+        "source": "neXtProt",
+        "source-link": "https://www.nextprot.org",
+        "source-type": "integrator",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "human",
+        "data-categories": [
+            "protein-related data",
+            "protein functional data",
+            "protein-protein interaction",
+            "sub-cellular location"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "ftp://ftp.nextprot.org/pub/"
+            },
+            {
+                "type": "api",
+                "location": "http://api.nextprot.org"
+            },
+            {
+                "type": "api",
+                "location": "http://sparql.nextprot.org"
+            },
+            {
+                "type": "api",
+                "location": "http://snorql.nextprot.org"
+            }
+        ],
+        "license": "CC BY-ND 3.0",
+        "license-type": "restrictive",
+        "license-link": "ftp://ftp.nextprot.org/pub/README",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "D.1.2",
+                "comment": "CC BY-ND prevents some types of reuse, such and modification and redistribution."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "CC BY-ND prevents all parties from reusing the data."
+            }
+        ],
+        "license-commentary": [],
+        "was-controversial": "false",
+        "contacts": [
+            "support@nextprot.org"
+        ],
+        "license-commentary-embeddable": "",
+        "data-tags": "biology, human, protein-related data, protein functional data, protein-protein interaction, sub-cellular location",
+        "grade-automatic": 3
     },
     {
         "id": "nextstrain",
@@ -1277,6 +1744,53 @@
         "license-commentary-embeddable": "See also: https://omim.org/downloads/<hr />From https://omim.org/help/agreement: This Use Agreement applies to any individual, institution, or organization that uses OMIM.org through its front end, including its mirror sites, the OMIM.org API, or downloads of OMIM data from the site. By accessing and using OMIM you agree to be bound by all the terms and conditions set forth in this USE AGREEMENT. This USE AGREEMENT shall constitute a legally binding agreement between the user and Johns Hopkins University (hereinafter \\\"JHU\\\").<hr />From https://omim.org/help/copyright: The OMIM® database including the collective data contained therein is the property of the Johns Hopkins University, which holds the copyright thereto.<hr />Custom license with use restrictions.<hr />Research and educational use of OMIM is encouraged, and single-user academic, non-profit, and governmental agencies can register below for access without a license. For-profit companies or anyone planning to redisplay or incorporate OMIM data into software MUST secure a license to obtain access to these files.",
         "data-tags": "biomedical, human, disease-phenotype association, gene-disease association, variant-disease association",
         "grade-automatic": 0.5
+    },
+    {
+        "id": "oncokb",
+        "source": "OncoKB",
+        "source-link": "http://oncokb.org",
+        "status": "complete",
+        "description": "OncoKB is a precision oncology knowledge base and contains information about the effects and treatment implications of specific cancer gene alterations. It is developed and maintained by the Knowledge Systems group in the Marie Josée and Henry R. Kravis Center for Molecular Oncology at Memorial Sloan Kettering Cancer Center (MSK), in partnership with Quest Diagnostics.",
+        "data-field": "biology",
+        "data-type": "human",
+        "data-categories": [
+            "variants",
+            "cancer genes",
+            "gene expression"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://oncokb.org/#/dataAccess"
+            }
+        ],
+        "license": "custom",
+        "license-type": "restrictive",
+        "license-link": "http://oncokb.org/#/terms",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "While custom, the terms are quite clear."
+            },
+            {
+                "criteria": "D.1.1",
+                "comment": "Restrictions on type of use appear in the license, even or research:\"You may copy, reproduce, or create derivative works of the Content only if:...you are using the Content only to replicate OncoKB locally, whether in whole or in part; or you are aggregating the Content with other data of similar nature for the purposes of advancing cancer research.\""
+            },
+            {
+                "criteria": "E.1.1",
+                "comment": "Restrictions exist on who may use the data: \"You may copy, reproduce, or create derivative works of the Content only if: you are a researcher or a non-profit entity; and...\""
+            }
+        ],
+        "license-commentary": [
+            "While there does not seem to be any clear licensing information currently on the site, from a separate conversation (https://github.com/geneontology/noctua/issues/510#issuecomment-334864073), it would seem that this will soon be updated."
+        ],
+        "last-curated": "2017-12-03",
+        "contacts": [
+            "team@oncokb.org"
+        ],
+        "license-commentary-embeddable": "While there does not seem to be any clear licensing information currently on the site, from a separate conversation (https://github.com/geneontology/noctua/issues/510#issuecomment-334864073), it would seem that this will soon be updated.",
+        "data-tags": "biology, human, variants, cancer genes, gene expression",
+        "grade-automatic": 3.5
     },
     {
         "id": "orphanet",
@@ -1413,6 +1927,109 @@
         "license-commentary-embeddable": "There is an alternate curation for this resource that bases itself off of 'http://www.pantherdb.org/tou.jsp', which was found using a narrow Google search and not given consideration due to the difficulties in finding it--we have found no access to this document yet except for the Google search.<hr />Considering the alternate license, downloads are under a permissive minimal license that states '...as long as the following copyright statement is placed at the top of each file: Copyright © 2005 SRI International', which besides being likely out of data, is custom and does not cover APIs, remixing, and the like. It is hard to interpret the consequences of this license.",
         "data-tags": "biology, genomic resource, orthology",
         "grade-automatic": 3
+    },
+    {
+        "id": "pfam",
+        "description": "The Pfam database is a large collection of protein families, each represented by multiple sequence alignments and hidden Markov models (HMMs).",
+        "last-curated": "2017-12-03",
+        "source": "Pfam",
+        "source-link": "http://pfam.xfam.org",
+        "source-type": "repository",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "protein familys",
+        "data-categories": [
+            "protein family alignments",
+            "HMMs"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "ftp://ftp.ebi.ac.uk/pub/databases/Pfam/"
+            }
+        ],
+        "license": "CC0",
+        "license-type": "permissive",
+        "license-link": "http://pfam.xfam.org/about",
+        "license-hat-used": "false",
+        "license-issues": [],
+        "license-commentary": [],
+        "was-controversial": "false",
+        "contacts": [
+            "pfam-help@ebi.ac.uk"
+        ],
+        "grants": [
+            {
+                "label": "EMBL is EMBL-EBI\\'s parent organisation. It provides core funding (staff, space, equipment) for Pfam."
+            },
+            {
+                "label": "The Wellcome Trust has supported Pfam since the database inception, via core funding when based at the Wellcome Trust Sanger Institute. As well as providing and maintaining the campus on which the EMBL-EBI is located, the Wellcome Trust also now provides significant funding for Pfam (grant 108433/Z/15/Z). The current grant runs from October 2015 to September 2020."
+            },
+            {
+                "label": "BBSRC currently supports Pfam activities via the grants (BB/L024136/1 and BB/N00521X/1)."
+            },
+            {
+                "label": "The Howard Hughes Medical Institute supports the Eddy group."
+            }
+        ],
+        "license-commentary-embeddable": "",
+        "data-tags": "biology, protein familys, protein family alignments, HMMs",
+        "grade-automatic": 5
+    },
+    {
+        "id": "pharos",
+        "description": "",
+        "last-curated": "2017-12-03",
+        "source": "Pharos",
+        "source-link": "https://pharos.nih.gov/",
+        "source-type": "integrator",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "",
+        "data-categories": [
+            "disease",
+            "targets",
+            "ligands"
+        ],
+        "data-access": [
+            {
+                "type": "api",
+                "location": "https://pharos.nih.gov/idg/api"
+            },
+            {
+                "type": "download",
+                "location": "http://juniper.health.unm.edu/tcrd/download/"
+            }
+        ],
+        "license": "CC BY-SA 4.0",
+        "license-type": "copyleft",
+        "license-link": "http://juniper.health.unm.edu/tcrd/download/README",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "A.1.1",
+                "comment": "While any novel data is under a CC license, the integrated resources are under whatever license the upstream is, with the user expected to sort it out."
+            }
+        ],
+        "license-commentary": [
+            "Unfortunately, the API ToS link leads to a bad (404-type) Swagger page.",
+            "From the license page: \\\"Please note that TCRD incoporates many data sources with a variety of associated licenses...Users of the TCRD downloads are resposible for compliance with these licenses.\\\"",
+            "Given the variety and terms of the upstream resources, the inconsistency is not unexpected.",
+            "The license is also found here at https://pharos.nih.gov/idg/about, which has similar wording to the README on the downloads page, but makes no note of the user responsibility to adhere to licenses from original data sources."
+        ],
+        "was-controversial": "false",
+        "contacts": [
+            "pharos@mail.nih.gov"
+        ],
+        "grants": [
+            {
+                "label": "Pharos is the user interface to the Knowledge Management Center (KMC) for the Illuminating the Druggable Genome (IDG) program funded by the National Institutes of Health (NIH) Common Fund. (Grant No. 5U54CA189205-02).",
+                "url": "https://projectreporter.nih.gov/project_info_details.cfm?aid=8898033&icde=28628127&ddparam=&ddvalue=&ddsub=&cr=3&csb=default&cs=ASC"
+            }
+        ],
+        "license-commentary-embeddable": "Unfortunately, the API ToS link leads to a bad (404-type) Swagger page.<hr />From the license page: \\\"Please note that TCRD incoporates many data sources with a variety of associated licenses...Users of the TCRD downloads are resposible for compliance with these licenses.\\\"<hr />Given the variety and terms of the upstream resources, the inconsistency is not unexpected.<hr />The license is also found here at https://pharos.nih.gov/idg/about, which has similar wording to the README on the downloads page, but makes no note of the user responsibility to adhere to licenses from original data sources.",
+        "data-tags": "biology, disease, targets, ligands",
+        "grade-automatic": 1
     },
     {
         "id": "pombase",
@@ -1552,6 +2169,53 @@
         "grade-automatic": 4
     },
     {
+        "id": "rhea",
+        "description": "Rhea is an expert curated resource of biochemical reactions designed for the annotation of enzymes and genome-scale metabolic networks and models. Rhea uses the ChEBI (Chemical Entities of Biological Interest) ontology of small molecules to precisely describe reactions participants and their chemical structures. All reactions are balanced for mass and charge and are linked to source literature, metabolic resources and other functional vocabularies such as the enzyme classification of the NC-IUBMB.",
+        "last-curated": "2017-12-03",
+        "source": "Rhea",
+        "source-link": "http://www.rhea-db.org",
+        "source-type": "source",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "biochemical",
+        "data-categories": [
+            "enzymes",
+            "metabolic networks",
+            "reactions"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://www.rhea-db.org/download"
+            },
+            {
+                "type": "api",
+                "location": "http://www.rhea-db.org/webservice"
+            }
+        ],
+        "license": "CC BY 4.0",
+        "license-type": "permissive",
+        "license-link": "http://www.rhea-db.org/licensedisclaimer",
+        "license-hat-used": "false",
+        "license-issues": [],
+        "license-commentary": [],
+        "was-controversial": "false",
+        "contacts": [
+            "http://www.rhea-db.org/feedback"
+        ],
+        "grants": [
+            {
+                "label": "Rhea development and curation activities at the SIB are supported by the Swiss Federal Government through the State Secretariat for Education, Research and Innovation (SERI), and by the SystemsX.ch, The Swiss Initiative in Systems Biology."
+            },
+            {
+                "label": "Rhea curation was partially supported by MICROME (an EU Framework Programme 7 Collaborative Project. Grant Agreement Number 222886-2)."
+            }
+        ],
+        "license-commentary-embeddable": "",
+        "data-tags": "biology, biochemical, enzymes, metabolic networks, reactions",
+        "grade-automatic": 5
+    },
+    {
         "id": "sgd",
         "source": "Saccharomyces Genome Database (SGD)",
         "source-link": "https://yeastgenome.org/",
@@ -1605,6 +2269,124 @@
         "license-commentary-embeddable": "The license information found was in passing in the \"About SGD\" paragraph on the SGD Help page at https://sites.google.com/view/yeastgenome-help/about; in its entirety: \"...all of the data in SGD are freely accessible to researchers and educators worldwide...\"<hr />Otherwise, a reasonable person might assume that the licensing terms were those of Stanford's Terms of Use (https://www.stanford.edu/site/terms/), linked on most pages and considerably more restrictive.",
         "data-tags": "biology, MOD, genotype-phenotype association, disease-model association, gene expression",
         "grade-automatic": 4
+    },
+    {
+        "id": "string",
+        "source": "STRING",
+        "source-link": "https://string-db.org",
+        "status": "complete",
+        "description": "STRING is a database of known and predicted protein-protein interactions. The interactions include direct (physical) and indirect (functional) associations; they stem from computational prediction, from knowledge transfer between organisms, and from interactions aggregated from other (primary) databases.",
+        "data-field": "biology",
+        "data-type": "cross-species",
+        "data-categories": [
+            "protein-protein interaction",
+            "protein families"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "https://string-db.org/cgi/download.pl"
+            }
+        ],
+        "license": "CC-BY-4.0",
+        "license-type": "permissive",
+        "license-link": "https://string-db.org/cgi/access.pl",
+        "license-commentary": [
+            "While there are APIs available, we skipped evaluation as they explicitly state they are now meant for bulk use and downloads are available anyways."
+        ],
+        "last-curated": "2017-12-03",
+        "contacts": [
+            "https://string-db.org/cgi/support.pl"
+        ],
+        "license-commentary-embeddable": "While there are APIs available, we skipped evaluation as they explicitly state they are now meant for bulk use and downloads are available anyways.",
+        "data-tags": "biology, cross-species, protein-protein interaction, protein families",
+        "grade-automatic": 5
+    },
+    {
+        "id": "tair-open",
+        "description": "The Arabidopsis Information Resource (TAIR) maintains a database of genetic and molecular biology data for the model higher plant Arabidopsis thaliana.",
+        "last-curated": "2017-12-03",
+        "source": "The Arabidopsis Information Resource (TAIR, public)",
+        "source-link": "http://www.arabidopsis.org/",
+        "source-type": "source",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "MOD",
+        "data-categories": [
+            "sequence",
+            "gene structure",
+            "gene expression",
+            "functional annotation"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://www.arabidopsis.org/download/index.jsp"
+            }
+        ],
+        "license": "CC BY 4.0",
+        "license-type": "permissive",
+        "license-link": "http://www.arabidopsis.org/download_files/Public_Data_Releases/README.txt",
+        "license-hat-used": "false",
+        "license-issues": [],
+        "license-commentary": [
+            "This curation is for the post one-year embargo window data; data within that window is available for a subscription. The data sets are clearly separately available."
+        ],
+        "was-controversial": "false",
+        "contacts": [
+            "curator@arabidopsis.org"
+        ],
+        "license-commentary-embeddable": "This curation is for the post one-year embargo window data; data within that window is available for a subscription. The data sets are clearly separately available.",
+        "data-tags": "biology, MOD, sequence, gene structure, gene expression, functional annotation",
+        "grade-automatic": 5
+    },
+    {
+        "id": "uniprotkb",
+        "description": "The mission of UniProt is to provide the scientific community with a comprehensive, high-quality and freely accessible resource of protein sequence and functional information. Includes: UniProtKB, UniRef, UniParc, and Proteomes.",
+        "last-curated": "2017-12-03",
+        "source": "UniProt",
+        "source-link": "http://www.uniprot.org",
+        "source-type": "source",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "sequence",
+        "data-categories": [
+            "protein sequence",
+            "protein function"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://www.uniprot.org/downloads"
+            }
+        ],
+        "license": "CC BY-ND 3.0",
+        "license-type": "restrictive",
+        "license-link": "http://www.uniprot.org/help/license",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "D.1.2",
+                "comment": "CC BY-ND prevents some types of reuse, such and modification and redistribution."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "CC BY-ND prevents all parties from reusing the data."
+            }
+        ],
+        "license-commentary": [],
+        "was-controversial": "false",
+        "contacts": [
+            "help@uniprot.org"
+        ],
+        "grants": [
+            {
+                "label": "UniProt is supported by the National Institutes of Health (NIH), National Human Genome Research Institute (NHGRI) and National Institute of General Medical Sciences (NIGMS) grant U41HG007822. Additional support for the EMBL-EBI\\'s involvement in UniProt comes from European Molecular Biology Laboratory (EMBL), the British Heart Foundation (BHF) (RG/13/5/30112), the Parkinson\\'s Disease United Kingdom (PDUK) GO grant G-1307, and the NIH GO grant U41HG02273. UniProt activities at the SIB are additionally supported by the Swiss Federal Government through the State Secretariat for Education, Research and Innovation SERI. PIR\\'s UniProt activities are also supported by the NIH grants R01GM080646, G08LM010720, and P20GM103446, and the National Science Foundation (NSF) grant DBI-1062520."
+            }
+        ],
+        "license-commentary-embeddable": "",
+        "data-tags": "biology, sequence, protein sequence, protein function",
+        "grade-automatic": 3
     },
     {
         "id": "wormbase",

@@ -4,6 +4,9 @@
     <loc>http://reusabledata.org/about.html</loc>
   </url>
   <url>
+    <loc>http://reusabledata.org/agr.html</loc>
+  </url>
+  <url>
     <loc>http://reusabledata.org/bgee-data.html</loc>
   </url>
   <url>
@@ -11,6 +14,12 @@
   </url>
   <url>
     <loc>http://reusabledata.org/biogrid.html</loc>
+  </url>
+  <url>
+    <loc>http://reusabledata.org/bto.html</loc>
+  </url>
+  <url>
+    <loc>http://reusabledata.org/chembl.html</loc>
   </url>
   <url>
     <loc>http://reusabledata.org/civicdb.html</loc>
@@ -37,6 +46,12 @@
     <loc>http://reusabledata.org/dictybase.html</loc>
   </url>
   <url>
+    <loc>http://reusabledata.org/drugbank.html</loc>
+  </url>
+  <url>
+    <loc>http://reusabledata.org/drugcentral.html</loc>
+  </url>
+  <url>
     <loc>http://reusabledata.org/encode.html</loc>
   </url>
   <url>
@@ -44,6 +59,12 @@
   </url>
   <url>
     <loc>http://reusabledata.org/flybase.html</loc>
+  </url>
+  <url>
+    <loc>http://reusabledata.org/gdc.html</loc>
+  </url>
+  <url>
+    <loc>http://reusabledata.org/gnomad.html</loc>
   </url>
   <url>
     <loc>http://reusabledata.org/go-ann.html</loc>
@@ -88,7 +109,13 @@
     <loc>http://reusabledata.org/mygene-info.html</loc>
   </url>
   <url>
+    <loc>http://reusabledata.org/myvariant-info.html</loc>
+  </url>
+  <url>
     <loc>http://reusabledata.org/ncbi-gene.html</loc>
+  </url>
+  <url>
+    <loc>http://reusabledata.org/nextprot.html</loc>
   </url>
   <url>
     <loc>http://reusabledata.org/nextstrain.html</loc>
@@ -100,6 +127,9 @@
     <loc>http://reusabledata.org/omim.html</loc>
   </url>
   <url>
+    <loc>http://reusabledata.org/oncokb.html</loc>
+  </url>
+  <url>
     <loc>http://reusabledata.org/orphanet-open.html</loc>
   </url>
   <url>
@@ -107,6 +137,12 @@
   </url>
   <url>
     <loc>http://reusabledata.org/panther.html</loc>
+  </url>
+  <url>
+    <loc>http://reusabledata.org/pfam.html</loc>
+  </url>
+  <url>
+    <loc>http://reusabledata.org/pharos.html</loc>
   </url>
   <url>
     <loc>http://reusabledata.org/pombase.html</loc>
@@ -121,7 +157,19 @@
     <loc>http://reusabledata.org/rgd.html</loc>
   </url>
   <url>
+    <loc>http://reusabledata.org/rhea.html</loc>
+  </url>
+  <url>
     <loc>http://reusabledata.org/sgd.html</loc>
+  </url>
+  <url>
+    <loc>http://reusabledata.org/string.html</loc>
+  </url>
+  <url>
+    <loc>http://reusabledata.org/tair-open.html</loc>
+  </url>
+  <url>
+    <loc>http://reusabledata.org/uniprotkb.html</loc>
   </url>
   <url>
     <loc>http://reusabledata.org/wormbase.html</loc>
