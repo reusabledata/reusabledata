@@ -14,7 +14,7 @@
             "disease-gene association"
         ],
         "data-access": [],
-        "license": "upknown",
+        "license": "unknown",
         "license-type": "unknown",
         "license-link": "TODO",
         "license-hat-used": "false",
@@ -234,7 +234,7 @@
                 "location": "https://www.ebi.ac.uk/chembl/ws"
             }
         ],
-        "license": "CC SA 3.0 Unported",
+        "license": "CC-BY-SA-3.0",
         "license-type": "copyleft",
         "license-link": "ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_23/LICENSE",
         "license-hat-used": "false",
@@ -306,7 +306,7 @@
                 "location": "https://griffithlab.github.io/civic-api-docs/"
             }
         ],
-        "license": "CC0",
+        "license": "CC0-1.0",
         "license-type": "permissive",
         "license-link": "https://civic.genome.wustl.edu/about",
         "license-issues": [],
@@ -642,7 +642,7 @@
                 "location": "https://www.drugbank.ca/releases/latest"
             }
         ],
-        "license": "CC NC 4.0",
+        "license": "CC-BY-NC-4.0",
         "license-type": "restrictive",
         "license-link": "https://www.drugbank.ca/releases/latest",
         "license-hat-used": "false",
@@ -694,7 +694,7 @@
                 "location": "http://drugcentral.org/download"
             }
         ],
-        "license": "CC BY-SA 4.0",
+        "license": "CC-BY-SA-4.0",
         "license-type": "copyleft",
         "license-link": "http://drugcentral.org/privacy",
         "license-hat-used": "false",
@@ -906,7 +906,7 @@
                 "location": "http://gnomad.broadinstitute.org/downloads"
             }
         ],
-        "license": "ODbL 1.0",
+        "license": "ODbL-1.0",
         "license-type": "copyleft",
         "license-link": "http://gnomad.broadinstitute.org/terms",
         "license-hat-used": "false",
@@ -1608,7 +1608,7 @@
                 "location": "http://snorql.nextprot.org"
             }
         ],
-        "license": "CC BY-ND 3.0",
+        "license": "CC-BY-ND-3.0",
         "license-type": "restrictive",
         "license-link": "ftp://ftp.nextprot.org/pub/README",
         "license-hat-used": "false",
@@ -1671,7 +1671,7 @@
                 "location": "http://omia.angis.org.au/download/"
             }
         ],
-        "license": "standard",
+        "license": "all rights reserved",
         "license-type": "copyright",
         "license-link": "http://sydney.edu.au/disclaimer.html",
         "license-issues": [
@@ -1861,7 +1861,7 @@
                 "location": "http://www.orpha.net/sparql"
             }
         ],
-        "license": "https://creativecommons.org/licenses/by-nd/3.0/",
+        "license": "CC-BY-ND-3.0",
         "license-type": "restrictive",
         "license-link": "http://www.orphadata.org/cgi-bin/inc/legal.inc.php",
         "license-commentary": [
@@ -1948,7 +1948,7 @@
                 "location": "ftp://ftp.ebi.ac.uk/pub/databases/Pfam/"
             }
         ],
-        "license": "CC0",
+        "license": "CC0-1.0",
         "license-type": "permissive",
         "license-link": "http://pfam.xfam.org/about",
         "license-hat-used": "false",
@@ -2001,7 +2001,7 @@
                 "location": "http://juniper.health.unm.edu/tcrd/download/"
             }
         ],
-        "license": "CC BY-SA 4.0",
+        "license": "CC-BY-SA-4.0",
         "license-type": "copyleft",
         "license-link": "http://juniper.health.unm.edu/tcrd/download/README",
         "license-hat-used": "false",
@@ -2193,7 +2193,7 @@
                 "location": "http://www.rhea-db.org/webservice"
             }
         ],
-        "license": "CC BY 4.0",
+        "license": "CC-BY-4.0",
         "license-type": "permissive",
         "license-link": "http://www.rhea-db.org/licensedisclaimer",
         "license-hat-used": "false",
@@ -2324,7 +2324,7 @@
                 "location": "http://www.arabidopsis.org/download/index.jsp"
             }
         ],
-        "license": "CC BY 4.0",
+        "license": "CC-BY-4.0",
         "license-type": "permissive",
         "license-link": "http://www.arabidopsis.org/download_files/Public_Data_Releases/README.txt",
         "license-hat-used": "false",
@@ -2360,7 +2360,7 @@
                 "location": "http://www.uniprot.org/downloads"
             }
         ],
-        "license": "CC BY-ND 3.0",
+        "license": "CC-BY-ND-3.0",
         "license-type": "restrictive",
         "license-link": "http://www.uniprot.org/help/license",
         "license-hat-used": "false",
