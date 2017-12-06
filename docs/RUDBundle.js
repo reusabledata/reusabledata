@@ -37353,8 +37353,8 @@ var each = us.each;
 var InteractionViewer = function(global_data, graph_id){
 
     //var graph_layout = 'cose-bilkent'; // default
-    var graph_layout = 'circle'; // default
-    //var graph_layout = 'cose-bilkent'; // default
+    //var graph_layout = 'circle'; // default
+    var graph_layout = 'cose-bilkent'; // default
 
     var DEBUG = true;
     function ll(str){
