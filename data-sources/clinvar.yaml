@@ -30,6 +30,7 @@ license-commentary:
     - 'Custom PD declaration.'
     - 'The license page section \"Molecular Data Usage\" states that\: \"NCBI is not in a position to assess the validity of such claims and since there is no transfer of rights from submitters to NCBI, NCBI has no rights to transfer to a third party. Therefore, NCBI cannot provide comment or unrestricted permission concerning the use, copying, or distribution of the information contained in the molecular databases.\"'
     - 'We also considered the wording at https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/ , but decided that the one we chose above was mostly likely indended and correct.'
-was-controversial: "false"
+    - 'We turned on the \"controversial\" flag for this resource due to the unclear nature of sumbitted data. While the stated intent seems to have the data available as PD, ClinVar does not require a copyright reassignment and explicitly states that they cannot vouch for submitted data, which rather undermines any PD-style statement. We were intitially intending on adding a B.1 violation as ClinVar would be acting more like a directory than a unified resource, possibly requiring negotiation with upstream resources.'
+was-controversial: "true"
 contacts:
     - info@ncbi.nlm.nih.gov
