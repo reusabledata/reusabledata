@@ -1,0 +1,46 @@
+id: 'wikipathways'
+description: ' WikiPathways is a database of biological pathways maintained by and for the scientific community.'
+last-curated: '2017-12-08'
+source: 'WikiPathways'
+source-link: 'https://www.wikipathways.org'
+source-type: "source"
+status: "complete"
+data-field: 'biology'
+data-type: 'pathway'
+data-categories:
+  - 'disease'
+  - 'micronutrient'
+  - 'nanomaterial'
+  - 'ExDNA'
+  - 'renal genomics'
+  - 'adverse outcomes'
+  - 'regenerative medicine'
+  - 'clinical proteomic tumor analysis'
+data-access:
+  - type: download
+    location: 'http://data.wikipathways.org/current/'
+  - type: api
+    location: https://www.wikipathways.org/index.php/Help:WikiPathways_Webservice/API
+license: "custom"
+license-type: "permissive"
+license-link: 'https://www.wikipathways.org/index.php/WikiPathways:License_Terms'
+license-hat-used: "false"
+license-issues:
+  - criteria: 'A.2'
+    comment: 'While the linked terms page states that all WikiPathways data is CC0, the \"Redistributing\" states that: \"...you are not allowed to charge for the content it self [sic].\"'
+license-commentary:
+  - 'In addition to the wording mentioned in the A.2 violation, the same section mentions that you can distribute and charge as long as \"it is made clear that the content is free and freely available from WikiPathways.org.\" Both of these seem to undermine the intent of the CC0 terms.'
+was-controversial: "false"
+contacts:
+  - 'https://www.wikipathways.org/index.php/Contact_Us'
+grants:
+  - label: 'The BioRange program of the Netherlands Bioinformatics Centre (NBIC) (Netherland Genomics Initiative grant)'
+  - label: 'The WikiPathways project is funded by the National Institute for General Medical Sciences (NIH grant R01-GM100039)'   - label: 'The WikiPathways project is also funded by the National Resource for Network Biology (National Institute of General Medical Sciences grant P41 GM103504).'
+  - label: 'Google Summer of Code has supported a number of students working on WikiPathways'
+  - label: 'Maastricht University: Broad Research Strategy Program Part 2 (BOS2)'
+  - label: 'Transnational University Limburg (tUL)'
+  - label: 'IOP Gut Health'
+  - label: 'EU network of Excellence NuGO (EC FP6 grant 506360)'
+  - label: 'MicroGennet (EU Marie Curie action program IRSES grant 269210)'
+  - label: 'Open PHACTS (IMI grant)'
+  - label: 'eNanoMapper (EC FP7 grant 604134)'
