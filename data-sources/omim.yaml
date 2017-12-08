@@ -2,7 +2,7 @@ id: omim
 last-curated: '2017-12-07'
 source: 'Mendelian Inheritance in Man (OMIM)'
 source-link: https://www.omim.org
-source-type: "integrator", "unknown", "repository", "source"
+source-type: "source"
 status: complete
 description: 'OMIM is a comprehensive, authoritative compendium of human genes and genetic phenotypes with full-text, referenced overviews that contains information on all known mendelian disorders and over 12,000 genes. OMIM focuses on the relationship between phenotype and genotype.'
 data-field: biomedical
