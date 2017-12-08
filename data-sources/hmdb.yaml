@@ -8,7 +8,7 @@ status: "complete"
 data-field: 'biology'
 data-type: 'human'
 data-categories:
-  - 'metabolomics
+  - 'metabolomics'
   - 'clinical chemistry'
   - 'biomarkers'
 data-access:
