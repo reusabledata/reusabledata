@@ -35,7 +35,8 @@ contacts:
   - 'https://www.wikipathways.org/index.php/Contact_Us'
 grants:
   - label: 'The BioRange program of the Netherlands Bioinformatics Centre (NBIC) (Netherland Genomics Initiative grant)'
-  - label: 'The WikiPathways project is funded by the National Institute for General Medical Sciences (NIH grant R01-GM100039)'   - label: 'The WikiPathways project is also funded by the National Resource for Network Biology (National Institute of General Medical Sciences grant P41 GM103504).'
+  - label: 'The WikiPathways project is funded by the National Institute for General Medical Sciences (NIH grant R01-GM100039)'
+  - label: 'The WikiPathways project is also funded by the National Resource for Network Biology (National Institute of General Medical Sciences grant P41 GM103504).'
   - label: 'Google Summer of Code has supported a number of students working on WikiPathways'
   - label: 'Maastricht University: Broad Research Strategy Program Part 2 (BOS2)'
   - label: 'Transnational University Limburg (tUL)'
