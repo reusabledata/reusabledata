@@ -4,7 +4,7 @@ source-link: 'https://www.ncbi.nlm.nih.gov/clinvar/'
 source-type: 'integrator'
 status: complete
 description: 'ClinVar archives and aggregates information about relationships among variation and human health. ClinVar collects reports of variants found in patient samples, assertions made regarding their clinical significance, information about the submitter, and other supporting data.'
-last-curated: '2017-12-06'
+last-curated: '2017-12-07'
 data-field: biomedical
 data-type: human
 data-categories:
