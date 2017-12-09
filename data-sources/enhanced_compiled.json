@@ -321,9 +321,11 @@
     {
         "id": "clinvar",
         "source": "ClinVar",
-        "source-link": "TODO",
-        "status": "incomplete",
+        "source-link": "https://www.ncbi.nlm.nih.gov/clinvar/",
+        "source-type": "integrator",
+        "status": "complete",
         "description": "ClinVar archives and aggregates information about relationships among variation and human health. ClinVar collects reports of variants found in patient samples, assertions made regarding their clinical significance, information about the submitter, and other supporting data.",
+        "last-curated": "2017-12-07",
         "data-field": "biomedical",
         "data-type": "human",
         "data-categories": [
@@ -334,34 +336,41 @@
         "data-access": [
             {
                 "type": "download",
-                "location": "https://www.ncbi.nlm.nih.gov/clinvar/docs/ftp_primer/"
+                "location": "https://www.ncbi.nlm.nih.gov/home/about/policies/"
             }
         ],
-        "license": "unknown",
+        "license": "custom",
         "license-type": "public domain",
         "license-link": "http://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/",
+        "license-hat-used": "false",
         "license-issues": [
             {
                 "criteria": "A.2",
-                "comment": "public domain"
+                "comment": "Public domain declaration"
             },
             {
-                "criteria": "B.1"
+                "criteria": "B.2.1",
+                "comment": "The license page section \\\"Molecular Data Usage\\\" states that all data may not be covered under the public domain (see comments)."
             },
             {
-                "criteria": "B.2.1"
-            },
-            {
-                "criteria": "B.2.2"
+                "criteria": "B.2.2",
+                "comment": "There does not seem to be any easy way to differentiate the \\\"clean\\\" data."
             }
         ],
         "license-commentary": [
-            "Information that is created by or for the US government on this site is within the public domain. Public domain information on the National Library of Medicine (NLM) Web pages may be freely distributed and copied. However, it is requested that in any subsequent use of this work, NLM be given appropriate acknowledgment.",
-            "NOTE: This site contains resources which incorporate material contributed or licensed by individuals, companies, or organizations that may be protected by U.S. and foreign copyright laws. These include, but are not limited to PubMed Health (see PubMed Health Copyright and Restrictions Notice), PubMed Central (PMC) (see PMC Copyright Notice), Bookshelf (see Bookshelf Copyright Notice), OMIM (see OMIM Copyright Status), and PubChem. All persons reproducing, redistributing, or making commercial use of this information are expected to adhere to the terms and conditions asserted by the copyright holder. Transmission or reproduction of protected items beyond that allowed by fair use (PDF) as defined in the copyright laws requires the written permission of the copyright owners."
+            "We turned on the \\\"controversial\\\" flag for this resource due to the unclear nature of sumbitted data. While the stated intent seems to have the data available as PD, ClinVar does not require a copyright reassignment and explicitly states that they cannot vouch for submitted data, which rather undermines any PD-style statement. We were intitially intending on adding a B.1 violation as ClinVar would be acting more like a directory than a unified resource, possibly requiring negotiation with upstream resources.",
+            "While an API is offered through E-Utilities, we will evaluate the more concrete downloads given their ease.",
+            "Custom PD declaration.",
+            "The license page section \\\"Molecular Data Usage\\\" states that\\: \\\"NCBI is not in a position to assess the validity of such claims and since there is no transfer of rights from submitters to NCBI, NCBI has no rights to transfer to a third party. Therefore, NCBI cannot provide comment or unrestricted permission concerning the use, copying, or distribution of the information contained in the molecular databases.\\\"",
+            "We also considered the wording at https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/ , but decided that the one we chose above was mostly likely indended and correct."
         ],
+        "was-controversial": "true",
         "contacts": [
             "info@ncbi.nlm.nih.gov"
-        ]
+        ],
+        "license-commentary-embeddable": "We turned on the \\\"controversial\\\" flag for this resource due to the unclear nature of sumbitted data. While the stated intent seems to have the data available as PD, ClinVar does not require a copyright reassignment and explicitly states that they cannot vouch for submitted data, which rather undermines any PD-style statement. We were intitially intending on adding a B.1 violation as ClinVar would be acting more like a directory than a unified resource, possibly requiring negotiation with upstream resources.<hr />While an API is offered through E-Utilities, we will evaluate the more concrete downloads given their ease.<hr />Custom PD declaration.<hr />The license page section \\\"Molecular Data Usage\\\" states that\\: \\\"NCBI is not in a position to assess the validity of such claims and since there is no transfer of rights from submitters to NCBI, NCBI has no rights to transfer to a third party. Therefore, NCBI cannot provide comment or unrestricted permission concerning the use, copying, or distribution of the information contained in the molecular databases.\\\"<hr />We also considered the wording at https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/ , but decided that the one we chose above was mostly likely indended and correct.",
+        "data-tags": "biomedical, human, disease-gene association, variant-disease association, variant definitions",
+        "grade-automatic": 4
     },
     {
         "id": "coriell-institute",
