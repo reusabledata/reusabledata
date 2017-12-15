@@ -692,21 +692,24 @@
         "status": "complete",
         "data-field": "general",
         "data-type": "any",
-        "data-categories": [],
-        "data-access": [],
+        "data-categories": [
+            "data",
+            "literature"
+        ],
+        "data-access": [
+            {
+                "type": "api",
+                "location": "http://wiki.datadryad.org/Data_Access"
+            }
+        ],
         "license": "CC0-1.0",
         "license-type": "permissive",
         "license-link": "https://datadryad.org/pages/policies#publication",
         "license-hat-used": "false",
-        "license-issues": [
-            {
-                "criteria": "C.1",
-                "comment": "While the data could be accessed semi-manually through search and download, there did not seem to be any bulk access mechanisms available."
-            }
-        ],
+        "license-issues": [],
         "license-commentary": [
-            "The C \\\"issue\\\" may be a product of the primary mission as a citable repository rather than as a primary aggregating resource.",
-            "No C.2 violation was considered as all access was open, there was just no centralized bulk access.",
+            "Main API information found from the landing page under \\\"About\\\" -> \\\"Repository features and technology\\\": https://datadryad.org/pages/repository",
+            "Also note more detailed API information in the wiki: http://wiki.datadryad.org/Data_Access",
             "\\\"Dryad will make Accepted Content available to the public under a CC0 Waiver\\\""
         ],
         "was-controversial": "false",
@@ -1040,6 +1043,59 @@
         ],
         "contacts": [
             "http://www.gtexportal.org/home/contact"
+        ]
+    },
+    {
+        "id": "hmdb",
+        "description": "The Human Metabolome Database (HMDB) is a freely available electronic database containing detailed information about small molecule metabolites found in the human body.",
+        "last-curated": "2017-12-07",
+        "source": "Human Metabolome Database (HMDB)",
+        "source-link": "http://www.hmdb.ca",
+        "source-type": "source",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "human",
+        "data-categories": [
+            "metabolomics",
+            "clinical chemistry",
+            "biomarkers"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://www.hmdb.ca/downloads"
+            }
+        ],
+        "license": "custom",
+        "license-type": "restrictive",
+        "license-link": "http://www.hmdb.ca/about#cite",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "Custom terms at linked license and on downloads page."
+            },
+            {
+                "criteria": "D.1.1",
+                "comment": "The custom license would appear to allow for liberal non-commercial reuse."
+            },
+            {
+                "criteria": "E.1.1",
+                "comment": "The custom license would appear to explicitly allow for non-commercial reuse with other non-commercial interests."
+            }
+        ],
+        "license-commentary": [
+            "While the terms are minimal, they seem intended to act a bit the CC-BY-NC; it was evaluated similarly.",
+            "Given their upstream resources mentioned in http://www.hmdb.ca/sources , it would be interesting to know their pass-through negotiations and differences with Canadian law.."
+        ],
+        "was-controversial": "false",
+        "contacts": [
+            "https://twitter.com/WishartLab"
+        ],
+        "grants": [
+            {
+                "label": "This project is supported by the Canadian Institutes of Health Research (award #111062), Alberta Innovates - Health Solutions, and by The Metabolomics Innovation Centre (TMIC), a nationally-funded research and core facility that supports a wide range of cutting-edge metabolomic studies."
+            }
         ]
     },
     {
@@ -1636,8 +1692,10 @@
     },
     {
         "id": "omim",
+        "last-curated": "2017-12-07",
         "source": "Mendelian Inheritance in Man (OMIM)",
         "source-link": "https://www.omim.org",
+        "source-type": "source",
         "status": "complete",
         "description": "OMIM is a comprehensive, authoritative compendium of human genes and genetic phenotypes with full-text, referenced overviews that contains information on all known mendelian disorders and over 12,000 genes. OMIM focuses on the relationship between phenotype and genotype.",
         "data-field": "biomedical",
@@ -1654,31 +1712,48 @@
             },
             {
                 "type": "download",
-                "location": "https://omim.org/downloads/"
+                "location": "https://omim.org/downloads"
             }
         ],
-        "license": "unknown",
+        "license": "custom",
         "license-type": "restrictive",
         "license-link": "http://www.omim.org/help/agreement",
+        "license-hat-used": "false",
         "license-issues": [
             {
-                "criteria": "A.1.1",
-                "comment": "There are different licenses for different portions of the data, and for different types of users."
+                "criteria": "A.2",
+                "comment": "The license at link is custom."
+            },
+            {
+                "criteria": "B.1",
+                "comment": "Agreement section 13 requires downloads to be updated by downstream; section 14 discussion arbitrary API key revocation."
             },
             {
                 "criteria": "C.2",
-                "comment": "The data is only available after registering"
+                "comment": "Downloads and access are provided post-registration; as the API key is used for access control, it violates the C.2 example."
+            },
+            {
+                "criteria": "D.1.2",
+                "comment": "Sections 8, 9, and 10 of the agreement make it seems that while a non-profit reasearcher may access the data, there is no reuse (pass-through) possible."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "Sections 8, 9, and 10 of the agreement make it seems that while a non-profit reasearcher may access the data, there is no reuse (pass-through) possible."
             }
         ],
         "license-commentary": [
-            "See also: https://omim.org/downloads/",
-            "From https://omim.org/help/agreement: This Use Agreement applies to any individual, institution, or organization that uses OMIM.org through its front end, including its mirror sites, the OMIM.org API, or downloads of OMIM data from the site. By accessing and using OMIM you agree to be bound by all the terms and conditions set forth in this USE AGREEMENT. This USE AGREEMENT shall constitute a legally binding agreement between the user and Johns Hopkins University (hereinafter \\\"JHU\\\").",
-            "From https://omim.org/help/copyright: The OMIM® database including the collective data contained therein is the property of the Johns Hopkins University, which holds the copyright thereto.",
-            "Custom license with use restrictions.",
-            "Research and educational use of OMIM is encouraged, and single-user academic, non-profit, and governmental agencies can register below for access without a license. For-profit companies or anyone planning to redisplay or incorporate OMIM data into software MUST secure a license to obtain access to these files."
+            "Assuming that one registered, it seems that data access would be relatively pain-free; so no C.1 violation.",
+            "See also: https://omim.org/downloads and https://omim.org/api for additional access information.",
+            "It is worth reading through the linked agreement; there are many sections that are restrictive or would be best interpreted with legal advice."
         ],
+        "was-controversial": "false",
         "contacts": [
             "JHTT-Communications@jhmi.edu"
+        ],
+        "grants": [
+            {
+                "label": "\\\"OMIM curation and updating is funded by a grant from the National Human Genome Research Institute (NHGRI) [1U41HG006627]. Initial development of the OMIM.org website was supported by Johns Hopkins Medicine and a grant from the Maryland Department of Health and Mental Hygiene. OMIM is hosted at University of California Santa Cruz (UCSC) Genome Bioinformatics.\\\""
+            }
         ]
     },
     {
@@ -2279,6 +2354,89 @@
         "grants": [
             {
                 "label": "UniProt is supported by the National Institutes of Health (NIH), National Human Genome Research Institute (NHGRI) and National Institute of General Medical Sciences (NIGMS) grant U41HG007822. Additional support for the EMBL-EBI\\'s involvement in UniProt comes from European Molecular Biology Laboratory (EMBL), the British Heart Foundation (BHF) (RG/13/5/30112), the Parkinson\\'s Disease United Kingdom (PDUK) GO grant G-1307, and the NIH GO grant U41HG02273. UniProt activities at the SIB are additionally supported by the Swiss Federal Government through the State Secretariat for Education, Research and Innovation SERI. PIR\\'s UniProt activities are also supported by the NIH grants R01GM080646, G08LM010720, and P20GM103446, and the National Science Foundation (NSF) grant DBI-1062520."
+            }
+        ]
+    },
+    {
+        "id": "wikipathways",
+        "description": " WikiPathways is a database of biological pathways maintained by and for the scientific community.",
+        "last-curated": "2017-12-08",
+        "source": "WikiPathways",
+        "source-link": "https://www.wikipathways.org",
+        "source-type": "source",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "pathway",
+        "data-categories": [
+            "disease",
+            "micronutrient",
+            "nanomaterial",
+            "ExDNA",
+            "renal genomics",
+            "adverse outcomes",
+            "regenerative medicine",
+            "clinical proteomic tumor analysis"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "http://data.wikipathways.org/current/"
+            },
+            {
+                "type": "api",
+                "location": "https://www.wikipathways.org/index.php/Help:WikiPathways_Webservice/API"
+            }
+        ],
+        "license": "custom",
+        "license-type": "permissive",
+        "license-link": "https://www.wikipathways.org/index.php/WikiPathways:License_Terms",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "While the linked terms page states that all WikiPathways data is CC0, the \\\"Redistributing\\\" states that: \\\"...you are not allowed to charge for the content it self [sic].\\\""
+            }
+        ],
+        "license-commentary": [
+            "In addition to the wording mentioned in the A.2 violation, the same section mentions that you can distribute and charge as long as \\\"it is made clear that the content is free and freely available from WikiPathways.org.\\\" Both of these seem to undermine the intent of the CC0 terms."
+        ],
+        "was-controversial": "false",
+        "contacts": [
+            "https://www.wikipathways.org/index.php/Contact_Us"
+        ],
+        "grants": [
+            {
+                "label": "The BioRange program of the Netherlands Bioinformatics Centre (NBIC) (Netherland Genomics Initiative grant)"
+            },
+            {
+                "label": "The WikiPathways project is funded by the National Institute for General Medical Sciences (NIH grant R01-GM100039)"
+            },
+            {
+                "label": "The WikiPathways project is also funded by the National Resource for Network Biology (National Institute of General Medical Sciences grant P41 GM103504)."
+            },
+            {
+                "label": "Google Summer of Code has supported a number of students working on WikiPathways"
+            },
+            {
+                "label": "Maastricht University: Broad Research Strategy Program Part 2 (BOS2)"
+            },
+            {
+                "label": "Transnational University Limburg (tUL)"
+            },
+            {
+                "label": "IOP Gut Health"
+            },
+            {
+                "label": "EU network of Excellence NuGO (EC FP6 grant 506360)"
+            },
+            {
+                "label": "MicroGennet (EU Marie Curie action program IRSES grant 269210)"
+            },
+            {
+                "label": "Open PHACTS (IMI grant)"
+            },
+            {
+                "label": "eNanoMapper (EC FP7 grant 604134)"
             }
         ]
     },

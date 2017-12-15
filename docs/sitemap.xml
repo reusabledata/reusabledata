@@ -82,6 +82,9 @@
     <loc>http://reusabledata.org/gtex.html</loc>
   </url>
   <url>
+    <loc>http://reusabledata.org/hmdb.html</loc>
+  </url>
+  <url>
     <loc>http://reusabledata.org/hpo.html</loc>
   </url>
   <url>
@@ -176,6 +179,9 @@
   </url>
   <url>
     <loc>http://reusabledata.org/uniprotkb.html</loc>
+  </url>
+  <url>
+    <loc>http://reusabledata.org/wikipathways.html</loc>
   </url>
   <url>
     <loc>http://reusabledata.org/wormbase.html</loc>
