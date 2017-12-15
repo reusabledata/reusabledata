@@ -17,9 +17,7 @@ license: "CC0-1.0"
 license-type: "permissive"
 license-link: 'https://datadryad.org/pages/policies#publication'
 license-hat-used: "false"
-license-issues:
-  - criteria: 'C.1'
-    comment: 'While the data could be accessed semi-manually through search and download, there did not seem to be any bulk access mechanisms available.'
+license-issues: []
 license-commentary:
   - 'Main API information found from the landing page under \"About\" -> \"Repository features and technology\": https://datadryad.org/pages/repository'
   - 'Also note more detailed API information in the wiki: http://wiki.datadryad.org/Data_Access'
