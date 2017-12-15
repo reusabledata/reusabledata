@@ -1,0 +1,35 @@
+id: 'hmdb'
+description: 'The Human Metabolome Database (HMDB) is a freely available electronic database containing detailed information about small molecule metabolites found in the human body.'
+last-curated: '2017-12-07'
+source: 'Human Metabolome Database (HMDB)'
+source-link: 'http://www.hmdb.ca'
+source-type: "source"
+status: "complete"
+data-field: 'biology'
+data-type: 'human'
+data-categories:
+  - 'metabolomics'
+  - 'clinical chemistry'
+  - 'biomarkers'
+data-access:
+  - type: download
+    location: 'http://www.hmdb.ca/downloads'
+license: "custom"
+license-type: "restrictive"
+license-link: 'http://www.hmdb.ca/about#cite'
+license-hat-used: "false"
+license-issues:
+  - criteria: 'A.2'
+    comment: 'Custom terms at linked license and on downloads page.'
+  - criteria: 'D.1.1'
+    comment: 'The custom license would appear to allow for liberal non-commercial reuse.'
+  - criteria: 'E.1.1'
+    comment: 'The custom license would appear to explicitly allow for non-commercial reuse with other non-commercial interests.'
+license-commentary:
+  - 'While the terms are minimal, they seem intended to act a bit the CC-BY-NC; it was evaluated similarly.'
+  - 'Given their upstream resources mentioned in http://www.hmdb.ca/sources , it would be interesting to know their pass-through negotiations and differences with Canadian law..'
+was-controversial: "false"
+contacts:
+  - 'https://twitter.com/WishartLab'
+grants:
+  - label: 'This project is supported by the Canadian Institutes of Health Research (award #111062), Alberta Innovates - Health Solutions, and by The Metabolomics Innovation Centre (TMIC), a nationally-funded research and core facility that supports a wide range of cutting-edge metabolomic studies.'
