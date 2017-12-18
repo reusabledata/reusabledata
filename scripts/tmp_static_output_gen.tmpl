@@ -12,7 +12,6 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
      <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" crossorigin="anonymous">
      <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.0/vue.js"></script> -->
-     <!-- <script type="text/javascript" src="RUD.bundle.js"></script> -->
 
      <link rel="stylesheet" href="style.css">
   </head>
@@ -452,7 +451,7 @@
 	    <small>
 	      The (Re)usable Data Project would like to acknowledge
 	      the assistance of many more people than can be listed
-	      here. Please visit the <a href="/about.html">about
+	      here. Please visit the <a href="about.html">about
 	      page</a> for the full list.
 	    </small>
 	  </p>
@@ -466,52 +465,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script>
+    <script type="text/javascript" src="RUDBundle.js"></script>
     <script type="text/javascript">
       var global_data = {{{ jsondata }}};
       var global_summary_data = {{{ summarydata }}};
-      jQuery(document).ready(function(){
-        console.log('Ready...');
-        if( jQuery("#sourcestable") && jQuery("#sourcestable").length ){
-          console.log('Running #sourcetable...');
-          var tbl = jQuery("#sourcestable").DataTable({
-            //{autoWidth: true, "order": [[3, "desc"], [0, "asc"]]}
-            autoWidth: true
-          });
-
-          console.log('...table init...');
-
-          // Initialize for license commentary popups.
-          jQuery(function(){
-            jQuery('[data-toggle="popover"]').popover();
-          });
-          // And on paging redraw (they are separate).
-          tbl.on("draw", function(){
-            //console.log('DataTable draw event');
-            jQuery('[data-toggle="popover"]').popover();
-          });
-
-          console.log('...done.');
-        }
-        if( jQuery("#summarygraph") && jQuery("#summarygraph").length ){
-          console.log('...summary graph init...');
-
-          var layout = {
-            title: 'High-level summary of our curated data sources',
-            //width: 500,
-            //height: 300,
-            paper_bgcolor: "rgb(236, 238, 239)",
-            plot_bgcolor: "rgb(236, 238, 239)",
-            xaxis: {
-               //tickangle: -45
-               tickangle: -15
-            },
-            barmode: 'stack'
-          };
-          Plotly.newPlot('summarygraph', global_summary_data, layout);
-
-          console.log('...done.');
-        }
-      });
+      // Defer all execution to RUDBundle.js.
     </script>
 
     <!-- Global Site Tag (gtag.js) - Google Analytics -->

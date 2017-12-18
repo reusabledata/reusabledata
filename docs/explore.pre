@@ -1,0 +1,77 @@
+<div class="container">
+
+  <h2>Explore our data</h2>
+
+  <div class="row">
+
+    <div class="col-xl-12">
+
+      <p>
+	We are still exploring our data and its implications. On this
+	page, we have put together some intial simple breakdowns and
+	views over our data.
+	<br />
+	(Note: if the bar charts are too compressed, please expand your browser
+	window and refresh.)
+      </p>
+
+      <ul>
+	<li><a href="#licensegraphjump">Licenses used</a></li>
+	<li><a href="#licensetypegraphjump">License categories</a></li>
+	<li><a href="#scoregraphjump">Score distribution</a></li>
+	<li><a href="#summarygraphjump">High-level summary of curated data resource</a></li>
+	<li><a href="#interactiongraphjump">Resource interactions</a></li>
+      </ul>
+
+      <p>
+	If you would like to look at the raw data, the JSON blobs that are used on this page are available for <a href="https://raw.githubusercontent.com/reusabledata/reusabledata/master/data-sources/enhanced_compiled.json">all data</a> and <a href="https://raw.githubusercontent.com/reusabledata/reusabledata/master/data-sources/summary_graph.json">criteria summary</a>. The YAML files these are derived from are available <a href="https://github.com/reusabledata/reusabledata/tree/master/data-sources">here</a>.
+	If you have any new or novel ideas exploring our data, please
+	let us know on
+	our <a href="https://github.com/reusabledata/reusabledata/issues">tracker</a>.
+      </p>
+
+    </div>
+  </div>
+
+  <hr /><span id="licensegraphjump"></span><span id="licensetypegraphjump"></span>
+
+  <div class="row">
+
+    <div class="col-xl-6">
+      <!-- <div style="width: 50%; height:500px;" id="licensegraph"></div> -->
+      <div id="licensegraph"></div>
+    </div>
+
+    <div class="col-xl-6">
+      <!-- <div style="width: 50%; height:500px;" id="licensetypegraph"></div> -->
+      <div id="licensetypegraph"></div>
+    </div>
+
+  </div>
+
+  <hr /><span id="scoregraphjump"></span><span id="summarygraphjump"></span>
+
+  <div class="row">
+
+    <div class="col-xl-6">
+     <!-- <div style="width: 100%; height:500px;" id="scoregraph"></div> -->
+      <div id="scoregraph"></div>
+    </div>
+
+    <div class="col-xl-6">
+      <div style="width: 100%; height:500px;" id="summarygraph"></div>
+    </div>
+
+  </div>
+
+  <div class="row"><span id="interactiongraphjump"></span>
+
+    <div class="col-xl-12">
+      <h4>Resource interactions</h4>
+      <div style="width: 100%; height:500px;" id="interactiongraph"></div>
+      <!-- <div id="interactiongraph"></div> -->
+    </div>
+
+  </div>
+
+</div>

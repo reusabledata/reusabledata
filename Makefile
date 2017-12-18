@@ -1,6 +1,6 @@
 
 
-all: index.html criteria.html license-types.html reading.html about.html enhanced_compiled.json summary_graph.json details_pages sitemap
+all: index.html criteria.html license-types.html reading.html about.html enhanced_compiled.json summary_graph.json details_pages sitemap explore.html
 
 # .PHONY: clean
 # clean:
@@ -81,12 +81,12 @@ about.html: about.html.seed
 	node ./scripts/mustache-inject.js --template ./scripts/tmp_static_output_frame.tmpl --body ./docs/about.html.seed -o ./docs/about.html
 
 ###
-### interaction.html is an HTML seed + JS build -> assembled doc/app.
+### explore.html is an HTML seed + JS build -> assembled doc/app.
 ###
 
 RUDBundle.js:
 	npm install
 	npm run build
 
-interaction.html: RUDBundle.js enhanced_compiled.json
-	node ./scripts/mustache-inject.js --template ./scripts/tmp_static_output_frame.tmpl --body ./docs/interaction.pre -c ./data-sources/enhanced_compiled.json -o ./docs/interaction.html
+explore.html: RUDBundle.js enhanced_compiled.json summary_graph.json
+	node ./scripts/mustache-inject.js --template ./scripts/tmp_static_output_frame.tmpl --body ./docs/explore.pre -c ./data-sources/enhanced_compiled.json -s ./data-sources/summary_graph.json -o ./docs/explore.html
