@@ -37330,6 +37330,9 @@ module.exports = debounce;
 // Let jshint pass over over our external globals (browserify takes
 // care of it all).
 /* global jQuery */
+/* global Plotly */
+/* global global_data */
+/* global global_summary_data */
 
 var us = require('underscore');
 var cytoscape = require('cytoscape');
@@ -37349,19 +37352,214 @@ var each = us.each;
 /// ...
 ///
 
+var DEBUG = true;
+function ll(str){
+    if(DEBUG){
+        console.log(str);
+    }
+}
+
+///
+var SourceTable = function(table_id){
+
+    console.log('Running source table...');
+
+    var tbl = jQuery('#' + table_id).DataTable({
+        //{autoWidth: true, "order": [[3, "desc"], [0, "asc"]]}
+        autoWidth: true
+    });
+
+    console.log('...table init...');
+
+    // Initialize for license commentary popups.
+    jQuery(function(){
+        jQuery('[data-toggle="popover"]').popover();
+    });
+    // And on paging redraw (they are separate).
+    tbl.on("draw", function(){
+        //console.log('DataTable draw event');
+        jQuery('[data-toggle="popover"]').popover();
+    });
+
+    console.log('...done.');
+};
+
+///
+var SummaryViewer = function(summary_data, graph_id){
+
+    console.log('In summary graph init...');
+    console.log(summary_data);
+
+    var layout = {
+        title: 'High-level summary of curated data resources',
+        //width: 500,
+        //height: 300,
+        paper_bgcolor: "rgb(236, 238, 239)",
+        plot_bgcolor: "rgb(236, 238, 239)",
+        xaxis: {
+            //tickangle: -45
+            tickangle: -15
+        },
+        barmode: 'stack'
+    };
+
+    Plotly.newPlot(graph_id, summary_data, layout);
+
+    console.log('...done.');
+};
+
+///
+var LicenseViewer = function(global_data, graph_id){
+
+    // Generate simple tracks.
+    var licount = {};
+    each(global_data, function(n){
+
+	var nid = n['id'];
+	var nlbl = n['source'];
+	var lic = n['license'];
+
+	// Ensure.
+	if( typeof(licount[lic]) === 'undefined' ){
+	    licount[lic] = 0;
+	}
+
+	licount[lic] = licount[lic] +1;
+    });
+
+    var values = [];
+    var labels = [];
+    each(licount, function(v, k){
+	values.push(v);
+	labels.push(k);
+    });
+
+    var data = [{
+	values: values,
+	labels: labels,
+	type: 'pie'
+    }];
+
+    var layout = {
+        title: 'Licenses used',
+	height: 400,
+	width: 500
+    };
+
+    Plotly.newPlot(graph_id, data, layout);
+
+};
+
+///
+var LicenseTypeViewer = function(global_data, graph_id){
+
+    // Generate simple tracks.
+    var licount = {};
+    each(global_data, function(n){
+
+	var nid = n['id'];
+	var nlbl = n['source'];
+	var lic = n['license-type'];
+
+	// Ensure.
+	if( typeof(licount[lic]) === 'undefined' ){
+	    licount[lic] = 0;
+	}
+
+	licount[lic] = licount[lic] +1;
+    });
+
+    var values = [];
+    var labels = [];
+    each(licount, function(v, k){
+	values.push(v);
+	labels.push(k);
+    });
+
+    var data = [{
+	values: values,
+	labels: labels,
+	type: 'pie'
+    }];
+
+    var layout = {
+        title: 'License categories',
+	height: 400,
+	width: 500
+    };
+
+    Plotly.newPlot(graph_id, data, layout);
+
+};
+
+///
+var ScoreViewer = function(global_data, graph_id){
+
+    // Base track.
+    var x = [0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0];
+
+    // Generate size scaling.
+    var scount = {};
+    each(global_data, function(n){
+
+	var nid = n['id'];
+	var nlbl = n['source'];
+	var score = n['grade-automatic'];
+
+	// Ensure.
+	if( typeof(scount[score]) === 'undefined' ){
+	    scount[score] = 0;
+	}
+
+	scount[score] = scount[score] +1;
+    });
+    var size = [];
+    each(x, function(t){
+	var cnt = 0;
+	if( typeof(scount[t]) !== 'undefined' ){
+	    //mag = scount[t.toString()] * 10;
+	    cnt = scount[t];
+	}
+	size.push(cnt);
+    });
+
+    console.log(x);
+    console.log(size);
+
+    // Assemble trace.
+    var trace = {
+	x: x,
+	y: size,
+	marker: {
+	    color: 'rgb(158,202,225)',
+	    opacity: 0.6,
+	    line: {
+		color: 'rbg(8,48,107)',
+		width: 1.5
+	    },
+	},
+	type: 'bar'
+    };
+    var data = [trace];
+
+    var layout = {
+	title: 'Score distribution',
+	xaxis: {
+	    title: "Score",
+	    autotick: false,
+	    dtick: 0.5
+	},
+	yaxis: {title: "Count"}
+    };
+
+    Plotly.newPlot(graph_id, data, layout);
+};
+
 ///
 var InteractionViewer = function(global_data, graph_id){
 
+    var graph_layout = 'circle'; // default
     //var graph_layout = 'cose-bilkent'; // default
-    //var graph_layout = 'circle'; // default
-    var graph_layout = 'cose-bilkent'; // default
-
-    var DEBUG = true;
-    function ll(str){
-	if(DEBUG){
-            console.log(str);
-	}
-    }
 
     // Translate into something cytoscape can understand.
     // Nodes first, capture/cache license infor along the way
@@ -37791,9 +37989,50 @@ var InteractionViewer = function(global_data, graph_id){
     // });
 };
 
+///
+/// ...
+///
+
 module.exports = {
-    'InteractionViewer': InteractionViewer
+    'LicenseViewer': LicenseViewer,
+    'LicenseTypeViewer': LicenseTypeViewer,
+    'ScoreViewer': ScoreViewer,
+    'SummaryViewer': SummaryViewer,
+    'InteractionViewer': InteractionViewer,
+    'SourceTable': SourceTable
 };
+
+///
+/// ...
+///
+
+jQuery(document).ready(function(){
+    console.log('JQuery/page ready...');
+    if( jQuery("#licensegraph") && jQuery("#licensegraph").length ){
+        console.log('Running license graph...');
+        window.RUD.LicenseViewer(global_data, 'licensegraph');
+    }
+    if( jQuery("#licensetypegraph") && jQuery("#licensetypegraph").length ){
+        console.log('Running license type graph...');
+        window.RUD.LicenseTypeViewer(global_data, 'licensetypegraph');
+    }
+    if( jQuery("#scoregraph") && jQuery("#scoregraph").length ){
+        console.log('Running score graph...');
+        window.RUD.ScoreViewer(global_data, 'scoregraph');
+    }
+    if( jQuery("#summarygraph") && jQuery("#summarygraph").length ){
+        console.log('Running summary graph...');
+        window.RUD.SummaryViewer(global_summary_data, 'summarygraph');
+    }
+    if( jQuery("#interactiongraph") && jQuery("#interactiongraph").length ){
+        console.log('Running interaction graph...');
+        window.RUD.InteractionViewer(global_data, 'interactiongraph');
+    }
+    if( jQuery("#sourcestable") && jQuery("#sourcestable").length ){
+        console.log('Running source table...');
+        window.RUD.SourceTable('sourcestable');
+    }
+});
 
 },{"cytoscape":33,"cytoscape-cose-bilkent":32,"underscore":37}]},{},[38])(38)
 });

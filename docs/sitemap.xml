@@ -58,6 +58,9 @@
     <loc>http://reusabledata.org/encode.html</loc>
   </url>
   <url>
+    <loc>http://reusabledata.org/explore.html</loc>
+  </url>
+  <url>
     <loc>http://reusabledata.org/fantom5.html</loc>
   </url>
   <url>
@@ -92,9 +95,6 @@
   </url>
   <url>
     <loc>http://reusabledata.org/index.html</loc>
-  </url>
-  <url>
-    <loc>http://reusabledata.org/interaction.html</loc>
   </url>
   <url>
     <loc>http://reusabledata.org/kegg-ftp.html</loc>

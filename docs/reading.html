@@ -50,7 +50,10 @@
             </div>
 	  </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html" id="nav02" aria-haspopup="true" aria-expanded="false">About</a>
+            <a class="nav-link" href="explore.html" id="nav02" aria-haspopup="true" aria-expanded="false">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" id="nav03" aria-haspopup="true" aria-expanded="false">About</a>
           </li>
           <!-- <li class="nav-item"> -->
           <!--   <a class="nav-link" href="https://github.com/reusabledata/reusabledata/issues/new" id="nav03" aria-haspopup="true" aria-expanded="false">Contact</a> -->
@@ -128,7 +131,7 @@ are currently being maintained.</p>
 	    <small>
 	      The (Re)usable Data Project would like to acknowledge
 	      the assistance of many more people than can be listed
-	      here. Please visit the <a href="/about.html">about
+	      here. Please visit the <a href="about.html">about
 	      page</a> for the full list.
 	    </small>
 	  </p>
@@ -146,53 +149,7 @@ are currently being maintained.</p>
     <script type="text/javascript">
       var global_data = {};
       var global_summary_data = {};
-      jQuery(document).ready(function(){
-        console.log('Ready...');
-        if( jQuery("#sourcestable") && jQuery("#sourcestable").length ){
-          console.log('Running #sourcetable...');
-          var tbl = jQuery("#sourcestable").DataTable({
-            //{autoWidth: true, "order": [[3, "desc"], [0, "asc"]]}
-            autoWidth: true
-          });
-
-          console.log('...table init...');
-
-          // Initialize for license commentary popups.
-          jQuery(function(){
-            jQuery('[data-toggle="popover"]').popover();
-          });
-          // And on paging redraw (they are separate).
-          tbl.on("draw", function(){
-            //console.log('DataTable draw event');
-            jQuery('[data-toggle="popover"]').popover();
-          });
-
-          console.log('...done.');
-        }
-        if( jQuery("#summarygraph") && jQuery("#summarygraph").length ){
-          console.log('...summary graph init...');
-
-          var layout = {
-            title: 'High-level summary of our curated data sources',
-            //width: 500,
-            //height: 300,
-            paper_bgcolor: "rgb(236, 238, 239)",
-            plot_bgcolor: "rgb(236, 238, 239)",
-            xaxis: {
-               //tickangle: -45
-               tickangle: -15
-            },
-            barmode: 'stack'
-          };
-          Plotly.newPlot('summarygraph', global_summary_data, layout);
-
-          console.log('...done.');
-        }
-        if( jQuery("#interactiongraph") && jQuery("#interactiongraph").length ){
-          console.log('Running interaction graph...');
-          window.RUD.InteractionViewer(global_data, 'interactiongraph');
-        }
-      });
+      // Defer all execution to RUDBundle.js.
     </script>
 
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
