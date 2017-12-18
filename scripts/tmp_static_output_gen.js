@@ -280,7 +280,7 @@ us.each(us.keys(summary_violation_group).sort(), function(grp){
     	var jset_ac = [
 	    grp,
 	    (summary_total_count - grp_cnt),
-	    "0",
+	    0,
 	    grp_cnt
 	];
 	//console.log(jset_ac.join("\t"));
@@ -391,4 +391,4 @@ fs.writeFileSync(out_file, outstr);
 fs.writeFileSync(score_file, JSON.stringify(data_sources, null, 4));
 
 // Write out summary graph .json.
-fs.writeFileSync(summary_graph_file, JSON.stringify(jdata, null, 4));
+fs.writeFileSync(summary_graph_file, JSON.stringify(jdata_plotly, null, 4));
