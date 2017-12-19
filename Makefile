@@ -1,6 +1,6 @@
 
 
-all: index.html criteria.html license-types.html reading.html about.html enhanced_compiled.json summary_graph.json details_pages sitemap explore.html
+all: index.html criteria.html license-types.html reading.html about.html enhanced_compiled.json summary_graph.json details_pages sitemap explore.html license.txt
 
 # .PHONY: clean
 # clean:
@@ -23,6 +23,14 @@ compiled.json:
 ## Make enhanced data files, as well as final index.
 index.html enhanced_compiled.json summary_graph.json: compiled.json
 	node ./scripts/tmp_static_output_gen.js -i ./data-sources/compiled.json -t ./scripts/tmp_static_output_gen.tmpl -o ./docs/index.html -s ./data-sources/enhanced_compiled.json -j ./data-sources/summary_graph.json
+
+###
+### Publish all files that we need for a contained "final" site away
+### from confusion with GitHub.
+###
+
+license.txt:
+	cp data-sources/LICENSE docs/license.txt
 
 ###
 ### All of the details pages are generated from running the compiled
