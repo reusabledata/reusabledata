@@ -8,4 +8,4 @@ The code license is available at https://github.com/reusabledata/reusabledata/bl
 
 The license for our curated reusability assessment is available at http://reusabledata.org
 
-Any questions can be referred to info at monarchinitiative.org or @monarchinit on twitter
+Any questions can be referred to help at reusabledata dot org.
