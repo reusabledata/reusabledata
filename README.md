@@ -8,4 +8,4 @@ The license for the static site generation code is available at https://github.c
 
 The license for our site and curated reusability assessments is available at http://reusabledata.org/license.txt.
 
-Any questions can be referred to help at reusabledata dot org.
+We suggest using out track for questions (https://github.com/reusabledata/reusabledata/issues), but can also be can be reached at help at reusabledata dot org.
