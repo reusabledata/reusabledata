@@ -30,9 +30,9 @@ license-issues:
       comment: 'Non-standard/custom license.'
     - criteria: 'B.1'
       comment: 'Section 11.1 of the DTA we looked at discusses the term of the agreement, which would have to be renewed approximately every year.'
-    - criteria: 'D.1'
+    - criteria: 'D.1.2'
       comment: 'The user \"...may freely use the Data only for data analysis...any other use of the Data must receive the authorization of Orphanet management board...\"'
-    - criteria: 'E.1'
+    - criteria: 'E.1.2'
       comment: 'The license is \"personal, non-transferable and non-communicable\", so cannot be freely reused.'
 was-controversial: 'false'
 contacts:
