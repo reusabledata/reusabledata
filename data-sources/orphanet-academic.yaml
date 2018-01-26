@@ -22,9 +22,18 @@ license-link: 'http://www.orphadata.org/cgi-bin/contact.php'
 license-hat-used: 'true'
 license-commentary:
     - 'The was based on the Academic DTA from Orphanet; there is also a commercial version of the Data Transfer Agreement (DTA), but we will not evaluate that for the time being.'
-    - 'Note that the license link above is to the contact request form as one must actively pursue the DTA--it was not apparently available directly from the site.'
-    - 'Data access details are not known as we did not pursue the agreement.'
-license-issues: []
+    - 'Note that the license link above is to the contact request form as one must actively pursue the DTA--it was not apparently available directly from the site. Whether this is a A.1.2 violation is under consideration.'
+    - 'Data access details are not known as we did not pursue the agreement; given the descriptions (http://www.orphadata.org/cgi-bin/docs/CataloguePdt-Academia.pdf) and evaluation for the free dataset, we have erred on the side that there are no C violations.'
+    - 'Interestingly, the agreement is: \"...governed by French laws...French courts shall have sole jurisdiction for any litigation...\".'
+license-issues:
+    - criteria: 'A.2'
+      comment: 'Non-standard/custom license.'
+    - criteria: 'B.1'
+      comment: 'Section 11.1 of the DTA we looked at discusses the term of the agreement, which would have to be renewed approximately every year.'
+    - criteria: 'D.1'
+      comment: 'The user \"...may freely use the Data only for data analysis...any other use of the Data must receive the authorization of Orphanet management board...\"'
+    - criteria: 'E.1'
+      comment: 'The license is \"personal, non-transferable and non-communicable\", so cannot be freely reused.'
 was-controversial: 'false'
 contacts:
     - 'http://www.orphadata.org/cgi-bin/contact.php'
