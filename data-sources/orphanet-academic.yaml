@@ -1,0 +1,32 @@
+id: orphanet-academic
+source: 'Orphanet portal for rare diseases and orphan drugs (academic access subset)'
+source-link: 'http://www.orpha.net'
+status: complete
+description: 'Orphanet provides reference information on rare diseases and orphan drugs to help improve the diagnosis, care and treatment of patients with rare diseases.'
+data-field: biomedical
+data-type: human
+data-categories:
+    - 'disease-gene association'
+    - 'disease-phenotype association'
+    - 'disease classification'
+    - 'ontology'
+data-access:
+    - type: download
+      location: http://www.orphadata.org/cgi-bin/index.php/
+    - type: api
+      location: http://www.orpha.net/sparql
+license: CC-BY-ND-3.0
+license-type: restrictive
+license-link: 'http://www.orphadata.org/cgi-bin/inc/legal.inc.php'
+license-commentary:
+    - '...you are free to copy, distribute, display and make commercial use of these databases in all legislations, provided you give us credit.'
+    - 'However, if you intend to distribute a modified version of one of our databases, you must ask us for permission first.'
+    - 'Users from Academia can obtain access for free via signature of a data transfer agreement'
+    - 'Freely-accesssible dataset'
+license-issues:
+    - criteria: D.1.2
+      comment: The CC-BY-ND license prevents derivation.
+    - criteria: E.1.2
+      comment: The CC-BY-ND license prevents derivation.
+contacts:
+- 'http://www.orphadata.org/cgi-bin/contact.php'
