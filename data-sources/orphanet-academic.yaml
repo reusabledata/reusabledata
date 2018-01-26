@@ -13,6 +13,7 @@ data-categories:
     - 'disease classification'
     - 'clinical metadata'
     - 'disease epidemiology'
+    - 'orphan drugs'
     - 'ontology'
 data-access: []
 license: custom
