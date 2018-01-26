@@ -1,32 +1,32 @@
 id: orphanet-academic
 source: 'Orphanet portal for rare diseases and orphan drugs (academic access subset)'
 source-link: 'http://www.orpha.net'
+source-type: 'source'
 status: complete
 description: 'Orphanet provides reference information on rare diseases and orphan drugs to help improve the diagnosis, care and treatment of patients with rare diseases.'
+last-curated: '2018-01-25'
 data-field: biomedical
 data-type: human
 data-categories:
     - 'disease-gene association'
     - 'disease-phenotype association'
     - 'disease classification'
+    - 'clinical metadata'
+    - 'disease epidemiology'
     - 'ontology'
-data-access:
-    - type: download
-      location: http://www.orphadata.org/cgi-bin/index.php/
-    - type: api
-      location: http://www.orpha.net/sparql
-license: CC-BY-ND-3.0
+data-access: []
+license: custom
 license-type: restrictive
-license-link: 'http://www.orphadata.org/cgi-bin/inc/legal.inc.php'
+license-link: 'http://www.orphadata.org/cgi-bin/contact.php'
+license-hat-used: 'true'
 license-commentary:
-    - '...you are free to copy, distribute, display and make commercial use of these databases in all legislations, provided you give us credit.'
-    - 'However, if you intend to distribute a modified version of one of our databases, you must ask us for permission first.'
-    - 'Users from Academia can obtain access for free via signature of a data transfer agreement'
-    - 'Freely-accesssible dataset'
-license-issues:
-    - criteria: D.1.2
-      comment: The CC-BY-ND license prevents derivation.
-    - criteria: E.1.2
-      comment: The CC-BY-ND license prevents derivation.
+    - 'The was based on the Academic DTA from Orphanet; there is also a commercial version of the Data Transfer Agreement (DTA), but we will not evaluate that for the time being.'
+    - 'Note that the license link above is to the contact request form as one must actively pursue the DTA--it was not apparently available directly from the site.'
+    - 'Data access details are not known as we did not pursue the agreement.'
+license-issues: []
+was-controversial: 'false'
 contacts:
-- 'http://www.orphadata.org/cgi-bin/contact.php'
+    - 'http://www.orphadata.org/cgi-bin/contact.php'
+grants:
+    - label: 'The European Commission funds the inventory of rare diseases, the encyclopaedia, and the collection of data on expert resources in European countries (since 2000, DG Health and Consumers Protection grant N°s S12.305098; S12.324970; SPC.2002269-2003220, 2006119, 20091215 and since 2004, DG Research and Innovation grant N°s LSSM-CT-2004-503246; LSHB-CT-2004-512148; LSHB-CT-2006-018933; Health-F2-2008-201230, HEALTH-F2-2009-223355, DG Santé grant 20133305-Operating Grant Orphanet). In 2014, the DG Santé grant 20102206 (Orphanet Europe Joint Action) was extended for one year without additional funding. In 2015, Orphanet participated in the ECRIN Integrating Activity (ECRIN-IA, 284395), funded by the European Union Framework Program 7.In 2016 Orphanet participated in the HIPBI-RD project (Erare Joint calls). Orphanet consortium is funded by the DG Santé grant RD-ACTION Joint Action 677024 (2015-2018).'
+    
