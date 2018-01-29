@@ -1915,49 +1915,65 @@
         "grade-automatic": 3.5
     },
     {
-        "id": "orphanet",
-        "source": "Orphanet portal for rare diseases and orphan drugs",
+        "id": "orphanet-academic",
+        "source": "Orphanet portal for rare diseases and orphan drugs (academic access subset)",
         "source-link": "http://www.orpha.net",
+        "source-type": "source",
         "status": "complete",
         "description": "Orphanet provides reference information on rare diseases and orphan drugs to help improve the diagnosis, care and treatment of patients with rare diseases.",
+        "last-curated": "2018-01-25",
         "data-field": "biomedical",
         "data-type": "human",
         "data-categories": [
             "disease-gene association",
             "disease-phenotype association",
             "disease classification",
+            "clinical metadata",
+            "disease epidemiology",
+            "orphan drugs",
             "ontology"
         ],
-        "data-access": [
-            {
-                "type": "download",
-                "location": "http://www.orphadata.org/cgi-bin/index.php/"
-            }
-        ],
-        "license": "unknown",
-        "license-type": "unknown",
-        "license-link": "http://www.orphadata.org/cgi-bin/index.php",
+        "data-access": [],
+        "license": "custom",
+        "license-type": "restrictive",
+        "license-link": "http://www.orphadata.org/cgi-bin/contact.php",
+        "license-hat-used": "true",
         "license-commentary": [
-            "Datasets available on request",
-            "These datasets are available for free on signature of a Data Transfer Agreement for Academia (consult the catalogue).",
-            "These datasets are available for a fee on signature of a Data Transfer Agreement for Industry (consult the catalogue)."
+            "The was based on the Academic DTA from Orphanet; there is also a commercial version of the Data Transfer Agreement (DTA), but we will not evaluate that for the time being.",
+            "Note that the license link above is to the contact request form as one must actively pursue the DTA--it was not apparently available directly from the site. Whether this is a A.1.2 violation is under consideration.",
+            "Data access details are not known as we did not pursue the agreement; given the descriptions (http://www.orphadata.org/cgi-bin/docs/CataloguePdt-Academia.pdf) and evaluation for the free dataset, we have erred on the side that there are no C violations.",
+            "Interestingly, the agreement is: \\\"...governed by French laws...French courts shall have sole jurisdiction for any litigation...\\\"."
         ],
         "license-issues": [
             {
+                "criteria": "A.2",
+                "comment": "Non-standard/custom license."
+            },
+            {
+                "criteria": "B.1",
+                "comment": "Section 11.1 of the DTA we looked at discusses the term of the agreement, which would have to be renewed approximately every year."
+            },
+            {
                 "criteria": "D.1.2",
-                "comment": "The CC-BY-ND license prevents derivation."
+                "comment": "The user \\\"...may freely use the Data only for data analysis...any other use of the Data must receive the authorization of Orphanet management board...\\\""
             },
             {
                 "criteria": "E.1.2",
-                "comment": "The CC-BY-ND license prevents derivation."
+                "comment": "The license is \\\"personal, non-transferable and non-communicable\\\", so cannot be freely reused."
             }
         ],
+        "was-controversial": "false",
         "contacts": [
             "http://www.orphadata.org/cgi-bin/contact.php"
         ],
-        "license-commentary-embeddable": "Datasets available on request<hr />These datasets are available for free on signature of a Data Transfer Agreement for Academia (consult the catalogue).<hr />These datasets are available for a fee on signature of a Data Transfer Agreement for Industry (consult the catalogue).",
-        "data-tags": "biomedical, human, disease-gene association, disease-phenotype association, disease classification, ontology",
-        "grade-automatic": 3
+        "grants": [
+            {
+                "label": "The European Commission funds the inventory of rare diseases, the encyclopaedia, and the collection of data on expert resources in European countries (since 2000, DG Health and Consumers Protection grant N°s S12.305098; S12.324970; SPC.2002269-2003220, 2006119, 20091215 and since 2004, DG Research and Innovation grant N°s LSSM-CT-2004-503246; LSHB-CT-2004-512148; LSHB-CT-2006-018933; Health-F2-2008-201230, HEALTH-F2-2009-223355, DG Santé grant 20133305-Operating Grant Orphanet). In 2014, the DG Santé grant 20102206 (Orphanet Europe Joint Action) was extended for one year without additional funding. In 2015, Orphanet participated in the ECRIN Integrating Activity (ECRIN-IA, 284395), funded by the European Union Framework Program 7.In 2016 Orphanet participated in the HIPBI-RD project (Erare Joint calls). Orphanet consortium is funded by the DG Santé grant RD-ACTION Joint Action 677024 (2015-2018)."
+            }
+        ],
+        "license-commentary-embeddable": "The was based on the Academic DTA from Orphanet; there is also a commercial version of the Data Transfer Agreement (DTA), but we will not evaluate that for the time being.<hr />Note that the license link above is to the contact request form as one must actively pursue the DTA--it was not apparently available directly from the site. Whether this is a A.1.2 violation is under consideration.<hr />Data access details are not known as we did not pursue the agreement; given the descriptions (http://www.orphadata.org/cgi-bin/docs/CataloguePdt-Academia.pdf) and evaluation for the free dataset, we have erred on the side that there are no C violations.<hr />Interestingly, the agreement is: \\\"...governed by French laws...French courts shall have sole jurisdiction for any litigation...\\\".",
+        "data-tags": "biomedical, human, disease-gene association, disease-phenotype association, disease classification, clinical metadata, disease epidemiology, orphan drugs, ontology",
+        "grade-automatic": 2
     },
     {
         "id": "orphanet-open",
