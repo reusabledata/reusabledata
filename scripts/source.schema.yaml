@@ -46,15 +46,15 @@ mapping:
     required: yes
     pattern: /^(TODO|(ht|f)tp(s?)\:\/\/\w[\/\.\-\:\=\?\&\_\+\u0023\w]+)$/
   ## (Optional) How the resource relates to the data it contains.
-  ## Current allowable entries are: "unknown", "repository", and "source",
-  ## and "integrator".
+  ## Current allowable entries are: "unknown", "repository", "source",
+  ## "integrator", and "warehouse".
   ##
   ## Example usage:
   ##   "source-type": integrator
   "source-type":
     type: str
     required: no
-    enum: ["integrator", "unknown", "repository", "source"]
+    enum: ["integrator", "unknown", "repository", "source", "warehouse"]
   ## Whether or not annotation is complete on this resource.
   ## Current allowable entries are: "complete", "incomplete", and "nonpublic".
   ##
