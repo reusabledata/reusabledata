@@ -20,7 +20,7 @@ data-access:
 license: "custon"
 license-type: "permissive"
 license-link: 'https://www.ebi.ac.uk/arrayexpress/help/FAQ.html#data_restrictions'
-license-hat-used: "true", "false"
+license-hat-used: "false"
 license-issues:
   - criteria: 'A.2'
     comment: 'Minimal custom permissive terms.'
