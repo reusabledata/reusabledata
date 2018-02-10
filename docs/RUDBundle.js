@@ -37442,7 +37442,7 @@ var LicenseViewer = function(global_data, graph_id){
 
     var layout = {
         title: 'Licenses used',
-	height: 400,
+	height: 500,
 	width: 500
     };
 
@@ -37483,8 +37483,119 @@ var LicenseTypeViewer = function(global_data, graph_id){
     }];
 
     var layout = {
-        title: 'License categories',
-	height: 400,
+        title: 'Overall license reuse categories',
+	height: 500,
+	width: 500
+    };
+
+    Plotly.newPlot(graph_id, data, layout);
+
+};
+
+///
+var LicenseCustomTypeViewer = function(global_data, graph_id){
+
+    // Generate simple tracks.
+    var licount = {};
+    each(global_data, function(n){
+
+	var nid = n['id'];
+	var nlbl = n['source'];
+	var lictype = n['license-type'];
+	var lic = n['license'];
+
+	// Filter out all non-custom licenses.
+	if( lic === 'custom' ){
+
+	    // Ensure.
+	    if( typeof(licount[lictype]) === 'undefined' ){
+		licount[lictype] = 0;
+	    }
+
+	    licount[lictype] = licount[lictype] +1;
+	}
+    });
+
+    var values = [];
+    var labels = [];
+    each(licount, function(v, k){
+	values.push(v);
+	labels.push(k);
+    });
+
+    var data = [{
+	values: values,
+	labels: labels,
+	type: 'pie'
+    }];
+
+    var layout = {
+        title: 'Reuse categories for custom (non-standard) licenses',
+	height: 500,
+	width: 500
+    };
+
+    Plotly.newPlot(graph_id, data, layout);
+
+};
+
+///
+var LicenseStandardViewer = function(global_data, graph_id){
+
+    // Generate simple tracks.
+    var licount = {};
+    each(global_data, function(n){
+
+	var nid = n['id'];
+	var nlbl = n['source'];
+	var lictype = n['license-type'];
+	var lic = n['license'];
+
+	// Figure out what category any license is in.
+	var category_bin = 'other';
+
+	if( us.contains(['CC0-1.0', 'CC-BY', 'CC-BY-4.0', 'CC-BY-3.0', 'CC-BY-SA-4.0', 'CC-BY-SA-3.0', 'CC-BY-NC-4.0', 'CC-BY-NC-3.0', 'CC-BY-ND-4.0', 'CC-BY-ND-3.0'], lic) ){
+	    category_bin = 'Creative Commons';
+	}else if( us.contains(['MIT', 'GPL-3.0'], lic) ){
+	    category_bin = 'OSI (standard software)';
+	}else if( us.contains(['ODbL-1.0'], lic) ){
+	    category_bin = 'ODC (standard data)';
+	}else if( lic === 'all rights reserved' ){
+	    category_bin = 'US copyright';
+	}else if( lic === 'custom' ){
+	    category_bin = 'custom';
+	}else if( lic === 'unknown' ){
+	    category_bin = 'unknown';
+	}
+
+	// We missed something...
+	if( category_bin === 'other' ){
+	    console.og('WARNING: missed standard license category: '+lic+'!');
+	}
+
+	// Ensure and count.
+	if( typeof(licount[category_bin]) === 'undefined' ){
+	    licount[category_bin] = 0;
+	}
+	licount[category_bin] = licount[category_bin] +1;
+    });
+
+    var values = [];
+    var labels = [];
+    each(licount, function(v, k){
+	values.push(v);
+	labels.push(k);
+    });
+
+    var data = [{
+	values: values,
+	labels: labels,
+	type: 'pie'
+    }];
+
+    var layout = {
+        title: 'Standard license groups',
+	height: 500,
 	width: 500
     };
 
@@ -37996,6 +38107,8 @@ var InteractionViewer = function(global_data, graph_id){
 module.exports = {
     'LicenseViewer': LicenseViewer,
     'LicenseTypeViewer': LicenseTypeViewer,
+    'LicenseCustomTypeViewer': LicenseCustomTypeViewer,
+    'LicenseStandardViewer': LicenseStandardViewer,
     'ScoreViewer': ScoreViewer,
     'SummaryViewer': SummaryViewer,
     'InteractionViewer': InteractionViewer,
@@ -38015,6 +38128,14 @@ jQuery(document).ready(function(){
     if( jQuery("#licensetypegraph") && jQuery("#licensetypegraph").length ){
         console.log('Running license type graph...');
         window.RUD.LicenseTypeViewer(global_data, 'licensetypegraph');
+    }
+    if( jQuery("#licensecustomtypegraph") && jQuery("#licensecustomtypegraph").length ){
+        console.log('Running custom license type graph...');
+        window.RUD.LicenseCustomTypeViewer(global_data, 'licensecustomtypegraph');
+    }
+    if( jQuery("#licensestandardgraph") && jQuery("#licensestandardgraph").length ){
+        console.log('Running license standard graph...');
+        window.RUD.LicenseStandardViewer(global_data, 'licensestandardgraph');
     }
     if( jQuery("#scoregraph") && jQuery("#scoregraph").length ){
         console.log('Running score graph...');
