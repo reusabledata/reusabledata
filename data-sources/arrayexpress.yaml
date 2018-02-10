@@ -29,7 +29,7 @@ license-commentary:
   - 'Otherwise, ArrayExpress seems to defer its licensing and ToS to the EBI terms; e.g.: https://www.ebi.ac.uk/about/terms-of-use; while these are similarly permissive, we take the ArrayExpress terms at face value.'
   - 'While there are distinctions occasionally made between "private" and "public" data, it seems that "private" is just staging data before publication and does not affect evaluation.'
   - 'There is an interesting section (https://www.ebi.ac.uk/arrayexpress/help/data_availability.html#removal) that describes situations where data needs to be retracted. This section, while alarmingly titled, is has no effect on the license determination.'
-was-controversial: "true"
+was-controversial: "false"
 contacts:
   - 'arrayexpress@ebi.ac.uk'
   - 'https://www.ebi.ac.uk/arrayexpress/help/contact_us.html'
