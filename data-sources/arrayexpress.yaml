@@ -1,0 +1,38 @@
+id: 'arrayexpress'
+description: 'ArrayExpress Archive of Functional Genomics Data stores data from high-throughput functional genomics experiments, and provides these data for reuse to the research community.'
+last-curated: '2018-02-09'
+source: 'ArrayExpress'
+source-link: 'http://https://www.ebi.ac.uk/arrayexpress'
+source-type: "repository"
+status: "complete"
+data-field: 'biology'
+data-type: 'microarray experiments'
+data-categories:
+  - 'functional genomics'
+  - 'high-throughput'
+  - 'microarray'
+  - 'sequencing'
+data-access:
+  - type: download
+    location: 'ftp://ftp.ebi.ac.uk/pub/databases/arrayexpress/data/'
+  - type: api
+    location: 'https://www.ebi.ac.uk/arrayexpress/help/programmatic_access.html'
+license: "custon"
+license-type: "permissive"
+license-link: 'https://www.ebi.ac.uk/arrayexpress/help/FAQ.html#data_restrictions'
+license-hat-used: "true", "false"
+license-issues:
+  - criteria: 'A.2'
+    comment: 'Minimal custom permissive terms.'
+license-commentary:
+  - 'The entirety of the license appears to be: "No restrictions, all public data from ArrayExpress can be used by anyone and our services are completely free of charge."'
+  - 'Otherwise, ArrayExpress seems to defer its licensing and ToS to the EBI terms; e.g.: https://www.ebi.ac.uk/about/terms-of-use; while these are similarly permissive, we take the ArrayExpress terms at face value.'
+  - 'While there are distinctions occasionally made between "private" and "public" data, it seems that "private" is just staging data before publication and does not affect evaluation.'
+  - 'There is an interesting section (https://www.ebi.ac.uk/arrayexpress/help/data_availability.html#removal) that describes situations where data needs to be retracted. This section, while alarmingly titled, is has no effect on the license determination.'
+was-controversial: "true"
+contacts:
+  - 'arrayexpress@ebi.ac.uk'
+  - 'https://www.ebi.ac.uk/arrayexpress/help/contact_us.html'
+grants:
+  - label: 'ArrayExpress and related activities are supported by member states of the European Molecular Biology Laboratory; European Commission: ENGAGE [201413], EurocanPlatform [260791], GEUVADIS [261123], SLING [226073], SYBARIS [242220], EUROCANPLATFORM [260791], CAGEKID [241669], BioMedBridges [284209] and Gen2Phen [200754]; US National Institutes of Health (the National Human Genome Research Institute, National Institute of Biomedical Imaging and Bioengineering and the National Cancer Institute) [P41 HG003619]; National Center for Biomedical Ontology (one of the National Centers for Biomedical Computing supported by the National Human Genome Research Institute, the National Heart, Lung, and Blood Institute, and National Institutes of Health Common Fund [U54-HG004028]); National Science Foundation Award Number [1127112].'
+ 
