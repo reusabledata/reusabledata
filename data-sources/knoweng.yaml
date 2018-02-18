@@ -1,0 +1,32 @@
+id: 'knoweng'
+description: 'A cloud-based genomics analysis platform with computationally advanced workflows and visualizations to extract novel information from large-scale genomic data.'
+last-curated: '2018-02-18'
+source: 'KnowEnG'
+source-link: 'https://hub.knoweng.org/'
+source-type: "integrator"
+status: "incomplete"
+data-field: 'TODO'
+data-type: 'TODO'
+data-categories:
+  - TODO
+data-access: []
+license: "custom"
+license-type: "unknown"
+license-link: 'https://hub.knoweng.org/legal/terms'
+license-hat-used: "false"
+license-issues:
+  - criteria: 'A.2'
+    comment: 'At this time KnowEnG seems to use a custom license.'
+license-commentary:
+  - 'Site requires registration and 120 day password rotation.'
+  - 'The required ToS on the registration page points to https://hub.knoweng.org/legal/terms, which contains template placeholders such as \"MyInstitution\" in places that should refer to KnowEnG, as well as references to \"MyState\" and \"MyCounty\".'
+  - 'ToS: \"Any modification is effective immediately upon posting the modification unless otherwise stated.\"'
+  - 'ToS: \"...site is limited to non-commercial educational and research activities...\"'
+  - 'ToS implies difficult to use as part of external pipeline: \"...does not authorize use of your User ID by third-parties.\"'
+  - 'ToS: \"...in our sole discretion, terminate or suspend your access to and use of...\"'
+- 'Much of the curated information was only found once registered and logged-in.'
+was-controversial: "true", "false"
+contacts:
+  - 'knoweng@illinois.edu'
+grants:
+  - label: ' The KnowEnG BD2K center is supported by grant 1U54GM114838 awarded by NIGMS through funds provided by the trans-NIH Big Data to Knowledge (BD2K) initiative'
