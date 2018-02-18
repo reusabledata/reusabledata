@@ -24,7 +24,7 @@ license-commentary:
   - 'ToS: \"...site is limited to non-commercial educational and research activities...\"'
   - 'ToS implies difficult to use as part of external pipeline: \"...does not authorize use of your User ID by third-parties.\"'
   - 'ToS: \"...in our sole discretion, terminate or suspend your access to and use of...\"'
-- 'Much of the curated information was only found once registered and logged-in.'
+  - 'Much of the curated information was only found once registered and logged-in.'
 was-controversial: "false"
 contacts:
   - 'knoweng@illinois.edu'
