@@ -95,14 +95,14 @@ us.each(data_sources, function(source){
 	if( lictype !== 'copyright' ){
 	    note_inconsistency(source, 'lic/type mismatch');
 	}
-	if( ! violations['A.1'] ){
+	if( ! violations['A.1.2'] ){
 	    note_inconsistency(source, 'req violation issue');
 	}
     }else if( lic === 'inconsistent' ){
 	if( lictype !== 'unknown' ){
 	    note_inconsistency(source, 'lic/type mismatch');
 	}
-	if( ! violations['A.1'] && ! violations['A.2'] ){
+	if( ! violations['A.1.1'] && ! violations['A.1.2'] && ! violations['A.2'] ){
 	    note_inconsistency(source, 'req violation issue');
 	}
     }else if( lic === 'all rights reserved' ){
