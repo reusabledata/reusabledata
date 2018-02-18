@@ -17,7 +17,7 @@ data-access:
   - type: api
     location: 'http://webservice.catalogueoflife.org/col/webservice'
   - type: download
-    location: ' http://catalogueoflife.org/content/annual-checklist-archive'
+    location: 'http://catalogueoflife.org/content/annual-checklist-archive'
 license: "custom"
 license-type: "restrictive"
 license-link: 'http://catalogueoflife.org/content/terms-use'
