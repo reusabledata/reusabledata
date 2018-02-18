@@ -25,8 +25,8 @@ license-commentary:
   - 'ToS implies difficult to use as part of external pipeline: \"...does not authorize use of your User ID by third-parties.\"'
   - 'ToS: \"...in our sole discretion, terminate or suspend your access to and use of...\"'
 - 'Much of the curated information was only found once registered and logged-in.'
-was-controversial: "true", "false"
+was-controversial: "false"
 contacts:
   - 'knoweng@illinois.edu'
 grants:
-  - label: ' The KnowEnG BD2K center is supported by grant 1U54GM114838 awarded by NIGMS through funds provided by the trans-NIH Big Data to Knowledge (BD2K) initiative'
+  - label: 'The KnowEnG BD2K center is supported by grant 1U54GM114838 awarded by NIGMS through funds provided by the trans-NIH Big Data to Knowledge (BD2K) initiative'
