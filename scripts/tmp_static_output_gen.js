@@ -314,6 +314,10 @@ console.log('Category\tNo violations\tUnknown\tHas a violation');
 us.each(jdata, function(jd){ console.log(jd.join("\t")); });
 console.log(jdata);
 
+///
+/// Plot generation.
+///
+
 // Convert into something for plotly.js.
 var jdata_plotly = [];
 //var xstack = ['A', 'B', 'C', 'D', 'E'];
@@ -365,7 +369,9 @@ jdata_plotly.push({
     'type': 'bar'
 });
 
-
+///
+/// Outputs.
+///
 
 // Pug/Jade for table.
 var html_table_str = pug.renderFile('./scripts/static-table.pug',
