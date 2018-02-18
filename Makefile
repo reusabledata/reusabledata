@@ -8,9 +8,10 @@ all: index.html criteria.html license-types.html reading.html about.html enhance
 #./data-sources/compiled.json
 
 .PHONY: check
-check:
+check: compiled.json
 	kwalify -E -m ./scripts/source.schema.yaml
 	kwalify -E -f ./scripts/source.schema.yaml ./data-sources/*.yaml
+#	node ./scripts/inconsistency_check.js -i ./data-sources/compiled.json
 
 ###
 ### index.html, with the table, has extra compilation steps to take it
