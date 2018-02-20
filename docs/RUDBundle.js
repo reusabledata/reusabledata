@@ -37707,7 +37707,8 @@ var InteractionViewer = function(global_data, graph_id){
 		//parent: parent,
 		//'text-valign': text_v_align,
 		//'text-halign': text_h_align,
-		'background-color': '#666666',
+		//'background-color': '#666666',
+		//'background-color': 'mapData(degree, 1, 100, green, red)',
 		//degree: (g.get_child_nodes(n.id()).length * 10) +
 		//  g.get_parent_nodes(n.id()).length
 	    }
@@ -37957,7 +37958,8 @@ var InteractionViewer = function(global_data, graph_id){
 		    //			'height': 100,
 		    'width': 50,
 		    'height': 35,
-		    'background-color': 'white',
+		    //'background-color': 'mapData(degree, 1, 100, green, red)',
+		    //'background-color': 'white',
 		    //			'background-color': 'black',
 		    'border-width': 1,
 		    'border-color': 'black',

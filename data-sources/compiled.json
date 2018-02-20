@@ -44,6 +44,59 @@
         ]
     },
     {
+        "id": "arrayexpress",
+        "description": "ArrayExpress Archive of Functional Genomics Data stores data from high-throughput functional genomics experiments, and provides these data for reuse to the research community.",
+        "last-curated": "2018-02-09",
+        "source": "ArrayExpress",
+        "source-link": "https://www.ebi.ac.uk/arrayexpress",
+        "source-type": "repository",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "microarray experiments",
+        "data-categories": [
+            "functional genomics",
+            "high-throughput",
+            "microarray",
+            "sequencing"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "ftp://ftp.ebi.ac.uk/pub/databases/arrayexpress/data/"
+            },
+            {
+                "type": "api",
+                "location": "https://www.ebi.ac.uk/arrayexpress/help/programmatic_access.html"
+            }
+        ],
+        "license": "custon",
+        "license-type": "permissive",
+        "license-link": "https://www.ebi.ac.uk/arrayexpress/help/FAQ.html#data_restrictions",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "Minimal custom permissive terms."
+            }
+        ],
+        "license-commentary": [
+            "The entirety of the license appears to be: \"No restrictions, all public data from ArrayExpress can be used by anyone and our services are completely free of charge.\"",
+            "Otherwise, ArrayExpress seems to defer its licensing and ToS to the EBI terms; e.g.: https://www.ebi.ac.uk/about/terms-of-use; while these are similarly permissive, we take the ArrayExpress terms at face value.",
+            "While there are distinctions occasionally made between \"private\" and \"public\" data, it seems that \"private\" is just staging data before publication and does not affect evaluation.",
+            "There is an interesting section (https://www.ebi.ac.uk/arrayexpress/help/data_availability.html#removal) that describes situations where data needs to be retracted. This section, while alarmingly titled, is has no effect on the license determination."
+        ],
+        "was-controversial": "false",
+        "contacts": [
+            "arrayexpress@ebi.ac.uk",
+            "https://www.ebi.ac.uk/arrayexpress/help/contact_us.html"
+        ],
+        "grants": [
+            {
+                "label": "ArrayExpress and related activities are supported by member states of the European Molecular Biology Laboratory; European Commission: ENGAGE [201413], EurocanPlatform [260791], GEUVADIS [261123], SLING [226073], SYBARIS [242220], EUROCANPLATFORM [260791], CAGEKID [241669], BioMedBridges [284209] and Gen2Phen [200754]; US National Institutes of Health (the National Human Genome Research Institute, National Institute of Biomedical Imaging and Bioengineering and the National Cancer Institute) [P41 HG003619]; National Center for Biomedical Ontology (one of the National Centers for Biomedical Computing supported by the National Human Genome Research Institute, the National Heart, Lung, and Blood Institute, and National Institutes of Health Common Fund [U54-HG004028]); National Science Foundation Award Number [1127112]."
+            }
+        ]
+    },
+    {
         "id": "bgee-data",
         "source": "BGee (data)",
         "source-link": "http://bgee.org",
@@ -194,6 +247,71 @@
             {
                 "label": "This work was supported by the European Union: (FELICS: Free European Life-Science Information and Computational Services: 021902 (RII3); SLING: Serving Life-science Information for the Next Generation: 226073)."
             }
+        ]
+    },
+    {
+        "id": "catalogueoflife",
+        "description": "The Catalogue of Life is the most comprehensive and authoritative global index of species currently available. It consists of a single integrated species checklist and taxonomic hierarchy. The Catalogue holds essential information on the names, relationships and distributions of over 1.6 million species.",
+        "last-curated": "2018-02-18",
+        "source": "Catalogue of Life",
+        "source-link": "http://catalogueoflife.org/",
+        "source-type": "source",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "custom",
+        "data-categories": [
+            "biodiversity",
+            "distribution",
+            "biogeography",
+            "taxonomy",
+            "ontology"
+        ],
+        "data-access": [
+            {
+                "type": "api",
+                "location": "http://webservice.catalogueoflife.org/col/webservice"
+            },
+            {
+                "type": "download",
+                "location": "http://catalogueoflife.org/content/annual-checklist-archive"
+            }
+        ],
+        "license": "custom",
+        "license-type": "restrictive",
+        "license-link": "http://catalogueoflife.org/content/terms-use",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "A.2",
+                "comment": "The resource uses custom terms."
+            },
+            {
+                "criteria": "B.1",
+                "comment": "Use seems to hinge on some contact with Sp2000. For example: \\\"If you wish to use the Catalogue of Life content on a public portal or webpage you are required to notify the Species 2000 Secretariat, and to assist with a check that the correct credits are given.\\\" Check check assistance especially seems to violate B.1."
+            },
+            {
+                "criteria": "C.1",
+                "comment": "The data \\\"download\\\" is quite complicated and should not actually be considered a download (see commentary). The API as given would likely require a custom spider to obtain the data in bulk."
+            },
+            {
+                "criteria": "D.1.2",
+                "comment": "Distribution seems to be prohibited without negotiation; example on the main ToS: \\\"Commercial use of this compilation or any of the species datasets contained within...or dissemination on the Internet, requires written permission from Species 2000 and ITIS.\\\""
+            },
+            {
+                "criteria": "E.1.1",
+                "comment": "Non-commercial restrictions exist on the data from the ToS."
+            }
+        ],
+        "license-commentary": [
+            "The offered API, while possibly spiderable given a starting point, does not seem to offer bulk downloads or similarly significant metadata calls. Spiderable, but non-trivial custom code may be required.",
+            "While not a violation, the credit requirements may be difficult to meet in some cases: \\\"Credit must be given at the following three levels on all occasions that records are shown. The three levels credit the complete work, the contributing database of the record, and the expert who provides taxonomic scrutiny of the individual record.\\\"",
+            "The custom licensing terms do not seem to make clear rights around derivation and modification.",
+            "The download is actually a Linux virtual machine in a custom wrapper that tries to drive interaction with a browser on port 8080; this is rather onerous and I do not think this could be considered a \\\"download\\\" so much as an \\\"offline\\\" site clone or application.",
+            "Embedded in the \\\"download\\\" is further elaboration on the license, which seem to contain terms about internal use as well: \\\"Use of this compilation or any of the databases contained within it by commercial organisations requires a written agreement from Species 2000 and ITIS. This applies when it is used commercially for external services, products or publications and when it is used to provide internal services within an organisation.\\\""
+        ],
+        "was-controversial": "false",
+        "contacts": [
+            "sp2000@sp2000.org"
         ]
     },
     {
