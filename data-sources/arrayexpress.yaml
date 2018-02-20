@@ -2,7 +2,7 @@ id: 'arrayexpress'
 description: 'ArrayExpress Archive of Functional Genomics Data stores data from high-throughput functional genomics experiments, and provides these data for reuse to the research community.'
 last-curated: '2018-02-09'
 source: 'ArrayExpress'
-source-link: 'http://https://www.ebi.ac.uk/arrayexpress'
+source-link: 'https://www.ebi.ac.uk/arrayexpress'
 source-type: "repository"
 status: "complete"
 data-field: 'biology'
