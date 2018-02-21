@@ -91,7 +91,7 @@ us.each(data_sources, function(source){
 	violations[crit] = true;
     });
 
-    if( lic === 'default' ){
+    if( lic === 'unlicensed' ){
 	if( lictype !== 'copyright' ){
 	    note_inconsistency(source, 'lic/type mismatch');
 	}
