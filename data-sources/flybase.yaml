@@ -10,8 +10,8 @@ data-categories:
 data-access:
     - type: download
       location: http://flybase.org/static_pages/downloads/ID.html
-license: 'all rights reserved'
-license-type: 'copyright'
+license: 'custom'
+license-type: 'restrictive'
 license-link: 'http://flybase.org/wiki/FlyBase:About#FlyBase_Copyright'
 license-issues:
     - criteria: A.2
