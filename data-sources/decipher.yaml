@@ -16,14 +16,14 @@ data-categories:
   - 'rare sequence variants'
 data-access: []
 license: custom
-license-type: closed pool
+license-type: private pool
 license-link: 'https://decipher.sanger.ac.uk/datasharing'
 license-issues:
   - criteria: A.2
     comment: 'The resource uses an extensive custom license.'
   - criteria: B.1
     comment: There are terms that require possible audits in the future, making future free use something that needs to be negotiated.
-  - criteria: C.1 
+  - criteria: C.1
     comment: This could not be evaluated as no description of access was found.
   - criteria: C.2
     comment: This could not be evaluated as no description of access was found.
