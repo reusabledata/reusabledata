@@ -8,8 +8,8 @@ data-type: human
 data-categories:
     - 'disease-model association'
 data-access: []
-license: unknown
-license-type: unknown
+license: unlicensed
+license-type: copyright
 license-link: 'https://www.coriell.org/legal-notice'
 license-issues:
     - criteria: A.1.2

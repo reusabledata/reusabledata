@@ -17,7 +17,7 @@ data-access:
     location: 'ftp://ftp.ebi.ac.uk/pub/databases/arrayexpress/data/'
   - type: api
     location: 'https://www.ebi.ac.uk/arrayexpress/help/programmatic_access.html'
-license: "custon"
+license: "custom"
 license-type: "permissive"
 license-link: 'https://www.ebi.ac.uk/arrayexpress/help/FAQ.html#data_restrictions'
 license-hat-used: "false"
@@ -35,4 +35,3 @@ contacts:
   - 'https://www.ebi.ac.uk/arrayexpress/help/contact_us.html'
 grants:
   - label: 'ArrayExpress and related activities are supported by member states of the European Molecular Biology Laboratory; European Commission: ENGAGE [201413], EurocanPlatform [260791], GEUVADIS [261123], SLING [226073], SYBARIS [242220], EUROCANPLATFORM [260791], CAGEKID [241669], BioMedBridges [284209] and Gen2Phen [200754]; US National Institutes of Health (the National Human Genome Research Institute, National Institute of Biomedical Imaging and Bioengineering and the National Cancer Institute) [P41 HG003619]; National Center for Biomedical Ontology (one of the National Centers for Biomedical Computing supported by the National Human Genome Research Institute, the National Heart, Lung, and Blood Institute, and National Institutes of Health Common Fund [U54-HG004028]); National Science Foundation Award Number [1127112].'
- 
