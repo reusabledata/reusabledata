@@ -22,7 +22,7 @@ license-type: "permissive"
 license-link: 'https://www.ebi.ac.uk/arrayexpress/help/FAQ.html#data_restrictions'
 license-hat-used: "false"
 license-issues:
-  - criteria: 'A.2'
+  - criteria: 'A.2.2'
     comment: 'Minimal custom permissive terms.'
 license-commentary:
   - 'The entirety of the license appears to be: "No restrictions, all public data from ArrayExpress can be used by anyone and our services are completely free of charge."'

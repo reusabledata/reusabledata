@@ -16,7 +16,7 @@ license: custom
 license-type: restrictive
 license-link: 'http://oncokb.org/#/terms'
 license-issues:
-  - criteria: A.2
+  - criteria: A.2.2
     comment: "While custom, the terms are quite clear."
   - criteria: D.1.1
     comment: 'Restrictions on type of use appear in the license, even or research:"You may copy, reproduce, or create derivative works of the Content only if:...you are using the Content only to replicate OncoKB locally, whether in whole or in part; or you are aggregating the Content with other data of similar nature for the purposes of advancing cancer research."'

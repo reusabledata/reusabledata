@@ -199,7 +199,7 @@ mapping:
           "criteria":
             type: str
             required: yes
-            enum: ['A.1.1', 'A.1.2', 'A.2', 'B.1', 'B.2.1', 'B.2.2', 'C.1', 'C.2', 'D.1.1', 'D.1.2', 'E.1.1', 'E.1.2']
+            enum: ['A.1.1', 'A.1.2', 'A.2.1', 'A.2.2', 'B.1', 'B.2.1', 'B.2.2', 'C.1', 'C.2', 'D.1.1', 'D.1.2', 'E.1.1', 'E.1.2']
           ## How the criteria was violated.
           "comment":
             type: str

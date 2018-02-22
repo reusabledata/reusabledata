@@ -19,7 +19,7 @@ license: custom
 license-type: private pool
 license-link: 'https://decipher.sanger.ac.uk/datasharing'
 license-issues:
-  - criteria: A.2
+  - criteria: A.2.2
     comment: 'The resource uses an extensive custom license.'
   - criteria: B.1
     comment: There are terms that require possible audits in the future, making future free use something that needs to be negotiated.

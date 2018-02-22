@@ -17,7 +17,7 @@ license-type: "permissive"
 license-link: 'http://www.brenda-enzymes.info/ontology/tissue/tree/update/update_files/BrendaTissueOBO'
 license-hat-used: "false"
 license-issues:
-  - criteria: 'A.2'
+  - criteria: 'A.2.2'
     comment: 'While they are obviously attempting to be permissive by listing \"CC-BY\", this does not map onto any of the number CC-BY versions (e.g. 3.0 or 4.0), thereby, breaking the reference and meaning that we would have to contact for them for terms).'
   - criteria: 'C.2'
     comment: 'Once one knows the location of the BTO (ontology file), access is fine. However, we were unable to locate the ontology file after some searching through the main BRENDA website; most text would imply there is no free ontology file to be had.'

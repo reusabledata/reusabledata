@@ -16,7 +16,7 @@ license: custom
 license-type: permissive
 license-link: 'http://www.informatics.jax.org/mgihome/other/copyright.shtml'
 license-issues:
-    - criteria: A.2
+    - criteria: A.2.2
       comment: Custom license.
     - criteria: E.1.1
       comment: distinguishes groups, allowing for research/academic. Commercial groups can negotiate.

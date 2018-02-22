@@ -23,7 +23,7 @@ license-type: "restrictive"
 license-link: 'http://catalogueoflife.org/content/terms-use'
 license-hat-used: "false"
 license-issues:
-  - criteria: 'A.2'
+  - criteria: 'A.2.2'
     comment: 'The resource uses custom terms.'
   - criteria: 'B.1'
     comment: 'Use seems to hinge on some contact with Sp2000. For example: \"If you wish to use the Catalogue of Life content on a public portal or webpage you are required to notify the Species 2000 Secretariat, and to assist with a check that the correct credits are given.\" Check check assistance especially seems to violate B.1.'
