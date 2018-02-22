@@ -12,7 +12,7 @@ data-access:
   - type: download
     location: 'http://'
 license: ""
-license-type: "unknown", "copyleft", "permissive", "public domain", "copyright", "restrictive", "closed pool"
+license-type: "unknown", "unlicensed", "copyleft", "permissive", "public domain", "copyright", "restrictive", or "private pool"
 license-link: 'http://'
 license-hat-used: "true", "false"
 license-issues:

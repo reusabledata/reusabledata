@@ -3,7 +3,7 @@
 
 The exact boundries of various license types is still in flux within the (Re)usable Data Project, and will no doubt be revisited as we better understand the space our communities work in. At its core, we're wanting to examine pools of (re)use--where things can be mixed and where they must stay separate.
 
-The basic idea is that our `permissive` licenses can all inter-operate for our range of (re)use. The `copyleft` (and `closedpool`) licenses would also theoretically all inter-operation for our use, assuming that everybody all used the same one or had compatible ones, which is a practical non-starter in many domains. `restrictive`, `copyright`, and `closed pool` licenses would all have issues that prevent (re)use.
+The basic idea is that our `permissive` licenses can all inter-operate for our range of (re)use. The `copyleft` (and `private pool`) licenses would also theoretically all inter-operation for our use, assuming that everybody all used the same one or had compatible ones, which is a practical non-starter in many domains. `restrictive`, `copyright`, and `private pool` licenses would all have issues that prevent (re)use.
 
 Naturally, the license landscape is much more complicated than can be sketched with these basic terms. Eventually, we would would like to use more granular terms, essentially a license compatibility ontology, so that a new resources could intelligently knit together what they need with their license, so on. This is just a humble first pass to get the most basic understanding.
 
@@ -19,7 +19,7 @@ A "permissive" license is one that allows reuse in modifying, remixing, and shar
 
 While the license is very open to use, it's reuse requires a matching open license for reuse. This category includes GPLs and CC BY SA 4.0.
 
-## <span id="closedpool">closed pool</span>
+## <span id="privatepool">private pool</span>
 
 Similar to copyleft, but without the public "open" component; think of a private data pool that members can enjoy if they join.
 
