@@ -140,7 +140,7 @@ mapping:
   ## The type of license that is being used. This will be to define
   ## compatible data pools in the future; we only use the grossest terms now.
   ## If it is not known "TODO" is used. Current possible values are:
-  ## "unknown", "unlicensed", "copyleft", "permissive", "public domain",
+  ## "unknown", "copyleft", "permissive",
   ## "copyright", "restrictive", or "private pool".
   ##
   ## Example usage:
@@ -148,7 +148,7 @@ mapping:
   "license-type":
     type: str
     required: yes
-    enum: ["unknown", "copyleft", "permissive", "public domain", "copyright", "restrictive", "private pool"]
+    enum: ["unknown", "copyleft", "permissive", "copyright", "restrictive", "private pool"]
   ## (Optional) The link to the resource license.
   ##
   ## Example usage:
