@@ -1,5 +1,5 @@
 id: 'pharos'
-description: ''
+description: 'Pharos is the user interface to the Knowledge Management Center (KMC) for the Illuminating the Druggable Genome (IDG) program...'
 last-curated: '2017-12-03'
 source: 'Pharos'
 source-link: 'https://pharos.nih.gov/'
@@ -16,13 +16,13 @@ data-access:
     location: 'https://pharos.nih.gov/idg/api'
   - type: download
     location: 'http://juniper.health.unm.edu/tcrd/download/'
-license: "CC-BY-SA-4.0"
-license-type: "copyleft"
+license: "inconsistent"
+license-type: "unknown"
 license-link: 'http://juniper.health.unm.edu/tcrd/download/README'
 license-hat-used: "false"
 license-issues:
   - criteria: 'A.1.1'
-    comment: 'While any novel data is under a CC license, the integrated resources are under whatever license the upstream is, with the user expected to sort it out.'
+    comment: 'While any novel data is under a CC license (CC-BY-SA-4.0), the integrated resources are under whatever license the upstream is, with the user expected to sort it out.'
 license-commentary:
   - 'Unfortunately, the API ToS link leads to a bad (404-type) Swagger page.'
   - 'From the license page: \"Please note that TCRD incoporates many data sources with a variety of associated licenses...Users of the TCRD downloads are resposible for compliance with these licenses.\"'
