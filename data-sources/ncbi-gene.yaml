@@ -12,25 +12,27 @@ data-categories:
 data-access:
   - type: download
     location:  ftp://ftp.ncbi.nih.gov/gene/
-license: custom
+license: inconsistent
 license-type: unknown
 license-link: 'http://www.ncbi.nlm.nih.gov/home/about/policies.shtml'
 license-issues:
-    - criteria: A.2
-      comment: The license apparently uses language to declare something similar to "public domain", but with the caveat that it may contain data that is otherwise.
-    - criteria: B.1
-      comment: This is judged to be a violation as any (re)use would depend on negotiating with all upstream copyright holders, which are not presented.
-    - criteria: B.2.1
-      comment: It is implied that their license does not cover all data.
-    - criteria: B.2.2
-      comment: Could not find an explicit "clean" version of the data in the downloads.
-    - criteria: D.1.2
-      comment: There is no apparent way to guarantee usage without possibly violating copyright.
-    - criteria: E.1.2
-      comment: There is no apparent way to guarantee usage without possibly violating copyright.
+    - criteria: A.1.1
+      comment: The license apparently uses language to declare something similar to "public domain", but with the caveat that it may contain data that is otherwise. This is judged to be a violation as any (re)use would depend on negotiating with all upstream copyright holders, which are not presented. It is implied that their license does not cover all data and could not find an explicit "clean" version of the data in the downloads.
+    # - criteria: A.2.2
+    #   comment: The license apparently uses language to declare something similar to "public domain", but with the caveat that it may contain data that is otherwise.
+    # - criteria: B.1
+    #   comment: This is judged to be a violation as any (re)use would depend on negotiating with all upstream copyright holders, which are not presented.
+    # - criteria: B.2.1
+    #   comment: It is implied that their license does not cover all data.
+    # - criteria: B.2.2
+    #   comment: Could not find an explicit "clean" version of the data in the downloads.
+    # - criteria: D.1.2
+    #   comment: There is no apparent way to guarantee usage without possibly violating copyright.
+    # - criteria: E.1.2
+    #   comment: There is no apparent way to guarantee usage without possibly violating copyright.
 license-commentary:
   - 'We specifically avoided the more general operation of the EUtils suite, focusing on the provided downloads.'
-  - 'The following statements from the license page seem to support a custom "hands off" approach. To was difficult to decide if this was "restrictive" or "unknown.'
+  - 'The following statements from the license page seem to support a custom "hands off" approach. To was difficult to decide if this was "restrictive" or "unknown" (although inconsistent in practice).'
   - '...NCBI itself places no restrictions on the use or distribution of the data contained therein. Nor do we accept data when the submitter has requested restrictions on reuse or redistribution...'
   - '...some submitters of the original data...may claim patent, copyright, or other intellectual property rights in all or a portion of the data (that has been submitted)...'
   - '...NCBI cannot provide comment or unrestricted permission concerning the use, copying, or distribution of the information contained in the molecular databases...'
