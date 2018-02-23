@@ -91,7 +91,7 @@ us.each(data_sources, function(source){
 	violations[crit] = true;
     });
 
-    if( lic === 'default' ){
+    if( lic === 'unlicensed' ){
 	if( lictype !== 'copyright' ){
 	    note_inconsistency(source, 'lic/type mismatch');
 	}
@@ -102,7 +102,7 @@ us.each(data_sources, function(source){
 	if( lictype !== 'unknown' ){
 	    note_inconsistency(source, 'lic/type mismatch');
 	}
-	if( ! violations['A.1.1'] && ! violations['A.1.2'] && ! violations['A.2'] ){
+	if( ! violations['A.1.1'] && ! violations['A.1.2'] && ! violations['A.2.1'] && ! violations['A.2.2'] ){
 	    note_inconsistency(source, 'req violation issue');
 	}
     }else if( lic === 'all rights reserved' ){
@@ -115,7 +115,7 @@ us.each(data_sources, function(source){
     }else if( lic === 'custom' ){
 	// Anything possible for lictype.
 	//
-	if( ! violations['A.2'] && ! violations['A.1.1'] ){
+	if( ! violations['A.2.1'] && ! violations['A.2.2'] && ! violations['A.1.1'] ){
 	    //console.log(violations);
 	    note_inconsistency(source, 'req violation issue');
 	}
@@ -200,8 +200,15 @@ us.each(data_sources, function(source){
 	if( lictype !== 'permissive' ){
 	    note_inconsistency(source, 'lic/type mismatch');
 	}
+	if( ! violations['A.2.1'] ){
+	    note_inconsistency(source, 'req violation issue');
+	}
 	if( violations['D.1.1'] || violations['E.1.1'] || violations['D.1.2'] || violations['E.1.2'] ){
 	    note_inconsistency(source, 'req violation issue');
+	}
+    }else if( violations['A.2.1'] ){ // Double check PD is being used right.
+	if( lic === 'public domain' ){
+	    note_inconsistency(source, 'vio/lic mismatch');
 	}
     }else{
 	//_die('License without consistency template.');

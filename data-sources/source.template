@@ -12,11 +12,11 @@ data-access:
   - type: download
     location: 'http://'
 license: ""
-license-type: "unknown", "copyleft", "permissive", "public domain", "copyright", "restrictive", "closed pool"
+license-type: "unknown", "unlicensed", "copyleft", "permissive", "public domain", "copyright", "restrictive", or "private pool"
 license-link: 'http://'
 license-hat-used: "true", "false"
 license-issues:
-  - criteria: 'A.1.1', 'A.1.2', 'A.2', 'B.1', 'B.2.1', 'B.2.2', 'C.1', 'C.2', 'D.1.1', 'D.1.2', 'E.1.1', 'E.1.2'
+  - criteria: 'A.1.1', 'A.1.2', 'A.2.1', 'A.2.2', 'B.1', 'B.2.1', 'B.2.2', 'C.1', 'C.2', 'D.1.1', 'D.1.2', 'E.1.1', 'E.1.2'
     comment: ''
 license-commentary:
   - ''

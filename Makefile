@@ -1,6 +1,6 @@
 
 
-all: index.html criteria.html license-types.html reading.html about.html enhanced_compiled.json summary_graph.json details_pages sitemap explore.html license.txt
+all: index.html criteria.html license-types.html reading.html about.html enhanced_compiled.json summary_graph.json details_pages sitemap explore.html license.txt check
 
 # .PHONY: clean
 # clean:
@@ -11,7 +11,7 @@ all: index.html criteria.html license-types.html reading.html about.html enhance
 check: compiled.json
 	kwalify -E -m ./scripts/source.schema.yaml
 	kwalify -E -f ./scripts/source.schema.yaml ./data-sources/*.yaml
-#	node ./scripts/inconsistency_check.js -i ./data-sources/compiled.json
+	node ./scripts/inconsistency_check.js -i ./data-sources/compiled.json
 
 ###
 ### index.html, with the table, has extra compilation steps to take it

@@ -16,7 +16,7 @@ license: custom
 license-type: restrictive
 license-link: 'http://www.kegg.jp/kegg/legal.html'
 license-issues:
-    - criteria: A.2
+    - criteria: A.2.2
       comment: "For our use case (see commentary), KEGG (FTP) uses custom licensing through NPO Bioinformatics Japan (https://www.bioinformatics.jp/en/keggftp.html)."
     - criteria: B.1
       comment: 'According to the organizational use agreement: "Your Product or Service must not allow Your users to obtain KEGG FTP Data, except in small quantities"; many uses would require negotiation here as continuing reuse is unclear.'

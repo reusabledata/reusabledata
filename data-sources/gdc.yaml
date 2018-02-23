@@ -16,8 +16,8 @@ data-access:
     location: 'https://gdc.cancer.gov/access-data/gdc-data-transfer-tool'
   - type: api
     location: 'https://gdc.cancer.gov/developers/gdc-application-programming-interface-api'
-license: "unknown"
-license-type: "unknown"
+license: "unlicensed"
+license-type: "copyright"
 #license-link: 'http://'
 license-hat-used: "false"
 license-issues:

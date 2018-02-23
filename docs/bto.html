@@ -113,7 +113,7 @@
 		 violations</a>.
 	       </dd>
 	       <dd class="curated-data">
-		 4.5
+		 4
 	       </dd>
 
 	       <!-- description -->
@@ -158,7 +158,7 @@
 	       <dd class="field-explanation">
 		 (Optional) How the resource relates to the data it
 		 contains.  Current allowable entries are: "unknown",
-		 "repository", and "source", and "integrator".
+		 "repository", "source", "integrator", and "warehouse".
 	       </dd>
 	       <dd class="curated-data">
 		 source
@@ -227,12 +227,12 @@
 	       </dt>
 	       <dd class="field-explanation">
 		  The license that is used by the resource. We use
-		  SPDX where we can (https://spdx.org/licenses/) or:
-		  "unknown", "public domain", "all rights reserved",
-		  or "custom".
+		  <a href="https://spdx.org/licenses/">SPDX</a> where
+		  we can or: "inconsistent", "public domain", "unlicensed",
+		  "all rights reserved", or "custom".
 	       </dd>
 	       <dd class="curated-data">
-		 CC-BY
+		 custom
 	       </dd>
 
 	       <!-- license-type -->
@@ -243,9 +243,9 @@
 		 The type of license that is being used. This will be
 		 to define compatible data pools in the future; we
 		 only use the grossest terms now.  If it is not known
-		 "TODO" is used. Current possible values are:
-		 "unknown", "copyleft", "permissive", "public domain",
-		 "copyright", "restrictive", or "closed pool".
+		 "unknown" is used. Current possible values are:
+		 "unknown", "unlicensed", "copyleft", "permissive",
+		 "public domain", "copyright", "restrictive", or "private pool".
 	       </dd>
 	       <dd class="curated-data">
 		 <a href="license-types.html#permissive">permissive</a>
@@ -304,6 +304,7 @@
 		 license-commentary field.
 	       </dd>
 	       <dd class="curated-data">
+		 <a href="criteria.html#criteria-A.2.2">Criteria A.2.2</a>: While they are obviously attempting to be permissive by listing \&quot;CC-BY\&quot;, this does not map onto any of the number CC-BY versions (e.g. 3.0 or 4.0), thereby, breaking the reference and meaning that we would have to contact for them for terms). <br />
 		 <a href="criteria.html#criteria-C.2">Criteria C.2</a>: Once one knows the location of the BTO (ontology file), access is fine. However, we were unable to locate the ontology file after some searching through the main BRENDA website; most text would imply there is no free ontology file to be had. <br />
 	       </dd>
 
@@ -320,7 +321,7 @@
 	       <dd class="curated-data">
 		 &#8226; The relatively high score is due to knowing where the ontology exists and knowing to look at the header--normal use of the site seems to lead around restricted APIs webpages containing; the free ontology file is hiding in there. <br />
 		 &#8226; Typcial of this is: \&quot;Use of this online version of BRENDA is free for academic research only. Commercial use or download access requires a license. See terms of use.\&quot; (http:&#x2F;&#x2F;bto.brenda-enzymes.org&#x2F;copy.php) <br />
-		 &#8226; The \&quot;CC-BY\&quot; declaration in the ontology file header should be versioned or linked. <br />
+		 &#8226; The \&quot;CC-BY\&quot; declaration in the ontology file header should be versioned or linked. Due to not knowing what version, we have marked it as a custom; obviously intended to be under very permissive terms. <br />
 	       </dd>
 
 	       <!-- was-controversial -->

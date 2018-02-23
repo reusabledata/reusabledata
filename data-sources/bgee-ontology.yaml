@@ -17,6 +17,8 @@ license-link: 'https://github.com/BgeeDB/'
 license-issues:
     - criteria: D.1.2
       comment: 'By using the GPLv3, there may be issues in mixing and redistributing this data with licenses that have incompatible terms.'
+    - criteria: E.1.2
+      comment: 'By using the GPLv3, there may be some parties with issues in mixing and redistributing this data with licenses that have incompatible terms.'
 license-commentary:
     - 'It is somewhat unclear, but apparently all ontology data is under the listed GNU GPL v.3.0; this may be problematic for some types of reuse.'
 contacts:

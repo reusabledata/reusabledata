@@ -19,9 +19,9 @@ table(id='sourcestable' class='table table-sm table-striped rud-compact-table')
     each source, index in data_sources
       if source['status'] === 'complete'
        tr
-         td 
+         td
            a(href=source['id'] + '.html') #{ source.source }
-           span() &nbsp;           
+           span() &nbsp;
            a(href=source['source-link']) &#x1f517;
          td #{ source['data-tags'] }
          case source['grade-automatic']
@@ -31,7 +31,7 @@ table(id='sourcestable' class='table table-sm table-striped rud-compact-table')
            when 4.5
              td
                span(style="color:green;") &#x2605;&nbsp;&#x2605;&nbsp;&#x2605;&nbsp;&#x2605;&nbsp;
-               span() &#x00bd; 
+               span() &#x00bd;
                //- span(style='color:#000000;') (#{ source['grade-automatic'] })
            when 4
              td
@@ -40,7 +40,7 @@ table(id='sourcestable' class='table table-sm table-striped rud-compact-table')
            when 3.5
              td
                span(style="color:orange;") &#x2605;&nbsp;&#x2605;&nbsp;&#x2605;&nbsp;
-               span() &#x00bd; 
+               span() &#x00bd;
                //- span(style='color:#000000;') (#{ source['grade-automatic'] })
            when 3
              td
@@ -49,7 +49,7 @@ table(id='sourcestable' class='table table-sm table-striped rud-compact-table')
            when 2.5
              td
                span(style="color:red;") &#x2605;&nbsp;&#x2605;&nbsp;
-               span() &#x00bd; 
+               span() &#x00bd;
                //- span(style='color:#000000;') (#{ source['grade-automatic'] })
            when 2
              td
@@ -58,7 +58,7 @@ table(id='sourcestable' class='table table-sm table-striped rud-compact-table')
            when 1.5
              td
                span(style="color:darkred;") &#x2605;&nbsp;
-               span() &#x00bd; 
+               span() &#x00bd;
                //- span(style='color:#000000;') (#{ source['grade-automatic'] })
            when 1
              td
@@ -66,7 +66,7 @@ table(id='sourcestable' class='table table-sm table-striped rud-compact-table')
                //- span(style='color:#000000;') (#{ source['grade-automatic'] })
            when 0.5
              td
-               span() &#x00bd; 
+               span() &#x00bd;
                //- span(style='color:#000000;') (#{ source['grade-automatic'] })
            when 0
              td
@@ -81,8 +81,8 @@ table(id='sourcestable' class='table table-sm table-striped rud-compact-table')
            case source['license-type']
              when 'public domain'
                a(href='license-types.html#publicdomain') #{ source['license-type'] }
-             when 'closedpool'
-               a(href='license-types.html#closedpool') #{ source['license-type'] }
+             when 'private pool'
+               a(href='license-types.html#privatepool') #{ source['license-type'] }
              default
                a(href='license-types.html#' + source['license-type']) #{ source['license-type'] }
            span() &nbsp;
