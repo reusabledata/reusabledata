@@ -144,7 +144,7 @@ mapping:
   ## "copyright", "restrictive", or "private pool".
   ##
   ## Example usage:
-  ##   "license-type": public domain
+  ##   "license-type": copyleft
   "license-type":
     type: str
     required: yes
