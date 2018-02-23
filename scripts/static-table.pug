@@ -81,7 +81,7 @@ table(id='sourcestable' class='table table-sm table-striped rud-compact-table')
            case source['license-type']
              when 'public domain'
                a(href='license-types.html#publicdomain') #{ source['license-type'] }
-             when 'privatepool'
+             when 'private pool'
                a(href='license-types.html#privatepool') #{ source['license-type'] }
              default
                a(href='license-types.html#' + source['license-type']) #{ source['license-type'] }
