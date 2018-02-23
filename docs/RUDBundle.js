@@ -37384,7 +37384,7 @@ var SourceTable = function(table_id){
     console.log('...done.');
 };
 
-///
+/// High-level summary of curated data resources
 var SummaryViewer = function(summary_data, graph_id){
 
     console.log('In summary graph init...');
@@ -37398,7 +37398,7 @@ var SummaryViewer = function(summary_data, graph_id){
         plot_bgcolor: "rgb(236, 238, 239)",
         xaxis: {
             //tickangle: -45
-            tickangle: -15
+            tickangle: -25
         },
         barmode: 'stack'
     };
@@ -37408,23 +37408,26 @@ var SummaryViewer = function(summary_data, graph_id){
     console.log('...done.');
 };
 
-///
+/// Licenses used
 var LicenseViewer = function(global_data, graph_id){
 
     // Generate simple tracks.
     var licount = {};
     each(global_data, function(n){
 
-	var nid = n['id'];
-	var nlbl = n['source'];
-	var lic = n['license'];
+	if( n['status'] === 'complete' ){
 
-	// Ensure.
-	if( typeof(licount[lic]) === 'undefined' ){
-	    licount[lic] = 0;
+	    var nid = n['id'];
+	    var nlbl = n['source'];
+	    var lic = n['license'];
+
+	    // Ensure.
+	    if( typeof(licount[lic]) === 'undefined' ){
+		licount[lic] = 0;
+	    }
+
+	    licount[lic] = licount[lic] +1;
 	}
-
-	licount[lic] = licount[lic] +1;
     });
 
     var values = [];
@@ -37450,23 +37453,27 @@ var LicenseViewer = function(global_data, graph_id){
 
 };
 
-///
+/// Overall license reuse categories
 var LicenseTypeViewer = function(global_data, graph_id){
 
     // Generate simple tracks.
     var licount = {};
     each(global_data, function(n){
 
-	var nid = n['id'];
-	var nlbl = n['source'];
-	var lic = n['license-type'];
+	if( n['status'] === 'complete' ){
 
-	// Ensure.
-	if( typeof(licount[lic]) === 'undefined' ){
-	    licount[lic] = 0;
+	    var nid = n['id'];
+	    var nlbl = n['source'];
+	    var lic = n['license-type'];
+
+	    // Ensure.
+	    if( typeof(licount[lic]) === 'undefined' ){
+		licount[lic] = 0;
+	    }
+
+	    licount[lic] = licount[lic] +1;
+
 	}
-
-	licount[lic] = licount[lic] +1;
     });
 
     var values = [];
@@ -37492,27 +37499,29 @@ var LicenseTypeViewer = function(global_data, graph_id){
 
 };
 
-///
+/// Reuse categories for custom (non-standard) licenses
 var LicenseCustomTypeViewer = function(global_data, graph_id){
 
     // Generate simple tracks.
     var licount = {};
     each(global_data, function(n){
 
-	var nid = n['id'];
-	var nlbl = n['source'];
-	var lictype = n['license-type'];
-	var lic = n['license'];
+	if( n['status'] === 'complete' ){
 
-	// Filter out all non-custom licenses.
-	if( lic === 'custom' ){
+	    var nid = n['id'];
+	    var nlbl = n['source'];
+	    var lictype = n['license-type'];
+	    var lic = n['license'];
 
-	    // Ensure.
-	    if( typeof(licount[lictype]) === 'undefined' ){
-		licount[lictype] = 0;
+	    // Filter out all non-custom licenses too.
+	    if( lic === 'custom' ){
+		// Ensure.
+		if( typeof(licount[lictype]) === 'undefined' ){
+		    licount[lictype] = 0;
+		}
+
+		licount[lictype] = licount[lictype] +1;
 	    }
-
-	    licount[lictype] = licount[lictype] +1;
 	}
     });
 
@@ -37539,45 +37548,50 @@ var LicenseCustomTypeViewer = function(global_data, graph_id){
 
 };
 
-///
+/// Standard license groups
 var LicenseStandardViewer = function(global_data, graph_id){
 
     // Generate simple tracks.
     var licount = {};
     each(global_data, function(n){
 
-	var nid = n['id'];
-	var nlbl = n['source'];
-	var lictype = n['license-type'];
-	var lic = n['license'];
+	if( n['status'] === 'complete' ){
 
-	// Figure out what category any license is in.
-	var category_bin = 'other';
+	    var nid = n['id'];
+	    var nlbl = n['source'];
+	    var lictype = n['license-type'];
+	    var lic = n['license'];
 
-	if( us.contains(['CC0-1.0', 'CC-BY', 'CC-BY-4.0', 'CC-BY-3.0', 'CC-BY-SA-4.0', 'CC-BY-SA-3.0', 'CC-BY-NC-4.0', 'CC-BY-NC-3.0', 'CC-BY-ND-4.0', 'CC-BY-ND-3.0'], lic) ){
-	    category_bin = 'Creative Commons';
-	}else if( us.contains(['MIT', 'GPL-3.0'], lic) ){
-	    category_bin = 'OSI (standard software)';
-	}else if( us.contains(['ODbL-1.0'], lic) ){
-	    category_bin = 'ODC (standard data)';
-	}else if( lic === 'all rights reserved' ){
-	    category_bin = 'US copyright';
-	}else if( lic === 'custom' ){
-	    category_bin = 'custom';
-	}else if( lic === 'unknown' ){
-	    category_bin = 'unknown';
+	    // Figure out what category any license is in.
+	    var category_bin = 'unmapped';
+
+	    if( us.contains(['CC0-1.0', 'CC-BY-4.0', 'CC-BY-3.0', 'CC-BY-SA-4.0', 'CC-BY-SA-3.0', 'CC-BY-NC-4.0', 'CC-BY-NC-3.0', 'CC-BY-ND-4.0', 'CC-BY-ND-3.0'], lic) ){
+		category_bin = 'Creative Commons';
+	    }else if( us.contains(['MIT', 'GPL-3.0'], lic) ){
+		category_bin = 'OSI (standard software)';
+	    }else if( us.contains(['ODbL-1.0'], lic) ){
+		category_bin = 'ODC (standard data)';
+	    }else if( lic === 'all rights reserved' || lic === 'unlicensed' ){
+		category_bin = 'US copyright (inc. none)';
+	    }else if( lic === 'public domain' ){
+		category_bin = 'US public domain';
+	    }else if( lic === 'custom' ){
+		category_bin = 'custom';
+	    }else if( lic === 'inconsistent' ){
+		category_bin = 'inconsistent';
+	    }
+
+	    // We missed something...
+	    if( category_bin === 'unmapped' ){
+		console.log('WARNING: missed standard license category: '+lic+'!');
+	    }
+
+	    // Ensure and count.
+	    if( typeof(licount[category_bin]) === 'undefined' ){
+		licount[category_bin] = 0;
+	    }
+	    licount[category_bin] = licount[category_bin] +1;
 	}
-
-	// We missed something...
-	if( category_bin === 'other' ){
-	    console.og('WARNING: missed standard license category: '+lic+'!');
-	}
-
-	// Ensure and count.
-	if( typeof(licount[category_bin]) === 'undefined' ){
-	    licount[category_bin] = 0;
-	}
-	licount[category_bin] = licount[category_bin] +1;
     });
 
     var values = [];
@@ -37603,7 +37617,7 @@ var LicenseStandardViewer = function(global_data, graph_id){
 
 };
 
-///
+/// Score distribution
 var ScoreViewer = function(global_data, graph_id){
 
     // Base track.
@@ -37613,16 +37627,19 @@ var ScoreViewer = function(global_data, graph_id){
     var scount = {};
     each(global_data, function(n){
 
-	var nid = n['id'];
-	var nlbl = n['source'];
-	var score = n['grade-automatic'];
+	if( n['status'] === 'complete' ){
 
-	// Ensure.
-	if( typeof(scount[score]) === 'undefined' ){
-	    scount[score] = 0;
+	    var nid = n['id'];
+	    var nlbl = n['source'];
+	    var score = n['grade-automatic'];
+
+	    // Ensure.
+	    if( typeof(scount[score]) === 'undefined' ){
+		scount[score] = 0;
+	    }
+
+	    scount[score] = scount[score] +1;
 	}
-
-	scount[score] = scount[score] +1;
     });
     var size = [];
     each(x, function(t){
@@ -37655,6 +37672,8 @@ var ScoreViewer = function(global_data, graph_id){
 
     var layout = {
 	title: 'Score distribution',
+	// height: 500,
+	// width: 400,
 	xaxis: {
 	    title: "Score",
 	    autotick: false,
@@ -37666,7 +37685,7 @@ var ScoreViewer = function(global_data, graph_id){
     Plotly.newPlot(graph_id, data, layout);
 };
 
-///
+/// Resource interactions
 var InteractionViewer = function(global_data, graph_id){
 
     var graph_layout = 'circle'; // default
@@ -37678,172 +37697,186 @@ var InteractionViewer = function(global_data, graph_id){
     var license2idlist = {};
     each(global_data, function(n){
 
-	var nid = n['id'];
-	var nlbl = n['source'];
-	var lic = n['license'];
+	if( n['status'] === 'complete' ){
 
-	// Trim and special labels for overly long/weird ones.
-	if( nlbl.indexOf('(') !== -1 ){
-	    nlbl = nlbl.slice(0, nlbl.indexOf('(') -1);
-	}
-	if( nid === 'panther' ){
-	    nlbl = 'PANTHER';
-	// }else if( nid === 'clinvar' ){
-	//     nlbl = '';
-	}
+	    var nid = n['id'];
+	    var nlbl = n['source'];
+	    var lic = n['license'];
 
-	// Save who is in what group for licensing interactions.
-	if( ! license2idlist[lic] ){
-	    license2idlist[lic] = [];
-	}
-	license2idlist[lic].push(nid);
-
-	// Push into cytoscape struct.
-	elements.push({
-	    group: 'nodes',
-	    data: {
-		id: nid,
-		label: nlbl,
-		//parent: parent,
-		//'text-valign': text_v_align,
-		//'text-halign': text_h_align,
-		//'background-color': '#666666',
-		//'background-color': 'mapData(degree, 1, 100, green, red)',
-		//degree: (g.get_child_nodes(n.id()).length * 10) +
-		//  g.get_parent_nodes(n.id()).length
+	    // Trim and special labels for overly long/weird ones.
+	    if( nlbl.indexOf('(') !== -1 ){
+		nlbl = nlbl.slice(0, nlbl.indexOf('(') -1);
 	    }
-	});
+	    if( nid === 'panther' ){
+		nlbl = 'PANTHER';
+		// }else if( nid === 'clinvar' ){
+		//     nlbl = '';
+	    }
+
+	    // Save who is in what group for licensing interactions.
+	    if( ! license2idlist[lic] ){
+		license2idlist[lic] = [];
+	    }
+	    license2idlist[lic].push(nid);
+
+	    // Push into cytoscape struct.
+	    elements.push({
+		group: 'nodes',
+		data: {
+		    id: nid,
+		    label: nlbl,
+		    //parent: parent,
+		    //'text-valign': text_v_align,
+		    //'text-halign': text_h_align,
+		    //'background-color': '#666666',
+		    //'background-color': 'mapData(degree, 1, 100, green, red)',
+		    //degree: (g.get_child_nodes(n.id()).length * 10) +
+		    //  g.get_parent_nodes(n.id()).length
+		}
+	    });
+	}
     });
+
+    // We are trying to grossly gauge the ability to reuse other
+    // licenses with:
+    //  1) not requiring a change in our own license and
+    //  2) only having a minimal of extra work involved, such as
+    //     adding attribution, etc.
+    //  3) Can redistribute under similar terms as self, or have complete
+    //     control in the case of USC, etc.
+    var ability_to_reuse = {
+	'public domain': { // PD not intl portable?
+	    'public domain': true
+	},
+	'CC0-1.0': { // PD-style
+	    'public domain': true,
+	    'CC0-1.0': true,
+	},
+	'MIT': { // attribution-only licenses
+	    'public domain': true,
+	    'CC0-1.0': true,
+	    'MIT': true,
+	    'CC-BY-4.0': true,
+	    'CC-BY-3.0': true
+	},
+	'CC-BY-4.0': { // attribution-only licenses
+	    'public domain': true,
+	    'CC0-1.0': true,
+	    'MIT': true,
+	    'CC-BY-4.0': true,
+	    'CC-BY-3.0': true
+	},
+	'CC-BY-3.0': { // attribution-only licenses
+	    'public domain': true,
+	    'CC0-1.0': true,
+	    'MIT': true,
+	    'CC-BY-4.0': true,
+	    'CC-BY-3.0': true
+	},
+	'CC-BY-SA-4.0': { // copyleft licenses can absorb lesser; CC group compatible?
+	    'public domain': true,
+	    'CC0-1.0': true,
+	    'MIT': true,
+	    'CC-BY-4.0': true,
+	    'CC-BY-3.0': true,
+	    'CC-BY-SA-4.0': true,
+	    'CC-BY-SA-3.0': true
+	},
+	'CC-BY-SA-3.0': { // copyleft licenses can absorb lesser; CC group compatible?
+	    'public domain': true,
+	    'CC0-1.0': true,
+	    'MIT': true,
+	    'CC-BY-4.0': true,
+	    'CC-BY-3.0': true,
+	    'CC-BY-SA-4.0': true,
+	    'CC-BY-SA-3.0': true
+	},
+	'GPL-3.0': { // copyleft licenses can absorb lesser; GPL compatible
+	    'public domain': true,
+	    'CC0-1.0': true,
+	    'MIT': true,
+	    'CC-BY-4.0': true,
+	    'CC-BY-3.0': true,
+	    'GPL-3.0': true
+	},
+	'ODbL-1.0': { // copyleft licenses can absorb lesser; ODbL compatible
+	    'public domain': true,
+	    'CC0-1.0': true,
+	    'MIT': true,
+	    'CC-BY-4.0': true,
+	    'CC-BY-3.0': true,
+	    'ODbL-1.0': true
+	},
+	'CC-BY-NC-4.0': { // NC can take anything "weaker" and weaker CC?
+	    'public domain': true,
+	    'CC0-1.0': true,
+	    'MIT': true,
+	    'CC-BY-4.0': true,
+	    'CC-BY-3.0': true,
+	    'CC-BY-NC-4.0': true
+	},
+	'CC-BY-ND-3.0': { // ND can take anything "weaker" and weaker CC?
+	    'public domain': true,
+	    'CC0-1.0': true,
+	    'MIT': true,
+	    'CC-BY-4.0': true,
+	    'CC-BY-3.0': true,
+	    'CC-BY-NC-3.0': true
+	},
+	'all rights reserved': {
+	    'public domain': true,
+	    'CC0-1.0': true
+	},
+	'unlicensed': {
+	    'public domain': true,
+	    'CC0-1.0': true
+	},
+	'inconsistent': {
+	    'public domain': true,
+	    'CC0-1.0': true
+	},
+	'custom': {
+	    'public domain': true,
+	    'CC0-1.0': true
+	}
+    };
 
     // Okay, one more time around, this time looking at licensing
     // info for interactions.
     each(global_data, function(n){
 
-	var nid = n['id'];
-	var nlbl = n['source'];
-	var lic = n['license'];
+	if( n['status'] === 'complete' ){
 
-	if( lic === 'CC0-1.0' ){ // pd-ish only take pd-ish
-	    //each( us.keys(license2idlist), function(okay_lic){
-		each( license2idlist['CC0-1.0'], function(cohort_id){
-		    if( nid !== cohort_id ){
-			// Push edge data.
-			elements.push({
-			    group: 'edges',
-			    data: {
-				//id: ,
-				source: nid,
-				target: cohort_id,
-				predicate: 'ability_to_reuse',
-				label: 'could reuse',
-				color: '#009999',
-				glyph: 'triangle'
-			    }
-			});
-		    }
-		});
-	    //});
-	}
-	if( lic === 'CC-BY-4.0' || lic === 'CC-BY-3.0' || lic === 'CC-BY' || lic === 'MIT'){
-	    each( ['CC0-1.0',
-		   'CC-BY-4.0',
-		   'CC-BY-3.0',
-		   'CC-BY',
-		   'MIT'], function(okay_lic){
-		each( license2idlist[okay_lic], function(cohort_id){
-		    if( nid !== cohort_id ){
-			// Push edge data.
-			elements.push({
-			    group: 'edges',
-			    data: {
-				//id: ,
-				source: nid,
-				target: cohort_id,
-				predicate: 'ability_to_reuse',
-				label: 'could reuse',
-				color: '#009999',
-				glyph: 'triangle'
-			    }
-			});
-		    }
-		});
-	    });
-	}
-	if( lic === 'CC-BY-SA-4.0' || lic === 'CC-BY-SA-3.0' || lic === 'GPL-3.0' || lic ===  'ODbL-1.0'){ // SAs can take eachother and anything weaker
-	    each( ['CC0-1.0',
-		   'CC-BY-4.0',
-		   'CC-BY-3.0',
-		   'CC-BY',
-		   'CC-BY-SA-4.0',
-		   'CC-BY-SA-3.0',
-		   'GPL-3.0',
-		   'ODbL-1.0'], function(okay_lic){
-		each( license2idlist[okay_lic], function(cohort_id){
-		    if( nid !== cohort_id ){
-			// Push edge data.
-			elements.push({
-			    group: 'edges',
-			    data: {
-				//id: ,
-				source: nid,
-				target: cohort_id,
-				predicate: 'ability_to_reuse',
-				label: 'could reuse',
-				color: '#009999',
-				glyph: 'triangle'
-			    }
-			});
-		    }
-		});
-	    });
-	}
-	if( lic === 'CC-BY-NC-4.0'){ // NC can take anything "weaker"
-	    each( ['CC-BY-4.0',
-		   'CC-BY-3.0',
-		   'CC-BY',
-		   'MIT',
-		   'CC0-1.0'], function(okay_lic){
-		each( license2idlist[okay_lic], function(cohort_id){
-		    if( nid !== cohort_id ){
-			// Push edge data.
-			elements.push({
-			    group: 'edges',
-			    data: {
-				//id: ,
-				source: nid,
-				target: cohort_id,
-				predicate: 'ability_to_reuse',
-				label: 'could reuse',
-				color: '#009999',
-				glyph: 'triangle'
-			    }
-			});
-		    }
-		});
-	    });
-	}
-	if( lic === 'CC-BY-ND-3.0' || lic === 'custom' || lic === 'unknown' ||  lic === 'all rights reserved' ){ // all can take cc0
-	    each( ['CC0-1.0'], function(okay_lic){
-		each( license2idlist[okay_lic], function(cohort_id){
-		    if( nid !== cohort_id ){
-			// Push edge data.
-			elements.push({
-			    group: 'edges',
-			    data: {
-				//id: ,
-				source: nid,
-				target: cohort_id,
-				predicate: 'ability_to_reuse',
-				label: 'could reuse',
-				color: '#009999',
-				glyph: 'triangle'
-			    }
-			});
-		    }
-		});
-	    });
-	}
+	    var nid = n['id'];
+	    var nlbl = n['source'];
+	    var lic = n['license'];
 
+	    if( ! ability_to_reuse[lic] ){
+		console.log('WARNING: somehow missed interaction for: ' + lic);
+	    }else{
+
+		each( us.keys(ability_to_reuse[lic]), function(okay_lic){
+
+		    each( license2idlist[okay_lic], function(cohort_id){
+			if( nid !== cohort_id ){
+			    // Push edge data.
+			    elements.push({
+				group: 'edges',
+				data: {
+				    //id: ,
+				    source: nid,
+				    target: cohort_id,
+				    predicate: 'ability_to_reuse',
+				    label: 'could reuse',
+				    color: '#009999',
+				    glyph: 'triangle'
+				}
+			    });
+			}
+		    });
+		});
+	    }
+	}
     });
 
     // Setup possible layouts.
