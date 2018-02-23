@@ -73,7 +73,7 @@ var SummaryViewer = function(summary_data, graph_id){
         plot_bgcolor: "rgb(236, 238, 239)",
         xaxis: {
             //tickangle: -45
-            tickangle: -15
+            tickangle: -25
         },
         barmode: 'stack'
     };
@@ -347,6 +347,8 @@ var ScoreViewer = function(global_data, graph_id){
 
     var layout = {
 	title: 'Score distribution',
+	// height: 500,
+	// width: 400,
 	xaxis: {
 	    title: "Score",
 	    autotick: false,
