@@ -347,8 +347,6 @@ var ScoreViewer = function(global_data, graph_id){
 
     var layout = {
 	title: 'Score distribution',
-	// height: 500,
-	// width: 400,
 	xaxis: {
 	    title: "Score",
 	    autotick: false,
@@ -365,52 +363,7 @@ var InteractionViewer = function(global_data, graph_id){
 
     var graph_layout = 'circle'; // default
     //var graph_layout = 'cose-bilkent'; // default
-
-    // Translate into something cytoscape can understand.
-    // Nodes first, capture/cache license infor along the way
-    var elements = [];
-    var license2idlist = {};
-    each(global_data, function(n){
-
-	if( n['status'] === 'complete' ){
-
-	    var nid = n['id'];
-	    var nlbl = n['source'];
-	    var lic = n['license'];
-
-	    // Trim and special labels for overly long/weird ones.
-	    if( nlbl.indexOf('(') !== -1 ){
-		nlbl = nlbl.slice(0, nlbl.indexOf('(') -1);
-	    }
-	    if( nid === 'panther' ){
-		nlbl = 'PANTHER';
-		// }else if( nid === 'clinvar' ){
-		//     nlbl = '';
-	    }
-
-	    // Save who is in what group for licensing interactions.
-	    if( ! license2idlist[lic] ){
-		license2idlist[lic] = [];
-	    }
-	    license2idlist[lic].push(nid);
-
-	    // Push into cytoscape struct.
-	    elements.push({
-		group: 'nodes',
-		data: {
-		    id: nid,
-		    label: nlbl,
-		    //parent: parent,
-		    //'text-valign': text_v_align,
-		    //'text-halign': text_h_align,
-		    //'background-color': '#666666',
-		    //'background-color': 'mapData(degree, 1, 100, green, red)',
-		    //degree: (g.get_child_nodes(n.id()).length * 10) +
-		    //  g.get_parent_nodes(n.id()).length
-		}
-	    });
-	}
-    });
+    var elements = []; // for cytoscape
 
     // We are trying to grossly gauge the ability to reuse other
     // licenses with:
@@ -516,8 +469,29 @@ var InteractionViewer = function(global_data, graph_id){
 	}
     };
 
-    // Okay, one more time around, this time looking at licensing
-    // info for interactions.
+    // Capture/cache license<->resource info.
+    var license2idlist = {};
+    each(global_data, function(n){
+
+	if( n['status'] === 'complete' ){
+
+	    var nid = n['id'];
+	    var lic = n['license'];
+
+	    // Save who is in what group for licensing interactions.
+	    if( ! license2idlist[lic] ){
+		license2idlist[lic] = [];
+	    }
+	    license2idlist[lic].push(nid);
+	}
+    });
+
+    // Okay, one more time around, this time looking at licensing info
+    // for interactions (edges). Collect degree i/o info along the way.
+    var in_degree = {};
+    var out_degree = {};
+    var max_in = 1;
+    var max_out = 1;
     each(global_data, function(n){
 
 	if( n['status'] === 'complete' ){
@@ -534,11 +508,34 @@ var InteractionViewer = function(global_data, graph_id){
 
 		    each( license2idlist[okay_lic], function(cohort_id){
 			if( nid !== cohort_id ){
+
+			    // Ensure the data structure for capturing
+			    // out degree.
+			    if( typeof(out_degree[nid]) === 'undefined' ){
+				out_degree[nid] = 0;
+			    }
+			    // Ensure the data structure for capturing in degree.
+			    if( typeof(in_degree[cohort_id]) === 'undefined' ){
+				in_degree[cohort_id] = 0;
+			    }
+			    out_degree[nid] = out_degree[nid] + 1;
+			    in_degree[cohort_id] = in_degree[cohort_id] + 1;
+
+			    // Get the maxes for range.
+			    if( out_degree[nid] > max_out ){
+				max_out = out_degree[nid];
+			    }
+			    if( in_degree[cohort_id] > max_in ){
+				max_in = in_degree[cohort_id];
+			    }
+
+			    // console.log('degrees ('+ nid +'/'+ cohort_id +'): '+
+			    // 		out_degree[nid] +', '+ in_degree[cohort_id]);
+
 			    // Push edge data.
 			    elements.push({
 				group: 'edges',
 				data: {
-				    //id: ,
 				    source: nid,
 				    target: cohort_id,
 				    predicate: 'ability_to_reuse',
@@ -551,6 +548,45 @@ var InteractionViewer = function(global_data, graph_id){
 		    });
 		});
 	    }
+	}
+    });
+
+    // console.log(us.keys(in_degree).length);
+    // console.log(in_degree);
+    // console.log(max_in);
+
+    // Finally, translate into something cytoscape can understand for
+    // nodes.
+    each(global_data, function(n){
+
+	if( n['status'] === 'complete' ){
+
+	    var nid = n['id'];
+	    var nlbl = n['source'];
+	    var lic = n['license'];
+
+	    // Trim and special labels for overly long/weird ones.
+	    if( nlbl.indexOf('(') !== -1 ){
+		nlbl = nlbl.slice(0, nlbl.indexOf('(') -1);
+	    }
+	    if( nid === 'panther' ){
+		nlbl = 'PANTHER';
+		// }else if( nid === 'clinvar' ){
+		//     nlbl = '';
+	    }
+
+	    // Push into cytoscape struct.
+	    // console.log('degrees (' + nid + '): ' +
+	    // 		in_degree[nid] + ', ' + out_degree[nid]);
+	    elements.push({
+		group: 'nodes',
+		data: {
+		    id: nid,
+		    label: nlbl,
+		    idegree: in_degree[nid],
+		    odegree: out_degree[nid]
+		}
+	    });
 	}
     });
 
@@ -628,9 +664,14 @@ var InteractionViewer = function(global_data, graph_id){
 	'circle': {
 	    name: 'circle',
 	    fit: true,
-	    sort: function(a, b){
-		return a.data('degree') - b.data('degree');
-	    }
+	    // sort: function(a, b){
+	    // 	var ai = a.data('idegree') || 1;
+	    // 	var bi = b.data('idegree') || 1;
+	    // 	var ao = (a.data('odegree') || 0) * 0.1;
+	    // 	var bo = (b.data('odegree') || 0) * 0.1;
+	    // 	//console.log('sort: ' + ai + ', ' + bi);
+	    // 	return (ai + ao) - (bi + bo);
+	    // }
 	},
 	'breadthfirst': {
 	    name: 'breadthfirst',
@@ -666,21 +707,21 @@ var InteractionViewer = function(global_data, graph_id){
 		    //			'height': 100,
 		    'width': 50,
 		    'height': 35,
-		    //'background-color': 'mapData(degree, 1, 100, green, red)',
+		    'background-color': 'mapData(idegree, 0, '+max_in+', yellow, green)',
+		    //'color': 'mapData(odegree, 0, 100, blue, red)',
 		    //'background-color': 'white',
-		    //			'background-color': 'black',
+		    //'background-color': 'black',
+                    'color': 'black',
 		    'border-width': 1,
 		    'border-color': 'black',
-		    //			'font-size': 14,
+		    //'font-size': 14,
 		    'font-size': 8,
 		    'min-zoomed-font-size': 3, //10,
                     'text-valign': 'center',
-                    'color': 'black',
-		    //                      'color': 'black',
 		    'shape': 'roundrectangle',
 		    //'shape': show_shape,
-		    //                        'text-outline-width': 1,
-		    //                        'text-outline-color': '#222222',
+		    //'text-outline-width': 1,
+		    //'text-outline-color': '#222222',
 		    'text-wrap': 'wrap',
 		    'text-max-width': '48px'
 		}
@@ -741,73 +782,6 @@ var InteractionViewer = function(global_data, graph_id){
 	//zoom: 2//,
 	//pan: { x: 100, y: 100 }
     });
-
-    // Make sure that there is a notice of highlight when we are
-    // working.
-    // cy.on('select', function(evt){
-    //     console.log( 'selected: ' + evt.target.id() );
-    //     evt.target.style('background-color', 'gray');
-    // });
-    // cy.on('unselect', function(evt){
-    //     console.log( 'unselected: ' + evt.target.id() );
-    //     evt.target.style('background-color', 'white');
-    // });
-
-    // // TODO: notice on hover.
-    // //
-    // // Hacky, but I think should work in practice.
-    // var color_holder = 'red';
-    // var offset = 25;
-    // cy.on('mouseover', function(evt){
-    // 	if( evt && evt.target && evt.target.id ){
-    // 	    // Detect if node or not.
-    // 	    var entity_id = evt.target.id();
-    // 	    if( entity_id.substr(0, 8) === 'gomodel:' ){
-    // 		color_holder = evt.target.style('background-color');
-    // 		console.log( 'mouseovered: (' +
-    // 			     color_holder + ') ' +
-    // 			     entity_id );
-    // 		evt.target.style('background-color', 'red');
-
-    // 		// jQuery("#hoverbox").append('info about: ' + entity_id);
-    // 		var gotten_node = g.get_node(entity_id);
-    // 		var nso = new node_stack_object(gotten_node, aid);
-    // 		jQuery("#hoverbox").append(nso.to_string());
-
-    // 		var scroll_left = jQuery(document).scrollLeft();
-    // 		var scroll_top = jQuery(document).scrollTop();
-    // 		var x = (evt.originalEvent.pageX + offset - scroll_left) +
-    // 			'px';
-    // 		var y = (evt.originalEvent.pageY + offset - scroll_top) +
-    // 			'px';
-    // 		jQuery('#hoverbox').css('border-width', '1px');
-    // 		jQuery('#hoverbox').css('border-style', 'solid');
-    // 		jQuery('#hoverbox').css('border-color', 'black');
-    // 		jQuery('#hoverbox').css('border-radius', '3px');
-    // 		jQuery('#hoverbox').css('background-color', 'white');
-    // 		jQuery('#hoverbox').css('padding', '1em');
-    // 		jQuery('#hoverbox').css('position', 'fixed');
-    // 		jQuery('#hoverbox').css('top', y);
-    // 		jQuery('#hoverbox').css('left', x);
-    // 		jQuery("#hoverbox").removeClass('hidden');
-    // 	    }
-    // 	}
-    // });
-    // cy.on('mouseout', function(evt){
-    // 	if( evt && evt.target && evt.target.id ){
-    // 	    // Detect if node or not.
-    // 	    var entity_id = evt.target.id();
-    // 	    //console.log(evt);
-    // 	    if( entity_id.substr(0, 8) === 'gomodel:' ){
-    // 		console.log( 'mouseouted: (' +
-    // 			     color_holder + ') ' +
-    // 			     entity_id );
-    // 		evt.target.style('background-color', color_holder);
-    // 		jQuery("#hoverbox").addClass('hidden');
-    // 		jQuery("#hoverbox").empty();
-    // 	    }
-    // 	}
-    // });
 };
 
 ///
