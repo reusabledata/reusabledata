@@ -95,14 +95,14 @@ us.each(data_sources, function(source){
 	if( lictype !== 'copyright' ){
 	    note_inconsistency(source, 'lic/type mismatch');
 	}
-	if( ! violations['A.1.2'] ){
+	if( ! violations['A.1.2'] || violations['A.1.1'] || violations['A.2.1'] || violations['A.2.2'] ){
 	    note_inconsistency(source, 'req violation issue');
 	}
     }else if( lic === 'inconsistent' ){
 	if( lictype !== 'unknown' ){
 	    note_inconsistency(source, 'lic/type mismatch');
 	}
-	if( ! violations['A.1.1'] && ! violations['A.1.2'] && ! violations['A.2.1'] && ! violations['A.2.2'] ){
+	if( ! violations['A.1.1'] || violations['A.1.2'] || violations['A.2.1'] || violations['A.2.2'] ){
 	    note_inconsistency(source, 'req violation issue');
 	}
     }else if( lic === 'all rights reserved' ){
@@ -200,7 +200,7 @@ us.each(data_sources, function(source){
 	if( lictype !== 'permissive' ){
 	    note_inconsistency(source, 'lic/type mismatch');
 	}
-	if( ! violations['A.2.1'] ){
+	if( ! violations['A.2.1'] || violations['A.1.1'] || violations['A.1.2'] || violations['A.2.2'] ){
 	    note_inconsistency(source, 'req violation issue');
 	}
 	if( violations['D.1.1'] || violations['E.1.1'] || violations['D.1.2'] || violations['E.1.2'] ){
