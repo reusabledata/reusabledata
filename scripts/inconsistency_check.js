@@ -115,7 +115,7 @@ us.each(data_sources, function(source){
     }else if( lic === 'custom' ){
 	// Anything possible for lictype.
 	//
-	if( ! violations['A.2.1'] && ! violations['A.2.2'] && ! violations['A.1.1'] ){
+	if( violations['A.1.1'] || violations['A.1.2'] || violations['A.2.1'] || ! violations['A.2.2'] ){
 	    //console.log(violations);
 	    note_inconsistency(source, 'req violation issue');
 	}
