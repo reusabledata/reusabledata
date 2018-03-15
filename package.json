@@ -1,61 +1,58 @@
 {
-    "name": "reusabledata",
-    "version": "0.9.9",
-    "license": "BSD-3-Clause",
-    "description": "Site for the Reusable Data Project.",
-    "keywords": [
-	"reusable",
-	"data"
-    ],
-    "author": "SJC <sjcarbon@lbl.gov> (http://berkeleybop.org/)",
-    "homepage": "http://berkeleybop.org/",
-    "repository": {
-	"type": "git",
-	"url": "git+https://github.com/reusabledata/reusabledata.git"
-    },
-    "engines": {
-	"node": ">= 4.4",
-	"npm": ">= 2.15"
-    },
-    "dependencies": {
-	"cytoscape": "3.2.6",
-	"cytoscape-cose-bilkent": "2.1.0",
-	"glob": "7.1.2",
-	"markdown": "0.5.0",
-	"minimist": "1.2.0",
-	"mustache": "2.3.0",
-	"pug": "2.0.0-rc.3",
-	"underscore": "1.8.3",
-	"yamljs": "0.2.8"
-    },
-    "devDependencies": {
-	"browserify": "13.0.1",
-	"browserify-shim": "3.8.12",
-	"jshint": "2.9.3"
-    },
-    "browserify": {
-	"transform": [
-	    "browserify-shim"
-	]
-    },
-    "browser": {
-    },
-    "browserify-shim": {
-    },
-    "bundleDependencies": [],
-    "private": false,
-    "main": null,
-    "bugs": {
-	"url": "https://github.com/reusabledata/reusabledata/issues"
-    },
-    "directories": {
-    },
-    "scripts": {
-	"build": "./node_modules/.bin/browserify src/RUD.js --standalone RUD -o docs/RUDBundle.js",
-	"check": "kwalify -E -f ./scripts/source.schema.yaml ./data-sources/*.yaml",
-	"yamls2json": "node ./scripts/yamls2json.js -i ./data-sources/ -o ./data-sources/compiled.json",
-	"json2yamls": "node ./scripts/json2yamls.js -i ./data-sources/compiled.json -o ./data-sources/",
-	"tmp-gen-static": "node ./scripts/tmp_static_output_gen.js -i ./data-sources/compiled.json -t ./scripts/tmp_static_output_gen.tmpl -o ./docs/index.html",
-	"test": "echo \"Error: no test specified\" && exit 1"
-    }
+   "name": "reusabledata",
+   "version": "0.9.9",
+   "license": "BSD-3-Clause",
+   "description": "Site for the Reusable Data Project.",
+   "keywords": [
+      "reusable",
+      "data"
+   ],
+   "author": "SJC <sjcarbon@lbl.gov> (http://berkeleybop.org/)",
+   "homepage": "http://berkeleybop.org/",
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/reusabledata/reusabledata.git"
+   },
+   "engines": {
+      "node": ">= 4.4",
+      "npm": ">= 2.15"
+   },
+   "dependencies": {
+      "cytoscape": "3.2.6",
+      "cytoscape-cose-bilkent": "2.1.0",
+      "glob": "7.1.2",
+      "markdown": "0.5.0",
+      "minimist": "1.2.0",
+      "mustache": "2.3.0",
+      "pug": "2.0.0-rc.3",
+      "underscore": "1.8.3",
+      "yamljs": "0.2.8"
+   },
+   "devDependencies": {
+      "browserify": "13.0.1",
+      "browserify-shim": "3.8.12",
+      "jshint": "2.9.3"
+   },
+   "browserify": {
+      "transform": [
+         "browserify-shim"
+      ]
+   },
+   "browser": {},
+   "browserify-shim": {},
+   "bundleDependencies": [],
+   "private": false,
+   "main": null,
+   "bugs": {
+      "url": "https://github.com/reusabledata/reusabledata/issues"
+   },
+   "directories": {},
+   "scripts": {
+      "build": "./node_modules/.bin/browserify src/RUD.js --standalone RUD -o docs/RUDBundle.js",
+      "check": "kwalify -E -f ./scripts/source.schema.yaml ./data-sources/*.yaml",
+      "yamls2json": "node ./scripts/yamls2json.js -i ./data-sources/ -o ./data-sources/compiled.json",
+      "json2yamls": "node ./scripts/json2yamls.js -i ./data-sources/compiled.json -o ./data-sources/",
+      "tmp-gen-static": "node ./scripts/tmp_static_output_gen.js -i ./data-sources/compiled.json -t ./scripts/tmp_static_output_gen.tmpl -o ./docs/index.html",
+      "test": "echo \"Error: no test specified\" && exit 1"
+   }
 }
