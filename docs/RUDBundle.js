@@ -37440,6 +37440,7 @@ var LicenseViewer = function(global_data, graph_id){
     var data = [{
 	values: values,
 	labels: labels,
+	hole: '0.37',
 	type: 'pie'
     }];
 
@@ -37486,6 +37487,7 @@ var LicenseTypeViewer = function(global_data, graph_id){
     var data = [{
 	values: values,
 	labels: labels,
+	hole: '0.37',
 	type: 'pie'
     }];
 
@@ -37535,6 +37537,7 @@ var LicenseCustomTypeViewer = function(global_data, graph_id){
     var data = [{
 	values: values,
 	labels: labels,
+	hole: '0.37',
 	type: 'pie'
     }];
 
@@ -37604,6 +37607,7 @@ var LicenseStandardViewer = function(global_data, graph_id){
     var data = [{
 	values: values,
 	labels: labels,
+	hole: '0.37',
 	type: 'pie'
     }];
 
