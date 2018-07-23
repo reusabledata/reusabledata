@@ -49,7 +49,7 @@ their integration.
 ### Contributing
 
 Current information on contributing new resources or updating already evaluated ones can be found at 
-[here](https://github.com/reusabledata/reusabledata/CONTRIBUTING.md).
+[here](https://github.com/reusabledata/reusabledata/blob/master/CONTRIBUTING.md).
 
 <hr /><span id="contributors"></span>
 
