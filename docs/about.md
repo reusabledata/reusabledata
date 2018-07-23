@@ -3,6 +3,7 @@
 * [Request for community partnership](#request)
 * [Contact](#contact)
 * [Background](#background)
+* [Contributing](#contributing)
 * [Contributors](#contributors)
 * [Citation policy](#citation)
 
@@ -39,6 +40,12 @@ use and reuse their data.
 
 We are grateful to the many original sources of our data for allowing
 their integration.
+
+<hr /><span id="contributing"></span>
+### Contributing
+
+Current information on contributing new resources or updating already evaluated ones can be found at 
+[here](https://github.com/reusabledata/reusabledata/CONTRIBUTING.md).
 
 <hr /><span id="contributors"></span>
 ### Contributors
