@@ -57,8 +57,8 @@ Current information on contributing new resources or updating already evaluated 
 
 * *Seth Carbon*, Lawrence Berkeley National Laboratory
 * *Robin Champieux*, Oregon Health & Science University
-* *Melissa Haendel*, Oregon Health & Science University
-* *Julie McMurry*, Oregon Health & Science University
+* *Melissa Haendel*, Oregon State University; Oregon Health & Science University
+* *Julie McMurry*, Oregon State University
 * *Lilly Winfree*, Oregon Health & Science University
 * *Letisha Wyatt*, Oregon Health & Science University
 
