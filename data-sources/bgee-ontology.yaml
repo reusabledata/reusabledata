@@ -1,5 +1,5 @@
 id: bgee-ontology
-source: 'BGee (ontology)'
+source: 'Bgee (ontology)'
 source-link: 'http://bgee.org'
 status: complete
 description: 'Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, Affymetrix, in situ hybridization, and EST data).'

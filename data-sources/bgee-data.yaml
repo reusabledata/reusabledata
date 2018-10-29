@@ -1,5 +1,5 @@
 id: bgee-data
-source: 'BGee (data)'
+source: 'Bgee (data)'
 source-link: 'http://bgee.org'
 status: complete
 description: 'Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, Affymetrix, in situ hybridization, and EST data).'
@@ -18,4 +18,4 @@ license-commentary:
 contacts:
     - Bgee@isb-sib.ch
 license-issues:
-    - {criteria: A.1.2, comment: 'After some search we were unable to determine the license of the non-ontology portions of the BGee data. No explicit license statements were apparent, causing a cascade of criteria violations. In spite of this, access itself is clear, so one star is awarded accordingly for C.'}
+    - {criteria: A.1.2, comment: 'After some search we were unable to determine the license of the non-ontology portions of the Bgee data. No explicit license statements were apparent, causing a cascade of criteria violations. In spite of this, access itself is clear, so one star is awarded accordingly for C.'}
