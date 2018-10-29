@@ -13,7 +13,7 @@ entities may have different results in the license commentary.
 ## <span id="criteria-A">A) License is public, discoverable, and standard</span>
 
 **Rationale:** All data sources should publicly state their terms of
-use in an easy-to-find and non-ambiguous manner.
+use in an easy-to-find and unambiguous manner.
 
 - <span id="criteria-A.1">**A.1**) Does the resource have a *single* license?</span>
     - Does the resource’s data area itself (if applicable) have any license information?
@@ -82,7 +82,7 @@ In the case that a resource holds multiple kinds of content (software, ontologie
     - Unprotected HTTP/S access for an API or downloads → Yes
     - Access by API key for analytics → Yes
     - Access by API key for access control → No
-    - Access by API key for access control, but with downloads available allowing timely complete data injest → Yes
+    - Access by API key for access control, but with downloads available allowing timely complete data ingest → Yes
     - Time/size limited access to data that functionally prevents timely complete data ingest → No
 
 ## <span id="criteria-D">D) License has little or no restrictions on kinds of (re)use</span>
