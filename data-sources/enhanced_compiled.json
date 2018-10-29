@@ -822,12 +822,12 @@
         "source-link": "http://drugcentral.org",
         "source-type": "integrator",
         "status": "complete",
-        "data-field": "phamacology",
+        "data-field": "pharmacology",
         "data-type": "drug-target interaction",
         "data-categories": [
             "chemical structure of drugs",
             "drug",
-            "diseaase"
+            "disease"
         ],
         "data-access": [
             {
@@ -857,7 +857,7 @@
             "For questions and comments please contact Oleg Ursu or Jayme Holmes."
         ],
         "license-commentary-embeddable": "While there is upstream data integtration, there seems to be no mention of upstream licenses or terms. Not necessarily our issue here.",
-        "data-tags": "phamacology, drug-target interaction, chemical structure of drugs, drug, diseaase",
+        "data-tags": "pharmacology, drug-target interaction, chemical structure of drugs, drug, disease",
         "grade-automatic": 3
     },
     {
@@ -1799,7 +1799,7 @@
             "protein-related data",
             "protein functional data",
             "protein-protein interaction",
-            "sub-cellular location"
+            "subcellular location"
         ],
         "data-access": [
             {
@@ -1839,7 +1839,7 @@
             "support@nextprot.org"
         ],
         "license-commentary-embeddable": "",
-        "data-tags": "biology, human, protein-related data, protein functional data, protein-protein interaction, sub-cellular location",
+        "data-tags": "biology, human, protein-related data, protein functional data, protein-protein interaction, subcellular location",
         "grade-automatic": 3
     },
     {
@@ -2188,7 +2188,7 @@
         "source-type": "repository",
         "status": "complete",
         "data-field": "biology",
-        "data-type": "protein familys",
+        "data-type": "protein families",
         "data-categories": [
             "protein family alignments",
             "HMMs"
@@ -2224,7 +2224,7 @@
             }
         ],
         "license-commentary-embeddable": "",
-        "data-tags": "biology, protein familys, protein family alignments, HMMs",
+        "data-tags": "biology, protein families, protein family alignments, HMMs",
         "grade-automatic": 5
     },
     {

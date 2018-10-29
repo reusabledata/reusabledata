@@ -777,12 +777,12 @@
         "source-link": "http://drugcentral.org",
         "source-type": "integrator",
         "status": "complete",
-        "data-field": "phamacology",
+        "data-field": "pharmacology",
         "data-type": "drug-target interaction",
         "data-categories": [
             "chemical structure of drugs",
             "drug",
-            "diseaase"
+            "disease"
         ],
         "data-access": [
             {
@@ -1691,7 +1691,7 @@
             "protein-related data",
             "protein functional data",
             "protein-protein interaction",
-            "sub-cellular location"
+            "subcellular location"
         ],
         "data-access": [
             {
@@ -2059,7 +2059,7 @@
         "source-type": "repository",
         "status": "complete",
         "data-field": "biology",
-        "data-type": "protein familys",
+        "data-type": "protein families",
         "data-categories": [
             "protein family alignments",
             "HMMs"
