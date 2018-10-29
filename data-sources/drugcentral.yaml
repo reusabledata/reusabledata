@@ -5,12 +5,12 @@ source: 'DrugCentral'
 source-link: 'http://drugcentral.org'
 source-type: "integrator"
 status: "complete"
-data-field: 'phamacology'
+data-field: 'pharmacology'
 data-type: 'drug-target interaction'
 data-categories:
   - 'chemical structure of drugs'
   - 'drug'
-  - 'diseaase'
+  - 'disease'
 data-access:
   - type: download
     location: 'http://drugcentral.org/download'
