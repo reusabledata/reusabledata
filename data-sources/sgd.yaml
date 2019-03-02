@@ -11,24 +11,23 @@ data-categories:
   - 'gene expression'
 data-access:
   - type: download
-    location: https://www.yeastgenome.org/download-data
+    location: "https://www.yeastgenome.org/search?category=download"
   - type: api
-    location: https://yeastmine.yeastgenome.org/yeastmine/api.do
-license: custom
+    location: "https://yeastmine.yeastgenome.org/yeastmine/api.do"
+license: CC-BY-4.0
 license-type: permissive
 license-link: 'https://sites.google.com/view/yeastgenome-help/about'
 license-issues:
-  - criteria: A.2.2
-    comment: "The licensing uses custom verbiage, as well as being somewhat hidden. See commentary."
-  - criteria: E.1.1
-    comment: "The license distinguishes groups, allowing for free use in research and education. There is no statement for other groups."
+  - criteria: A.1.1
+    comment: "While the downloadable data seems quite clearly CC-BY-4.0, the API terms footer indicates no redistribution under similar terms (with an implication that abstracts may be under other copyright restrictions as well), with a punt-to-user disclaimer."
 license-commentary:
   - 'The license information found was in passing in the "About SGD" paragraph on the SGD Help page at https://sites.google.com/view/yeastgenome-help/about; in its entirety: "...all of the data in SGD are freely accessible to researchers and educators worldwide..."'
-  - "Otherwise, a reasonable person might assume that the licensing terms were those of Stanford's Terms of Use (https://www.stanford.edu/site/terms/), linked on most pages and considerably more restrictive."
-was-controversial: "true"
-last-curated: "2017-10-17"
+  - "SGD operates under the Creative Commons Attribution 4.0 International license (CC BY 4.0)."
+  - 'However, the license information for the API is much less clear, reading: "Permission to use the information contained in this database was given by the researchers/institutes who contributed or published the information. Users of the database are solely responsible for compliance with any copyright restrictions, including those applying to the author abstracts."'
+was-controversial: "false"
+last-curated: "2019-03-01"
 grants:
-  - label: "The SGD is funded by the National Human Genome Research Institute (NHGRI), US National Institutes of Health [5U41HG001315-18].  Funding is also provided by the Gene Ontology Consortium project funded by the NHGRI [2U41HG002273-13] and the InterMOD project [5R01HG004834-04].  The SGD is part of the Department of Genetics at the School of Medicine, Stanford University and located within the Center for Genomics and Personalized Medicine."
+  - label: "The SGD is funded by the US National Institutes of Health, National Human Genome Research Institute (NHGRI), [U41HG001315]. Our efforts are also supported via the Gene Ontology Consortium (GOC) funded by the NHGRI [U41HG002273] and the Alliance of Genome Resources supplement via WormBase [U41HG02223-17S1]."
 contacts:
   - 'https://www.yeastgenome.org/suggestion'
   - 'sgd-helpdesk@lists.stanford.edu'
