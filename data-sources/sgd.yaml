@@ -18,12 +18,16 @@ license: CC-BY-4.0
 license-type: permissive
 license-link: 'https://sites.google.com/view/yeastgenome-help/about'
 license-issues:
-  - criteria: A.1.1
-    comment: "While the downloadable data seems quite clearly CC-BY-4.0, the API terms footer indicates no redistribution under similar terms (with an implication that abstracts may be under other copyright restrictions as well), with a punt-to-user disclaimer."
+  - criteria: B.2.1
+    comment: "While the downloadable data seems quite clearly CC-BY-4.0, the API footer has terms that indicate that all data may not be covered under the same license (see comments)."
+  - criteria: B.2.2
+    comment: 'The API does not seem to be any easy way to differentiate the \"clean\" CC-BY-4.0 data from other licenses.'
 license-commentary:
-  - 'The license information found was in passing in the "About SGD" paragraph on the SGD Help page at https://sites.google.com/view/yeastgenome-help/about; in its entirety: "...all of the data in SGD are freely accessible to researchers and educators worldwide..."'
+  - 'The license information found in the "About SGD" paragraph on the SGD Help page at https://sites.google.com/view/yeastgenome-help/about'
   - "SGD operates under the Creative Commons Attribution 4.0 International license (CC BY 4.0)."
   - 'However, the license information for the API is much less clear, reading: "Permission to use the information contained in this database was given by the researchers/institutes who contributed or published the information. Users of the database are solely responsible for compliance with any copyright restrictions, including those applying to the author abstracts."'
+  - 'The API did not seem to offer any way of filter out things with other licenses.'
+  - 'Without ascending, noting that various upstream for the SGD API could have other terms: https://yeastmine.yeastgenome.org/yeastmine/dataCategories.do'
 was-controversial: "false"
 last-curated: "2019-03-01"
 grants:
