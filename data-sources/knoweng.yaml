@@ -28,7 +28,7 @@ license-issues:
     comment: 'Explicit statement that license only applies to new work.'
   - criteria: 'B.2.2'
     comment: 'I found no method of obtaining just the new work data.'
-  - criteria: 'C.1
+  - criteria: 'C.1'
     comment: 'The resource seems to be a self-contained platform; after some search, I found no bulk methods of download.'
   - criteria: 'C.2'
     comment: 'As C.1.'
