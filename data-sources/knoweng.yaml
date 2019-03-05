@@ -8,17 +8,17 @@ status: "complete"
 data-field: 'biology'
 data-type: 'x-species'
 data-categories:
-  - graph
-  - cancer
-  - gene
-  - ontology
-  - platform
-  - protein families
-  - molecular interaction
-  - protein interaction
+  - 'graph'
+  - 'cancer'
+  - 'gene'
+  - 'ontology'
+  - 'platform'
+  - 'protein families'
+  - 'molecular interaction'
+  - 'protein interaction'
 data-access:
-  - type: API
-    location: https://platform.knoweng.org
+  - type: 'API'
+    location: 'https://platform.knoweng.org'
 license: "CC-BY-NC-SA-4.0"
 license-type: "restrictive"
 license-link: 'https://knoweng.org/kn-overview/'
