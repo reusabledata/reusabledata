@@ -17,7 +17,7 @@ data-categories:
   - 'molecular interaction'
   - 'protein interaction'
 data-access:
-  - type: 'API'
+  - type: 'api'
     location: 'https://platform.knoweng.org'
 license: "CC-BY-NC-SA-4.0"
 license-type: "restrictive"
