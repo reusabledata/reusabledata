@@ -118,7 +118,8 @@ var summary_violation_group = {
 var summary_violation = {
     "A.1.1": [],
     "A.1.2": [],
-    "A.2": [],
+    "A.2.1": [],
+    "A.2.2": [],
     "B.1": [],
     "B.2.1": [],
     "B.2.2": [],
@@ -206,7 +207,7 @@ us.each(data_sources, function(source){
 	}else{
 	    summary_known_count++;
 
-	    if( s['A.2'] ){
+	    if( s['A.2.1'] || s['A.2.2'] ){
 		grade -= 0.5;
 	    }
 	    if( s['B.1'] ){

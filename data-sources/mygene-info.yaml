@@ -19,7 +19,7 @@ license-commentary:
   - 'TSRI shall have no responsibility whatsoever for such information [from 3rd party websites].'
   - 'Nothing contained herein shall be construed as conferring by implication, estoppel or otherwise any license or right under any patent, trademark or other intellectual property of TSRI or any third party. Except as expressly provided above, nothing contained herein shall be construed as conferring any right or license under any TSRI copyrights.'
 license-issues:
-    - criteria: A.2
+    - criteria: A.2.2
       comment: Custom license, but consistent.
     - criteria: B.2.1
       comment: Scope is incomplete - they claim no responsibility for data from other sources on their site.

@@ -14,8 +14,8 @@
             "disease-gene association"
         ],
         "data-access": [],
-        "license": "unknown",
-        "license-type": "unknown",
+        "license": "unlicensed",
+        "license-type": "copyright",
         "license-link": "TODO",
         "license-hat-used": "false",
         "license-issues": [
@@ -44,8 +44,61 @@
         ]
     },
     {
+        "id": "arrayexpress",
+        "description": "ArrayExpress Archive of Functional Genomics Data stores data from high-throughput functional genomics experiments, and provides these data for reuse to the research community.",
+        "last-curated": "2018-02-09",
+        "source": "ArrayExpress",
+        "source-link": "https://www.ebi.ac.uk/arrayexpress",
+        "source-type": "repository",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "microarray experiments",
+        "data-categories": [
+            "functional genomics",
+            "high-throughput",
+            "microarray",
+            "sequencing"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "ftp://ftp.ebi.ac.uk/pub/databases/arrayexpress/data/"
+            },
+            {
+                "type": "api",
+                "location": "https://www.ebi.ac.uk/arrayexpress/help/programmatic_access.html"
+            }
+        ],
+        "license": "custom",
+        "license-type": "permissive",
+        "license-link": "https://www.ebi.ac.uk/arrayexpress/help/FAQ.html#data_restrictions",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "A.2.2",
+                "comment": "Minimal custom permissive terms."
+            }
+        ],
+        "license-commentary": [
+            "The entirety of the license appears to be: \"No restrictions, all public data from ArrayExpress can be used by anyone and our services are completely free of charge.\"",
+            "Otherwise, ArrayExpress seems to defer its licensing and ToS to the EBI terms; e.g.: https://www.ebi.ac.uk/about/terms-of-use; while these are similarly permissive, we take the ArrayExpress terms at face value.",
+            "While there are distinctions occasionally made between \"private\" and \"public\" data, it seems that \"private\" is just staging data before publication and does not affect evaluation.",
+            "There is an interesting section (https://www.ebi.ac.uk/arrayexpress/help/data_availability.html#removal) that describes situations where data needs to be retracted. This section, while alarmingly titled, is has no effect on the license determination."
+        ],
+        "was-controversial": "false",
+        "contacts": [
+            "arrayexpress@ebi.ac.uk",
+            "https://www.ebi.ac.uk/arrayexpress/help/contact_us.html"
+        ],
+        "grants": [
+            {
+                "label": "ArrayExpress and related activities are supported by member states of the European Molecular Biology Laboratory; European Commission: ENGAGE [201413], EurocanPlatform [260791], GEUVADIS [261123], SLING [226073], SYBARIS [242220], EUROCANPLATFORM [260791], CAGEKID [241669], BioMedBridges [284209] and Gen2Phen [200754]; US National Institutes of Health (the National Human Genome Research Institute, National Institute of Biomedical Imaging and Bioengineering and the National Cancer Institute) [P41 HG003619]; National Center for Biomedical Ontology (one of the National Centers for Biomedical Computing supported by the National Human Genome Research Institute, the National Heart, Lung, and Blood Institute, and National Institutes of Health Common Fund [U54-HG004028]); National Science Foundation Award Number [1127112]."
+            }
+        ]
+    },
+    {
         "id": "bgee-data",
-        "source": "BGee (data)",
+        "source": "Bgee (data)",
         "source-link": "http://bgee.org",
         "status": "complete",
         "description": "Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, Affymetrix, in situ hybridization, and EST data).",
@@ -60,8 +113,8 @@
                 "location": "http://bgee.org/?page=doc&action=access"
             }
         ],
-        "license": "unknown",
-        "license-type": "unknown",
+        "license": "unlicensed",
+        "license-type": "copyright",
         "license-commentary": [
             "As of two years ago, they seem to want to migrate over to CC BY, but after some searching, it could not be cited on their main data portal: https://think-lab.github.io/d/82/#15",
             "They do not seem to me looking at the remix affects of licenses of their own data (http://bgee.org/?page=source).",
@@ -73,13 +126,13 @@
         "license-issues": [
             {
                 "criteria": "A.1.2",
-                "comment": "After some search we were unable to determine the license of the non-ontology portions of the BGee data. No explicit license statements were apparent, causing a cascade of criteria violations. In spite of this, access itself is clear, so one star is awarded accordingly for C."
+                "comment": "After some search we were unable to determine the license of the non-ontology portions of the Bgee data. No explicit license statements were apparent, causing a cascade of criteria violations. In spite of this, access itself is clear, so one star is awarded accordingly for C."
             }
         ]
     },
     {
         "id": "bgee-ontology",
-        "source": "BGee (ontology)",
+        "source": "Bgee (ontology)",
         "source-link": "http://bgee.org",
         "status": "complete",
         "description": "Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, Affymetrix, in situ hybridization, and EST data).",
@@ -112,6 +165,10 @@
             {
                 "criteria": "D.1.2",
                 "comment": "By using the GPLv3, there may be issues in mixing and redistributing this data with licenses that have incompatible terms."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "By using the GPLv3, there may be some parties with issues in mixing and redistributing this data with licenses that have incompatible terms."
             }
         ],
         "license-commentary": [
@@ -171,11 +228,15 @@
                 "location": "http://www.brenda-enzymes.info/ontology/tissue/tree/update/update_files/BrendaTissueOBO"
             }
         ],
-        "license": "CC-BY",
+        "license": "custom",
         "license-type": "permissive",
         "license-link": "http://www.brenda-enzymes.info/ontology/tissue/tree/update/update_files/BrendaTissueOBO",
         "license-hat-used": "false",
         "license-issues": [
+            {
+                "criteria": "A.2.2",
+                "comment": "While they are obviously attempting to be permissive by listing \\\"CC-BY\\\", this does not map onto any of the number CC-BY versions (e.g. 3.0 or 4.0), thereby, breaking the reference and meaning that we would have to contact for them for terms)."
+            },
             {
                 "criteria": "C.2",
                 "comment": "Once one knows the location of the BTO (ontology file), access is fine. However, we were unable to locate the ontology file after some searching through the main BRENDA website; most text would imply there is no free ontology file to be had."
@@ -184,7 +245,7 @@
         "license-commentary": [
             "The relatively high score is due to knowing where the ontology exists and knowing to look at the header--normal use of the site seems to lead around restricted APIs webpages containing; the free ontology file is hiding in there.",
             "Typcial of this is: \\\"Use of this online version of BRENDA is free for academic research only. Commercial use or download access requires a license. See terms of use.\\\" (http://bto.brenda-enzymes.org/copy.php)",
-            "The \\\"CC-BY\\\" declaration in the ontology file header should be versioned or linked."
+            "The \\\"CC-BY\\\" declaration in the ontology file header should be versioned or linked. Due to not knowing what version, we have marked it as a custom; obviously intended to be under very permissive terms."
         ],
         "was-controversial": "false",
         "contacts": [
@@ -194,6 +255,71 @@
             {
                 "label": "This work was supported by the European Union: (FELICS: Free European Life-Science Information and Computational Services: 021902 (RII3); SLING: Serving Life-science Information for the Next Generation: 226073)."
             }
+        ]
+    },
+    {
+        "id": "catalogueoflife",
+        "description": "The Catalogue of Life is the most comprehensive and authoritative global index of species currently available. It consists of a single integrated species checklist and taxonomic hierarchy. The Catalogue holds essential information on the names, relationships and distributions of over 1.6 million species.",
+        "last-curated": "2018-02-18",
+        "source": "Catalogue of Life",
+        "source-link": "http://catalogueoflife.org/",
+        "source-type": "source",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "custom",
+        "data-categories": [
+            "biodiversity",
+            "distribution",
+            "biogeography",
+            "taxonomy",
+            "ontology"
+        ],
+        "data-access": [
+            {
+                "type": "api",
+                "location": "http://webservice.catalogueoflife.org/col/webservice"
+            },
+            {
+                "type": "download",
+                "location": "http://catalogueoflife.org/content/annual-checklist-archive"
+            }
+        ],
+        "license": "custom",
+        "license-type": "restrictive",
+        "license-link": "http://catalogueoflife.org/content/terms-use",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "A.2.2",
+                "comment": "The resource uses custom terms."
+            },
+            {
+                "criteria": "B.1",
+                "comment": "Use seems to hinge on some contact with Sp2000. For example: \\\"If you wish to use the Catalogue of Life content on a public portal or webpage you are required to notify the Species 2000 Secretariat, and to assist with a check that the correct credits are given.\\\" Check check assistance especially seems to violate B.1."
+            },
+            {
+                "criteria": "C.1",
+                "comment": "The data \\\"download\\\" is quite complicated and should not actually be considered a download (see commentary). The API as given would likely require a custom spider to obtain the data in bulk."
+            },
+            {
+                "criteria": "D.1.2",
+                "comment": "Distribution seems to be prohibited without negotiation; example on the main ToS: \\\"Commercial use of this compilation or any of the species datasets contained within...or dissemination on the Internet, requires written permission from Species 2000 and ITIS.\\\""
+            },
+            {
+                "criteria": "E.1.1",
+                "comment": "Non-commercial restrictions exist on the data from the ToS."
+            }
+        ],
+        "license-commentary": [
+            "The offered API, while possibly spiderable given a starting point, does not seem to offer bulk downloads or similarly significant metadata calls. Spiderable, but non-trivial custom code may be required.",
+            "While not a violation, the credit requirements may be difficult to meet in some cases: \\\"Credit must be given at the following three levels on all occasions that records are shown. The three levels credit the complete work, the contributing database of the record, and the expert who provides taxonomic scrutiny of the individual record.\\\"",
+            "The custom licensing terms do not seem to make clear rights around derivation and modification.",
+            "The download is actually a Linux virtual machine in a custom wrapper that tries to drive interaction with a browser on port 8080; this is rather onerous and I do not think this could be considered a \\\"download\\\" so much as an \\\"offline\\\" site clone or application.",
+            "Embedded in the \\\"download\\\" is further elaboration on the license, which seem to contain terms about internal use as well: \\\"Use of this compilation or any of the databases contained within it by commercial organisations requires a written agreement from Species 2000 and ITIS. This applies when it is used commercially for external services, products or publications and when it is used to provide internal services within an organisation.\\\""
+        ],
+        "was-controversial": "false",
+        "contacts": [
+            "sp2000@sp2000.org"
         ]
     },
     {
@@ -318,13 +444,13 @@
                 "location": "https://www.ncbi.nlm.nih.gov/home/about/policies/"
             }
         ],
-        "license": "custom",
-        "license-type": "public domain",
+        "license": "public domain",
+        "license-type": "permissive",
         "license-link": "http://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/",
         "license-hat-used": "false",
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.1",
                 "comment": "Public domain declaration"
             },
             {
@@ -360,8 +486,8 @@
             "disease-model association"
         ],
         "data-access": [],
-        "license": "unknown",
-        "license-type": "unknown",
+        "license": "unlicensed",
+        "license-type": "copyright",
         "license-link": "https://www.coriell.org/legal-notice",
         "license-issues": [
             {
@@ -412,7 +538,7 @@
         "license-link": "http://ctdbase.org/about/legal.jsp",
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "Custom license with interesting use restrictions."
             },
             {
@@ -452,7 +578,7 @@
                 "location": "ftp://ftp.ncbi.nlm.nih.gov/dbgap/"
             }
         ],
-        "license": "unknown",
+        "license": "inconsistent",
         "license-type": "unknown",
         "license-link": "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-14-124.html",
         "license-issues": [
@@ -508,11 +634,11 @@
         ],
         "data-access": [],
         "license": "custom",
-        "license-type": "closed pool",
+        "license-type": "private pool",
         "license-link": "https://decipher.sanger.ac.uk/datasharing",
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "The resource uses an extensive custom license."
             },
             {
@@ -573,8 +699,8 @@
                 "location": "http://dictybase.org/Downloads/"
             }
         ],
-        "license": "unknown",
-        "license-type": "unknown",
+        "license": "unlicensed",
+        "license-type": "copyright",
         "license-link": "TODO",
         "license-issues": [
             {
@@ -651,12 +777,12 @@
         "source-link": "http://drugcentral.org",
         "source-type": "integrator",
         "status": "complete",
-        "data-field": "phamacology",
+        "data-field": "pharmacology",
         "data-type": "drug-target interaction",
         "data-categories": [
             "chemical structure of drugs",
             "drug",
-            "diseaase"
+            "disease"
         ],
         "data-access": [
             {
@@ -672,6 +798,10 @@
             {
                 "criteria": "D.1.2",
                 "comment": "By using a copyleft-style license, there may be issues in mixing and redistributing this data with licenses that have incompatible terms."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "By using a copyleft-style license, there may be some parties with issues in mixing and redistributing this data with licenses that have incompatible terms."
             }
         ],
         "license-commentary": [
@@ -747,7 +877,7 @@
         "license-link": "https://www.genome.gov/27528022/encode-consortium-data-release-policy/",
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "Easy and perfectly (re)usable, yet custom."
             }
         ],
@@ -795,12 +925,12 @@
                 "location": "http://flybase.org/static_pages/downloads/ID.html"
             }
         ],
-        "license": "all rights reserved",
-        "license-type": "copyright",
+        "license": "custom",
+        "license-type": "restrictive",
         "license-link": "http://flybase.org/wiki/FlyBase:About#FlyBase_Copyright",
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "Copyright statement includes 'This publication may be copied for non-commercial, scientific uses by individuals or organizations (including for-profit organizations). FlyBase is freely distributed to the scientific community on the understanding that it will not be used for commercial gain by any organization. Any commercial use of this publication, or any parts thereof, is expressly prohibited without permission in writing from the FlyBase consortium.'"
             },
             {
@@ -852,8 +982,8 @@
                 "location": "https://gdc.cancer.gov/developers/gdc-application-programming-interface-api"
             }
         ],
-        "license": "unknown",
-        "license-type": "unknown",
+        "license": "unlicensed",
+        "license-type": "copyright",
         "license-hat-used": "false",
         "license-issues": [
             {
@@ -902,8 +1032,12 @@
         "license-hat-used": "false",
         "license-issues": [
             {
-                "criteria": "D.1.1",
+                "criteria": "D.1.2",
                 "comment": "While extremely open, the ODbL does restrict the ability to mix and redistribute with data without similar terms."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "By using the ODbL, there may be some parties with issues in mixing and redistributing this data with licenses that have incompatible terms."
             }
         ],
         "license-commentary": [
@@ -1012,7 +1146,7 @@
         "license-link": "https://www.gtexportal.org/home/documentationPage",
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "Custom license based on the various datasets and NIH Genomic Data Sharing Policy."
             },
             {
@@ -1072,7 +1206,7 @@
         "license-hat-used": "false",
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "Custom terms at linked license and on downloads page."
             },
             {
@@ -1120,7 +1254,7 @@
         "license-link": "http://human-phenotype-ontology.github.io/license.html",
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "HPO is copyrighted to protect ontologies and all changes must be made by hpo developers."
             },
             {
@@ -1213,7 +1347,7 @@
         "license-link": "http://www.kegg.jp/kegg/legal.html",
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "For our use case (see commentary), KEGG (FTP) uses custom licensing through NPO Bioinformatics Japan (https://www.bioinformatics.jp/en/keggftp.html)."
             },
             {
@@ -1269,7 +1403,7 @@
         "license-link": "http://www.informatics.jax.org/mgihome/other/copyright.shtml",
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "Custom license."
             },
             {
@@ -1313,29 +1447,17 @@
                 "location": "https://archive.monarchinitiative.org/latest/"
             }
         ],
-        "license": "CC-BY-3.0",
-        "license-type": "permissive",
+        "license": "inconsistent",
+        "license-type": "unknown",
         "license-link": "https://monarchinitiative.org",
         "license-issues": [
             {
-                "criteria": "B.2.1",
-                "comment": "Text in footer: \"Except where forbidden by the original sources...\"; how these interact is not clear."
-            },
-            {
-                "criteria": "B.2.2",
-                "comment": "There is no indication of which data has what sources, so reusability cannot be determined."
+                "criteria": "A.1.1",
+                "comment": "Text in footer: \"Except where forbidden by the original sources...\"; how these interact is not clear. There is no indication of which data has what sources, so reusability cannot be determined."
             },
             {
                 "criteria": "C.1",
                 "comment": "The scope of the API is not clear and the data downloads locations are apparently not public."
-            },
-            {
-                "criteria": "D.1.2",
-                "comment": "While the license of original Monarch work is CC-BY-3.0, there is no indication of how this interacts with upstream licenses and what they are."
-            },
-            {
-                "criteria": "E.1.2",
-                "comment": "While the license of original Monarch work is CC-BY-3.0, there is no indication of how this interacts with upstream licenses and what they are."
             }
         ],
         "license-commentary": [
@@ -1369,7 +1491,7 @@
         "license-link": "http://phenome.jax.org/about/termsofuse",
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "Custom license, yet consistent."
             }
         ],
@@ -1443,7 +1565,7 @@
         ],
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "Custom license, but consistent."
             },
             {
@@ -1495,7 +1617,7 @@
         ],
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "Custom license, but consistent."
             },
             {
@@ -1535,38 +1657,18 @@
                 "location": "ftp://ftp.ncbi.nih.gov/gene/"
             }
         ],
-        "license": "custom",
+        "license": "inconsistent",
         "license-type": "unknown",
         "license-link": "http://www.ncbi.nlm.nih.gov/home/about/policies.shtml",
         "license-issues": [
             {
-                "criteria": "A.2",
-                "comment": "The license apparently uses language to declare something similar to \"public domain\", but with the caveat that it may contain data that is otherwise."
-            },
-            {
-                "criteria": "B.1",
-                "comment": "This is judged to be a violation as any (re)use would depend on negotiating with all upstream copyright holders, which are not presented."
-            },
-            {
-                "criteria": "B.2.1",
-                "comment": "It is implied that their license does not cover all data."
-            },
-            {
-                "criteria": "B.2.2",
-                "comment": "Could not find an explicit \"clean\" version of the data in the downloads."
-            },
-            {
-                "criteria": "D.1.2",
-                "comment": "There is no apparent way to guarantee usage without possibly violating copyright."
-            },
-            {
-                "criteria": "E.1.2",
-                "comment": "There is no apparent way to guarantee usage without possibly violating copyright."
+                "criteria": "A.1.1",
+                "comment": "The license apparently uses language to declare something similar to \"public domain\", but with the caveat that it may contain data that is otherwise. This is judged to be a violation as any (re)use would depend on negotiating with all upstream copyright holders, which are not presented. It is implied that their license does not cover all data and could not find an explicit \"clean\" version of the data in the downloads."
             }
         ],
         "license-commentary": [
             "We specifically avoided the more general operation of the EUtils suite, focusing on the provided downloads.",
-            "The following statements from the license page seem to support a custom \"hands off\" approach. To was difficult to decide if this was \"restrictive\" or \"unknown.",
+            "The following statements from the license page seem to support a custom \"hands off\" approach. To was difficult to decide if this was \"restrictive\" or \"unknown\" (although inconsistent in practice).",
             "...NCBI itself places no restrictions on the use or distribution of the data contained therein. Nor do we accept data when the submitter has requested restrictions on reuse or redistribution...",
             "...some submitters of the original data...may claim patent, copyright, or other intellectual property rights in all or a portion of the data (that has been submitted)...",
             "...NCBI cannot provide comment or unrestricted permission concerning the use, copying, or distribution of the information contained in the molecular databases..."
@@ -1589,7 +1691,7 @@
             "protein-related data",
             "protein functional data",
             "protein-protein interaction",
-            "sub-cellular location"
+            "subcellular location"
         ],
         "data-access": [
             {
@@ -1642,10 +1744,15 @@
             "virus evolution"
         ],
         "data-access": [],
-        "license": "unknown",
-        "license-type": "unknown",
+        "license": "unlicensed",
+        "license-type": "copyright",
         "license-link": "TODO",
-        "license-issues": [],
+        "license-issues": [
+            {
+                "criteria": "A.1.2",
+                "comment": "Could not find any clear terms on any searched pages. See commentary."
+            }
+        ],
         "license-commentary": [
             "This is apparently not a public data resource: it is consuming open science, but producing nothing for downstream. I have checked the three non-application pages and there is no data, downloads, or copyright beyond software: /, /about, and /methods.",
             "From the site: This work is made possible by the open sharing of genetic data by research groups from all over the world. We gratefully acknowledge their contributions."
@@ -1721,7 +1828,7 @@
         "license-hat-used": "false",
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "The license at link is custom."
             },
             {
@@ -1780,7 +1887,7 @@
         "license-link": "http://oncokb.org/#/terms",
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "While custom, the terms are quite clear."
             },
             {
@@ -1832,7 +1939,7 @@
         ],
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "Non-standard/custom license."
             },
             {
@@ -1952,7 +2059,7 @@
         "source-type": "repository",
         "status": "complete",
         "data-field": "biology",
-        "data-type": "protein familys",
+        "data-type": "protein families",
         "data-categories": [
             "protein family alignments",
             "HMMs"
@@ -1990,7 +2097,7 @@
     },
     {
         "id": "pharos",
-        "description": "",
+        "description": "Pharos is the user interface to the Knowledge Management Center (KMC) for the Illuminating the Druggable Genome (IDG) program...",
         "last-curated": "2017-12-03",
         "source": "Pharos",
         "source-link": "https://pharos.nih.gov/",
@@ -2013,14 +2120,14 @@
                 "location": "http://juniper.health.unm.edu/tcrd/download/"
             }
         ],
-        "license": "CC-BY-SA-4.0",
-        "license-type": "copyleft",
+        "license": "inconsistent",
+        "license-type": "unknown",
         "license-link": "http://juniper.health.unm.edu/tcrd/download/README",
         "license-hat-used": "false",
         "license-issues": [
             {
                 "criteria": "A.1.1",
-                "comment": "While any novel data is under a CC license, the integrated resources are under whatever license the upstream is, with the user expected to sort it out."
+                "comment": "While any novel data is under a CC license (CC-BY-SA-4.0), the integrated resources are under whatever license the upstream is, with the user expected to sort it out."
             }
         ],
         "license-commentary": [
@@ -2059,8 +2166,8 @@
                 "location": "http://www.pombase.org/downloads"
             }
         ],
-        "license": "unknown",
-        "license-type": "unknown",
+        "license": "unlicensed",
+        "license-type": "copyright",
         "license-link": "TODO",
         "license-issues": [
             {
@@ -2147,7 +2254,7 @@
         "license-link": "http://rgd.mcw.edu/wg/home/disclaimer",
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "The licensing page seems to use custom verbiage."
             },
             {
@@ -2240,7 +2347,7 @@
         "license-link": "https://sites.google.com/view/yeastgenome-help/about",
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "The licensing uses custom verbiage, as well as being somewhat hidden. See commentary."
             },
             {
@@ -2409,7 +2516,7 @@
         "license-hat-used": "false",
         "license-issues": [
             {
-                "criteria": "A.2",
+                "criteria": "A.2.2",
                 "comment": "While the linked terms page states that all WikiPathways data is CC0, the \\\"Redistributing\\\" states that: \\\"...you are not allowed to charge for the content it self [sic].\\\""
             }
         ],
@@ -2474,7 +2581,7 @@
                 "location": "http://www.wormbase.org/about/userguide/for_developers/api-rest#01--10"
             }
         ],
-        "license": "custom",
+        "license": "inconsistent",
         "license-type": "unknown",
         "license-link": "http://www.wormbase.org/about/policies#2--10",
         "license-issues": [
@@ -2509,8 +2616,8 @@
         "license-link": "http://zfin.org/warranty.html",
         "license-issues": [
             {
-                "criteria": "A.2",
-                "comment": "Custom license with non academic and non research use restrictions."
+                "criteria": "A.2.2",
+                "comment": "Custom license with non-academic and non-research use restrictions."
             },
             {
                 "criteria": "B.1",

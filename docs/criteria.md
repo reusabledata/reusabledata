@@ -13,7 +13,7 @@ entities may have different results in the license commentary.
 ## <span id="criteria-A">A) License is public, discoverable, and standard</span>
 
 **Rationale:** All data sources should publicly state their terms of
-use in an easy-to-find and non-ambiguous manner.
+use in an easy-to-find and unambiguous manner.
 
 - <span id="criteria-A.1">**A.1**) Does the resource have a *single* license?</span>
     - Does the resource’s data area itself (if applicable) have any license information?
@@ -25,11 +25,12 @@ use in an easy-to-find and non-ambiguous manner.
     - Decision point:
         - Yes, I found a single license: → <span class="half-star">**HALF STAR**</span> → <a href="#criteria-A.2">**A.2**</a>
         - <span id="criteria-A.1.1">**A.1.1**</span>) No, I found multiple different licenses (i.e. conflicting licenses) and the data cannot be broken easily into multiple individual resources for separate evaluation; the ambiguity here will short circuit further evaluation of the license: → <span class="no-star">**NO STARS**</span> → <a href="#criteria-C">**C *and only C*<span></span>**</a>, *no other stars can be awarded in this case*.
-        - <span id="criteria-A.1.2">**A.1.2**</span>) No, I could not find license information in a reasonable location (i.e. license is missing); note that while technically the contents are now covered by default copyright protections in the US, the ambiguity here will short circuit further evaluation of the license: → <span class="no-star">**NO STARS**</span> → <a href="#criteria-C">**C *and only C*<span></span>**</a>, *no other stars can be awarded in this case*.
+        - <span id="criteria-A.1.2">**A.1.2**</span>) No, I could not find license information in a reasonable location (i.e. license is missing); note that while technically the contents are now covered by default copyright protections in the US, the ambiguity and lack of intent will short circuit further evaluation of the license as clarification and negotiation would be needed: → <span class="no-star">**NO STARS**</span> → <a href="#criteria-C">**C *and only C*<span></span>**</a>, *no other stars can be awarded in this case*.
 <br />*Note: If you do NOT find a license or terms using above methods, and happen to find a license using other methods (e.g. via GitHub, Google, etc.), DO make a note of where it was found--we may expand the likely locations in the future. At this point, reasonable discoverability is key for the star, but a found license can still be used when looking at other star criteria. Also note, if you find a single license but it is internally inconsistent, this internal inconsistency is evaluated in **B**, not **A**.*
 - <span id="criteria-A.2">**A.2**</span>) Does the resource use a standard license?
-    - Yes, it is as standard license: → <span class="half-star">**add HALF STAR to score from A.1**</span> → <a href="#criteria-B">**B**</a>
-    - No, it is a custom or non-standard license, including public domain declarations: → <span class="no-star">**NO STARS**</span> → <a href="#criteria-B">**B**</a>
+    - Yes, it is as standard license (referenced or copied with only right's holder declaration modifications from a public template), not including public domain declarations: → <span class="half-star">**add HALF STAR to score from A.1**</span> → <a href="#criteria-B">**B**</a>
+    - <span id="criteria-A.2.1">**A.2.1**</span>) Is it a public domain declaration? The public domain is a legal concept in many jurisdictions, including the US, rather than a license. While a public domain declaration may work well in some cases, often has very good intent, and could be considered a "standard", ambiguities, the need for legal clarification, and international portability issues make it problematic for our purposes versus a more standard licensing statement. Please see discussions at the [Creative Commons](https://wiki.creativecommons.org/wiki/Public\_domain) and [Stanford University Libraries](https://fairuse.stanford.edu/overview/public-domain/welcome/) for more background. If yes: → <span class="no-star">**NO STARS**</span> → <a href="#criteria-B">**B**</a>
+    - <span id="criteria-A.2.1">**A.2.2**</span>) No, it is a custom or non-standard license: → <span class="no-star">**NO STARS**</span> → <a href="#criteria-B">**B**</a>
 - Example list of standard licenses; also see <a href="license-types.html">license type</a> discussion:
     - Public domain declaration → No, see [discussion](license-types.html#publicdomain)
     - Any [Creative Commons license](https://creativecommons.org/licenses/) → Yes
@@ -81,7 +82,7 @@ In the case that a resource holds multiple kinds of content (software, ontologie
     - Unprotected HTTP/S access for an API or downloads → Yes
     - Access by API key for analytics → Yes
     - Access by API key for access control → No
-    - Access by API key for access control, but with downloads available allowing timely complete data injest → Yes
+    - Access by API key for access control, but with downloads available allowing timely complete data ingest → Yes
     - Time/size limited access to data that functionally prevents timely complete data ingest → No
 
 ## <span id="criteria-D">D) License has little or no restrictions on kinds of (re)use</span>

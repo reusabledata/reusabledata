@@ -11,7 +11,7 @@ data-categories:
     - 'disease-phenotype association'
     - 'gene-disease association'
     - 'variant-disease association'
-data-access: 
+data-access:
     - type: api
       location: 'https://omim.org/api'
     - type: download
@@ -21,7 +21,7 @@ license-type: restrictive
 license-link: 'http://www.omim.org/help/agreement'
 license-hat-used: "false"
 license-issues:
-    - criteria: A.2
+    - criteria: A.2.2
       comment: 'The license at link is custom.'
     - criteria: B.1
       comment: 'Agreement section 13 requires downloads to be updated by downstream; section 14 discussion arbitrary API key revocation.'

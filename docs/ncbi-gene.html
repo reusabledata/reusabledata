@@ -113,7 +113,7 @@
 		 violations</a>.
 	       </dd>
 	       <dd class="curated-data">
-		 1.5
+		 1
 	       </dd>
 
 	       <!-- description -->
@@ -158,7 +158,7 @@
 	       <dd class="field-explanation">
 		 (Optional) How the resource relates to the data it
 		 contains.  Current allowable entries are: "unknown",
-		 "repository", and "source", and "integrator".
+		 "repository", "source", "integrator", and "warehouse".
 	       </dd>
 	       <dd class="curated-data">
 		 TBD
@@ -229,12 +229,12 @@
 	       </dt>
 	       <dd class="field-explanation">
 		  The license that is used by the resource. We use
-		  SPDX where we can (https://spdx.org/licenses/) or:
-		  "unknown", "public domain", "all rights reserved",
-		  or "custom".
+		  <a href="https://spdx.org/licenses/">SPDX</a> where
+		  we can or: "inconsistent", "public domain", "unlicensed",
+		  "all rights reserved", or "custom".
 	       </dd>
 	       <dd class="curated-data">
-		 custom
+		 inconsistent
 	       </dd>
 
 	       <!-- license-type -->
@@ -245,9 +245,9 @@
 		 The type of license that is being used. This will be
 		 to define compatible data pools in the future; we
 		 only use the grossest terms now.  If it is not known
-		 "TODO" is used. Current possible values are:
-		 "unknown", "copyleft", "permissive", "public domain",
-		 "copyright", "restrictive", or "closed pool".
+		 "unknown" is used. Current possible values are:
+		 "unknown", "unlicensed", "copyleft", "permissive",
+		 "public domain", "copyright", "restrictive", or "private pool".
 	       </dd>
 	       <dd class="curated-data">
 		 <a href="license-types.html#unknown">unknown</a>
@@ -306,12 +306,7 @@
 		 license-commentary field.
 	       </dd>
 	       <dd class="curated-data">
-		 <a href="criteria.html#criteria-A.2">Criteria A.2</a>: The license apparently uses language to declare something similar to &quot;public domain&quot;, but with the caveat that it may contain data that is otherwise. <br />
-		 <a href="criteria.html#criteria-B.1">Criteria B.1</a>: This is judged to be a violation as any (re)use would depend on negotiating with all upstream copyright holders, which are not presented. <br />
-		 <a href="criteria.html#criteria-B.2.1">Criteria B.2.1</a>: It is implied that their license does not cover all data. <br />
-		 <a href="criteria.html#criteria-B.2.2">Criteria B.2.2</a>: Could not find an explicit &quot;clean&quot; version of the data in the downloads. <br />
-		 <a href="criteria.html#criteria-D.1.2">Criteria D.1.2</a>: There is no apparent way to guarantee usage without possibly violating copyright. <br />
-		 <a href="criteria.html#criteria-E.1.2">Criteria E.1.2</a>: There is no apparent way to guarantee usage without possibly violating copyright. <br />
+		 <a href="criteria.html#criteria-A.1.1">Criteria A.1.1</a>: The license apparently uses language to declare something similar to &quot;public domain&quot;, but with the caveat that it may contain data that is otherwise. This is judged to be a violation as any (re)use would depend on negotiating with all upstream copyright holders, which are not presented. It is implied that their license does not cover all data and could not find an explicit &quot;clean&quot; version of the data in the downloads. <br />
 	       </dd>
 
 	       <!-- license-commentary -->
@@ -326,7 +321,7 @@
 	       </dd>
 	       <dd class="curated-data">
 		 &#8226; We specifically avoided the more general operation of the EUtils suite, focusing on the provided downloads. <br />
-		 &#8226; The following statements from the license page seem to support a custom &quot;hands off&quot; approach. To was difficult to decide if this was &quot;restrictive&quot; or &quot;unknown. <br />
+		 &#8226; The following statements from the license page seem to support a custom &quot;hands off&quot; approach. To was difficult to decide if this was &quot;restrictive&quot; or &quot;unknown&quot; (although inconsistent in practice). <br />
 		 &#8226; ...NCBI itself places no restrictions on the use or distribution of the data contained therein. Nor do we accept data when the submitter has requested restrictions on reuse or redistribution... <br />
 		 &#8226; ...some submitters of the original data...may claim patent, copyright, or other intellectual property rights in all or a portion of the data (that has been submitted)... <br />
 		 &#8226; ...NCBI cannot provide comment or unrestricted permission concerning the use, copying, or distribution of the information contained in the molecular databases... <br />

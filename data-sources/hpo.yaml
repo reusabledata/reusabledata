@@ -7,14 +7,14 @@ data-field: biology
 data-type: human
 data-categories:
     - 'disease-phenotype association'
-data-access: 
+data-access:
     - type: download
       location: http://human-phenotype-ontology.github.io/downloads.html
 license: custom
 license-type: restrictive
 license-link: 'http://human-phenotype-ontology.github.io/license.html'
 license-issues:
-    - criteria: A.2
+    - criteria: A.2.2
       comment: HPO is copyrighted to protect ontologies and all changes must be made by hpo developers.
     - criteria: D.1.2
       comment: Restricted downstream use. May not be edited.

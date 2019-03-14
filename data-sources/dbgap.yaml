@@ -10,7 +10,7 @@ data-categories:
 data-access:
   - type: download
     location: ftp://ftp.ncbi.nlm.nih.gov/dbgap/
-license: unknown
+license: inconsistent
 license-type: unknown
 license-link: 'https://grants.nih.gov/grants/guide/notice-files/NOT-OD-14-124.html'
 license-issues:

@@ -6,7 +6,7 @@ source-link: 'http://pfam.xfam.org'
 source-type: "repository"
 status: "complete"
 data-field: 'biology'
-data-type: 'protein familys'
+data-type: 'protein families'
 data-categories:
   - 'protein family alignments'
   - 'HMMs'

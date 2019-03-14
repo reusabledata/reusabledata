@@ -11,9 +11,9 @@ data-access:
 license: custom
 license-type: restrictive
 license-link: http://zfin.org/warranty.html
-license-issues: 
-    - criteria: A.2
-      comment: Custom license with non academic and non research use restrictions.
+license-issues:
+    - criteria: A.2.2
+      comment: Custom license with non-academic and non-research use restrictions.
     - criteria: B.1
       comment: The license explicity requires intervention for downstream reuse and redistribution.
     - criteria: D.1.2

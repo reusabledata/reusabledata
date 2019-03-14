@@ -9,10 +9,12 @@ data-categories:
     - 'viral phylogeny'
     - 'virus evolution'
 data-access: []
-license: unknown
-license-type: unknown
+license: unlicensed
+license-type: copyright
 license-link: 'TODO'
-license-issues: []
+license-issues:
+  - criteria: A.1.2
+    comment: "Could not find any clear terms on any searched pages. See commentary."
 license-commentary:
     - 'This is apparently not a public data resource: it is consuming open science, but producing nothing for downstream. I have checked the three non-application pages and there is no data, downloads, or copyright beyond software: /, /about, and /methods.'
     - 'From the site: This work is made possible by the open sharing of genetic data by research groups from all over the world. We gratefully acknowledge their contributions.'

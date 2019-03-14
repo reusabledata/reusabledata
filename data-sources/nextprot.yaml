@@ -11,7 +11,7 @@ data-categories:
   - 'protein-related data'
   - 'protein functional data'
   - 'protein-protein interaction'
-  - 'sub-cellular location'
+  - 'subcellular location'
 data-access:
   - type: download
     location: 'ftp://ftp.nextprot.org/pub/'

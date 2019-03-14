@@ -18,7 +18,7 @@ license: custom
 license-type: permissive
 license-link: 'https://www.genome.gov/27528022/encode-consortium-data-release-policy/'
 license-issues:
-     - criteria: A.2
+     - criteria: A.2.2
        comment: "Easy and perfectly (re)usable, yet custom."
 license-commentary:
     - 'External data users may freely download, analyze and publish results based on any ENCODE data without restrictions as soon as they are released.'

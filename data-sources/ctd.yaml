@@ -16,7 +16,7 @@ license: custom
 license-type: restrictive
 license-link: 'http://ctdbase.org/about/legal.jsp'
 license-issues:
-    - criteria: A.2
+    - criteria: A.2.2
       comment: Custom license with interesting use restrictions.
     - criteria: B.1
       comment: For quality control purposes, you must provide CTD with periodic access to your publication of our data.

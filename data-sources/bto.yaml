@@ -7,22 +7,24 @@ source-type: "source"
 status: "complete"
 data-field: 'biology'
 data-type: 'ontology'
-data-categories: 
+data-categories:
   - 'enzyme sources'
 data-access:
   - type: download
     location: 'http://www.brenda-enzymes.info/ontology/tissue/tree/update/update_files/BrendaTissueOBO'
-license: "CC-BY"
+license: "custom"
 license-type: "permissive"
 license-link: 'http://www.brenda-enzymes.info/ontology/tissue/tree/update/update_files/BrendaTissueOBO'
 license-hat-used: "false"
 license-issues:
+  - criteria: 'A.2.2'
+    comment: 'While they are obviously attempting to be permissive by listing \"CC-BY\", this does not map onto any of the number CC-BY versions (e.g. 3.0 or 4.0), thereby, breaking the reference and meaning that we would have to contact for them for terms).'
   - criteria: 'C.2'
     comment: 'Once one knows the location of the BTO (ontology file), access is fine. However, we were unable to locate the ontology file after some searching through the main BRENDA website; most text would imply there is no free ontology file to be had.'
 license-commentary:
   - 'The relatively high score is due to knowing where the ontology exists and knowing to look at the header--normal use of the site seems to lead around restricted APIs webpages containing; the free ontology file is hiding in there.'
   - 'Typcial of this is: \"Use of this online version of BRENDA is free for academic research only. Commercial use or download access requires a license. See terms of use.\" (http://bto.brenda-enzymes.org/copy.php)'
-  - 'The \"CC-BY\" declaration in the ontology file header should be versioned or linked.'
+  - 'The \"CC-BY\" declaration in the ontology file header should be versioned or linked. Due to not knowing what version, we have marked it as a custom; obviously intended to be under very permissive terms.'
 was-controversial: "false"
 contacts:
   - 'http://support.brenda-enzymes.org/open.php'

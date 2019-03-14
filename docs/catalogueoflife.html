@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <title>Catalogue of Life(catalogueoflife)</title>
+
+     <link rel="shortcut icon" href="logo-circle.ico" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" crossorigin="anonymous">
+     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.0/vue.js"></script> -->
+
+     <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <!-- <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top"> -->
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" href="index.html#home">
+	<img src="logo-circle.png" height="30" class="d-inline-block align-top" alt="">
+	(Re)usable Data Project
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="index.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Learn more</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <!-- <a class="dropdown-item" href="index.html#home">Home</a> -->
+              <a class="dropdown-item" href="index.html#who-we-are">Who we are</a>
+              <a class="dropdown-item" href="index.html#what-this-is">What this is</a>
+              <a class="dropdown-item" href="index.html#our-criteria">Criteria overview</a>
+              <a class="dropdown-item" href="index.html#our-sources-data">Our sources data</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="index.html" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Evaluation</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown02">
+              <a class="dropdown-item" href="criteria.html" id="nav-crit" aria-haspopup="true" aria-expanded="false">Criteria details</a>
+              <a class="dropdown-item" href="license-types.html" id="nav-lc" aria-haspopup="true" aria-expanded="false">License categories</a>
+              <a class="dropdown-item" href="reading.html" id="nav-rl" aria-haspopup="true" aria-expanded="false">Reading list</a>
+            </div>
+	  </li>
+          <li class="nav-item">
+            <a class="nav-link" href="explore.html" id="nav02" aria-haspopup="true" aria-expanded="false">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" id="nav03" aria-haspopup="true" aria-expanded="false">About</a>
+          </li>
+          <!-- <li class="nav-item"> -->
+          <!--   <a class="nav-link" href="https://github.com/reusabledata/reusabledata/issues/new" id="nav03" aria-haspopup="true" aria-expanded="false">Contact</a> -->
+          <!-- </li> -->
+        </ul>
+        <form class="form-inline my-2 my-lg-0"
+	      action="https://google.com/search"
+	      method="GET">
+          <input class="form-control mr-sm-2"
+		 placeholder="Site search"
+		 type="text"
+		 name="q">
+          <input type="hidden"
+		 name="sitesearch"
+		 value="reusabledata.org">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">&#x1f50d;</button>
+        </form>
+      </div>
+    </nav>
+
+    
+
+    <!-- spacer -->
+    <div style="height:32px;"></div>
+
+    <div class="container"><!-- Start main content container. -->
+
+      <!-- <div class="row"> -->
+      <!-- 	<div class="col-xl-6"> -->
+      <div class="card">
+	<div class="card-block">
+	  <!-- <h4 class="card-title">What this is</h4> -->
+	  <!-- -->
+<!-- Please note that this template, whatever the form, should follow -->
+<!-- source.schema.yaml as closely as possible.
+     <!-- -->
+
+     <div class="container">
+
+       <!-- start who we are row -->
+       <div class="row">
+
+	 <div class="col-xl-12">
+
+	   <h1 class="card-title">Catalogue of Life - catalogueoflife</h1>
+
+	   <p>
+	     <dl>
+
+	       <!-- SPECIAL: grade-automatic -->
+	       <dt class="explanation-header">
+		 Grade
+	       </dt>
+	       <dd class="field-explanation">
+		 The grade for the resource as automatically
+		 determined by the <a href="criteria.html">criteria
+		 violations</a>.
+	       </dd>
+	       <dd class="curated-data">
+		 2
+	       </dd>
+
+	       <!-- description -->
+	       <dt class="explanation-header">
+		 Description
+	       </dt>
+	       <dd class="field-explanation">
+		 A full description of the resource from the resource
+		 itself, if possible.
+	       </dd>
+	       <dd class="curated-data">
+		 The Catalogue of Life is the most comprehensive and authoritative global index of species currently available. It consists of a single integrated species checklist and taxonomic hierarchy. The Catalogue holds essential information on the names, relationships and distributions of over 1.6 million species.
+	       </dd>
+
+	       <!-- last-curated -->
+	       <dt class="explanation-header">
+		 Last curated
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) The ISO 8601 date of when the resource was
+		 last curated.
+	       </dd>
+	       <dd class="curated-data">
+		 2018-02-18
+	       </dd>
+
+	       <!-- source-link -->
+	       <dt class="explanation-header">
+		 Location
+	       </dt>
+	       <dd class="field-explanation">
+		 URL for the resource.
+	       </dd>
+	       <dd class="curated-data">
+		 <a href="http:&#x2F;&#x2F;catalogueoflife.org&#x2F;">http:&#x2F;&#x2F;catalogueoflife.org&#x2F;</a>
+	       </dd>
+
+	       <!-- source-type -->
+	       <dt class="explanation-header">
+		 Source type
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) How the resource relates to the data it
+		 contains.  Current allowable entries are: "unknown",
+		 "repository", "source", "integrator", and "warehouse".
+	       </dd>
+	       <dd class="curated-data">
+		 source
+	       </dd>
+
+	       <!-- status -->
+	       <dt class="explanation-header">
+		 Curation status
+	       </dt>
+	       <dd class="field-explanation">
+		 Whether or not annotation is complete on this
+		 resource.  Current allowable entries are: "complete",
+		 "incomplete", and "nonpublic".
+	       </dd>
+	       <dd class="curated-data">
+		 complete
+	       </dd>
+
+	       <!-- data-field -->
+	       <dt class="explanation-header">
+		 Field
+	       </dt>
+	       <dd class="field-explanation">
+		 The area of research for the resource.
+	       </dd>
+	       <dd class="curated-data">
+		 biology
+	       </dd>
+
+	       <!-- data-type -->
+	       <dt class="explanation-header">
+		 Type
+	       </dt>
+	       <dd class="field-explanation">
+		 The type of data the resource contains.
+	       </dd>
+	       <dd class="curated-data">
+		 custom
+	       </dd>
+
+	       <!-- data-categories -->
+	       <dt class="explanation-header">
+		 Categories
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) Tags to describe the resource and its data.
+	       </dd>
+	       <dd class="curated-data">
+		 biodiversity <br />
+		 distribution <br />
+		 biogeography <br />
+		 taxonomy <br />
+		 ontology <br />
+	       </dd>
+
+	       <!-- data-access -->
+	       <dt class="explanation-header">
+		 Access
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) Links to the resource's data.
+	       </dd>
+	       <dd class="curated-data">
+		 <a href="http:&#x2F;&#x2F;webservice.catalogueoflife.org&#x2F;col&#x2F;webservice">api</a> <br />
+		 <a href="http:&#x2F;&#x2F;catalogueoflife.org&#x2F;content&#x2F;annual-checklist-archive">download</a> <br />
+	       </dd>
+
+	       <!-- license -->
+	       <dt class="explanation-header">
+		 License
+	       </dt>
+	       <dd class="field-explanation">
+		  The license that is used by the resource. We use
+		  <a href="https://spdx.org/licenses/">SPDX</a> where
+		  we can or: "inconsistent", "public domain", "unlicensed",
+		  "all rights reserved", or "custom".
+	       </dd>
+	       <dd class="curated-data">
+		 custom
+	       </dd>
+
+	       <!-- license-type -->
+	       <dt class="explanation-header">
+		 License type
+	       </dt>
+	       <dd class="field-explanation">
+		 The type of license that is being used. This will be
+		 to define compatible data pools in the future; we
+		 only use the grossest terms now.  If it is not known
+		 "unknown" is used. Current possible values are:
+		 "unknown", "unlicensed", "copyleft", "permissive",
+		 "public domain", "copyright", "restrictive", or "private pool".
+	       </dd>
+	       <dd class="curated-data">
+		 <a href="license-types.html#restrictive">restrictive</a>
+	       </dd>
+
+	       <!-- license-link -->
+	       <dt class="explanation-header">
+		 License location
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) The link to the resource license.
+	       </dd>
+	       <dd class="curated-data">
+		 <a href="http:&#x2F;&#x2F;catalogueoflife.org&#x2F;content&#x2F;terms-use">http:&#x2F;&#x2F;catalogueoflife.org&#x2F;content&#x2F;terms-use</a>
+	       </dd>
+
+	       <!-- license-hat-used -->
+	       <dt class="explanation-header">
+		 Focused curation
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) Setting this flag to true indicates that
+		 the licensing was combinatorially complicated enough
+		 (as is the case in some commercial licenses) that the
+		 curator chose to wear a single "hat" during the
+		 process. From the site text: "While we try to cover
+		 as much of the licensing possibilities of a data
+		 resource that we can, in a few cases we may choose a
+		 particular "hat" to wear while evaluating to prevent
+		 a combinatorial explosion, which may also reduce the
+		 clarity of our curations for the community. In these
+		 cases, we may take on the role of a (1)
+		 non-commercial (2) academic (3) group that is (4)
+		 based in the US and trying to (5) create an
+		 aggregating resource, noting that other entities may
+		 have different results in the license commentary."
+	       </dd>
+	       <dd class="curated-data">
+		 false
+	       </dd>
+
+	       <!-- license-issues -->
+	       <dt class="explanation-header">
+		 Issues
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) Structured issues with the license.  For
+		 every issue discovered with a resource, there should
+		 be a corresponding item in the license-issues field
+		 that marks the /exact/ violation, along with any
+		 comments. This field can be used by resources as the
+		 first step to improvement, as well as clarify any
+		 surrounding circumstances.  Any issues or thoughts
+		 about a resource that do not slot into one of the
+		 criteria violations can go into the
+		 license-commentary field.
+	       </dd>
+	       <dd class="curated-data">
+		 <a href="criteria.html#criteria-A.2.2">Criteria A.2.2</a>: The resource uses custom terms. <br />
+		 <a href="criteria.html#criteria-B.1">Criteria B.1</a>: Use seems to hinge on some contact with Sp2000. For example: \&quot;If you wish to use the Catalogue of Life content on a public portal or webpage you are required to notify the Species 2000 Secretariat, and to assist with a check that the correct credits are given.\&quot; Check check assistance especially seems to violate B.1. <br />
+		 <a href="criteria.html#criteria-C.1">Criteria C.1</a>: The data \&quot;download\&quot; is quite complicated and should not actually be considered a download (see commentary). The API as given would likely require a custom spider to obtain the data in bulk. <br />
+		 <a href="criteria.html#criteria-D.1.2">Criteria D.1.2</a>: Distribution seems to be prohibited without negotiation; example on the main ToS: \&quot;Commercial use of this compilation or any of the species datasets contained within...or dissemination on the Internet, requires written permission from Species 2000 and ITIS.\&quot; <br />
+		 <a href="criteria.html#criteria-E.1.1">Criteria E.1.1</a>: Non-commercial restrictions exist on the data from the ToS. <br />
+	       </dd>
+
+	       <!-- license-commentary -->
+	       <dt class="explanation-header">
+		 Commentary
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) Further commentary on the license,
+		 possibly including the though process of the
+		 curations and things like locations of additional
+		 licenses.
+	       </dd>
+	       <dd class="curated-data">
+		 &#8226; The offered API, while possibly spiderable given a starting point, does not seem to offer bulk downloads or similarly significant metadata calls. Spiderable, but non-trivial custom code may be required. <br />
+		 &#8226; While not a violation, the credit requirements may be difficult to meet in some cases: \&quot;Credit must be given at the following three levels on all occasions that records are shown. The three levels credit the complete work, the contributing database of the record, and the expert who provides taxonomic scrutiny of the individual record.\&quot; <br />
+		 &#8226; The custom licensing terms do not seem to make clear rights around derivation and modification. <br />
+		 &#8226; The download is actually a Linux virtual machine in a custom wrapper that tries to drive interaction with a browser on port 8080; this is rather onerous and I do not think this could be considered a \&quot;download\&quot; so much as an \&quot;offline\&quot; site clone or application. <br />
+		 &#8226; Embedded in the \&quot;download\&quot; is further elaboration on the license, which seem to contain terms about internal use as well: \&quot;Use of this compilation or any of the databases contained within it by commercial organisations requires a written agreement from Species 2000 and ITIS. This applies when it is used commercially for external services, products or publications and when it is used to provide internal services within an organisation.\&quot; <br />
+	       </dd>
+
+	       <!-- was-controversial -->
+	       <dt class="explanation-header">
+		 Controversial
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) Marker noting that there was some extended
+		 internal discussion or controversy about the
+		 evaluation of the licensing terms. If this is marked
+		 at "true", the controversy, or a link to a permanent
+		 archive of the controversy, must be sufficiently
+		 contained in the "license-commentary" to reconstruct
+		 the issues.
+	       </dd>
+	       <dd class="curated-data">
+		 false
+	       </dd>
+
+	       <!-- contacts -->
+	       <dt class="explanation-header">
+		 Contacts
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) Resource contact information, link, email,
+		 or whatever is public.
+	       </dd>
+	       <dd class="curated-data">
+		 sp2000@sp2000.org  <br />
+	       </dd>
+
+	       <!-- grants -->
+	       <dt class="explanation-header">
+		 Grants
+	       </dt>
+	       <dd class="field-explanation">
+		 (Optional) Semi-structured list of supporting grants.
+	       </dd>
+	       <dd class="curated-data">
+		 TBD
+	       </dd>
+
+	     </dl>
+	   </p>
+
+	 </div>
+
+       </div> <!-- end row -->
+
+     </div><!-- Done container. -->
+
+	  <!-- </div> -->
+	</div>
+      </div>
+      <!--   </div> -->
+      <!-- </div> -->
+
+    <!-- spacer -->
+    <div style="height:32px;"></div>
+
+    <div class="row">
+
+	<div id="our-sources-data" class="col-xl-12">
+
+	  <p>
+	    <small>
+	      All copyrightable materials on this site are ©
+	      2017 <a href="http://reusabledata.org/" title="The
+	      (Re)usable Data Project website">the (Re)usable Data
+	      Project</a> under the
+	      <a href="license.txt">CC-BY
+	      4.0</a> license.
+	    </small>
+	    <br />
+	    <small>
+	    ReusableData.org is funded by the National Center for
+	    Advancing Translational Sciences
+	    (<a href="https://ncats.nih.gov/">NCATS</a>) <a href="http://grantome.com/grant/NIH/OT3-TR002019-01">OT3
+	    TR002019</a> as part of
+	    the <a href="https://ncats.nih.gov/translator">Biomedical
+	    Data Translator project</a>.
+	    </small>
+	    <br />
+	    <small>
+	      The (Re)usable Data Project would like to acknowledge
+	      the assistance of many more people than can be listed
+	      here. Please visit the <a href="about.html">about
+	      page</a> for the full list.
+	    </small>
+	  </p>
+
+	</div>
+
+      </div><!-- Done container. -->
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script>
+    <script type="text/javascript" src="RUDBundle.js"></script>
+    <script type="text/javascript">
+      var global_data = ;
+      var global_summary_data = ;
+      // Defer all execution to RUDBundle.js.
+    </script>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106654450-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-106654450-1');
+    </script>
+
+  </body>
+
+</html>

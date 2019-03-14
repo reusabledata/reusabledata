@@ -12,8 +12,8 @@ data-categories:
 data-access:
   - type: download
     location: http://dictybase.org/Downloads/
-license: unknown
-license-type: unknown
+license: unlicensed
+license-type: copyright
 license-link: TODO
 license-issues:
   - criteria: A.1.2

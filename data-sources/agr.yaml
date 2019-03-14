@@ -13,8 +13,8 @@ data-categories:
 data-access: []
 #  - type: download
 #    location: 'http://'
-license: "unknown"
-license-type: "unknown"
+license: "unlicensed"
+license-type: "copyright"
 license-link: 'TODO'
 license-hat-used: "false"
 license-issues:
