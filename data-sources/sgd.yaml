@@ -29,6 +29,7 @@ license-commentary:
   - 'The API did not seem to offer any way of filter out things with other licenses.'
   - 'Without ascending, noting that various upstream for the SGD API could have other terms: https://yeastmine.yeastgenome.org/yeastmine/dataCategories.do'
 was-controversial: "false"
+provisional: "true"
 last-curated: "2019-03-01"
 grants:
   - label: "The SGD is funded by the US National Institutes of Health, National Human Genome Research Institute (NHGRI), [U41HG001315]. Our efforts are also supported via the Gene Ontology Consortium (GOC) funded by the NHGRI [U41HG002273] and the Alliance of Genome Resources supplement via WormBase [U41HG02223-17S1]."
