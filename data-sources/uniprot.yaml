@@ -1,6 +1,6 @@
 id: 'uniprotkb'
 description: 'The mission of UniProt is to provide the scientific community with a comprehensive, high-quality and freely accessible resource of protein sequence and functional information. Includes: UniProtKB, UniRef, UniParc, and Proteomes.'
-last-curated: '2017-12-03'
+last-curated: '2019-03-01'
 source: 'UniProt'
 source-link: 'http://www.uniprot.org'
 source-type: "source"
@@ -13,17 +13,14 @@ data-categories:
 data-access:
   - type: download
     location: 'http://www.uniprot.org/downloads'
-license: "CC-BY-ND-3.0"
-license-type: "restrictive"
-license-link: 'http://www.uniprot.org/help/license'
+license: "CC-BY-4.0"
+license-type: "permissive"
+license-link: 'https://www.uniprot.org/help/license'
 license-hat-used: "false"
-license-issues:
-  - criteria: 'D.1.2'
-    comment: 'CC BY-ND prevents some types of reuse, such and modification and redistribution.'
-  - criteria: 'E.1.2'
-    comment: 'CC BY-ND prevents all parties from reusing the data.'
-license-commentary: []
+license-commentary:
+  - "We have chosen to apply the Creative Commons Attribution (CC BY 4.0) License to all copyrightable parts of our databases."
 was-controversial: "false"
+provisional: "true"
 contacts:
   - 'help@uniprot.org'
 grants:
