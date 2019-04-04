@@ -45,6 +45,7 @@ license-commentary:
   - 'Evaluation by taking the latter at face value, assuming that it is an encompassing license for all new work, and the remaining requires negotiation with upstream.'
   - 'The major question is whether this is an A.1.1 violation or not; also, whether NC-SA is "restrictive" or "copyleft" for our purposes.'
 was-controversial: "false"
+provisional: "true"
 contacts:
   - 'knoweng@illinois.edu'
 grants:
