@@ -1,0 +1,30 @@
+id: bgee
+source: 'Bgee'
+source-link: 'http://bgee.org'
+status: complete
+description: 'Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, Affymetrix, in situ hybridization, and EST data).'
+data-field: biomedical
+data-type: x-species
+data-categories:
+    - 'expression data'
+data-access:
+    - type: download
+      location: 'ftp://ftp.bgee.org/'
+license: unlicensed
+license-type: copyright
+license-issues:
+    - criteria: A.1.2
+      comment: 'After some search we were unable to determine the license of the non-ontology portions of the Bgee data. No explicit license statements were apparent, causing a cascade of criteria violations. In spite of this, once an access method was determined, one star was awarded accordingly for C.'
+license-commentary:
+    - 'No licensing information found in: footers; "About"; "Bgee sources" (https://bgee.org/?page=source, just a list of other resources); "How to access Bgee data"; "Gene expression calls"; "Processed expression values"'
+    - 'Our curation and ontology resources can be browsed on our GitHub page.'
+    - 'Noting that while the website does not seem to support any systematic bulk download or mention how to do so, we did stumble onto their FTP site, which works well enough for C.'
+    - 'After a bunch of browsing, I could find no licensing information at all directly on the site.'
+    - 'The GitHub repos seems to be three resources: Confidence Information Ontology (GPL3?), the Homology Ontology (GPL3?, but OBO Foundry lists as CC-BY-3.0, but not sure why), and anatomical similarity annotations (CC0).'
+    - 'Given the inconsistent licensing of the "internal" resources on GH and the lack of any licensing mentioned on the site and Bgee sources, evaluating on as no license mentioned.'
+was-controversial: "false"
+provisional: "true"
+last-curated: "2019-03-04"
+grants: []
+contacts:
+    - Bgee@sib.swiss
