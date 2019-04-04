@@ -1,0 +1,52 @@
+id: 'knoweng'
+description: 'KnowEnG enables knowledge-guided machine learning and graph mining analysis on genomic datasets using scalable cloud computation and exploration of results with interactive visualizations.'
+last-curated: '2018-03-04'
+source: 'KnowEnG'
+source-link: 'https://hub.knoweng.org/'
+source-type: "integrator"
+status: "complete"
+data-field: 'biology'
+data-type: 'x-species'
+data-categories:
+  - 'graph'
+  - 'cancer'
+  - 'gene'
+  - 'ontology'
+  - 'platform'
+  - 'protein families'
+  - 'molecular interaction'
+  - 'protein interaction'
+data-access:
+  - type: 'api'
+    location: 'https://platform.knoweng.org'
+license: "CC-BY-NC-SA-4.0"
+license-type: "restrictive"
+license-link: 'https://knoweng.org/kn-overview/'
+license-hat-used: "false"
+license-issues:
+  - criteria: 'B.2.1'
+    comment: 'Explicit statement that license only applies to new work.'
+  - criteria: 'B.2.2'
+    comment: 'I found no method of obtaining just the new work data.'
+  - criteria: 'C.1'
+    comment: 'The resource seems to be a self-contained platform; after some search, I found no bulk methods of download.'
+  - criteria: 'C.2'
+    comment: 'As C.1.'
+  - criteria: 'D.1.2'
+    comment: 'While the NC part allows for non-commercial reuse, SA has license requirements.'
+  - criteria: 'E.1.2'
+    comment: 'While the NC part allows for non-commercial reuse, SA has license requirements.'
+license-commentary:
+  - 'Platform site requires registration/login.'
+  - 'In footer of platform: "Portions licensed under CC BY ND NC 4.0 license"'
+  - 'Nothing of interest under https://platform.knoweng.org/static/#/support/about'
+  - 'For knowledge graph, found more explicit info here: https://knoweng.org/kn-overview/'
+  - 'Licensing: "This work is licensed under a Commons Attribution-Non-Commercial-ShareAlike license for academic uses only (https://creativecommons.org/license/by-nc-sa/4.0/, CC BY-NC-SA 4). Where work is the Derivative Works created by KN team from the various databases. We recommend that the researchers contact owners of the data sources directly to obtain necessary permissions and licenses to download data and/or use it in ways not envisioned in our license. The intent is for the KnowEnG system including KN and Tools to be available for free for academic use only."'
+  - 'Evaluation by taking the latter at face value, assuming that it is an encompassing license for all new work, and the remaining requires negotiation with upstream.'
+  - 'The major question is whether this is an A.1.1 violation or not; also, whether NC-SA is "restrictive" or "copyleft" for our purposes.'
+was-controversial: "false"
+provisional: "true"
+contacts:
+  - 'knoweng@illinois.edu'
+grants:
+  - label: 'The KnowEnG BD2K center is supported by grant 1U54GM114838 awarded by NIGMS through funds provided by the trans-NIH Big Data to Knowledge (BD2K) initiative'

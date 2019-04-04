@@ -133,6 +133,13 @@ us.each(data_sources, function(source){
 	if( ! violations['D.1.1'] || ! violations['E.1.1'] ){
 	    note_inconsistency(source, 'req violation issue');
 	}
+    }else if( lic === 'CC-BY-NC-SA-4.0' ){
+	if( lictype !== 'restrictive' ){
+	    note_inconsistency(source, 'lic/type mismatch');
+	}
+	if( ! violations['D.1.2'] || ! violations['E.1.2'] ){
+	    note_inconsistency(source, 'req violation issue');
+	}
     }else if( lic === 'GPL-3.0' ){
 	if( lictype !== 'copyleft' ){
 	    note_inconsistency(source, 'lic/type mismatch');
