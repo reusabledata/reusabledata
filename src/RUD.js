@@ -243,7 +243,7 @@ var LicenseStandardViewer = function(global_data, graph_id){
 	    // Figure out what category any license is in.
 	    var category_bin = 'unmapped';
 
-	    if( us.contains(['CC0-1.0', 'CC-BY-4.0', 'CC-BY-3.0', 'CC-BY-SA-4.0', 'CC-BY-SA-3.0', 'CC-BY-NC-4.0', 'CC-BY-NC-3.0', 'CC-BY-ND-4.0', 'CC-BY-ND-3.0'], lic) ){
+	    if( us.contains(['CC0-1.0', 'CC-BY-4.0', 'CC-BY-3.0', 'CC-BY-SA-4.0', 'CC-BY-SA-3.0', 'CC-BY-NC-4.0', 'CC-BY-NC-3.0', 'CC-BY-ND-4.0', 'CC-BY-ND-3.0', 'CC-BY-NC-SA-4.0'], lic) ){
 		category_bin = 'Creative Commons';
 	    }else if( us.contains(['MIT', 'GPL-3.0'], lic) ){
 		category_bin = 'OSI (standard software)';
