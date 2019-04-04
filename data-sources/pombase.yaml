@@ -12,17 +12,14 @@ data-categories:
 data-access:
   - type: download
     location: http://www.pombase.org/downloads
-license: unlicensed
-license-type: copyright
-license-link: TODO
-license-issues:
-  - criteria: A.1.2
-    comment: "Could not find any clear terms on any searched pages. See commentary."
-license-commentary:
-  - 'While there is a linked Terms of Use (https://www.ebi.ac.uk/about/terms-of-use), the "General" (section 1) and "Data Services" (section 1) parts seem to defer to the "data owners"; it is unclear if this is PomBase. No other license information could be found.'
-last-curated: "2017-10-17"
+license: CC-BY-4.0
+license-type: permissive
+license-link: https://www.pombase.org/about/terms-of-use
+license-commentary: []
+last-curated: "2019-03-01"
+provisional: "true"
 grants:
   - label: "PomBase is funded by the Wellcome Trust [104967/Z/14/Z]."
 contacts:
   - 'helpdesk@pombase.org'
-  - 'http://www.pombase.org/feedback'
+  
