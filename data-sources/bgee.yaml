@@ -23,6 +23,7 @@ license-commentary:
     - 'The GitHub repos seems to be three resources: Confidence Information Ontology (GPL3?), the Homology Ontology (GPL3?, but OBO Foundry lists as CC-BY-3.0, but not sure why), and anatomical similarity annotations (CC0).'
     - 'Given the inconsistent licensing of the "internal" resources on GH and the lack of any licensing mentioned on the site and Bgee sources, evaluating on as no license mentioned.'
 was-controversial: "false"
+provisional: "true"
 last-curated: "2019-03-04"
 grants: []
 contacts:
