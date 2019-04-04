@@ -6,7 +6,7 @@ Thank you for your interest in contributing to the curated metadata of the (Re)u
 
 The best way to propose an evaluation or make a correction for inclusion would be as a personal fork to the repo. New resources should be YAML files named after the resource ID in the `data-sources/` directory. While corrections are naturally made in place, we would suggest using the resource template (https://github.com/reusabledata/reusabledata/blob/master/data-sources/source.template) for new resources. Once created the review process can be started with the creation of a pull request. This process can be done entirely through the GitHub interface if you are not familiar with command line git.
 
-Once the pull request has been created, our system creates scores automatically from the annotations in the YAML data files, as well as performing a suite of sanity and consistency checks (using travs). Besides these mechanical issues, a pull request is typically evaluated and discussed with at least one "core" member before being accepted. The conversation about a particular proposed evaluation or change should be done withing the pull request, to keep our curation process open and followable.
+Once the pull request has been created, our system creates scores automatically from the annotations in the YAML data files, as well as performing a suite of sanity and consistency checks (using Travis CI). Besides these mechanical issues, a pull request is typically evaluated and discussed with at least one "core" member before being accepted. The conversation about a particular proposed evaluation or change should be done within the pull request, to keep our curation process open and followable.
 
 Once an addition or update has been accepted by others and has proven to not be controversial (in which case the conversation continues) it is manually added to the system and the site is updated.
 
@@ -36,7 +36,7 @@ It may also be the case that we are currently discussing the issue and would ver
 
 #### The barrier of relying on GitHub to create evaluations is very high...
 
-We understand, but are unfortnately limited in the bandwidth we can apply to this problem. We currently have a ticket for discussion here of better/easier ways of making resource evaluations:
+We understand, but are unfortunately limited in the bandwidth we can apply to this problem. We currently have a ticket for discussion here of better/easier ways of making resource evaluations:
 
  https://github.com/reusabledata/reusabledata/issues/129
 
