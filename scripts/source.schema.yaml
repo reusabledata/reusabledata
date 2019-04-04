@@ -230,6 +230,19 @@ mapping:
     type: str
     required: no
     enum: ["true", "false"]
+  ## (Optional) In cases where there may not be the bandwidth for
+  ## multiple (min. 2) people to review an evaluation, this piece of
+  ## metadata allows desired fixes and new evaluations to start moving
+  ## through the system, but have a way to keep track of them for
+  ## additional scrutiny later on. The assumption is that things are
+  ## not.
+  ##
+  ## Example usage:
+  ##   "provisional": true
+  "provisional":
+    type: str
+    required: no
+    enum: ["true", "false"]
   ## (Optional) Resource contact information, link, email,
   ## or whatever is public.
   ##
