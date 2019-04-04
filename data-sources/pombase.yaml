@@ -17,6 +17,7 @@ license-type: permissive
 license-link: https://www.pombase.org/about/terms-of-use
 license-commentary: []
 last-curated: "2019-03-01"
+provisional: "true"
 grants:
   - label: "PomBase is funded by the Wellcome Trust [104967/Z/14/Z]."
 contacts:
