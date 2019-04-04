@@ -16,6 +16,9 @@
     <loc>http://reusabledata.org/bgee-ontology.html</loc>
   </url>
   <url>
+    <loc>http://reusabledata.org/bgee.html</loc>
+  </url>
+  <url>
     <loc>http://reusabledata.org/biogrid.html</loc>
   </url>
   <url>
@@ -104,6 +107,9 @@
   </url>
   <url>
     <loc>http://reusabledata.org/kegg-ftp.html</loc>
+  </url>
+  <url>
+    <loc>http://reusabledata.org/knoweng.html</loc>
   </url>
   <url>
     <loc>http://reusabledata.org/license-types.html</loc>

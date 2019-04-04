@@ -97,8 +97,8 @@
         ]
     },
     {
-        "id": "bgee-data",
-        "source": "Bgee (data)",
+        "id": "bgee",
+        "source": "Bgee",
         "source-link": "http://bgee.org",
         "status": "complete",
         "description": "Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, Affymetrix, in situ hybridization, and EST data).",
@@ -110,72 +110,31 @@
         "data-access": [
             {
                 "type": "download",
-                "location": "http://bgee.org/?page=doc&action=access"
+                "location": "ftp://ftp.bgee.org/"
             }
         ],
         "license": "unlicensed",
         "license-type": "copyright",
-        "license-commentary": [
-            "As of two years ago, they seem to want to migrate over to CC BY, but after some searching, it could not be cited on their main data portal: https://think-lab.github.io/d/82/#15",
-            "They do not seem to me looking at the remix affects of licenses of their own data (http://bgee.org/?page=source).",
-            "Assuming they have defaulted to ARR."
-        ],
-        "contacts": [
-            "Bgee@isb-sib.ch"
-        ],
         "license-issues": [
             {
                 "criteria": "A.1.2",
-                "comment": "After some search we were unable to determine the license of the non-ontology portions of the Bgee data. No explicit license statements were apparent, causing a cascade of criteria violations. In spite of this, access itself is clear, so one star is awarded accordingly for C."
-            }
-        ]
-    },
-    {
-        "id": "bgee-ontology",
-        "source": "Bgee (ontology)",
-        "source-link": "http://bgee.org",
-        "status": "complete",
-        "description": "Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, Affymetrix, in situ hybridization, and EST data).",
-        "data-field": "biomedical",
-        "data-type": "expression data",
-        "data-categories": [
-            "ontology"
-        ],
-        "data-access": [
-            {
-                "label": "CIO",
-                "type": "download",
-                "location": "https://github.com/BgeeDB/confidence-information-ontology"
-            },
-            {
-                "label": "HO",
-                "type": "download",
-                "location": "https://github.com/BgeeDB/homology-ontology"
-            },
-            {
-                "label": "ASA",
-                "type": "download",
-                "location": "https://github.com/BgeeDB/anatomical-similarity-annotations"
-            }
-        ],
-        "license": "GPL-3.0",
-        "license-type": "copyleft",
-        "license-link": "https://github.com/BgeeDB/",
-        "license-issues": [
-            {
-                "criteria": "D.1.2",
-                "comment": "By using the GPLv3, there may be issues in mixing and redistributing this data with licenses that have incompatible terms."
-            },
-            {
-                "criteria": "E.1.2",
-                "comment": "By using the GPLv3, there may be some parties with issues in mixing and redistributing this data with licenses that have incompatible terms."
+                "comment": "After some search we were unable to determine the license of the non-ontology portions of the Bgee data. No explicit license statements were apparent, causing a cascade of criteria violations. In spite of this, once an access method was determined, one star was awarded accordingly for C."
             }
         ],
         "license-commentary": [
-            "It is somewhat unclear, but apparently all ontology data is under the listed GNU GPL v.3.0; this may be problematic for some types of reuse."
+            "No licensing information found in: footers; \"About\"; \"Bgee sources\" (https://bgee.org/?page=source, just a list of other resources); \"How to access Bgee data\"; \"Gene expression calls\"; \"Processed expression values\"",
+            "Our curation and ontology resources can be browsed on our GitHub page.",
+            "Noting that while the website does not seem to support any systematic bulk download or mention how to do so, we did stumble onto their FTP site, which works well enough for C.",
+            "After a bunch of browsing, I could find no licensing information at all directly on the site.",
+            "The GitHub repos seems to be three resources: Confidence Information Ontology (GPL3?), the Homology Ontology (GPL3?, but OBO Foundry lists as CC-BY-3.0, but not sure why), and anatomical similarity annotations (CC0).",
+            "Given the inconsistent licensing of the \"internal\" resources on GH and the lack of any licensing mentioned on the site and Bgee sources, evaluating on as no license mentioned."
         ],
+        "was-controversial": "false",
+        "provisional": "true",
+        "last-curated": "2019-03-04",
+        "grants": [],
         "contacts": [
-            "Bgee@isb-sib.ch"
+            "Bgee@sib.swiss"
         ]
     },
     {
@@ -1380,6 +1339,82 @@
         ]
     },
     {
+        "id": "knoweng",
+        "description": "KnowEnG enables knowledge-guided machine learning and graph mining analysis on genomic datasets using scalable cloud computation and exploration of results with interactive visualizations.",
+        "last-curated": "2018-03-04",
+        "source": "KnowEnG",
+        "source-link": "https://hub.knoweng.org/",
+        "source-type": "integrator",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "x-species",
+        "data-categories": [
+            "graph",
+            "cancer",
+            "gene",
+            "ontology",
+            "platform",
+            "protein families",
+            "molecular interaction",
+            "protein interaction"
+        ],
+        "data-access": [
+            {
+                "type": "api",
+                "location": "https://platform.knoweng.org"
+            }
+        ],
+        "license": "CC-BY-NC-SA-4.0",
+        "license-type": "restrictive",
+        "license-link": "https://knoweng.org/kn-overview/",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "B.2.1",
+                "comment": "Explicit statement that license only applies to new work."
+            },
+            {
+                "criteria": "B.2.2",
+                "comment": "I found no method of obtaining just the new work data."
+            },
+            {
+                "criteria": "C.1",
+                "comment": "The resource seems to be a self-contained platform; after some search, I found no bulk methods of download."
+            },
+            {
+                "criteria": "C.2",
+                "comment": "As C.1."
+            },
+            {
+                "criteria": "D.1.2",
+                "comment": "While the NC part allows for non-commercial reuse, SA has license requirements."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "While the NC part allows for non-commercial reuse, SA has license requirements."
+            }
+        ],
+        "license-commentary": [
+            "Platform site requires registration/login.",
+            "In footer of platform: \"Portions licensed under CC BY ND NC 4.0 license\"",
+            "Nothing of interest under https://platform.knoweng.org/static/#/support/about",
+            "For knowledge graph, found more explicit info here: https://knoweng.org/kn-overview/",
+            "Licensing: \"This work is licensed under a Commons Attribution-Non-Commercial-ShareAlike license for academic uses only (https://creativecommons.org/license/by-nc-sa/4.0/, CC BY-NC-SA 4). Where work is the Derivative Works created by KN team from the various databases. We recommend that the researchers contact owners of the data sources directly to obtain necessary permissions and licenses to download data and/or use it in ways not envisioned in our license. The intent is for the KnowEnG system including KN and Tools to be available for free for academic use only.\"",
+            "Evaluation by taking the latter at face value, assuming that it is an encompassing license for all new work, and the remaining requires negotiation with upstream.",
+            "The major question is whether this is an A.1.1 violation or not; also, whether NC-SA is \"restrictive\" or \"copyleft\" for our purposes."
+        ],
+        "was-controversial": "false",
+        "provisional": "true",
+        "contacts": [
+            "knoweng@illinois.edu"
+        ],
+        "grants": [
+            {
+                "label": "The KnowEnG BD2K center is supported by grant 1U54GM114838 awarded by NIGMS through funds provided by the trans-NIH Big Data to Knowledge (BD2K) initiative"
+            }
+        ]
+    },
+    {
         "id": "mgi",
         "source": "Mouse Genome Informatics (MGI)",
         "source-link": "http://www.informatics.jax.org/",
@@ -2166,27 +2201,19 @@
                 "location": "http://www.pombase.org/downloads"
             }
         ],
-        "license": "unlicensed",
-        "license-type": "copyright",
-        "license-link": "TODO",
-        "license-issues": [
-            {
-                "criteria": "A.1.2",
-                "comment": "Could not find any clear terms on any searched pages. See commentary."
-            }
-        ],
-        "license-commentary": [
-            "While there is a linked Terms of Use (https://www.ebi.ac.uk/about/terms-of-use), the \"General\" (section 1) and \"Data Services\" (section 1) parts seem to defer to the \"data owners\"; it is unclear if this is PomBase. No other license information could be found."
-        ],
-        "last-curated": "2017-10-17",
+        "license": "CC-BY-4.0",
+        "license-type": "permissive",
+        "license-link": "https://www.pombase.org/about/terms-of-use",
+        "license-commentary": [],
+        "last-curated": "2019-03-01",
+        "provisional": "true",
         "grants": [
             {
                 "label": "PomBase is funded by the Wellcome Trust [104967/Z/14/Z]."
             }
         ],
         "contacts": [
-            "helpdesk@pombase.org",
-            "http://www.pombase.org/feedback"
+            "helpdesk@pombase.org"
         ]
     },
     {
@@ -2335,35 +2362,39 @@
         "data-access": [
             {
                 "type": "download",
-                "location": "https://www.yeastgenome.org/download-data"
+                "location": "https://www.yeastgenome.org/search?category=download"
             },
             {
                 "type": "api",
                 "location": "https://yeastmine.yeastgenome.org/yeastmine/api.do"
             }
         ],
-        "license": "custom",
+        "license": "CC-BY-4.0",
         "license-type": "permissive",
         "license-link": "https://sites.google.com/view/yeastgenome-help/about",
         "license-issues": [
             {
-                "criteria": "A.2.2",
-                "comment": "The licensing uses custom verbiage, as well as being somewhat hidden. See commentary."
+                "criteria": "B.2.1",
+                "comment": "While the downloadable data seems quite clearly CC-BY-4.0, the API footer has terms that indicate that all data may not be covered under the same license (see comments)."
             },
             {
-                "criteria": "E.1.1",
-                "comment": "The license distinguishes groups, allowing for free use in research and education. There is no statement for other groups."
+                "criteria": "B.2.2",
+                "comment": "The API does not seem to be any easy way to differentiate the \\\"clean\\\" CC-BY-4.0 data from other licenses."
             }
         ],
         "license-commentary": [
-            "The license information found was in passing in the \"About SGD\" paragraph on the SGD Help page at https://sites.google.com/view/yeastgenome-help/about; in its entirety: \"...all of the data in SGD are freely accessible to researchers and educators worldwide...\"",
-            "Otherwise, a reasonable person might assume that the licensing terms were those of Stanford's Terms of Use (https://www.stanford.edu/site/terms/), linked on most pages and considerably more restrictive."
+            "The license information found in the \"About SGD\" paragraph on the SGD Help page at https://sites.google.com/view/yeastgenome-help/about",
+            "SGD operates under the Creative Commons Attribution 4.0 International license (CC BY 4.0).",
+            "However, the license information for the API is much less clear, reading: \"Permission to use the information contained in this database was given by the researchers/institutes who contributed or published the information. Users of the database are solely responsible for compliance with any copyright restrictions, including those applying to the author abstracts.\"",
+            "The API did not seem to offer any way of filter out things with other licenses.",
+            "Without ascending, noting that various upstream for the SGD API could have other terms: https://yeastmine.yeastgenome.org/yeastmine/dataCategories.do"
         ],
-        "was-controversial": "true",
-        "last-curated": "2017-10-17",
+        "was-controversial": "false",
+        "provisional": "true",
+        "last-curated": "2019-03-01",
         "grants": [
             {
-                "label": "The SGD is funded by the National Human Genome Research Institute (NHGRI), US National Institutes of Health [5U41HG001315-18].  Funding is also provided by the Gene Ontology Consortium project funded by the NHGRI [2U41HG002273-13] and the InterMOD project [5R01HG004834-04].  The SGD is part of the Department of Genetics at the School of Medicine, Stanford University and located within the Center for Genomics and Personalized Medicine."
+                "label": "The SGD is funded by the US National Institutes of Health, National Human Genome Research Institute (NHGRI), [U41HG001315]. Our efforts are also supported via the Gene Ontology Consortium (GOC) funded by the NHGRI [U41HG002273] and the Alliance of Genome Resources supplement via WormBase [U41HG02223-17S1]."
             }
         ],
         "contacts": [
@@ -2438,7 +2469,7 @@
     {
         "id": "uniprotkb",
         "description": "The mission of UniProt is to provide the scientific community with a comprehensive, high-quality and freely accessible resource of protein sequence and functional information. Includes: UniProtKB, UniRef, UniParc, and Proteomes.",
-        "last-curated": "2017-12-03",
+        "last-curated": "2019-03-01",
         "source": "UniProt",
         "source-link": "http://www.uniprot.org",
         "source-type": "source",
@@ -2455,22 +2486,15 @@
                 "location": "http://www.uniprot.org/downloads"
             }
         ],
-        "license": "CC-BY-ND-3.0",
-        "license-type": "restrictive",
-        "license-link": "http://www.uniprot.org/help/license",
+        "license": "CC-BY-4.0",
+        "license-type": "permissive",
+        "license-link": "https://www.uniprot.org/help/license",
         "license-hat-used": "false",
-        "license-issues": [
-            {
-                "criteria": "D.1.2",
-                "comment": "CC BY-ND prevents some types of reuse, such and modification and redistribution."
-            },
-            {
-                "criteria": "E.1.2",
-                "comment": "CC BY-ND prevents all parties from reusing the data."
-            }
+        "license-commentary": [
+            "We have chosen to apply the Creative Commons Attribution (CC BY 4.0) License to all copyrightable parts of our databases."
         ],
-        "license-commentary": [],
         "was-controversial": "false",
+        "provisional": "true",
         "contacts": [
             "help@uniprot.org"
         ],

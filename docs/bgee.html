@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-     <title>PomBase(pombase)</title>
+     <title>Bgee(bgee)</title>
 
      <link rel="shortcut icon" href="logo-circle.ico" />
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -98,7 +98,7 @@
 
 	 <div class="col-xl-12">
 
-	   <h1 class="card-title">PomBase - pombase</h1>
+	   <h1 class="card-title">Bgee - bgee</h1>
 
 	   <p>
 	     <dl>
@@ -113,7 +113,7 @@
 		 violations</a>.
 	       </dd>
 	       <dd class="curated-data">
-		 5
+		 1
 	       </dd>
 
 	       <!-- description -->
@@ -125,7 +125,7 @@
 		 itself, if possible.
 	       </dd>
 	       <dd class="curated-data">
-		 PomBase is a comprehensive database for the fission yeast Schizosaccharomyces pombe, providing structural and functional annotation, literature curation and access to large-scale data sets.
+		 Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, Affymetrix, in situ hybridization, and EST data).
 	       </dd>
 
 	       <!-- last-curated -->
@@ -137,7 +137,7 @@
 		 last curated.
 	       </dd>
 	       <dd class="curated-data">
-		 2019-03-01
+		 2019-03-04
 	       </dd>
 
 	       <!-- source-link -->
@@ -148,7 +148,7 @@
 		 URL for the resource.
 	       </dd>
 	       <dd class="curated-data">
-		 <a href="http:&#x2F;&#x2F;pombase.org">http:&#x2F;&#x2F;pombase.org</a>
+		 <a href="http:&#x2F;&#x2F;bgee.org">http:&#x2F;&#x2F;bgee.org</a>
 	       </dd>
 
 	       <!-- source-type -->
@@ -185,7 +185,7 @@
 		 The area of research for the resource.
 	       </dd>
 	       <dd class="curated-data">
-		 biology
+		 biomedical
 	       </dd>
 
 	       <!-- data-type -->
@@ -196,7 +196,7 @@
 		 The type of data the resource contains.
 	       </dd>
 	       <dd class="curated-data">
-		 MOD
+		 x-species
 	       </dd>
 
 	       <!-- data-categories -->
@@ -207,9 +207,7 @@
 		 (Optional) Tags to describe the resource and its data.
 	       </dd>
 	       <dd class="curated-data">
-		 genotype-phenotype association <br />
-		 disease-model association <br />
-		 gene expression <br />
+		 expression data <br />
 	       </dd>
 
 	       <!-- data-access -->
@@ -220,7 +218,7 @@
 		 (Optional) Links to the resource's data.
 	       </dd>
 	       <dd class="curated-data">
-		 <a href="http:&#x2F;&#x2F;www.pombase.org&#x2F;downloads">download</a> <br />
+		 <a href="ftp:&#x2F;&#x2F;ftp.bgee.org&#x2F;">download</a> <br />
 	       </dd>
 
 	       <!-- license -->
@@ -234,7 +232,7 @@
 		  "all rights reserved", or "custom".
 	       </dd>
 	       <dd class="curated-data">
-		 CC-BY-4.0
+		 unlicensed
 	       </dd>
 
 	       <!-- license-type -->
@@ -250,7 +248,7 @@
 		 "public domain", "copyright", "restrictive", or "private pool".
 	       </dd>
 	       <dd class="curated-data">
-		 <a href="license-types.html#permissive">permissive</a>
+		 <a href="license-types.html#copyright">copyright</a>
 	       </dd>
 
 	       <!-- license-link -->
@@ -261,7 +259,7 @@
 		 (Optional) The link to the resource license.
 	       </dd>
 	       <dd class="curated-data">
-		 <a href="https:&#x2F;&#x2F;www.pombase.org&#x2F;about&#x2F;terms-of-use">https:&#x2F;&#x2F;www.pombase.org&#x2F;about&#x2F;terms-of-use</a>
+		 TBD
 	       </dd>
 
 	       <!-- license-hat-used -->
@@ -306,7 +304,7 @@
 		 license-commentary field.
 	       </dd>
 	       <dd class="curated-data">
-		 None
+		 <a href="criteria.html#criteria-A.1.2">Criteria A.1.2</a>: After some search we were unable to determine the license of the non-ontology portions of the Bgee data. No explicit license statements were apparent, causing a cascade of criteria violations. In spite of this, once an access method was determined, one star was awarded accordingly for C. <br />
 	       </dd>
 
 	       <!-- license-commentary -->
@@ -320,7 +318,12 @@
 		 licenses.
 	       </dd>
 	       <dd class="curated-data">
-		 None
+		 &#8226; No licensing information found in: footers; &quot;About&quot;; &quot;Bgee sources&quot; (https:&#x2F;&#x2F;bgee.org&#x2F;?page&#x3D;source, just a list of other resources); &quot;How to access Bgee data&quot;; &quot;Gene expression calls&quot;; &quot;Processed expression values&quot; <br />
+		 &#8226; Our curation and ontology resources can be browsed on our GitHub page. <br />
+		 &#8226; Noting that while the website does not seem to support any systematic bulk download or mention how to do so, we did stumble onto their FTP site, which works well enough for C. <br />
+		 &#8226; After a bunch of browsing, I could find no licensing information at all directly on the site. <br />
+		 &#8226; The GitHub repos seems to be three resources: Confidence Information Ontology (GPL3?), the Homology Ontology (GPL3?, but OBO Foundry lists as CC-BY-3.0, but not sure why), and anatomical similarity annotations (CC0). <br />
+		 &#8226; Given the inconsistent licensing of the &quot;internal&quot; resources on GH and the lack of any licensing mentioned on the site and Bgee sources, evaluating on as no license mentioned. <br />
 	       </dd>
 
 	       <!-- was-controversial -->
@@ -349,7 +352,7 @@
 		 or whatever is public.
 	       </dd>
 	       <dd class="curated-data">
-		 helpdesk@pombase.org  <br />
+		 Bgee@sib.swiss  <br />
 	       </dd>
 
 	       <!-- grants -->
@@ -360,7 +363,7 @@
 		 (Optional) Semi-structured list of supporting grants.
 	       </dd>
 	       <dd class="curated-data">
-		 PomBase is funded by the Wellcome Trust [104967&#x2F;Z&#x2F;14&#x2F;Z]. <br />
+		 TBD
 	       </dd>
 
 	     </dl>
