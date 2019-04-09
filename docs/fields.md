@@ -153,8 +153,8 @@ into one of the criteria violations can go into the license-commentary field.
 
 ## license-commentary
 ### Field Description
-(Optional) Further commentary on the license, possibly including the though process of the 
-curations and things like locations of additional licenses.
+(Optional) Further commentary on the license, possibly including the process of curation and 
+things like locations of additional licenses.
 (Also described as *Commentary* in the reusabledata.org source details view)
 
 
