@@ -90,6 +90,16 @@ about.html: about.html.seed
 	node ./scripts/mustache-inject.js --template ./scripts/tmp_static_output_frame.tmpl --body ./docs/about.html.seed -o ./docs/about.html
 
 ###
+### schema.html is the "standard" md -> partial-doc html -> assembled doc.
+###
+
+schema.html.seed:
+	node ./scripts/md2html.js -i ./docs/schema.md -o ./docs/schema.html.seed
+
+schema.html: schema.html.seed
+	node ./scripts/mustache-inject.js --template ./scripts/tmp_static_output_frame.tmpl --body ./docs/schema.html.seed -o ./docs/schema.html
+
+###
 ### explore.html is an HTML seed + JS build -> assembled doc/app.
 ###
 
