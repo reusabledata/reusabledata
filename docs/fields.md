@@ -25,7 +25,7 @@ Improve ontologies to better curate genotype-phenotype data.'
 
 ## last-curated
 ### Field Description
-(Optional) The ISO 8601 date of when the resource was last curated.
+(Optional) The ISO 8601 date of when the license was last reviewed by a (Re)Usable Data Project curator.
 
 ### Example Value
 `2017-12-03`
