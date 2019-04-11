@@ -48,25 +48,27 @@ their integration.
 
 ### Contributing
 
-Current information on contributing new resources or updating already evaluated ones can be found at 
+Current information on contributing new resources or updating already evaluated ones can be found at
 [here](https://github.com/reusabledata/reusabledata/blob/master/CONTRIBUTING.md).
 
 <hr /><span id="contributors"></span>
 
 ### Contributors
 
-* *Seth Carbon*, Lawrence Berkeley National Laboratory
-* *Robin Champieux*, Oregon Health & Science University
-* *Melissa Haendel*, Oregon State University; Oregon Health & Science University
-* *Julie McMurry*, Oregon State University
-* *Lilly Winfree*, Oregon Health & Science University
-* *Letisha Wyatt*, Oregon Health & Science University
+* *Seth Carbon*, Berkeley BBOP, Lawrence Berkeley National Laboratory
+* *Robin Champieux*, OHSU Library, Oregon Health & Science University
+* *Melissa Haendel*, Center for Genome Research and Biocomputing, OSU; Oregon Clinical & Translational Research Institute, OHSU
+* *Julie McMurry*, Center for Genome Research and Biocomputing, OSU
+* *Lilly Winfree*, Open Knowledge International
+* *Letisha Wyatt*, OHSU Library, Oregon Health & Science University
 
 <hr /><span id="citation"></span>
 
 ### Citation policy
 
-For the time being, if you wish to cite the (Re)usable Data Project,
+If you wish to cite the (Re)usable Data Project,
 please use the following:
 
-The Reusable Data Project. reusabledata.org accessed, source code and data at https://github.com/reusabledata/reusabledata
+[https://doi.org/10.1371/journal.pone.0213090](https://doi.org/10.1371/journal.pone.0213090)
+
+> Carbon, Seth, Robin Champieux, Julie A. McMurry, Lilly Winfree, Letisha R. Wyatt, and Melissa A. Haendel. “An Analysis and Metric of Reusable Data Licensing Practices for Biomedical Resources.” PLOS ONE 14, no. 3 (March 27, 2019): e0213090.
