@@ -1,6 +1,6 @@
 
 
-all: index.html criteria.html license-types.html reading.html about.html enhanced_compiled.json summary_graph.json details_pages sitemap explore.html license.txt check
+all: index.html criteria.html license-types.html reading.html about.html schema.html enhanced_compiled.json summary_graph.json details_pages sitemap explore.html license.txt check
 
 # .PHONY: clean
 # clean:
