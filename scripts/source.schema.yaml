@@ -1,4 +1,6 @@
 ####
+#### Documentation for this schema can be found in docs/schema.md.
+####
 #### Use kwalify and this schema to validate the config files.
 #### Example usage:
 ####    kwalify -E -m ./scripts/source.schema.yaml
@@ -6,271 +8,117 @@
 ####
 type: map
 mapping:
-  ## Unique ID of the resource, biodbcore or NAR preferred.
-  ## But any unique internal ID is usable.
-  ##
-  ## Example usage:
-  ##   "id": foobar
   "id":
     type: str
     required: yes
     unique: true
-  ## A full description of the resource from the resource itself, if possible.
-  ##
-  ## Example usage:
-  ##   "description": this awesome resource does cool things with beans
   "description":
     type: str
     required: yes
-  ## (Optional) The ISO 8601 date of when the resource was last curated.
-  ##
-  ## Example usage:
-  ##   "last-curated": 2017-10-12
   "last-curated":
     type: str
     required: no
     pattern: /^\d\d\d\d\-\d\d\-\d\d$/
-  ## Short internal label for the resource.
-  ##
-  ## Example usage:
-  ##   "source": FooBar
   "source":
     type: str
     required: yes
-  ## URL for the resource.
-  ##
-  ## Example usage:
-  ##   "source-link": http://foo.bar
   "source-link":
     type: str
     required: yes
     pattern: /^(TODO|(ht|f)tp(s?)\:\/\/\w[\/\.\-\:\=\?\&\_\+\u0023\w]+)$/
-  ## (Optional) How the resource relates to the data it contains.
-  ## Current allowable entries are: "unknown", "repository", "source",
-  ## "integrator", and "warehouse".
-  ##
-  ## Example usage:
-  ##   "source-type": integrator
   "source-type":
     type: str
     required: no
     enum: ["integrator", "unknown", "repository", "source", "warehouse"]
-  ## Whether or not annotation is complete on this resource.
-  ## Current allowable entries are: "complete", "incomplete", and "nonpublic".
-  ##
-  ## Example usage:
-  ##   "status": incomplete
   "status":
     type: str
     required: yes
     enum: ["complete", "incomplete", "nonpublic"]
-  ## The area of research for the resource.
-  ##
-  ## Example usage:
-  ##   "data-field": biomedical
   "data-field":
     type: str
     required: yes
-  ## The type of data the resource contains.
-  ##
-  ## Example usage:
-  ##   "data-type": human phenotype gene associations
   "data-type":
     type: str
     required: yes
-  ## (Optional) Tags to describe the resource and its data.
-  ##
-  ## Example usage:
-  ##   "data-categories":
-  ##      - 'food terminology'
-  ##      - 'food ontology'
-  ##      - 'food associations'
   "data-categories":
     type: seq
     sequence:
       - type: str
     required: no
-  ## (Optional) Links to the resource's data.
-  ##
-  ## Example usage:
-  ##   "data-access":
-  ##      - type: api
-  ##        location: http://foo.bar/api-v2
-  ##      - type: api
-  ##        location: http://foo.bar/api-v1
-  ##        label: old api
   "data-access":
     type: seq
     sequence:
       - type: map
         mapping:
-          ## (Optional) How the data access point should be differentiated
-          ## from others at a resource. E.g. "expression data" or
-          ## "HPO ontology". Very very optional as this can be a rat's nest.
           "label":
             type: str
             required: no
-          ## The type of data access. Likely: "download" or "api".
           "type":
             type: str
             required: yes
             enum: ["download", "api"]
-          ## The location of the data access. Do /NOT/ worry about getting the
-          ## perfect and "real" location here; a top-level or informational
-          ## location is fine.
           "location":
             type: str
             required: yes
             pattern: /^(ht|f)tp(s?)\:\/\/\w[\/\.\-\:\=\?\&\_\+\u0023\w]+$/
     required: no
-  ## The license that is used by the resource.
-  ## We use SPDX where we can (https://spdx.org/licenses/)
-  ## or: "inconsistent", "public domain", "unlicensed",
-  ## "all rights reserved", or "custom".
-  ##
   ## An updated list of SPDX licenses can be inlined with:
   ##  http https://raw.githubusercontent.com/spdx/license-list-data/master/json/licenses.json | jq "[.licenses[].licenseId]"
-  ##
-  ## Example usage:
-  ##   "license": all rights reserved
   "license":
     type: str
     required: yes
     enum: ["inconsistent", "public domain", "unlicensed", "all rights reserved", "custom", "0BSD", "AAL", "Abstyles", "Adobe-2006", "Adobe-Glyph", "ADSL", "AFL-1.1", "AFL-1.2", "AFL-2.0", "AFL-2.1", "AFL-3.0", "Afmparse", "AGPL-1.0", "AGPL-3.0-only", "AGPL-3.0-or-later", "Aladdin", "AMDPLPA", "AML", "AMPAS", "ANTLR-PD", "Apache-1.0", "Apache-1.1", "Apache-2.0", "APAFML", "APL-1.0", "APSL-1.0", "APSL-1.1", "APSL-1.2", "APSL-2.0", "Artistic-1.0-cl8", "Artistic-1.0-Perl", "Artistic-1.0", "Artistic-2.0", "Bahyph", "Barr", "Beerware", "BitTorrent-1.0", "BitTorrent-1.1", "Borceux", "BSD-1-Clause", "BSD-2-Clause-FreeBSD", "BSD-2-Clause-NetBSD", "BSD-2-Clause-Patent", "BSD-2-Clause", "BSD-3-Clause-Attribution", "BSD-3-Clause-Clear", "BSD-3-Clause-LBNL", "BSD-3-Clause-No-Nuclear-License-2014", "BSD-3-Clause-No-Nuclear-License", "BSD-3-Clause-No-Nuclear-Warranty", "BSD-3-Clause", "BSD-4-Clause-UC", "BSD-4-Clause", "BSD-Protection", "BSD-Source-Code", "BSL-1.0", "bzip2-1.0.5", "bzip2-1.0.6", "Caldera", "CATOSL-1.1", "CC-BY-1.0", "CC-BY-2.0", "CC-BY-2.5", "CC-BY-3.0", "CC-BY-4.0", "CC-BY-NC-1.0", "CC-BY-NC-2.0", "CC-BY-NC-2.5", "CC-BY-NC-3.0", "CC-BY-NC-4.0", "CC-BY-NC-ND-1.0", "CC-BY-NC-ND-2.0", "CC-BY-NC-ND-2.5", "CC-BY-NC-ND-3.0", "CC-BY-NC-ND-4.0", "CC-BY-NC-SA-1.0", "CC-BY-NC-SA-2.0", "CC-BY-NC-SA-2.5", "CC-BY-NC-SA-3.0", "CC-BY-NC-SA-4.0", "CC-BY-ND-1.0", "CC-BY-ND-2.0", "CC-BY-ND-2.5", "CC-BY-ND-3.0", "CC-BY-ND-4.0", "CC-BY-SA-1.0", "CC-BY-SA-2.0", "CC-BY-SA-2.5", "CC-BY-SA-3.0", "CC-BY-SA-4.0", "CC0-1.0", "CDDL-1.0", "CDDL-1.1", "CDLA-Permissive-1.0", "CDLA-Sharing-1.0", "CECILL-1.0", "CECILL-1.1", "CECILL-2.0", "CECILL-2.1", "CECILL-B", "CECILL-C", "ClArtistic", "CNRI-Jython", "CNRI-Python-GPL-Compatible", "CNRI-Python", "Condor-1.1", "CPAL-1.0", "CPL-1.0", "CPOL-1.02", "Crossword", "CrystalStacker", "CUA-OPL-1.0", "Cube", "curl", "D-FSL-1.0", "diffmark", "DOC", "Dotseqn", "DSDP", "dvipdfm", "ECL-1.0", "ECL-2.0", "EFL-1.0", "EFL-2.0", "eGenix", "Entessa", "EPL-1.0", "EPL-2.0", "ErlPL-1.1", "EUDatagrid", "EUPL-1.0", "EUPL-1.1", "EUPL-1.2", "Eurosym", "Fair", "Frameworx-1.0", "FreeImage", "FSFAP", "FSFUL", "FSFULLR", "FTL", "GFDL-1.1-only", "GFDL-1.1-or-later", "GFDL-1.2-only", "GFDL-1.2-or-later", "GFDL-1.3-only", "GFDL-1.3-or-later", "Giftware", "GL2PS", "Glide", "Glulxe", "gnuplot", "GPL-1.0-only", "GPL-1.0-or-later", "GPL-2.0-only", "GPL-2.0-or-later", "GPL-3.0-only", "GPL-3.0-or-later", "gSOAP-1.3b", "HaskellReport", "HPND", "IBM-pibs", "ICU", "IJG", "ImageMagick", "iMatix", "Imlib2", "Info-ZIP", "Intel-ACPI", "Intel", "Interbase-1.0", "IPA", "IPL-1.0", "ISC", "JasPer-2.0", "JSON", "LAL-1.2", "LAL-1.3", "Latex2e", "Leptonica", "LGPL-2.0-only", "LGPL-2.0-or-later", "LGPL-2.1-only", "LGPL-2.1-or-later", "LGPL-3.0-only", "LGPL-3.0-or-later", "LGPLLR", "Libpng", "libtiff", "LiLiQ-P-1.1", "LiLiQ-R-1.1", "LiLiQ-Rplus-1.1", "LPL-1.0", "LPL-1.02", "LPPL-1.0", "LPPL-1.1", "LPPL-1.2", "LPPL-1.3a", "LPPL-1.3c", "MakeIndex", "MirOS", "MIT-advertising", "MIT-CMU", "MIT-enna", "MIT-feh", "MIT", "MITNFA", "Motosoto", "mpich2", "MPL-1.0", "MPL-1.1", "MPL-2.0-no-copyleft-exception", "MPL-2.0", "MS-PL", "MS-RL", "MTLL", "Multics", "Mup", "NASA-1.3", "Naumen", "NBPL-1.0", "NCSA", "Net-SNMP", "NetCDF", "Newsletr", "NGPL", "NLOD-1.0", "NLPL", "Nokia", "NOSL", "Noweb", "NPL-1.0", "NPL-1.1", "NPOSL-3.0", "NRL", "NTP", "OCCT-PL", "OCLC-2.0", "ODbL-1.0", "OFL-1.0", "OFL-1.1", "OGTSL", "OLDAP-1.1", "OLDAP-1.2", "OLDAP-1.3", "OLDAP-1.4", "OLDAP-2.0.1", "OLDAP-2.0", "OLDAP-2.1", "OLDAP-2.2.1", "OLDAP-2.2.2", "OLDAP-2.2", "OLDAP-2.3", "OLDAP-2.4", "OLDAP-2.5", "OLDAP-2.6", "OLDAP-2.7", "OLDAP-2.8", "OML", "OpenSSL", "OPL-1.0", "OSET-PL-2.1", "OSL-1.0", "OSL-1.1", "OSL-2.0", "OSL-2.1", "OSL-3.0", "PDDL-1.0", "PHP-3.0", "PHP-3.01", "Plexus", "PostgreSQL", "psfrag", "psutils", "Python-2.0", "Qhull", "QPL-1.0", "Rdisc", "RHeCos-1.1", "RPL-1.1", "RPL-1.5", "RPSL-1.0", "RSA-MD", "RSCPL", "Ruby", "SAX-PD", "Saxpath", "SCEA", "Sendmail", "SGI-B-1.0", "SGI-B-1.1", "SGI-B-2.0", "SimPL-2.0", "SISSL-1.2", "SISSL", "Sleepycat", "SMLNJ", "SMPPL", "SNIA", "Spencer-86", "Spencer-94", "Spencer-99", "SPL-1.0", "SugarCRM-1.1.3", "SWL", "TCL", "TCP-wrappers", "TMate", "TORQUE-1.1", "TOSL", "Unicode-DFS-2015", "Unicode-DFS-2016", "Unicode-TOU", "Unlicense", "UPL-1.0", "Vim", "VOSTROM", "VSL-1.0", "W3C-19980720", "W3C-20150513", "W3C", "Watcom-1.0", "Wsuipa", "WTFPL", "X11", "Xerox", "XFree86-1.1", "xinetd", "Xnet", "xpp", "XSkat", "YPL-1.0", "YPL-1.1", "Zed", "Zend-2.0", "Zimbra-1.3", "Zimbra-1.4", "zlib-acknowledgement", "Zlib", "ZPL-1.1", "ZPL-2.0", "ZPL-2.1", "AGPL-3.0", "eCos-2.0", "GFDL-1.1", "GFDL-1.2", "GFDL-1.3", "GPL-1.0+", "GPL-1.0", "GPL-2.0+", "GPL-2.0-with-autoconf-exception", "GPL-2.0-with-bison-exception", "GPL-2.0-with-classpath-exception", "GPL-2.0-with-font-exception", "GPL-2.0-with-GCC-exception", "GPL-2.0", "GPL-3.0+", "GPL-3.0-with-autoconf-exception", "GPL-3.0-with-GCC-exception", "GPL-3.0", "LGPL-2.0+", "LGPL-2.0", "LGPL-2.1+", "LGPL-2.1", "LGPL-3.0+", "LGPL-3.0", "Nunit", "StandardML-NJ", "wxWindows"]
-  ## The type of license that is being used. This will be to define
-  ## compatible data pools in the future; we only use the grossest terms now.
-  ## If it is not known "TODO" is used. Current possible values are:
-  ## "unknown", "copyleft", "permissive",
-  ## "copyright", "restrictive", or "private pool".
-  ##
-  ## Example usage:
-  ##   "license-type": copyleft
   "license-type":
     type: str
     required: yes
     enum: ["unknown", "copyleft", "permissive", "copyright", "restrictive", "private pool"]
-  ## (Optional) The link to the resource license.
-  ##
-  ## Example usage:
-  ##   "license-link": http://foo.bar/license
   "license-link":
     type: str
     required: no
     pattern: /^(TODO|(ht|f)tp(s?)\:\/\/\w[\/\.\-\:\=\?\&\_\+\u0023\w]+)$/
-  ## (Optional) Setting this flag to true indicates that the licensing
-  ## was combinatorially complicated enough (as is the case in some
-  ## commercial licenses) that the curator chose to wear a single
-  ## "hat" during the process. From the site text:
-  ##
-  ## "While we try to cover as much of the licensing possibilities of a data
-  ## resource that we can, in a few cases we may choose a particular "hat"
-  ## to wear while evaluating to prevent a combinatorial explosion, which
-  ## may also reduce the clarity of our curations for the community. In
-  ## these cases, we may take on the role of a (1) non-commercial (2)
-  ## academic (3) group that is (4) based in the US and trying to (5)
-  ## create an aggregating resource, noting that other entities may have
-  ## different results in the license commentary."
-  ##
-  ## Example usage:
-  ##   "license-hat-used": "true"
   "license-hat-used":
     type: str
     required: no
     enum: ["true", "false"]
-  ## (Optional) Structured issues with the license.
-  ## For every issue discovered with a resource, there should be a
-  ## corresponding item in the license-issues field that marks the /exact/
-  ## violation, along with any comments. This field can be used by
-  ## resources as the first step to improvement, as well as clarify any
-  ## surrounding circumstances.
-  ## Any issues or thoughts about a resource that do not slot into one
-  ## of the criteria violations can go into the license-commentary field.
-  ##
-  ## Example usage:
-  ##   "license-issues":
-  ##      - criteria: A.1.1
-  ##        comment: me no find
   "license-issues":
     type: seq
     sequence:
       - type: map
         mapping:
-          ## The criteria violated. E.g. "A.1.1", "C.2".
           "criteria":
             type: str
             required: yes
             enum: ['A.1.1', 'A.1.2', 'A.2.1', 'A.2.2', 'B.1', 'B.2.1', 'B.2.2', 'C.1', 'C.2', 'D.1.1', 'D.1.2', 'E.1.1', 'E.1.2']
-          ## How the criteria was violated.
           "comment":
             type: str
             required: no
     required: no
-  ## (Optional) Further commentary on the license, possibly including
-  ## the though process of the curations and things like locations of
-  ## additional licenses.
-  ##
-  ## Example usage:
-  ##   "license-commentary":
-  ##      - "one thought"
-  ##      - "another thought"
   "license-commentary":
     type: seq
     sequence:
       - type: str
     required: no
-  ## (Optional) Marker noting that there was some extended internal
-  ## discussion or controversy about the evaluation of the licensing
-  ## terms. If this is marked at "true", the controversy, or a link
-  ## to a permanent archive of the controversy, must be sufficiently
-  ## contained in the "license-commentary" to reconstruct the issues.
-  ##
-  ## Example usage:
-  ##   "was-controversial": true
   "was-controversial":
     type: str
     required: no
     enum: ["true", "false"]
-  ## (Optional) In cases where there may not be the bandwidth for
-  ## multiple (min. 2) people to review an evaluation, this piece of
-  ## metadata allows desired fixes and new evaluations to start moving
-  ## through the system, but have a way to keep track of them for
-  ## additional scrutiny later on. The assumption is that things are
-  ## not.
-  ##
-  ## Example usage:
-  ##   "provisional": true
   "provisional":
     type: str
     required: no
     enum: ["true", "false"]
-  ## (Optional) Resource contact information, link, email,
-  ## or whatever is public.
-  ##
-  ## Example usage:
-  ##   "contacts":
-  ##     - foo@bar.bib
-  ##     - http://foo.bar/contact
   "contacts":
     type: seq
     sequence:
       - type: str
     required: no
-  ## (Optional) Semi-structured list of supporting grants.
-  ##
-  ## Example usage:
-  ##   "grants":
-  ##     - label: NIH Grant for Science 123
-  ##       url: http://foo.bar
   "grants":
     type: seq
     sequence:
       - type: map
         mapping:
-          ## A string representation of the grant.
           "label":
             type: str
             required: yes
-          ## The URL for grant information.
           "url":
             type: str
             required: no
