@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <title>(Re)usable Data Project</title>
+
+     <link rel="shortcut icon" href="logo-circle.ico" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" crossorigin="anonymous">
+     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.0/vue.js"></script> -->
+
+     <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <!-- <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top"> -->
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" href="index.html#home">
+	<img src="logo-circle.png" height="30" class="d-inline-block align-top" alt="">
+	(Re)usable Data Project
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="index.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Learn more</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <!-- <a class="dropdown-item" href="index.html#home">Home</a> -->
+              <a class="dropdown-item" href="index.html#who-we-are">Who we are</a>
+              <a class="dropdown-item" href="index.html#what-this-is">What this is</a>
+              <a class="dropdown-item" href="index.html#our-criteria">Criteria overview</a>
+              <a class="dropdown-item" href="index.html#our-sources-data">Our sources data</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="index.html" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Evaluation</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown02">
+              <a class="dropdown-item" href="criteria.html" id="nav-crit" aria-haspopup="true" aria-expanded="false">Criteria details</a>
+              <a class="dropdown-item" href="license-types.html" id="nav-lc" aria-haspopup="true" aria-expanded="false">License categories</a>
+              <a class="dropdown-item" href="schema.html" id="nav-sc" aria-haspopup="true" aria-expanded="false">Curation fields (schema)</a>
+              <a class="dropdown-item" href="reading.html" id="nav-rl" aria-haspopup="true" aria-expanded="false">Reading list</a>
+            </div>
+	  </li>
+          <li class="nav-item">
+            <a class="nav-link" href="explore.html" id="nav02" aria-haspopup="true" aria-expanded="false">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" id="nav03" aria-haspopup="true" aria-expanded="false">About</a>
+          </li>
+          <!-- <li class="nav-item"> -->
+          <!--   <a class="nav-link" href="https://github.com/reusabledata/reusabledata/issues/new" id="nav03" aria-haspopup="true" aria-expanded="false">Contact</a> -->
+          <!-- </li> -->
+        </ul>
+        <form class="form-inline my-2 my-lg-0"
+	      action="https://google.com/search"
+	      method="GET">
+          <input class="form-control mr-sm-2"
+		 placeholder="Site search"
+		 type="text"
+		 name="q">
+          <input type="hidden"
+		 name="sitesearch"
+		 value="reusabledata.org">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">&#x1f50d;</button>
+        </form>
+      </div>
+    </nav>
+
+    
+
+    <!-- spacer -->
+    <div style="height:32px;"></div>
+
+    <div class="container"><!-- Start main content container. -->
+
+      <!-- <div class="row"> -->
+      <!-- 	<div class="col-xl-6"> -->
+      <div class="card">
+	<div class="card-block">
+	  <!-- <h4 class="card-title">What this is</h4> -->
+	  <h1>Curating a Resource</h1>
+
+<p>This is a glossary of fields used by the data resource descriptor file
+convention of the (Re)usable Data Project.</p>
+
+<p>A <a href="../data-sources/source.template">template file</a> is provided to
+assist with this process, and this documentation mirrors the
+description of these fields as they appear on reusabledata.org data
+source detail pages.</p>
+
+<p>To make sure structured information is displayed properly, users may
+want to view this file in the <a href="https://github.com/reusabledata/reusabledata/blob/master/docs/schema.md">original form on GitHub</a>.</p>
+
+<h2>id</h2>
+
+<h4>Field Description</h4>
+
+<p>Unique ID of the resource, biodbcore or NAR preferred. But any unique
+internal ID is usable.</p>
+
+<p>This is a short-form identifier (often an initialism) for the resource
+created by the curator. By convention, this is typically the same as
+the file prefix describing the resource. Dashes are used in lieu of
+spaces when needed.</p>
+
+<h4>Example Values</h4>
+
+<p><code>civicdb</code>, <code>bgee</code>, <code>mgi</code>, <code>monarch</code>, <code>pmkb</code>, <code>ncbi-gene</code></p>
+
+<h2>description</h2>
+
+<h4>Field Description</h4>
+
+<p>A full description of the resource from the resource itself, if
+possible.</p>
+
+<h4>Example Value</h4>
+
+<p>&#39;Integrate, align, and re-distribute cross-species gene, genotype,
+variant, disease, and phenotype data. Provide a portal for exploration
+of phenotype-based similarity. Facilitate identification of animal
+models of human disease through phenotypic similarity. Enable
+quantitative comparison of cross-species phenotypes. Develop
+embeddable widgets for data exploration. Influence genotype and
+phenotype reporting standards. Improve ontologies to better curate
+genotype-phenotype data.&#39;</p>
+
+<h2>last-curated</h2>
+
+<h4>Field Description</h4>
+
+<p>(Optional) The ISO 8601 date of when the license was last reviewed by
+a (Re)Usable Data Project curator.</p>
+
+<h4>Example Value</h4>
+
+<p><code>2017-12-03</code></p>
+
+<h2>source</h2>
+
+<h4>Field Description</h4>
+
+<p>A full-length, human-readable name for the resource that
+differentiates it from other similar resources.</p>
+
+<h4>Example Value</h4>
+
+<p><code>National Center for Biotechnology Information (Gene)</code></p>
+
+<h2>source-link</h2>
+
+<h4>Field Description</h4>
+
+<p>URL for the resource. (Also described as <em>Location</em> in the
+reusabledata.org source details view.)</p>
+
+<h4>Example Value</h4>
+
+<p><code>http://www.civicdb.org</code></p>
+
+<h2>source-type</h2>
+
+<h4>Field Description</h4>
+
+<p>(Optional) How the resource relates to the data it contains. Used for gross description; it is naturally hard to categorize many resources.</p>
+
+<p>A <code>warehouse</code> value is currently under discussion.</p>
+
+<h4>Allowed Values</h4>
+
+<p>Current allowable entries are: <code>unknown</code>, <code>repository</code>, <code>source</code>, and <code>integrator</code>.</p>
+
+<ul><li><em>repository:</em> Describes a resource that, as a major component, allows direct submission of data sets under a specific them, which may not undergo further harmonization.</li><li><em>source:</em> Describes a primary source of data or knowledge generated by the source.</li><li><em>integrator:</em> Describes a resource that, as a major component, collects and harmonizes content from multiple other resources.</li><li><em>unknown:</em> Used when a resource does not qualify for one of the above types or is otherwise hard to categorize.</li></ul>
+
+<h2>status</h2>
+
+<h4>Field Description</h4>
+
+<p>Whether or not annotation is complete on this resource. (Also
+described as <em>Curation status</em> in the reusabledata.org source details
+view.)</p>
+
+<h4>Allowed Values</h4>
+
+<p>Current allowable entries are: <code>complete</code>, <code>incomplete</code>, and <code>nonpublic</code>.</p>
+
+<ul><li><em>complete:</em> The draft of the resource curation has been completed and is ready for further processing.</li><li><em>incomplete:</em> The draft of the resource curation is incomplete and needs to be finished before further processing. Will not be considered in analysis.</li><li><em>nonpublic:</em> The resource has been determined to not be a public resource, therefore cannot be considered under the current rubric. Will not be considered in analysis of public resources.</li></ul>
+
+<h2>data-field</h2>
+
+<h4>Field Description</h4>
+
+<p>The area of research for the resource, loosely determined by the
+curator. (Also described as <em>Field</em> in the reusabledata.org source
+details view.)</p>
+
+<h4>Example Values</h4>
+
+<p><code>biomedical</code>, <code>biology</code>, <code>pharmacology</code></p>
+
+<h2>data-type</h2>
+
+<h4>Field Description</h4>
+
+<p>The type of data the resource contains. (Also described as <em>Type</em> in
+the reusabledata.org source details view.)</p>
+
+<h4>Example Values</h4>
+
+<p><code>x-species</code>, <code>cross-species</code>, <code>ontology</code>, <code>MOD</code>, <code>genomic resource</code>, <code>pathway</code>, <code>sequence</code>, <code>human phenotype gene associations</code></p>
+
+<h2>data-categories</h2>
+
+<h4>Field Description</h4>
+
+<p>(Optional) Free tags to describe the resource and its data. (Also
+described as <em>Categories</em> in the reusabledata.org source details
+view.)</p>
+
+<h4>Example Values</h4>
+
+<p><code>cancer</code>, <code>precision medicine</code>, <code>variants</code>, <code>variant disease associations</code>, <code>food terminology</code>, <code>food ontology</code>, <code>food associations</code></p>
+
+<h2>data-access</h2>
+
+<h4>Field Description</h4>
+
+<p>(Optional) Links and metadata the resource&#39;s data in a structured list.</p>
+
+<ul><li><em>location:</em> The location of the data access. Do <em>NOT</em> worry about getting the perfect and "real" location here; a top-level or informational location is fine.</li><li><em>type:</em>  The type of data access: "download" or "api".</li><li><em>label:</em> (Optional) How the data access point should be differentiated from others at a resource. E.g. "expression data" or "HPO ontology". Very very optional as this can be a rat&#39;s nest.</li></ul>
+
+<h4>Example Values</h4>
+
+<p><code>YAML
+- type: download
+  location: https://civic.genome.wustl.edu/releases
+- type: api
+  location: https://griffithlab.github.io/civic-api-docs/
+- type: api
+  location: http://foo.bar/api-v1
+  label: old api
+</code></p>
+
+<h2>license</h2>
+
+<h4>Field Description</h4>
+
+<p>The license that is used by the resource. We use
+<a href="https://spdx.org/licenses/">SPDX</a> where we can or: <code>inconsistent</code>,
+<code>public domain</code>, <code>unlicensed</code>, <code>all rights reserved</code>, or <code>custom</code>.</p>
+
+<p>See scripts/source.schema.yaml for the most current full list that we
+use (as well as how to update).</p>
+
+<h4>Example Values</h4>
+
+<p><code>CC0-1.0</code>, <code>CC-BY-4.0</code>, <code>custom</code>, <code>all rights reserved</code></p>
+
+<h2>license-type</h2>
+
+<h4>Field Description</h4>
+
+<p>The type of license that is being used. This will be to define
+compatible data pools in the future; we only use the grossest terms
+now. If it is not known or unclassifiable "unknown" is used.</p>
+
+<h4>Allowed Values</h4>
+
+<p>Current possible values are: <code>unknown</code>, <code>copyleft</code>, <code>permissive</code>,
+<code>copyright</code>, <code>restrictive</code>, <code>private pool</code></p>
+
+<h2>license-link</h2>
+
+<h4>Field Description</h4>
+
+<p>(Optional) The link to the resource license. (Also described as
+<em>License location</em> in the reusabledata.org source details view.)</p>
+
+<h4>Example Values</h4>
+
+<p><code>http://www.omim.org/help/agreement</code>, <code>http://www.orphadata.org/cgi-bin/inc/legal.inc.php</code></p>
+
+<h2>license-hat-used</h2>
+
+<h4>Field Description</h4>
+
+<p>(Optional) Setting this flag to true indicates that the licensing was
+combinatorially complicated enough (as is the case in some commercial
+licenses) that the curator chose to wear a single "hat" during the
+process. From the site text:</p>
+
+<p>"While we try to cover as much of the licensing possibilities of a
+data resource that we can, in a few cases we may choose a particular
+"hat" to wear while evaluating to prevent a combinatorial explosion,
+which may also reduce the clarity of our curations for the
+community. In these cases, we may take on the role of a (1)
+non-commercial (2) academic (3) group that is (4) based in the US and
+trying to (5) create an aggregating resource (inegrator), noting that
+other entities may have different results in the license commentary."</p>
+
+<p>(Also described as <em>Focused curation</em> in the reusabledata.org source
+details view.)</p>
+
+<h4>Allowed Values</h4>
+
+<p><code>true</code>, <code>false</code></p>
+
+<h2>license-issues</h2>
+
+<h4>Field Description</h4>
+
+<p>(Optional) Structured issues with the license.</p>
+
+<p>For every issue discovered with a resource, there should be a
+corresponding item in the license-issues field that marks the /exact/
+violation, along with any comments. This field can be used by
+resources as the first step to improvement, as well as clarify any
+surrounding circumstances.</p>
+
+<p>Any issues or thoughts about a resource that do not slot into one of
+the criteria violations can go into the license-commentary field. They
+may cross reference.</p>
+
+<p>(Also described as <em>Issues</em> in the reusabledata.org source details view.)</p>
+
+<ul><li><em>criteria:</em> The criteria violated. E.g. "A.1.1", "C.2".</li><li><em>comment:</em> How the criteria violated.</li></ul>
+
+<h4>Example Values</h4>
+
+<p><code>YAML
+- criteria: A.1.1
+  comment: looked under only rock, not there
+- criteria: E.1.1
+  comment: clause that effectively uniformly prevents smurfs from accessing the data
+</code></p>
+
+<h2>license-commentary</h2>
+
+<h4>Field Description</h4>
+
+<p>(Optional) Further commentary on the license, possibly including the
+process of curation and things like locations of additional licenses.
+(Also described as <em>Commentary</em> in the reusabledata.org source details
+view.)</p>
+
+<h4>Example Usage</h4>
+
+<p><code>YAML
+- "one thought"
+- "another thought"
+</code></p>
+
+<h2>was-controversial</h2>
+
+<h4>Field Description</h4>
+
+<p>(Optional) Marker noting that there was some extended internal
+discussion or controversy about the evaluation of the licensing
+terms. If this is marked at "true", the controversy, or a link to a
+permanent archive of the controversy, must be sufficiently contained
+in the "license-commentary" to reconstruct the issues. (Also described
+as <em>Controversial</em> in the reusabledata.org source details view.)</p>
+
+<h4>Allowed Values</h4>
+
+<p><code>true</code>, <code>false</code></p>
+
+<h2>provisional</h2>
+
+<h4>Field Description</h4>
+
+<p>(Optional) In cases where there may not be the bandwidth for multiple
+(min. 2) people to review an evaluation, this piece of metadata allows
+desired fixes and new evaluations to start moving through the system,
+but have a way to keep track of them for additional scrutiny later
+on. The assumption is that things are not.</p>
+
+<h4>Allowed Values</h4>
+
+<p><code>true</code>, <code>false</code></p>
+
+<h2>contacts</h2>
+
+<h4>Field Description</h4>
+
+<p>(Optional) List of resource contact information, link, email, or
+whatever is public.</p>
+
+<h4>Example Value</h4>
+
+<p><code>YAML
+- https://civic.genome.wustl.edu/contact
+- foo@bar.bib
+</code></p>
+
+<h2>grants</h2>
+
+<h4>Field Description</h4>
+
+<p>(Optional) Semi-structured list of supporting grants.</p>
+
+<ul><li><em>label:</em> A string representation of the grant.</li><li><em>url:</em> (Optional) The URL for grant information.</li></ul>
+
+<h4>Example Value</h4>
+
+<p><code>yaml
+- label: &#39;Rhea development and curation activities at the SIB are supported by the Swiss Federal Government through the State Secretariat for Education, Research and Innovation (SERI), and by the SystemsX.ch, The Swiss Initiative in Systems Biology.&#39;
+  url: http://foo.bar
+- label: &#39;NIH Grant for Science 123&#39;
+</code></p>
+	  <!-- </div> -->
+	</div>
+      </div>
+      <!--   </div> -->
+      <!-- </div> -->
+
+    <!-- spacer -->
+    <div style="height:32px;"></div>
+
+    <div class="row">
+
+	<div id="our-sources-data" class="col-xl-12">
+
+	  <p>
+	    <small>
+	      All copyrightable materials on this site are ©
+	      2017 <a href="http://reusabledata.org/" title="The
+	      (Re)usable Data Project website">the (Re)usable Data
+	      Project</a> under the
+	      <a href="license.txt">CC-BY
+	      4.0</a> license.
+	    </small>
+	    <br />
+	    <small>
+	    ReusableData.org is funded by the National Center for
+	    Advancing Translational Sciences
+	    (<a href="https://ncats.nih.gov/">NCATS</a>) <a href="http://grantome.com/grant/NIH/OT3-TR002019-01">OT3
+	    TR002019</a> as part of
+	    the <a href="https://ncats.nih.gov/translator">Biomedical
+	    Data Translator project</a>.
+	    </small>
+	    <br />
+	    <small>
+	      The (Re)usable Data Project would like to acknowledge
+	      the assistance of many more people than can be listed
+	      here. Please visit the <a href="about.html">about
+	      page</a> for the full list.
+	    </small>
+	  </p>
+
+	</div>
+
+      </div><!-- Done container. -->
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script>
+    <script type="text/javascript" src="RUDBundle.js"></script>
+    <script type="text/javascript">
+      var global_data = {};
+      var global_summary_data = {};
+      // Defer all execution to RUDBundle.js.
+    </script>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106654450-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-106654450-1');
+    </script>
+
+  </body>
+
+</html>
