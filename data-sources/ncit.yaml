@@ -1,0 +1,36 @@
+id: 'ncit'
+description: >
+  NCI Thesaurus (NCIt) provides reference terminology for many NCI and other systems. 
+  It covers vocabulary for clinical care, translational and basic
+  research, and public information and administrative activities.
+last-curated: '2019-04-16'
+source: 'NCI Thesaurus'
+source-link: 'https://ncithesaurus-stage.nci.nih.gov/'
+source-type: "source"
+status: "complete"
+data-field: 'cancer'
+data-type: 'ontology'
+data-categories:
+  - 'cancer'
+  - 'ontology'
+  - 'disease'
+  - 'phenotypes'
+  - 'pharmacology'
+  - 'drugs'
+data-access:
+  - type: download
+    location: 'https://evs.nci.nih.gov/ftp1/NCI_Thesaurus/'
+license: "CC-BY-4.0"
+license-type: "permissive"
+license-link: 'https://evs.nci.nih.gov/ftp1/NCI_Thesaurus/ThesaurusTermsofUse.htm'
+license-hat-used: "false"
+license-issues: []
+license-commentary:
+  - >
+    The Terms of Use puts a trademark restriction on re-releasing the data using the name "NCI Thesaurus". 
+    This was evaluated as be outside the scope of data (re)use.
+was-controversial: "false"
+contacts:
+  - 'https://ncithesaurus-stage.nci.nih.gov/ncitbrowser/pages/contact_us.jsf'
+  - 'NCIAppSupport@nih.gov'
+grants: []
