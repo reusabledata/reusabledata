@@ -1,6 +1,6 @@
 id: 'wikipathways'
 description: ' WikiPathways is a database of biological pathways maintained by and for the scientific community.'
-last-curated: '2019-05-09'
+last-curated: '2019-05-10'
 source: 'WikiPathways'
 source-link: 'https://www.wikipathways.org'
 source-type: "source"
@@ -21,12 +21,13 @@ data-access:
     location: 'http://data.wikipathways.org/current/'
   - type: api
     location: 'https://www.wikipathways.org/index.php/Help:WikiPathways_Webservice/API'
-license: "custom"
+license: "CC0"
 license-type: "permissive"
 license-link: 'https://www.wikipathways.org/index.php/WikiPathways:License_Terms'
 license-hat-used: "false"
 license-issues: []
-license-commentary: []
+license-commentary:
+  - "I would note that the terms page makes an interesting and clear distinction between legal code and social norms, with an interesting list of social expectation that they would like users to adhere to."
 was-controversial: "false"
 contacts:
   - 'https://www.wikipathways.org/index.php/Contact_Us'
