@@ -2700,7 +2700,7 @@
         "license-issues": [],
         "license-commentary": [
             "I would note that the terms page makes an interesting and clear distinction between legal code and social norms, with an interesting list of social expectation that they would like users to adhere to.",
-            "Not explicit except by external link, but using CC0 1.0."
+            "Not explicitly referenced except by external link, but using CC0 1.0."
         ],
         "was-controversial": "false",
         "contacts": [
@@ -2741,7 +2741,7 @@
                 "label": "eNanoMapper (EC FP7 grant 604134)"
             }
         ],
-        "license-commentary-embeddable": "I would note that the terms page makes an interesting and clear distinction between legal code and social norms, with an interesting list of social expectation that they would like users to adhere to.<hr />Not explicit except by external link, but using CC0 1.0.",
+        "license-commentary-embeddable": "I would note that the terms page makes an interesting and clear distinction between legal code and social norms, with an interesting list of social expectation that they would like users to adhere to.<hr />Not explicitly referenced except by external link, but using CC0 1.0.",
         "data-tags": "biology, pathway, disease, micronutrient, nanomaterial, ExDNA, renal genomics, adverse outcomes, regenerative medicine, clinical proteomic tumor analysis",
         "grade-automatic": 5
     },
