@@ -21,7 +21,7 @@ data-access:
     location: 'http://data.wikipathways.org/current/'
   - type: api
     location: 'https://www.wikipathways.org/index.php/Help:WikiPathways_Webservice/API'
-license: "CC0"
+license: "CC0-1.0"
 license-type: "permissive"
 license-link: 'https://www.wikipathways.org/index.php/WikiPathways:License_Terms'
 license-hat-used: "false"
