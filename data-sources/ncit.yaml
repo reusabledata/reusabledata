@@ -5,7 +5,7 @@ description: >
   research, and public information and administrative activities.
 last-curated: '2019-05-22'
 source: 'NCI Thesaurus'
-source-link: 'https://ncithesaurus-stage.nci.nih.gov/'
+source-link: 'https://ncithesaurus-stage.nci.nih.gov'
 source-type: "source"
 status: "complete"
 data-field: 'cancer'
