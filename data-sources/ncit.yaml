@@ -17,6 +17,7 @@ data-categories:
   - 'phenotypes'
   - 'pharmacology'
   - 'drugs'
+  - 'biomedical coding and reference'
 data-access:
   - type: download
     location: 'https://evs.nci.nih.gov/ftp1/NCI_Thesaurus/'
