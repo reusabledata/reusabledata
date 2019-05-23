@@ -8,7 +8,7 @@ source: 'NCI Thesaurus'
 source-link: 'https://ncithesaurus-stage.nci.nih.gov'
 source-type: "source"
 status: "complete"
-data-field: 'cancer'
+data-field: 'biomedical'
 data-type: 'ontology'
 data-categories:
   - 'cancer'
