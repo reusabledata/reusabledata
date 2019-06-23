@@ -8,11 +8,11 @@
             "Avoid restrictions on<br>who may (re)use"
         ],
         "y": [
-            26,
+            27,
             32,
             48,
             23,
-            21
+            22
         ],
         "name": "No violations",
         "marker": {
@@ -50,11 +50,11 @@
             "Avoid restrictions on<br>who may (re)use"
         ],
         "y": [
-            31,
+            30,
             15,
             9,
             24,
-            26
+            25
         ],
         "name": "Have a violation",
         "marker": {
