@@ -1,6 +1,6 @@
 id: bgee
 source: 'Bgee'
-source-link: 'http://bgee.org'
+source-link: 'https://bgee.org/'
 status: complete
 description: 'Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, Affymetrix, in situ hybridization, and EST data).'
 data-field: biomedical
@@ -10,21 +10,17 @@ data-categories:
 data-access:
     - type: download
       location: 'ftp://ftp.bgee.org/'
-license: unlicensed
-license-type: copyright
+license: CC0-1.0
+license-type: permissive
 license-issues:
     - criteria: A.1.2
       comment: 'After some search we were unable to determine the license of the non-ontology portions of the Bgee data. No explicit license statements were apparent, causing a cascade of criteria violations. In spite of this, once an access method was determined, one star was awarded accordingly for C.'
 license-commentary:
-    - 'No licensing information found in: footers; "About"; "Bgee sources" (https://bgee.org/?page=source, just a list of other resources); "How to access Bgee data"; "Gene expression calls"; "Processed expression values"'
-    - 'Our curation and ontology resources can be browsed on our GitHub page.'
-    - 'Noting that while the website does not seem to support any systematic bulk download or mention how to do so, we did stumble onto their FTP site, which works well enough for C.'
-    - 'After a bunch of browsing, I could find no licensing information at all directly on the site.'
-    - 'The GitHub repos seems to be three resources: Confidence Information Ontology (GPL3?), the Homology Ontology (GPL3?, but OBO Foundry lists as CC-BY-3.0, but not sure why), and anatomical similarity annotations (CC0).'
-    - 'Given the inconsistent licensing of the "internal" resources on GH and the lack of any licensing mentioned on the site and Bgee sources, evaluating on as no license mentioned.'
+    - 'The About page states "To the extent possible under law, Bgee team has waived all copyright and related or neighboring rights to Bgee project. This work is published under the Creative Commons Zero license (CC0) from Switzerland. Although CC0 doesn’t legally require users of the data to cite the source, if you intend to use data from Bgee, it would be nice to cite us."'
+    - 'The News updates from 2019-04-05 state "We have clarified our license; we have chosen CC0."'
 was-controversial: "false"
 provisional: "true"
-last-curated: "2019-03-04"
+last-curated: "2019-06-24"
 grants: []
 contacts:
     - Bgee@sib.swiss
