@@ -4,7 +4,7 @@ The home repository for the (Re)usable Data Project. Please see:
 
 http://reusabledata.org
 
-This is a volunteer and community driven effort. As such, we appreciate your efforts to self-curate and make a pull request. As well, if you are interested in adding a new resource, updating a current resource, or have some other issue, we would ask you to create an issue in our tracker and we will do our best to make updates and provide feedback in a timely manner.
+This is a volunteer and community driven effort. We appreciate your efforts to self-curate and make a pull request. If you are interested in adding a new resource, updating a current resource, or have some other issue, we would ask you to create an issue in our tracker and we will do our best to make updates and provide feedback in a timely manner.
 
 The license for the static site generation code is available at https://github.com/reusabledata/reusabledata/blob/master/LICENSE.
 
