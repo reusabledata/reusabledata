@@ -1,18 +1,22 @@
 id: 'agr'
 description: 'The primary mission of the Alliance of Genome Resources (the Alliance) is to develop and maintain sustainable genome information resources that facilitate the use of diverse model organisms in understanding the genetic and genomic basis of human biology, health and disease.'
-last-curated: '2017-12-03'
+last-curated: '2019-06-23'
 source: 'Alliance of Genome Resources (AGR)'
 source-link: 'http://www.alliancegenome.org'
-source-type: "unknown"
+source-type: "integrator"
 status: "complete"
 data-field: 'biology'
 data-type: 'MOD'
 data-categories:
   - 'functional annotation'
   - 'disease-gene association'
-data-access: []
-#  - type: download
-#    location: 'http://'
+  - 'orthology'
+  - 'phenotype and disease models'
+data-access:
+  - type: download
+    location: 'https://www.alliancegenome.org/downloads'
+  - type: api
+    location: 'https://www.alliancegenome.org/api/swagger-ui/'
 license: "unlicensed"
 license-type: "copyright"
 license-link: 'TODO'
@@ -20,13 +24,9 @@ license-hat-used: "false"
 license-issues:
   - criteria: 'A.1.2'
     comment: 'No licensing information could be found after some searching.'
-  - criteria: 'C.1'
-    comment: 'Besides the various search and details pages that allowed downloads, there seemed to be no API, centralized downloads, or other products.'
-  - criteria: 'C.2'
-    comment: 'From our search, the only way to extract bulk data would be to crawl and page scrape from random walks.'
 license-commentary: []
 was-controversial: "false"
 contacts:
-  - 'info@alliancegenome.org'
+  - 'alliance-helpdesk@lists.stanford.edu'
 grants:
-  - label: 'NIH NHGRI U41 HG02223E'
+  - label: 'The Alliance is supported by NIH NHGRI U24HG002223-19S1, NIH NHGRI P41HG002659 (ZFIN), NIH NHGRI U24HG002223 (WormBase), MRC-UK MR/L001020/1 (WormBase), NIH NHGRI U41HG000739 (FlyBase), NIH NHLBI HL64541 (RGD), NIH NHGRI U41HG001315 (SGD), NIH NHGRI HG000330 (MGD), and NIH NHGRI U41HG002273 (GOC, which also provides funding to WB, MGD, SGD).'
