@@ -1,6 +1,6 @@
 
 
-all: index.html criteria.html license-types.html reading.html about.html schema.html enhanced_compiled.json summary_graph.json details_pages sitemap explore.html license.txt check
+all: index.html criteria.html license-types.html reading.html about.html schema.html enhanced_compiled.json summary_graph.json details_pages sitemap explore.html publish-resources check
 
 # .PHONY: clean
 # clean:
@@ -30,8 +30,10 @@ index.html enhanced_compiled.json summary_graph.json: compiled.json
 ### from confusion with GitHub.
 ###
 
-license.txt:
+.PHONY: publish-resources
+publish-resources: enhanced_compiled.json
 	cp data-sources/LICENSE docs/license.txt
+	cp data-sources/enhanced_compiled.json docs/data.json
 
 ###
 ### All of the details pages are generated from running the compiled
