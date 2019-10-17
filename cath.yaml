@@ -27,5 +27,5 @@ provisional: "true"
 contacts:
   - 'http://www.cathdb.info/support/contact'
   - 'i.sillitoe@ucl.ac.uk'
-grants: []
+grants:
   - label: '"CATH-GENE3D is part of the ELIXIR infrastructure"'
