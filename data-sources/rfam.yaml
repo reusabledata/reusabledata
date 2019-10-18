@@ -1,0 +1,31 @@
+id: 'rfam'
+description: 'The Rfam database is a collection of RNA families, each represented by multiple sequence alignments, consensus secondary structures and covariance models (CMs).'
+last-curated: '2019-10-18'
+source: 'Rfam'
+source-link: 'http://rfam.org'
+source-type: "source"
+status: "complete"
+data-field: 'biology'
+data-type: 'RNA families'
+data-categories:
+  - 'RNA family'
+  - 'multiple sequence alignments'
+  - 'msa'
+data-access:
+  - type: download
+    location: 'ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT'
+license: "CC0-1.0"
+license-type: "permissive"
+license-link: 'ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/COPYING'
+license-hat-used: "false"
+license-issues: []
+license-commentary:
+  - 'While one would "pass" the license on the way to the data downloads, I could not find mention any other location except a pointer at https://rfam.readthedocs.io/en/latest/ftp-help.html.'
+  - 'License only found within COPYING in release FTP.'
+  - 'Did not evaluate API.'
+was-controversial: "false"
+provisional: "true"
+contacts:
+  - 'rfam-help@ebi.ac.uk'
+grants:
+  - label: '"Rfam is part of the ELIXER infrastructure"'
