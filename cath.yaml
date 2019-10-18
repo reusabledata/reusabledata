@@ -1,0 +1,32 @@
+id: 'cath'
+description: 'CATH is a classification of protein structures downloaded from the Protein Data Bank. We group protein domains into superfamilies when there is sufficient evidence they have diverged from a common ancestor.'
+last-curated: '2019-10-16'
+source: 'CATH'
+source-link: 'http://www.cathdb.info'
+source-type: "source"
+status: "complete"
+data-field: 'biology'
+data-type: 'protein families'
+data-categories:
+  - 'protein family'
+  - 'superfamily'
+  - 'classification protein structure'
+data-access:
+  - type: download
+    location: 'http://www.cathdb.info/wiki?id=data:index'
+license: "CC0-1.0"
+license-type: "permissive"
+license-link: 'http://www.cathdb.info/wiki'
+license-hat-used: "false"
+license-issues: []
+license-commentary:
+  - 'License in footer of all pages; "About" page additionally has: "The CATH database is a free, publicly available online resource..."'
+  - 'The footer lists as: "CATH...is licensed under a Creative Commons Attribution 4.0 International License."'
+  - 'Did not evaluate API.'
+was-controversial: "false"
+provisional: "true"
+contacts:
+  - 'http://www.cathdb.info/support/contact'
+  - 'i.sillitoe@ucl.ac.uk'
+grants:
+  - label: '"CATH-GENE3D is part of the ELIXIR infrastructure"'
