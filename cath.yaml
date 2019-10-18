@@ -22,6 +22,7 @@ license-issues: []
 license-commentary:
   - 'License in footer of all pages; "About" page additionally has: "The CATH database is a free, publicly available online resource..."'
   - 'The footer lists as: "CATH...is licensed under a Creative Commons Attribution 4.0 International License."'
+  - 'Did not evaluate API.'
 was-controversial: "false"
 provisional: "true"
 contacts:
