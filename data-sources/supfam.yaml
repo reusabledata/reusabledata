@@ -1,0 +1,31 @@
+id: 'supfam'
+description: ''
+last-curated: '2019-10-18'
+source: 'SUPERFAMILY'
+source-link: 'http://www.supfam.org'
+source-type: "repository"
+status: "complete"
+data-field: 'biology'
+data-type: 'annotation'
+data-categories:
+  - 'structural annotation'
+  - 'functional annotation'
+  - 'HMM'
+  - 'protein superfamily'
+data-access:
+  - type: download
+license: "custom"
+license-type: "permissive"
+license-link: 'http://www.supfam.org/about'
+license-hat-used: "false"
+license-issues:
+  - criteria: A.1.1
+    comment: ''
+license-commentary:
+  - 'No formal license used, just a declaration that: "All annotation, models and the database dump are freely available for download to everyone."'
+  - 'Only other notice was in footer: "© The SUPERFAMILY authors and Julian Gough 2001-2019."; taking this a an elaboration on above.'
+was-controversial: "false"
+provisional: "true"
+contacts:
+  - 'http://www.supfam.org/contact'
+grants: []
