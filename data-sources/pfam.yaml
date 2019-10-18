@@ -1,6 +1,6 @@
 id: 'pfam'
 description: 'The Pfam database is a large collection of protein families, each represented by multiple sequence alignments and hidden Markov models (HMMs).'
-last-curated: '2017-12-03'
+last-curated: '2019-10-18'
 source: 'Pfam'
 source-link: 'http://pfam.xfam.org'
 source-type: "repository"
@@ -18,7 +18,8 @@ license-type: "permissive"
 license-link: 'http://pfam.xfam.org/about'
 license-hat-used: "false"
 license-issues: []
-license-commentary: []
+license-commentary:
+  - 'Pfam is freely available under the Creative Commons Zero ("CC0") licence.'
 was-controversial: "false"
 contacts:
   - 'pfam-help@ebi.ac.uk'
