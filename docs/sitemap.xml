@@ -178,6 +178,9 @@
     <loc>http://reusabledata.org/reading.html</loc>
   </url>
   <url>
+    <loc>http://reusabledata.org/rfam.html</loc>
+  </url>
+  <url>
     <loc>http://reusabledata.org/rgd.html</loc>
   </url>
   <url>
@@ -193,7 +196,13 @@
     <loc>http://reusabledata.org/string.html</loc>
   </url>
   <url>
+    <loc>http://reusabledata.org/supfam.html</loc>
+  </url>
+  <url>
     <loc>http://reusabledata.org/tair-open.html</loc>
+  </url>
+  <url>
+    <loc>http://reusabledata.org/tigrfams.html</loc>
   </url>
   <url>
     <loc>http://reusabledata.org/uniprotkb.html</loc>

@@ -2264,7 +2264,7 @@
     {
         "id": "pfam",
         "description": "The Pfam database is a large collection of protein families, each represented by multiple sequence alignments and hidden Markov models (HMMs).",
-        "last-curated": "2017-12-03",
+        "last-curated": "2019-10-18",
         "source": "Pfam",
         "source-link": "http://pfam.xfam.org",
         "source-type": "repository",
@@ -2286,7 +2286,9 @@
         "license-link": "http://pfam.xfam.org/about",
         "license-hat-used": "false",
         "license-issues": [],
-        "license-commentary": [],
+        "license-commentary": [
+            "Pfam is freely available under the Creative Commons Zero (\"CC0\") licence."
+        ],
         "was-controversial": "false",
         "contacts": [
             "pfam-help@ebi.ac.uk"
@@ -2305,7 +2307,7 @@
                 "label": "The Howard Hughes Medical Institute supports the Eddy group."
             }
         ],
-        "license-commentary-embeddable": "",
+        "license-commentary-embeddable": "Pfam is freely available under the Creative Commons Zero (\"CC0\") licence.",
         "data-tags": "biology, protein families, protein family alignments, HMMs",
         "grade-automatic": 5
     },
@@ -2440,6 +2442,51 @@
         "license-commentary-embeddable": "The issue with criteria B.2.2 could be rectified if Reactome provided a clean copy of the data that can be redistributed without negotiation.",
         "data-tags": "biology, pathway, pathway data",
         "grade-automatic": 4.5
+    },
+    {
+        "id": "rfam",
+        "description": "The Rfam database is a collection of RNA families, each represented by multiple sequence alignments, consensus secondary structures and covariance models (CMs).",
+        "last-curated": "2019-10-18",
+        "source": "Rfam",
+        "source-link": "http://rfam.org",
+        "source-type": "source",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "RNA families",
+        "data-categories": [
+            "RNA family",
+            "multiple sequence alignments",
+            "msa"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT"
+            }
+        ],
+        "license": "CC0-1.0",
+        "license-type": "permissive",
+        "license-link": "ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/COPYING",
+        "license-hat-used": "false",
+        "license-issues": [],
+        "license-commentary": [
+            "While one would \"pass\" the license on the way to the data downloads, I could not find mention any other location except a pointer at https://rfam.readthedocs.io/en/latest/ftp-help.html.",
+            "License only found within COPYING in release FTP.",
+            "Did not evaluate API."
+        ],
+        "was-controversial": "false",
+        "provisional": "true",
+        "contacts": [
+            "rfam-help@ebi.ac.uk"
+        ],
+        "grants": [
+            {
+                "label": "\"Rfam is part of the ELIXER infrastructure\""
+            }
+        ],
+        "license-commentary-embeddable": "While one would \"pass\" the license on the way to the data downloads, I could not find mention any other location except a pointer at https://rfam.readthedocs.io/en/latest/ftp-help.html.<hr />License only found within COPYING in release FTP.<hr />Did not evaluate API.",
+        "data-tags": "biology, RNA families, RNA family, multiple sequence alignments, msa",
+        "grade-automatic": 5
     },
     {
         "id": "rgd",
@@ -2623,6 +2670,63 @@
         "grade-automatic": 5
     },
     {
+        "id": "supfam",
+        "description": "SUPERFAMILY is a database of structural and functional annotation for all proteins and genomes.",
+        "last-curated": "2019-10-18",
+        "source": "SUPERFAMILY",
+        "source-link": "http://www.supfam.org",
+        "source-type": "source",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "annotation",
+        "data-categories": [
+            "structural annotation",
+            "functional annotation",
+            "HMM",
+            "protein superfamily"
+        ],
+        "data-access": [
+            {
+                "label": "SUPERFAMILY Genomes",
+                "type": "download",
+                "location": "http://supfam.org/genome/hierarchy"
+            },
+            {
+                "label": "SCOP Hierarchy",
+                "type": "download",
+                "location": "http://supfam.org/scop"
+            }
+        ],
+        "license": "custom",
+        "license-type": "permissive",
+        "license-link": "http://www.supfam.org/about",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "A.2.2",
+                "comment": "No formal license used, just a declaration that: \"All annotation, models and the database dump are freely available for download to everyone.\""
+            },
+            {
+                "criteria": "C.1",
+                "comment": "There seems to be no central clearing location of the data, but rather a hierarchy view, navigate, click on individual set, then download. Scriptable."
+            }
+        ],
+        "license-commentary": [
+            "The relatively high score hinges on the positive or negative evaluation of whether the declaration of \"freely available...to everyone\" constitutes a wnough of license; I have decided that it does, but it is a close call.",
+            "Only other notice was in footer: \"© The SUPERFAMILY authors and Julian Gough 2001-2019.\"; taking this a an elaboration on above.",
+            "Very minimal website."
+        ],
+        "was-controversial": "false",
+        "provisional": "true",
+        "contacts": [
+            "http://www.supfam.org/contact"
+        ],
+        "grants": [],
+        "license-commentary-embeddable": "The relatively high score hinges on the positive or negative evaluation of whether the declaration of \"freely available...to everyone\" constitutes a wnough of license; I have decided that it does, but it is a close call.<hr />Only other notice was in footer: \"© The SUPERFAMILY authors and Julian Gough 2001-2019.\"; taking this a an elaboration on above.<hr />Very minimal website.",
+        "data-tags": "biology, annotation, structural annotation, functional annotation, HMM, protein superfamily",
+        "grade-automatic": 4
+    },
+    {
         "id": "tair-open",
         "description": "The Arabidopsis Information Resource (TAIR) maintains a database of genetic and molecular biology data for the model higher plant Arabidopsis thaliana.",
         "last-curated": "2017-12-03",
@@ -2659,6 +2763,55 @@
         "license-commentary-embeddable": "This curation is for the post one-year embargo window data; data within that window is available for a subscription. The data sets are clearly separately available.",
         "data-tags": "biology, MOD, sequence, gene structure, gene expression, functional annotation",
         "grade-automatic": 5
+    },
+    {
+        "id": "tigrfams",
+        "description": "TIGRFAMs is a resource consisting of curated multiple sequence alignments, Hidden Markov Models (HMMs) for protein sequence classification, and associated information designed to support automated annotation of (mostly prokaryotic) proteins.\n",
+        "last-curated": "2019-10-18",
+        "source": "TIGRFAMs",
+        "source-link": "http://tigrfams.jcvi.org/cgi-bin/index.cgi",
+        "source-type": "source",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "protein",
+        "data-categories": [
+            "MSA",
+            "HMM",
+            "protein sequence classification"
+        ],
+        "data-access": [
+            {
+                "type": "download",
+                "location": "ftp://ftp.jcvi.org/pub/data/TIGRFAMs/"
+            }
+        ],
+        "license": "LGPL-2.0-or-later",
+        "license-type": "copyleft",
+        "license-link": "ftp://ftp.jcvi.org/pub/data/TIGRFAMs/COPYRIGHT",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "D.1.2",
+                "comment": "By using the LGPLv2.0+, there may be issues in mixing and redistributing this data with licenses that have incompatible terms."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "By using the LGPLv2.0+, there may be some parties with issues in mixing and redistributing this data with licenses that have incompatible terms."
+            }
+        ],
+        "license-commentary": [
+            "The licensing is further complicated by the \"...version 2 of the License, or (at your option) any later version\" statement, which means that two direct derivatives of this data could possibly end up incompatible: https://www.gnu.org/licenses/gpl-faq.html#AllCompatibility .\n",
+            "While the application of GNU licenses may make sense for software, they are troublesome to reason about for data. For example, how does \"[t]he modified work must itself be a software library\" work with data? Overall, most of the terms of the LGPLv2.0 seem to be nonsensical for data, making applying the terms difficult. However, we currently have no further criteria to capture these issues.\n"
+        ],
+        "was-controversial": "false",
+        "provisional": "true",
+        "contacts": [
+            "https://www.jcvi.org/contact"
+        ],
+        "grants": [],
+        "license-commentary-embeddable": "The licensing is further complicated by the \"...version 2 of the License, or (at your option) any later version\" statement, which means that two direct derivatives of this data could possibly end up incompatible: https://www.gnu.org/licenses/gpl-faq.html#AllCompatibility .\n<hr />While the application of GNU licenses may make sense for software, they are troublesome to reason about for data. For example, how does \"[t]he modified work must itself be a software library\" work with data? Overall, most of the terms of the LGPLv2.0 seem to be nonsensical for data, making applying the terms difficult. However, we currently have no further criteria to capture these issues.\n",
+        "data-tags": "biology, protein, MSA, HMM, protein sequence classification",
+        "grade-automatic": 3
     },
     {
         "id": "uniprotkb",
