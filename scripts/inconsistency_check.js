@@ -147,6 +147,13 @@ us.each(data_sources, function(source){
 	if( ! violations['D.1.2'] || ! violations['E.1.2'] ){
 	    note_inconsistency(source, 'req violation issue');
 	}
+    }else if( lic === 'LGPL-2.0-or-later' ){
+	if( lictype !== 'copyleft' ){
+	    note_inconsistency(source, 'lic/type mismatch');
+	}
+	if( ! violations['D.1.2'] || ! violations['E.1.2'] ){
+	    note_inconsistency(source, 'req violation issue');
+	}
     }else if( lic === 'CC-BY-SA-3.0' ){
 	if( lictype !== 'copyleft' ){
 	    note_inconsistency(source, 'lic/type mismatch');
