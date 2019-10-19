@@ -1,0 +1,39 @@
+id: 'supfam'
+description: 'SUPERFAMILY is a database of structural and functional annotation for all proteins and genomes.'
+last-curated: '2019-10-18'
+source: 'SUPERFAMILY'
+source-link: 'http://www.supfam.org'
+source-type: "source"
+status: "complete"
+data-field: 'biology'
+data-type: 'annotation'
+data-categories:
+  - 'structural annotation'
+  - 'functional annotation'
+  - 'HMM'
+  - 'protein superfamily'
+data-access:
+  - label: 'SUPERFAMILY Genomes'
+    type: download
+    location: http://supfam.org/genome/hierarchy
+  - label: 'SCOP Hierarchy'
+    type: download
+    location: http://supfam.org/scop
+license: "custom"
+license-type: "permissive"
+license-link: 'http://www.supfam.org/about'
+license-hat-used: "false"
+license-issues:
+  - criteria: A.2.2
+    comment: 'No formal license used, just a declaration that: "All annotation, models and the database dump are freely available for download to everyone."'
+  - criteria: C.1
+    comment: 'There seems to be no central clearing location of the data, but rather a hierarchy view, navigate, click on individual set, then download. Scriptable.'
+license-commentary:
+  - 'The relatively high score hinges on the positive or negative evaluation of whether the declaration of "freely available...to everyone" constitutes a wnough of license; I have decided that it does, but it is a close call.'
+  - 'Only other notice was in footer: "© The SUPERFAMILY authors and Julian Gough 2001-2019."; taking this a an elaboration on above.'
+  - 'Very minimal website.'
+was-controversial: "false"
+provisional: "true"
+contacts:
+  - 'http://www.supfam.org/contact'
+grants: []
