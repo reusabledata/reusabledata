@@ -31,8 +31,9 @@ license-commentary:
     possibly end up incompatible: https://www.gnu.org/licenses/gpl-faq.html#AllCompatibility .
   - >
     While the application of GNU licenses may make sense for software, they are troublesome to reason about
-    for data. For example, how does "[t]he modified work must itself be a software library" work with data. Overall,
-    most of the terms of the LGPLv2.0 would seem to be nonsensical for data.
+    for data. For example, how does "[t]he modified work must itself be a software library" work with data? Overall,
+    most of the terms of the LGPLv2.0 seem to be nonsensical for data, making applying the terms difficult. However,
+    we currently have no further criteria to capture these issues.
 was-controversial: "false"
 provisional: "true"
 contacts:
