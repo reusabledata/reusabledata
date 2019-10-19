@@ -1,0 +1,30 @@
+id: "cogs"
+description: "Phylogenetic classification of proteins encoded in complete genomes."
+last-curated: "2019-10-19"
+source: 'COGs'
+source-link: "https://www.ncbi.nlm.nih.gov/COG/"
+source-type: resource
+status: complete
+data-field: biology
+data-type: 'protein function'
+data-categories:
+  - ''
+data-access:
+  - label: 2014 update FTP
+    type: download
+    location: ftp://ftp.ncbi.nih.gov/pub/COG/COG2014/data
+license: unlicensed
+license-type: copyright
+license-link: TODO
+license-hat-used: "false"
+license-issues:
+  - criteria: A.1.2
+    comment: "Could not find any clear terms on any searched pages. See commentary."
+license-commentary:
+  - 'I could find no licensing information, including in the most recent publication covering the most current FTP downloads.'
+was-controversial: "false"
+provisional: "true"
+contacts:
+  - 'cogs@ncbi.nlm.nih.gov'
+  - 'koonin@ncbi.nlm.nih.gov'
+grants: []
