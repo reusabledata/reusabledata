@@ -26,7 +26,7 @@ license-issues:
 license-commentary:
   - 'The relatively high score hinges on the positive or negative evaluation of whether the declaration of "freely available...to everyone" constitutes a wnough of license; I have decided that it does, but it is a close call.'
   - 'Only other notice was in footer: "© The SUPERFAMILY authors and Julian Gough 2001-2019."; taking this a an elaboration on above.'
-was-controversial: "true"
+was-controversial: "false"
 provisional: "true"
 contacts:
   - 'http://www.supfam.org/contact'
