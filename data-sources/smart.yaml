@@ -6,17 +6,26 @@ source-link: 'http://smart.embl-heidelberg.de'
 source-type: "source"
 status: "complete"
 data-field: 'biology'
-data-type: ''
+data-type: 'protein domains'
 data-categories:
-  - ''
-data-access:
-  - type: download
-    location: ''
+  - 'protein domain identification'
+  - 'protein domain annotation'
+data-access: []
 license: "custom"
 license-type: "restrictive"
 license-link: 'https://software.embl-em.de/stream/license_pdf/24/56fb8ca3363b8_License_Academic_SMART.pdf'
 license-hat-used: "true"
-license-issues: []
+license-issues:
+  - criteria: A.2
+    comment: "custom license used"
+  - criteria: C.1
+    comment: ""
+  - criteria: C.2
+    comment: ""
+  - criteria: D.1.2
+    comment: ""
+  - criteria: E.1.2
+    comment: ""
 license-commentary:
   - 'From FAQ: "...[I]f you just want the basic searching functionality...you can sign a license agreement, and get our set of Hidden Markov Models, alignments and thresholds. The license is free to academics, but not commercial users. For further details on the academic license, visit SMART page at EMBLEM."'
   - '"From "You need te [sic: read to] be a registered User to download EMBLEM Software."'
