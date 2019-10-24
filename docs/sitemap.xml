@@ -37,6 +37,9 @@
     <loc>http://reusabledata.org/clinvar.html</loc>
   </url>
   <url>
+    <loc>http://reusabledata.org/cogs.html</loc>
+  </url>
+  <url>
     <loc>http://reusabledata.org/coriell-institute.html</loc>
   </url>
   <url>
@@ -191,6 +194,9 @@
   </url>
   <url>
     <loc>http://reusabledata.org/sgd.html</loc>
+  </url>
+  <url>
+    <loc>http://reusabledata.org/smart.html</loc>
   </url>
   <url>
     <loc>http://reusabledata.org/string.html</loc>

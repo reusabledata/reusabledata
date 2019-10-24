@@ -9,8 +9,8 @@
         ],
         "y": [
             29,
-            35,
-            51,
+            36,
+            52,
             25,
             24
         ],
@@ -30,10 +30,10 @@
         ],
         "y": [
             0,
-            10,
+            11,
             0,
-            10,
-            10
+            11,
+            11
         ],
         "name": "Unknown",
         "marker": {
@@ -50,11 +50,11 @@
             "Avoid restrictions on<br>who may (re)use"
         ],
         "y": [
-            31,
+            33,
             15,
-            9,
-            25,
-            26
+            10,
+            26,
+            27
         ],
         "name": "Have a violation",
         "marker": {

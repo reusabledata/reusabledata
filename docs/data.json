@@ -464,6 +464,50 @@
         "grade-automatic": 4
     },
     {
+        "id": "cogs",
+        "description": "Phylogenetic classification of proteins encoded in complete genomes.",
+        "last-curated": "2019-10-19",
+        "source": "COGs",
+        "source-link": "https://www.ncbi.nlm.nih.gov/COG/",
+        "source-type": "source",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "protein function",
+        "data-categories": [
+            "protein family",
+            "function prediction"
+        ],
+        "data-access": [
+            {
+                "label": "2014 update FTP",
+                "type": "download",
+                "location": "ftp://ftp.ncbi.nih.gov/pub/COG/COG2014/data"
+            }
+        ],
+        "license": "unlicensed",
+        "license-type": "copyright",
+        "license-hat-used": "false",
+        "license-issues": [
+            {
+                "criteria": "A.1.2",
+                "comment": "Could not find any clear terms on any searched pages. See commentary."
+            }
+        ],
+        "license-commentary": [
+            "I could find no licensing information, including in the most recent publication covering the most current FTP downloads."
+        ],
+        "was-controversial": "false",
+        "provisional": "true",
+        "contacts": [
+            "cogs@ncbi.nlm.nih.gov",
+            "koonin@ncbi.nlm.nih.gov"
+        ],
+        "grants": [],
+        "license-commentary-embeddable": "I could find no licensing information, including in the most recent publication covering the most current FTP downloads.",
+        "data-tags": "biology, protein function, protein family, function prediction",
+        "grade-automatic": 1
+    },
+    {
         "id": "coriell-institute",
         "source": "Coriell Institute for Medical Research",
         "source-link": "https://coriell.org/",
@@ -2636,6 +2680,74 @@
         "license-commentary-embeddable": "The license information found in the \"About SGD\" paragraph on the SGD Help page at https://sites.google.com/view/yeastgenome-help/about<hr />SGD operates under the Creative Commons Attribution 4.0 International license (CC BY 4.0).<hr />However, the license information for the API is much less clear, reading: \"Permission to use the information contained in this database was given by the researchers/institutes who contributed or published the information. Users of the database are solely responsible for compliance with any copyright restrictions, including those applying to the author abstracts.\"<hr />The API did not seem to offer any way of filter out things with other licenses.<hr />Without ascending, noting that various upstream for the SGD API could have other terms: https://yeastmine.yeastgenome.org/yeastmine/dataCategories.do",
         "data-tags": "biology, MOD, genotype-phenotype association, disease-model association, gene expression",
         "grade-automatic": 4.5
+    },
+    {
+        "id": "smart",
+        "description": "Identification and annotation of genetically mobile domains and the analysis of domain architectures.",
+        "last-curated": "2019-10-19",
+        "source": "Simple Modular Architecture Research Tool (SMART)",
+        "source-link": "http://smart.embl-heidelberg.de",
+        "source-type": "source",
+        "status": "complete",
+        "data-field": "biology",
+        "data-type": "protein domains",
+        "data-categories": [
+            "protein domain identification",
+            "protein domain annotation"
+        ],
+        "data-access": [],
+        "license": "custom",
+        "license-type": "restrictive",
+        "license-link": "https://software.embl-em.de/stream/license_pdf/24/56fb8ca3363b8_License_Academic_SMART.pdf",
+        "license-hat-used": "true",
+        "license-issues": [
+            {
+                "criteria": "A.2.2",
+                "comment": "custom license used"
+            },
+            {
+                "criteria": "C.1",
+                "comment": "The main site seems to be a web application, with no bulk access possible."
+            },
+            {
+                "criteria": "C.2",
+                "comment": "While there is a software download where one may be able to recreate the data and/or website, the evaluator believes that the process and package around it violates access criteria."
+            },
+            {
+                "criteria": "D.1.2",
+                "comment": "The restrictive licensing terms prevent further reuse."
+            },
+            {
+                "criteria": "E.1.2",
+                "comment": "The restrictive licensing terms prevent further reuse."
+            }
+        ],
+        "license-commentary": [
+            "From FAQ: \"...[I]f you just want the basic searching functionality...you can sign a license agreement, and get our set of Hidden Markov Models, alignments and thresholds. The license is free to academics, but not commercial users. For further details on the academic license, visit SMART page at EMBLEM.\"",
+            "\"From \"You need te [sic: read to] be a registered User to download EMBLEM Software.\"",
+            "From EMBLEM page: \"License...Academic SMART...(none defined)\"",
+            "On registrations and click-through, found license at: https://software.embl-em.de/license/24",
+            "From license: non-commercial license only covers \"public funded academic and/or education and/or research institution or an individual working for such institution\"",
+            "From license: \"non-exclusive, non-transferable\"",
+            "From license: \"shall not have the right to download...and/or to make copies...for either internal use or for back-up purposes\"",
+            "From license: \"software code of the Licensed Software shall be treated as trade secrets and confidential information\"",
+            "From license: \"Except as otherwise expressly permitted in this Agreement, LICENSEE may not (i) modify or create any derivative works of the Licensed Software or documentation to the Licensed Software, including customization, translation or localization...(iii) redistribute, encumber, sell, rent, lease, sublicense, or otherwise transfer rights to the Licensed Software\"",
+            "From license: \"...agrees to cite the use of the Licensed Software on all related scientific publications, posters, grant applications, institutional reports or brochures\"",
+            "From FAQ: \"If you are a commerical user, please contact biobyte solutions GmbH. They provide the commercial version of SMART...\""
+        ],
+        "was-controversial": "false",
+        "provisional": "true",
+        "contacts": [
+            "smart@embl.de"
+        ],
+        "grants": [
+            {
+                "label": "From latest paper: \"German Network for Bioinformatics Infrastructure (de.NBI); EMBL. Funding for open access charge: European Molecular Biology Laboratory.\""
+            }
+        ],
+        "license-commentary-embeddable": "From FAQ: \"...[I]f you just want the basic searching functionality...you can sign a license agreement, and get our set of Hidden Markov Models, alignments and thresholds. The license is free to academics, but not commercial users. For further details on the academic license, visit SMART page at EMBLEM.\"<hr />\"From \"You need te [sic: read to] be a registered User to download EMBLEM Software.\"<hr />From EMBLEM page: \"License...Academic SMART...(none defined)\"<hr />On registrations and click-through, found license at: https://software.embl-em.de/license/24<hr />From license: non-commercial license only covers \"public funded academic and/or education and/or research institution or an individual working for such institution\"<hr />From license: \"non-exclusive, non-transferable\"<hr />From license: \"shall not have the right to download...and/or to make copies...for either internal use or for back-up purposes\"<hr />From license: \"software code of the Licensed Software shall be treated as trade secrets and confidential information\"<hr />From license: \"Except as otherwise expressly permitted in this Agreement, LICENSEE may not (i) modify or create any derivative works of the Licensed Software or documentation to the Licensed Software, including customization, translation or localization...(iii) redistribute, encumber, sell, rent, lease, sublicense, or otherwise transfer rights to the Licensed Software\"<hr />From license: \"...agrees to cite the use of the Licensed Software on all related scientific publications, posters, grant applications, institutional reports or brochures\"<hr />From FAQ: \"If you are a commerical user, please contact biobyte solutions GmbH. They provide the commercial version of SMART...\"",
+        "data-tags": "biology, protein domains, protein domain identification, protein domain annotation",
+        "grade-automatic": 1.5
     },
     {
         "id": "string",
