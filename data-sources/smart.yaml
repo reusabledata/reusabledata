@@ -1,0 +1,46 @@
+id: 'smart'
+description: 'Identification and annotation of genetically mobile domains and the analysis of domain architectures.'
+last-curated: '2019-10-19'
+source: 'Simple Modular Architecture Research Tool (SMART)'
+source-link: 'http://smart.embl-heidelberg.de'
+source-type: "source"
+status: "complete"
+data-field: 'biology'
+data-type: 'protein domains'
+data-categories:
+  - 'protein domain identification'
+  - 'protein domain annotation'
+data-access: []
+license: "custom"
+license-type: "restrictive"
+license-link: 'https://software.embl-em.de/stream/license_pdf/24/56fb8ca3363b8_License_Academic_SMART.pdf'
+license-hat-used: "true"
+license-issues:
+  - criteria: A.2.2
+    comment: "custom license used"
+  - criteria: C.1
+    comment: "The main site seems to be a web application, with no bulk access possible."
+  - criteria: C.2
+    comment: "While there is a software download where one may be able to recreate the data and/or website, the evaluator believes that the process and package around it violates access criteria."
+  - criteria: D.1.2
+    comment: "The restrictive licensing terms prevent further reuse."
+  - criteria: E.1.2
+    comment: "The restrictive licensing terms prevent further reuse."
+license-commentary:
+  - 'From FAQ: "...[I]f you just want the basic searching functionality...you can sign a license agreement, and get our set of Hidden Markov Models, alignments and thresholds. The license is free to academics, but not commercial users. For further details on the academic license, visit SMART page at EMBLEM."'
+  - '"From "You need te [sic: read to] be a registered User to download EMBLEM Software."'
+  - 'From EMBLEM page: "License...Academic SMART...(none defined)"'
+  - 'On registrations and click-through, found license at: https://software.embl-em.de/license/24'
+  - 'From license: non-commercial license only covers "public funded academic and/or education and/or research institution or an individual working for such institution"'
+  - 'From license: "non-exclusive, non-transferable"'
+  - 'From license: "shall not have the right to download...and/or to make copies...for either internal use or for back-up purposes"'
+  - 'From license: "software code of the Licensed Software shall be treated as trade secrets and confidential information"'
+  - 'From license: "Except as otherwise expressly permitted in this Agreement, LICENSEE may not (i) modify or create any derivative works of the Licensed Software or documentation to the Licensed Software, including customization, translation or localization...(iii) redistribute, encumber, sell, rent, lease, sublicense, or otherwise transfer rights to the Licensed Software"'
+  - 'From license: "...agrees to cite the use of the Licensed Software on all related scientific publications, posters, grant applications, institutional reports or brochures"'
+  - 'From FAQ: "If you are a commerical user, please contact biobyte solutions GmbH. They provide the commercial version of SMART..."'
+was-controversial: "false"
+provisional: "true"
+contacts:
+  - 'smart@embl.de'
+grants:
+  - label: 'From latest paper: "German Network for Bioinformatics Infrastructure (de.NBI); EMBL. Funding for open access charge: European Molecular Biology Laboratory."'
