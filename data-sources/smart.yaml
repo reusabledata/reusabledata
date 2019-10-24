@@ -16,7 +16,7 @@ license-type: "restrictive"
 license-link: 'https://software.embl-em.de/stream/license_pdf/24/56fb8ca3363b8_License_Academic_SMART.pdf'
 license-hat-used: "true"
 license-issues:
-  - criteria: A.2
+  - criteria: A.2.2
     comment: "custom license used"
   - criteria: C.1
     comment: "The main site seems to be a web application, with no bulk access possible."
