@@ -19,13 +19,13 @@ license-issues:
   - criteria: A.2
     comment: "custom license used"
   - criteria: C.1
-    comment: ""
+    comment: "The main site seems to be a web application, with no bulk access possible."
   - criteria: C.2
-    comment: ""
+    comment: "While there is a software download where one may be able to recreate the data and/or website, the evaluator believes that the process and package around it violates access criteria."
   - criteria: D.1.2
-    comment: ""
+    comment: "The restrictive licensing terms prevent further reuse."
   - criteria: E.1.2
-    comment: ""
+    comment: "The restrictive licensing terms prevent further reuse."
 license-commentary:
   - 'From FAQ: "...[I]f you just want the basic searching functionality...you can sign a license agreement, and get our set of Hidden Markov Models, alignments and thresholds. The license is free to academics, but not commercial users. For further details on the academic license, visit SMART page at EMBLEM."'
   - '"From "You need te [sic: read to] be a registered User to download EMBLEM Software."'
