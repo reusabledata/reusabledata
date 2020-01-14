@@ -3,7 +3,7 @@ source: Variant Interpretation for Cancer Consortium meta-knowledgebase
 source-link: http://search.cancervariants.org
 source-type: integrator
 status: complete
-description: 'The VICC is an open consortium of experts in the clinical interpretation of variants in cancer. Our goal is to build community standards around the clinical interpretation of molecular variation in tumors. The meta-knowledgebase is a precursor resource for demonstrating the gains that can be made through integrating efforts.'
+description: 'The VICC is an open consortium of experts in the clinical interpretation of variants in cancer. Our goal is to build community standards around the clinical interpretation of molecular variation in tumors. The meta-knowledgebase is a precursor search tool for demonstrating the gains that can be made through integrating multiple such knowledgebases.'
 data-field: biomedical
 data-type: human
 data-categories:
@@ -21,8 +21,8 @@ license-type: unknown
 license-link: 'http://docs.cancervariants.org/en/latest/license.html'
 license-hat-used: true
 license-issues:
-  - criteria:
+  - criteria: 
 license-commentary:
-
+  - 
 contacts:
     - https://civic.genome.wustl.edu/contact
