@@ -1,6 +1,6 @@
 id: 'cancer-biomarkers-database'
 description: 'The Cancer Biomarkers database is curated and maintained by several clinical and scientific experts in the field of precision oncology.'
-last-curated: '2020-2020-17'
+last-curated: '2020-01-17'
 source: 'Cancer Biomarkers database'
 source-link: 'https://www.cancergenomeinterpreter.org/biomarkers'
 source-type: "source"
