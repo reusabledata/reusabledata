@@ -1,0 +1,30 @@
+id: 'cancer-biomarkers-database'
+description: 'The Cancer Biomarkers database is curated and maintained by several clinical and scientific experts in the field of precision oncology.'
+last-curated: '2020-01-17'
+source: 'Cancer Biomarkers database'
+source-link: 'https://www.cancergenomeinterpreter.org/biomarkers'
+source-type: "source"
+status: "complete"
+data-field: 'oncology'
+data-type: 'interaction'
+data-categories:
+  - 'cancer'
+  - 'drug'
+  - 'biomarker'
+  - 'oncology'
+data-access:
+  - type: download
+    location: 'https://www.cancergenomeinterpreter.org/data/cgi_biomarkers_latest.zip'
+license: "CC0-1.0"
+license-type: "permissive"
+license-link: 'https://www.cancergenomeinterpreter.org/biomarkers'
+license-hat-used: "false"
+license-issues: []
+license-commentary:
+  - "Noting that the footer has a \"Legal advice\" link to more restrictive terms; it seems clear from the context that this is site boilerplate, with the resource hosted within. Similarly for the \"API\" and \"License\" links."
+  - "License information (as well as data) are all available on the landing page."
+was-controversial: "false"
+contacts:
+  - 'http://goo.gl/forms/gV47GKakVvJD3iTz2'
+grants:
+  - label: "European Union's Horizon 2020 funded project."
