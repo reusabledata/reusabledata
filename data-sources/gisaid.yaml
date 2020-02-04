@@ -2,6 +2,7 @@ id: gisaid
 last-curated: "2020-02-03"
 source: GISAID
 source-link: 'https://www.gisaid.org'
+source-type: 'unknown'
 status: incomplete
 description: 'The GISAID Initiative promotes the international sharing of all influenza virus sequences, related clinical and epidemiological data associated with human viruses, and geographical as well as species-specific data associated with avian and other animal viruses, to help researchers understand how the viruses evolve, spread and potentially become pandemics.'
 data-field: biology
