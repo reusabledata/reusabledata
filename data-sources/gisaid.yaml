@@ -37,6 +37,7 @@ license-commentary:
   - 'The fact that the license agreement itself has terms makes conversation possibly difficult.'
   - 'While the license is quite readable, it has many interesting terms trying to control the behavior (e.g. 2b) of those under the agreement that may be best understood by law professionals.'
 was-controversial: "false"
+provisional: "true"
 contacts:
   - https://www.gisaid.org/help/contact/
 grants:
