@@ -1,0 +1,50 @@
+id: gisaid
+last-curated: "2020-02-03"
+source: GISAID
+source-link: 'https://www.gisaid.org'
+source-type: 'unknown'
+status: incomplete
+description: 'The GISAID Initiative promotes the international sharing of all influenza virus sequences, related clinical and epidemiological data associated with human viruses, and geographical as well as species-specific data associated with avian and other animal viruses, to help researchers understand how the viruses evolve, spread and potentially become pandemics.'
+data-field: biology
+data-type: viral
+data-categories:
+  - 'gene'
+  - 'clinical'
+  - 'epidemiology'
+  - 'influenza virus sequence'
+  - 'aves' 
+  - 'evolution'
+  - 'demographic'
+  - 'geo-spatial'
+  - 'gis'
+data-access: []
+license: custom
+license-type: private pool
+license-link: 'https://www.gisaid.org/registration/terms-of-use/'
+license-hat-used: 'false'
+license-issues:
+  - criteria: A.2.2
+    comment: 'The resource uses an extensive custom license.'
+  - criteria: B.1
+    comment: There are terms (e.g. 2b) that would make it seem that GISAID would need to be negotiated with for any further reuse beyond.
+  - criteria: C.1
+    comment: The webapp-style interface is not suitable for scripting or batch operations; bulk access options were not apparent.
+  - criteria: C.2
+    comment: I believe it would take a bit of knowledge to probe out the correct calls and get through the authorization, assuming scripting was feasible. 
+  - criteria: D.1.2
+    comment: 'No pass-through of data seems possible except through the license agreement; no academic exception seems to exist.'
+  - criteria: E.1.2
+    comment: 'No pass-through of data seems possible except through the license agreement; no academic exception seems to exist.'
+license-commentary:
+  - 'The terms found at https://www.gisaid.org/registration/terms-of-use/ appear to be the same as the final version agreed to during registration.'
+  - 'Additional terms for registry at https://www.gisaid.org/registration/register/ .'
+  - 'Additional terms for registry at https://platform.gisaid.org/epi3/frontend#360c7c .'
+  - 'The fact that the license agreement itself has terms makes conversation possibly difficult.'
+  - 'While the license is quite readable, it has many interesting terms trying to control the behavior (e.g. 2b) of those under the agreement that may be best understood by law professionals.'
+  - 'The'
+was-controversial: "false"
+provisional: "true"
+contacts:
+  - https://www.gisaid.org/help/contact/
+grants:
+  - label: "https://www.gisaid.org/about-us/grants/ , no current listing"
