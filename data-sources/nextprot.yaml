@@ -1,6 +1,6 @@
 id: 'nextprot'
 description: 'Developed by the SIB Swiss Institute of Bioinformatics neXtProt is a comprehensive human-centric discovery platform, offering its users a seamless integration of and navigation through protein-related data.'
-last-curated: '2017-12-03'
+last-curated: '2020-03-09'
 source: 'neXtProt'
 source-link: 'https://www.nextprot.org'
 source-type: "integrator"
@@ -21,16 +21,13 @@ data-access:
     location: 'http://sparql.nextprot.org'
   - type: api
     location: 'http://snorql.nextprot.org'
-license: "CC-BY-ND-3.0"
-license-type: "restrictive"
+license: "CC-BY-4.0"
+license-type: "permissive"
 license-link: 'ftp://ftp.nextprot.org/pub/README'
 license-hat-used: "false"
-license-issues:
-  - criteria: 'D.1.2'
-    comment: 'CC BY-ND prevents some types of reuse, such and modification and redistribution.'
-  - criteria: 'E.1.2'
-    comment: 'CC BY-ND prevents all parties from reusing the data.'
-license-commentary: []
+license-issues: []
+license-commentary:
+  - Using the license most proximate to the download--in the downloads directory itself. There is a somewhat ambiguous ARR statement at https://www.nextprot.org/copyright.
 was-controversial: "false"
 contacts:
   - 'support@nextprot.org'
