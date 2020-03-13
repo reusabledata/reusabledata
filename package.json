@@ -22,7 +22,7 @@
       "cytoscape-cose-bilkent": "2.1.0",
       "glob": "7.1.2",
       "markdown": "0.5.0",
-      "minimist": "1.2.0",
+      "minimist": "1.2.5",
       "mustache": "2.3.0",
       "pug": "2.0.0-rc.3",
       "underscore": "1.8.3",
