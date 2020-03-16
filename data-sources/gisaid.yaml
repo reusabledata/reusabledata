@@ -3,7 +3,7 @@ last-curated: "2020-02-03"
 source: GISAID
 source-link: 'https://www.gisaid.org'
 source-type: 'unknown'
-status: incomplete
+status: "complete"
 description: 'The GISAID Initiative promotes the international sharing of all influenza virus sequences, related clinical and epidemiological data associated with human viruses, and geographical as well as species-specific data associated with avian and other animal viruses, to help researchers understand how the viruses evolve, spread and potentially become pandemics.'
 data-field: biology
 data-type: viral
@@ -12,7 +12,7 @@ data-categories:
   - 'clinical'
   - 'epidemiology'
   - 'influenza virus sequence'
-  - 'aves' 
+  - 'aves'
   - 'evolution'
   - 'demographic'
   - 'geo-spatial'
@@ -30,7 +30,7 @@ license-issues:
   - criteria: C.1
     comment: The webapp-style interface is not suitable for scripting or batch operations; bulk access options were not apparent.
   - criteria: C.2
-    comment: I believe it would take a bit of knowledge to probe out the correct calls and get through the authorization, assuming scripting was feasible. 
+    comment: I believe it would take a bit of knowledge to probe out the correct calls and get through the authorization, assuming scripting was feasible.
   - criteria: D.1.2
     comment: 'No pass-through of data seems possible except through the license agreement; no academic exception seems to exist.'
   - criteria: E.1.2
