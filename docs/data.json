@@ -1120,7 +1120,7 @@
         "source": "GISAID",
         "source-link": "https://www.gisaid.org",
         "source-type": "unknown",
-        "status": "incomplete",
+        "status": "complete",
         "description": "The GISAID Initiative promotes the international sharing of all influenza virus sequences, related clinical and epidemiological data associated with human viruses, and geographical as well as species-specific data associated with avian and other animal viruses, to help researchers understand how the viruses evolve, spread and potentially become pandemics.",
         "data-field": "biology",
         "data-type": "viral",
@@ -1183,7 +1183,10 @@
             {
                 "label": "https://www.gisaid.org/about-us/grants/ , no current listing"
             }
-        ]
+        ],
+        "license-commentary-embeddable": "The terms found at https://www.gisaid.org/registration/terms-of-use/ appear to be the same as the final version agreed to during registration.<hr />Additional terms for registry at https://www.gisaid.org/registration/register/ .<hr />Additional terms for registry at https://platform.gisaid.org/epi3/frontend#360c7c .<hr />The fact that the license agreement itself has terms makes conversation possibly difficult.<hr />While the license is quite readable, it has many interesting terms trying to control the behavior (e.g. 2b) of those under the agreement that may be best understood by law professionals.<hr />The",
+        "data-tags": "biology, viral, gene, clinical, epidemiology, influenza virus sequence, aves, evolution, demographic, geo-spatial, gis",
+        "grade-automatic": 1
     },
     {
         "id": "gnomad",
