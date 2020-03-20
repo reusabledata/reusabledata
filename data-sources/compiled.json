@@ -1050,7 +1050,7 @@
     },
     {
         "id": "gisaid",
-        "last-curated": "2020-02-03",
+        "last-curated": "2020-03-09",
         "source": "GISAID",
         "source-link": "https://www.gisaid.org",
         "source-type": "unknown",
@@ -1106,7 +1106,7 @@
             "Additional terms for registry at https://platform.gisaid.org/epi3/frontend#360c7c .",
             "The fact that the license agreement itself has terms makes conversation possibly difficult.",
             "While the license is quite readable, it has many interesting terms trying to control the behavior (e.g. 2b) of those under the agreement that may be best understood by law professionals.",
-            "The"
+            "While not a current criteria violation, I feel it is worth noting that there was a 26 day waiting period between request and account creation."
         ],
         "was-controversial": "false",
         "provisional": "true",
