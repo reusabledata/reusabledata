@@ -347,6 +347,54 @@
         "grade-automatic": 2
     },
     {
+        "id": "cath",
+        "last-curated": "2020-10-15",
+        "source": "CATH Protein Structure Database",
+        "source-link": "http://cathdb.info",
+        "source-type": "source",
+        "status": "complete",
+        "description": "CATH is a classification of protein structures downloaded from the Protein Data Bank.",
+        "data-field": "biology",
+        "data-type": "protein families",
+        "data-categories": [
+            "protein family",
+            "superfamily",
+            "classification protein structure"
+        ],
+        "data-access": [
+            {
+                "label": "CATH Data Downloads",
+                "type": "download",
+                "location": "ftp://orengoftp.biochem.ucl.ac.uk/cath"
+            }
+        ],
+        "license": "CC-BY-4.0",
+        "license-type": "permissive",
+        "license-link": "http://cathdb.info",
+        "license-hat-used": "false",
+        "license-issues": [],
+        "license-commentary": [
+            "After browsing the site and checking the usual locations, the footer was the only place the licensing information was found.",
+            "\"About\" page additionally has: \"The CATH database is a free, publicly available online resource...\"",
+            "The footer lists as: \"CATH...is licensed under a Creative Commons Attribution 4.0 International License.\"",
+            "Did not evaluate API.",
+            "We take their licensing at face value; we note that this is a derivative of the Protein Data Bank (PDB)."
+        ],
+        "was-controversial": "false",
+        "provisional": "true",
+        "contacts": [
+            "http://cathdb.info/support"
+        ],
+        "grants": [
+            {
+                "label": "\"CATH-GENE3D is part of the ELIXIR infrastructure\""
+            }
+        ],
+        "license-commentary-embeddable": "After browsing the site and checking the usual locations, the footer was the only place the licensing information was found.<hr />\"About\" page additionally has: \"The CATH database is a free, publicly available online resource...\"<hr />The footer lists as: \"CATH...is licensed under a Creative Commons Attribution 4.0 International License.\"<hr />Did not evaluate API.<hr />We take their licensing at face value; we note that this is a derivative of the Protein Data Bank (PDB).",
+        "data-tags": "biology, protein families, protein family, superfamily, classification protein structure",
+        "grade-automatic": 5
+    },
+    {
         "id": "chembl",
         "description": "ChEMBL is a database of bioactive drug-like small molecules, it contains 2-D structures, calculated properties (e.g. logP, Molecular Weight, Lipinski Parameters, etc.) and abstracted bioactivities (e.g. binding constants, pharmacology and ADMET data).",
         "last-curated": "2017-12-03",
