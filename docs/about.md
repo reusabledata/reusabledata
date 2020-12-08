@@ -61,6 +61,7 @@ Current information on contributing new resources or updating already evaluated 
 * *Julie McMurry*, Center for Genome Research and Biocomputing, OSU
 * *Lilly Winfree*, Open Knowledge International
 * *Letisha Wyatt*, OHSU Library, Oregon Health & Science University
+* *Alex H. Wagner*, Nationwide Children's Hospital; Ohio State University
 
 <hr /><span id="citation"></span>
 
