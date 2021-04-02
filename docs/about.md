@@ -27,8 +27,6 @@ To make a formal request, add a resource, create a pull request for an
 edit, or for general questions please use our
 [issue tracker](https://github.com/reusabledata/reusabledata/issues/new).
 
-For more general discussion about the issues surrounding (re)usable data, please feel free to join our [Google Group](https://groups.google.com/forum/#!forum/reusabledata).
-
 <hr /><span id="background"></span>
 
 ### Background
