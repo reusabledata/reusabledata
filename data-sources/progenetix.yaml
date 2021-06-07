@@ -1,0 +1,34 @@
+id: progenetix
+source: 'Progenetix'
+source-link: 'http://progenetix.org'
+source-type: integrator
+status: ''
+description: >
+  The Progenetix database provides an overview of mutation data in cancer, with a focus on copy number abnormalities (CNV / CNA), for all types of human malignancies. The data is based on individual sample data and contains currently (2021) more than 130000 CNV profiles.
+data-field: biomedical
+data-type: human
+data-categories:
+    - 'cancer'
+    - 'genomic data'
+    - 'variants'
+data-categories:
+data-access:
+    - type: api
+      location: 'http://info.progenetix.org/doc/downloads.html'
+    - type: api
+      location: 'http://progenetix.org/beacon/'
+    - type: api
+      location: 'http://progenetix.org/services/'
+license: CC-BY
+license-type: ''
+license-issues:
+    - ''
+license-commentary:
+    - ''
+was-controversial: ""
+provisional: ""
+last-curated: ""
+grants: []
+contacts:
+    - contact@progenetix.org
+    - michael@baud.is
