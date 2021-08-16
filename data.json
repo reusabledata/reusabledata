@@ -586,7 +586,7 @@
 	    "immutability",
 	    "unclear derivatives"
 	],
-	"contacts" [
+	"contacts": [
 	    "http://human-phenotype-ontology.github.io/contact.html"
 	],
 	"grade": "yellow"
