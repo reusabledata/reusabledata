@@ -34,6 +34,7 @@ index.html enhanced_compiled.json summary_graph.json: compiled.json
 publish-resources: enhanced_compiled.json
 	cp data-sources/LICENSE docs/license.txt
 	cp data-sources/enhanced_compiled.json docs/data.json
+	cp data-sources/enhanced_compiled.json data.json
 
 ###
 ### All of the details pages are generated from running the compiled
