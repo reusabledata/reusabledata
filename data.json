@@ -468,7 +468,7 @@
     {
         "id": "civicdb",
         "source": "Clinical Interpretation of Variants in Cancer (CIViC)",
-        "source-link": "https://www.civicdb.org",
+        "source-link": "https://civicdb.org",
         "status": "complete",
         "description": "CIViC is an open access, open source, community-driven web resource for Clinical Interpretation of Variants in Cancer. Our goal is to enable precision medicine by providing an educational forum for dissemination of knowledge and active discussion of the clinical significance of cancer genome alterations.",
         "data-field": "biomedical",
