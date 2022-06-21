@@ -2,9 +2,9 @@
     {
         "id": "agr",
         "description": "The primary mission of the Alliance of Genome Resources (the Alliance) is to develop and maintain sustainable genome information resources that facilitate the use of diverse model organisms in understanding the genetic and genomic basis of human biology, health and disease.",
-        "last-curated": "2019-06-23",
+        "last-curated": "2022-06-10",
         "source": "Alliance of Genome Resources (AGR)",
-        "source-link": "http://www.alliancegenome.org",
+        "source-link": "https://www.alliancegenome.org",
         "source-type": "integrator",
         "status": "complete",
         "data-field": "biology",
@@ -19,30 +19,29 @@
             {
                 "type": "download",
                 "location": "https://www.alliancegenome.org/downloads"
-            },
-            {
-                "type": "api",
-                "location": "https://www.alliancegenome.org/api/swagger-ui/"
             }
         ],
-        "license": "unlicensed",
-        "license-type": "copyright",
-        "license-link": "TODO",
+        "license": "CC-BY-4.0",
+        "license-type": "permissive",
+        "license-link": "https://www.alliancegenome.org/privacy-warranty-licensing",
         "license-hat-used": "false",
-        "license-issues": [
-            {
-                "criteria": "A.1.2",
-                "comment": "No licensing information could be found after some searching."
-            }
+        "license-issues": [],
+        "license-commentary": [
+            "The licensing page easily linked through footer.",
+            "The licensing page makes a distinction between ontologies used in annotation and other data; we will focus on the data portion.",
+            "For this re-evaluation, the API was not persued as the downloads were straightforward and did not seem to include ontology repackaging."
         ],
-        "license-commentary": [],
         "was-controversial": "false",
+        "provisional": "true",
         "contacts": [
-            "alliance-helpdesk@lists.stanford.edu"
+            "help@alliancegenome.org"
         ],
         "grants": [
             {
-                "label": "The Alliance is supported by NIH NHGRI U24HG002223-19S1, NIH NHGRI P41HG002659 (ZFIN), NIH NHGRI U24HG002223 (WormBase), MRC-UK MR/L001020/1 (WormBase), NIH NHGRI U41HG000739 (FlyBase), NIH NHLBI HL64541 (RGD), NIH NHGRI U41HG001315 (SGD), NIH NHGRI HG000330 (MGD), and NIH NHGRI U41HG002273 (GOC, which also provides funding to WB, MGD, SGD)."
+                "label": "The Alliance is supported by NIH NHGRI and NHLBI: U24HG010859"
+            },
+            {
+                "label": "...additional support from: NIH NHGRI U41HG000739 (FlyBase), NIH NHGRI HG000330 (MGD), NIH NHLBI HL64541 (RGD), NIH NHGRI U24HG001315 (SGD), NIH NHGRI U24HG002223 (WormBase), NIH NHGRI P41HG002659 (ZFIN), NIH NHGRI U41HG002273 (GOC[...])"
             }
         ]
     },
