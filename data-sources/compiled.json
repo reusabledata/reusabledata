@@ -142,7 +142,8 @@
     {
         "id": "biocyc-open",
         "description": "BioCyc is a collection of 20,028 Pathway/Genome Databases (PGDBs) for model eukaryotes and for thousands of microbes, plus software tools for exploring them. BioCyc is an encyclopedic reference that contains curated data from 130,000 publications.",
-        "source": "BioCyc Pathway/Genome Database Collection (BioCyc, public)",
+        "last-curated": "2023-03-08",
+        "source": "BioCyc Database Collection (BioCyc, public)",
         "source-link": "https://www.biocyc.org/",
         "source-type": "source",
         "status": "complete",
