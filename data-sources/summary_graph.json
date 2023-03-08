@@ -10,9 +10,9 @@
         "y": [
             32,
             39,
-            54,
+            55,
             29,
-            28
+            29
         ],
         "name": "No violations",
         "marker": {
@@ -50,10 +50,10 @@
             "Avoid restrictions on<br>who may (re)use"
         ],
         "y": [
-            33,
-            16,
+            34,
+            17,
             11,
-            26,
+            27,
             27
         ],
         "name": "Have a violation",
