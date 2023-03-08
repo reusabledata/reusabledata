@@ -1,0 +1,31 @@
+id: 'biocyc-open'
+description: 'BioCyc is a collection of 20,028 Pathway/Genome Databases (PGDBs) for model eukaryotes and for thousands of microbes, plus software tools for exploring them. BioCyc is an encyclopedic reference that contains curated data from 130,000 publications.'
+source: 'BioCyc Pathway/Genome Database Collection (BioCyc, public)'
+source-link: 'https://www.biocyc.org/'
+source-type: "source"
+status: "incomplete"
+data-field: 'biology'
+data-type: 'genomic resource'
+data-categories:
+  - 'sequence'
+  - 'gene structure'
+  - 'pathways'
+  - 'reactions'
+  - 'functional annotation'
+data-access:
+  - type: download
+    location: 'https://biocyc.org/download.shtml'
+license: "custom"
+license-type: "restrictive"
+license-link: 'http://biocyc.org/all-reg.shtml'
+license-hat-used: "false"
+license-issues: []
+license-commentary:
+  - 'This curation is for the post two-year embargo window data, excluding EcoCyc and MetaCyc which are current and supported by the NIH; data within that window is available with a subscription.'
+  - 'All data access to the downloads is mediated by an individual URL/password/login combination that is obtained by filling out a form and waiting for a response. The curator waited a little over two business days for their response.'
+was-controversial: "false"
+provisional: "true"
+contacts:
+  - 'biocyc-support@sri.com'
+  - 'https://www.biocyc.org/contact.shtml'
+grants: []
