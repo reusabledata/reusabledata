@@ -1,6 +1,6 @@
 id: 'drugbank'
 description: 'The DrugBank database is a unique bioinformatics and cheminformatics resource that combines detailed drug data with comprehensive drug target information.'
-last-curated: '2017-12-03'
+last-curated: '2023-08-11'
 source: 'DrugBank'
 source-link: 'https://www.drugbank.ca'
 source-type: "source"
