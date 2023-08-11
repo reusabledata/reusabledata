@@ -1,0 +1,40 @@
+id: 'umls'
+description: 'The UMLS integrates and distributes key terminology, classification and coding standards, and associated resources to promote creation of more effective and interoperable biomedical information systems and services, including electronic health records.'
+source: 'Unified Medical Language System (UMLS)'
+source-link: 'https://www.nlm.nih.gov/research/umls/'
+source-type: "integrator"
+status: "complete"
+data-field: 'biomedial'
+data-type: 'terminology'
+data-categories:
+  - 'standards'
+  - 'concept'
+  - 'ontology'
+data-access: []
+license: "custom"
+license-type: "restrictive"
+license-link: 'https://uts.nlm.nih.gov/uts/assets/LicenseAgreement.pdf'
+license-hat-used: "true"
+license-issues:
+  - criteria: 'A.2.2'
+    comment: 'Non-standard/custom license.'
+  - criteria: 'B.1'
+    comment: 'One term of the license is that you must "[...]provide NLM with a brief report on the usefulness of the UMLS Metathesaurus in general[...]" (term 5); this rises to a barrier to reuse as a manual step invloving people has been added to use.'
+  - criteria: 'B.2.1'
+    comment: 'Violation occurs in section 11 "Some of the Material in the UMLS Metathesaurus is from copyrighted sources"'
+  - criteria: 'C.1'
+    comment: 'Was unable to be exavluated due to the terms of the license requiring agreeing to reporting before proceeding, producing a barrier to access.'
+  - criteria: 'C.2'
+    comment: 'Was unable to be exavluated due to the terms of the license requiring agreeing to reporting before proceeding, producing a barrier to access.'
+  - criteria: 'D.1.2'
+    comment: 'Various types of restrictions are given for various subsets/sources; for example, section 12.1 forbidding translation and derivative works.'
+  - criteria: 'E.1.1'
+    comment: '"UMLS licenses are issued only to individuals and not to groups or organizations"; while an individual research may be able to get access and use, companies (for example) would not.'
+license-commentary:
+  - 'Could not access C categories as proceeding to access demanded signing up for giving reports: "[...]I will provide an annual report[...]", https://uts.nlm.nih.gov/uts/signUp'
+  - '"License hat" was required to be used as "UMLS licenses are issued only to individuals and not to groups or organizations[...]", https://www.nlm.nih.gov/databases/umls.html'
+was-controversial: "false"
+provisional: "true"
+contacts:
+  - 'https://www.nlm.nih.gov/research/umls/support.html'
+grants: []
