@@ -2958,6 +2958,7 @@
     {
         "id": "umls",
         "description": "The UMLS integrates and distributes key terminology, classification and coding standards, and associated resources to promote creation of more effective and interoperable biomedical information systems and services, including electronic health records.",
+        "last-curated": "2023-08-11",
         "source": "Unified Medical Language System (UMLS)",
         "source-link": "https://www.nlm.nih.gov/research/umls/",
         "source-type": "integrator",
