@@ -959,7 +959,7 @@
         ],
         "grants": [
             {
-                "label": "This project is supported by the Canadian Institutes of Health Research (award #111062), Alberta Innovates - Health Solutions, and by The Metabolomics Innovation Centre (TMIC), a nationally-funded research and core facility that supports a wide range of cutting-edge metabolomic studies. TMIC is funded by Genome Alberta, Genome British Columbia, and Genome Canada, a not-for-profit organization that is leading Canada\\'s national genomics strategy with funding from the federal government. Maintenance, support, and commercial licensing is provided by OMx Personal Health Analytics, Inc. Designed by Educe Design & Innovation Inc."
+                "label": "This project is supported by the Canadian Institutes of Health Research (award #111062), Alberta Innovates - Health Solutions, and by The Metabolomics Innovation Centre (TMIC), a nationally-funded research and core facility that supports a wide range of cutting-edge metabolomic studies. TMIC is funded by Genome Alberta, Genome British Columbia, and Genome Canada, a not-for-profit organization that is leading Canada's national genomics strategy with funding from the federal government. Maintenance, support, and commercial licensing is provided by OMx Personal Health Analytics, Inc. Designed by Educe Design & Innovation Inc."
             }
         ],
         "license-commentary-embeddable": "This seems to ba a standard NC/commercial licensing split, with DrugBank+ supporting commerical licensing for fees.<hr />To download, one must sign up for an account (https://www.drugbank.ca/public_users); possibly for tracking/analytics.",
