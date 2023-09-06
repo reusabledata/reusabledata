@@ -24,7 +24,7 @@ was-controversial: "false"
 contacts:
   - 'pfam-help@ebi.ac.uk'
 grants:
-  - label: "EMBL is EMBL-EBI\'s parent organisation. It provides core funding (staff, space, equipment) for Pfam."
+  - label: "EMBL is EMBL-EBI's parent organisation. It provides core funding (staff, space, equipment) for Pfam."
   - label: 'The Wellcome Trust has supported Pfam since the database inception, via core funding when based at the Wellcome Trust Sanger Institute. As well as providing and maintaining the campus on which the EMBL-EBI is located, the Wellcome Trust also now provides significant funding for Pfam (grant 108433/Z/15/Z). The current grant runs from October 2015 to September 2020.'
   - label: 'BBSRC currently supports Pfam activities via the grants (BB/L024136/1 and BB/N00521X/1).'
   - label: 'The Howard Hughes Medical Institute supports the Eddy group.'

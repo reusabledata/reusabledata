@@ -2,7 +2,7 @@ id: 'supfam'
 description: 'SUPERFAMILY is a database of structural and functional annotation for all proteins and genomes.'
 last-curated: '2019-10-18'
 source: 'SUPERFAMILY'
-source-link: 'http://www.supfam.org'
+source-link: 'https://www.supfam.org'
 source-type: "source"
 status: "complete"
 data-field: 'biology'
@@ -15,13 +15,13 @@ data-categories:
 data-access:
   - label: 'SUPERFAMILY Genomes'
     type: download
-    location: http://supfam.org/genome/hierarchy
+    location: https://supfam.org/genome/hierarchy
   - label: 'SCOP Hierarchy'
     type: download
-    location: http://supfam.org/scop
+    location: https://supfam.org/scop
 license: "custom"
 license-type: "permissive"
-license-link: 'http://www.supfam.org/about'
+license-link: 'https://www.supfam.org/about'
 license-hat-used: "false"
 license-issues:
   - criteria: A.2.2
@@ -35,5 +35,5 @@ license-commentary:
 was-controversial: "false"
 provisional: "true"
 contacts:
-  - 'http://www.supfam.org/contact'
+  - 'https://www.supfam.org/contact'
 grants: []

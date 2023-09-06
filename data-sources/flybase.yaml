@@ -12,7 +12,7 @@ data-access:
       location: http://flybase.org/static_pages/downloads/ID.html
 license: 'custom'
 license-type: 'restrictive'
-license-link: 'http://flybase.org/wiki/FlyBase:About#FlyBase_Copyright'
+license-link: 'https://wiki.flybase.org/wiki/FlyBase:About#FlyBase_Licenses_and_Availability'
 license-issues:
     - criteria: A.2.2
       comment: Copyright statement includes 'This publication may be copied for non-commercial, scientific uses by individuals or organizations (including for-profit organizations). FlyBase is freely distributed to the scientific community on the understanding that it will not be used for commercial gain by any organization. Any commercial use of this publication, or any parts thereof, is expressly prohibited without permission in writing from the FlyBase consortium.'
