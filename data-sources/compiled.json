@@ -863,9 +863,9 @@
     {
         "id": "drugbank",
         "description": "The DrugBank database is a unique bioinformatics and cheminformatics resource that combines detailed drug data with comprehensive drug target information.",
-        "last-curated": "2017-12-03",
+        "last-curated": "2023-09-24",
         "source": "DrugBank",
-        "source-link": "https://www.drugbank.ca",
+        "source-link": "https://go.drugbank.com",
         "source-type": "source",
         "status": "complete",
         "data-field": "pharmacology",
@@ -899,18 +899,16 @@
             }
         ],
         "license-commentary": [
-            "This seems to ba a standard NC/commercial licensing split, with DrugBank+ supporting commerical licensing for fees.",
-            "To download, one must sign up for an account (https://www.drugbank.ca/public_users); possibly for tracking/analytics."
+            "There is also an open (CC0) data subset for vocabulary and structures that could be evaluated separately; it is ~5mb vs ~150mb for the complete \"academic\" set(about 3%).",
+            "This seems to be mostly a standard NC/commercial licensing split, with DrugBank+ supporting commerical licensing for fees.",
+            "To download the full academic set, one must create an account (https://go.drugbank.com/public_users/sign_up), which is a multi-step and human mediated process, with varying turnaround times and follow-up questions."
         ],
         "was-controversial": "false",
         "contacts": [
-            "support@drugbankplus.com"
+            "https://go.drugbank.com/contact",
+            "info@drugbank.com"
         ],
-        "grants": [
-            {
-                "label": "This project is supported by the Canadian Institutes of Health Research (award #111062), Alberta Innovates - Health Solutions, and by The Metabolomics Innovation Centre (TMIC), a nationally-funded research and core facility that supports a wide range of cutting-edge metabolomic studies. TMIC is funded by Genome Alberta, Genome British Columbia, and Genome Canada, a not-for-profit organization that is leading Canada's national genomics strategy with funding from the federal government. Maintenance, support, and commercial licensing is provided by OMx Personal Health Analytics, Inc. Designed by Educe Design & Innovation Inc."
-            }
-        ]
+        "grants": []
     },
     {
         "id": "drugcentral",
