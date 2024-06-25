@@ -3,21 +3,32 @@ source: 'Bgee'
 source-link: 'https://www.bgee.org'
 source-type: integrator
 status: complete
-description: 'Bgee is a database for retrieval and comparison of gene expression patterns across multiple animal species.'
-data-field: biomedical
-data-type: x-species
+description: 'Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, scRNA-Seq, Affymetrix, in situ hybridization, and EST data).'
+data-field:
+  - 'biomedical'
+  - 'biology'
+  - 'evo-devo'
+data-type:
+  - 'x-species'
+  - 'curated experiment annotations'
+  - 'RNA-Seq experiments'
+  - 'scRNA-Seq experiments'
+  - 'microarray experiments'
+  - 'in situ hybridization experiments'
+  - 'EST libraries'
 data-categories:
-    - 'expression data'
+  - 'expression data'
+  - 'curated data'
 data-access:
-    - type: download
-      location: 'https://www.bgee.org/download/gene-expression-calls'
-    - type: download
-      location: 'https://www.bgee.org/download/processed-expression-values'
+  - type: download
+    location: 'https://www.bgee.org/download/gene-expression-calls'
+  - type: download
+    location: 'https://www.bgee.org/download/processed-expression-values'
 license: CC0-1.0
 license-type: permissive
 license-issues:
-    - criteria: C.1
-      comment: 'While the download method is fine, to get at all of the available data in TSV, one would have to click through on over a hundred different links through the UI; there is also the "hidden" https://www.bgee.org/ftp/current/ , but it is not conducive to crawling in my estimation. There are also supposed to be dumps at /download/data-dumps, but the two links there are 404.'
+  - criteria: C.1
+    comment: 'While the download method is fine, to get at all of the available data in TSV, one would have to click through on over a hundred different links through the UI; there is also the "hidden" https://www.bgee.org/ftp/current/ , but it is not conducive to crawling in my estimation. There are also supposed to be dumps at /download/data-dumps, but the two links there are 404.'
 license-commentary:
   - 'In footer, two download pages are given in the footer (/download/processed-expression-values and /download/gene-expression-calls) and a third in the menu (/download/data-dumps); on all of these pages we see "All data are available under the Creative Commons Zero license (CC0)."'
   - 'Also noting that on /about/, there is similarly affirming text.'
@@ -25,6 +36,7 @@ license-commentary:
 was-controversial: "false"
 provisional: "true"
 last-curated: "2024-06-25"
-grants: []
+grants:
+  - label: Bgee and related activities are supported by SIB Swiss Institute of Bioinformatics; Canton de Vaud; Swiss National Science Foundation {31003A 173048, 31003A 153341, 31003A 133011, CRSII3 160723}; SystemsX project AgingX, PNR {407540 167149 (BioSODA)}; NIH Award {U01CA215010 (OncoMX)}; European Union’s Horizon 2020 research and innovation program {863410}
 contacts:
-    - Bgee@sib.swiss
+  - Bgee@sib.swiss
