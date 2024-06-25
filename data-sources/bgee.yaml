@@ -1,30 +1,30 @@
 id: bgee
 source: 'Bgee'
-source-link: 'http://bgee.org'
+source-link: 'https://www.bgee.org'
 source-type: integrator
 status: complete
-description: 'Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, Affymetrix, in situ hybridization, and EST data).'
+description: 'Bgee is a database for retrieval and comparison of gene expression patterns across multiple animal species.'
 data-field: biomedical
 data-type: x-species
 data-categories:
     - 'expression data'
 data-access:
     - type: download
-      location: 'ftp://ftp.bgee.org/'
-license: inconsistent
-license-type: unknown
+      location: 'https://www.bgee.org/download/gene-expression-calls'
+    - type: download
+      location: 'https://www.bgee.org/download/processed-expression-values'
+license: CC0-1.0
+license-type: permissive
 license-issues:
-    - criteria: A.1.1
-      comment: 'While the CC0 tool is explicitly being invoked in main areas, there is some inconsistency, i.e. different ontology licensing and downloads that obviously encompass non-CC0 data.'
+    - criteria: C.1
+      comment: 'While the download method is fine, to get at all of the available data in TSV, one would have to click through on over a hundred different links through the UI; there is also the "hidden" https://www.bgee.org/ftp/current/ , but it is not conducive to crawling in my estimation. There are also supposed to be dumps at /download/data-dumps, but the two links there are 404.'
 license-commentary:
-    - 'Evaluated as a single cohesive product.' 
-    - 'Noting CC0 label in footer explicit terms info at https://bgee.org/?page=about'
-    - 'https://bgee.org/?page=download from "About" page is 404; once an access method for download was determined (looking at various download URLs), one star was awarded accordingly for C.'
-    - 'Data sources: https://bgee.org/?page=source'
-    - 'Some clarifying information taken from direct communication (https://github.com/reusabledata/reusabledata/issues/126).'
-was-controversial: "true"
+  - 'In footer, two download pages are given in the footer (/download/processed-expression-values and /download/gene-expression-calls) and a third in the menu (/download/data-dumps); on all of these pages we see "All data are available under the Creative Commons Zero license (CC0)."'
+  - 'Also noting that on /about/, there is similarly affirming text.'
+  - 'A little unclear on how this practically interacts with the sources list on /about/sources, but does not affect evaluation with current standards.'
+was-controversial: "false"
 provisional: "true"
-last-curated: "2019-07-02"
+last-curated: "2024-06-25"
 grants: []
 contacts:
     - Bgee@sib.swiss
