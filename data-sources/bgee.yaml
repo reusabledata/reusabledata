@@ -4,21 +4,19 @@ source-link: 'https://www.bgee.org'
 source-type: integrator
 status: complete
 description: 'Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, scRNA-Seq, Affymetrix, in situ hybridization, and EST data).'
-data-field:
-  - 'biomedical'
+data-field: 'biomedical'
+data-type: 'x-species'
+data-categories:
+  - 'expression data'
+  - 'curated data'
   - 'biology'
   - 'evo-devo'
-data-type:
-  - 'x-species'
   - 'curated experiment annotations'
   - 'RNA-Seq experiments'
   - 'scRNA-Seq experiments'
   - 'microarray experiments'
   - 'in situ hybridization experiments'
   - 'EST libraries'
-data-categories:
-  - 'expression data'
-  - 'curated data'
 data-access:
   - type: download
     location: 'https://www.bgee.org/download/gene-expression-calls'
