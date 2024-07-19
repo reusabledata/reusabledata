@@ -22,18 +22,19 @@ data-access:
     location: 'https://www.bgee.org/download/gene-expression-calls'
   - type: download
     location: 'https://www.bgee.org/download/processed-expression-values'
+  - type: download
+    location: 'https://www.bgee.org/download/data-dumps'
 license: CC0-1.0
 license-type: permissive
-license-issues:
-  - criteria: C.1
-    comment: 'While the download method is fine, to get at all of the available data in TSV, one would have to click through on over a hundred different links through the UI; there is also the "hidden" https://www.bgee.org/ftp/current/ , but it is not conducive to crawling in my estimation. There are also supposed to be dumps at /download/data-dumps, but the two links there are 404.'
+license-issues: []
 license-commentary:
   - 'In footer, two download pages are given in the footer (/download/processed-expression-values and /download/gene-expression-calls) and a third in the menu (/download/data-dumps); on all of these pages we see "All data are available under the Creative Commons Zero license (CC0)."'
   - 'Also noting that on /about/, there is similarly affirming text.'
   - 'A little unclear on how this practically interacts with the sources list on /about/sources, but does not affect evaluation with current standards.'
+  - 'While there is manual iteration needed for the TSVs, the mysql and rdf available on the data-dumps page sufficiently bridges the bulk criteria in C.1.'
 was-controversial: "false"
 provisional: "true"
-last-curated: "2024-06-25"
+last-curated: "2024-07-18"
 grants:
   - label: Bgee and related activities are supported by SIB Swiss Institute of Bioinformatics; Canton de Vaud; Swiss National Science Foundation {31003A 173048, 31003A 153341, 31003A 133011, CRSII3 160723}; SystemsX project AgingX, PNR {407540 167149 (BioSODA)}; NIH Award {U01CA215010 (OncoMX)}; European Union’s Horizon 2020 research and innovation program {863410}
 contacts:
