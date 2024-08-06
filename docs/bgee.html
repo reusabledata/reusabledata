@@ -114,7 +114,7 @@
 		 violations</a>.
 	       </dd>
 	       <dd class="curated-data">
-		 1
+		 5
 	       </dd>
 
 	       <!-- description -->
@@ -126,7 +126,7 @@
 		 itself, if possible.
 	       </dd>
 	       <dd class="curated-data">
-		 Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, Affymetrix, in situ hybridization, and EST data).
+		 Bgee is a database to retrieve and compare gene expression patterns in multiple animal species, produced from multiple data types (RNA-Seq, scRNA-Seq, Affymetrix, in situ hybridization, and EST data).
 	       </dd>
 
 	       <!-- last-curated -->
@@ -138,7 +138,7 @@
 		 last curated.
 	       </dd>
 	       <dd class="curated-data">
-		 2019-07-02
+		 2024-07-18
 	       </dd>
 
 	       <!-- source-link -->
@@ -149,7 +149,7 @@
 		 URL for the resource.
 	       </dd>
 	       <dd class="curated-data">
-		 <a href="http:&#x2F;&#x2F;bgee.org">http:&#x2F;&#x2F;bgee.org</a>
+		 <a href="https:&#x2F;&#x2F;www.bgee.org">https:&#x2F;&#x2F;www.bgee.org</a>
 	       </dd>
 
 	       <!-- source-type -->
@@ -209,6 +209,15 @@
 	       </dd>
 	       <dd class="curated-data">
 		 expression data <br />
+		 curated data <br />
+		 biology <br />
+		 evo-devo <br />
+		 curated experiment annotations <br />
+		 RNA-Seq experiments <br />
+		 scRNA-Seq experiments <br />
+		 microarray experiments <br />
+		 in situ hybridization experiments <br />
+		 EST libraries <br />
 	       </dd>
 
 	       <!-- data-access -->
@@ -219,7 +228,9 @@
 		 (Optional) Links to the resource's data.
 	       </dd>
 	       <dd class="curated-data">
-		 <a href="ftp:&#x2F;&#x2F;ftp.bgee.org&#x2F;">download</a> <br />
+		 <a href="https:&#x2F;&#x2F;www.bgee.org&#x2F;download&#x2F;gene-expression-calls">download</a> <br />
+		 <a href="https:&#x2F;&#x2F;www.bgee.org&#x2F;download&#x2F;processed-expression-values">download</a> <br />
+		 <a href="https:&#x2F;&#x2F;www.bgee.org&#x2F;download&#x2F;data-dumps">download</a> <br />
 	       </dd>
 
 	       <!-- license -->
@@ -233,7 +244,7 @@
 		  "all rights reserved", or "custom".
 	       </dd>
 	       <dd class="curated-data">
-		 inconsistent
+		 CC0-1.0
 	       </dd>
 
 	       <!-- license-type -->
@@ -249,7 +260,7 @@
 		 "public domain", "copyright", "restrictive", or "private pool".
 	       </dd>
 	       <dd class="curated-data">
-		 <a href="license-types.html#unknown">unknown</a>
+		 <a href="license-types.html#permissive">permissive</a>
 	       </dd>
 
 	       <!-- license-link -->
@@ -305,7 +316,7 @@
 		 license-commentary field.
 	       </dd>
 	       <dd class="curated-data">
-		 <a href="criteria.html#criteria-A.1.1">Criteria A.1.1</a>: While the CC0 tool is explicitly being invoked in main areas, there is some inconsistency, i.e. different ontology licensing and downloads that obviously encompass non-CC0 data. <br />
+		 None
 	       </dd>
 
 	       <!-- license-commentary -->
@@ -319,11 +330,10 @@
 		 licenses.
 	       </dd>
 	       <dd class="curated-data">
-		 &#8226; Evaluated as a single cohesive product. <br />
-		 &#8226; Noting CC0 label in footer explicit terms info at https:&#x2F;&#x2F;bgee.org&#x2F;?page&#x3D;about <br />
-		 &#8226; https:&#x2F;&#x2F;bgee.org&#x2F;?page&#x3D;download from &quot;About&quot; page is 404; once an access method for download was determined (looking at various download URLs), one star was awarded accordingly for C. <br />
-		 &#8226; Data sources: https:&#x2F;&#x2F;bgee.org&#x2F;?page&#x3D;source <br />
-		 &#8226; Some clarifying information taken from direct communication (https:&#x2F;&#x2F;github.com&#x2F;reusabledata&#x2F;reusabledata&#x2F;issues&#x2F;126). <br />
+		 &#8226; In footer, two download pages are given in the footer (&#x2F;download&#x2F;processed-expression-values and &#x2F;download&#x2F;gene-expression-calls) and a third in the menu (&#x2F;download&#x2F;data-dumps); on all of these pages we see &quot;All data are available under the Creative Commons Zero license (CC0).&quot; <br />
+		 &#8226; Also noting that on &#x2F;about&#x2F;, there is similarly affirming text. <br />
+		 &#8226; A little unclear on how this practically interacts with the sources list on &#x2F;about&#x2F;sources, but does not affect evaluation with current standards. <br />
+		 &#8226; While there is manual iteration needed for the TSVs, the mysql and rdf available on the data-dumps page sufficiently bridges the bulk criteria in C.1. <br />
 	       </dd>
 
 	       <!-- was-controversial -->
@@ -340,7 +350,7 @@
 		 the issues.
 	       </dd>
 	       <dd class="curated-data">
-		 true
+		 false
 	       </dd>
 
 	       <!-- contacts -->
@@ -363,7 +373,7 @@
 		 (Optional) Semi-structured list of supporting grants.
 	       </dd>
 	       <dd class="curated-data">
-		 TBD
+		 Bgee and related activities are supported by SIB Swiss Institute of Bioinformatics; Canton de Vaud; Swiss National Science Foundation {31003A 173048, 31003A 153341, 31003A 133011, CRSII3 160723}; SystemsX project AgingX, PNR {407540 167149 (BioSODA)}; NIH Award {U01CA215010 (OncoMX)}; European Union’s Horizon 2020 research and innovation program {863410} <br />
 	       </dd>
 
 	     </dl>
