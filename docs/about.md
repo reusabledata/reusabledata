@@ -55,8 +55,8 @@ Current information on contributing new resources or updating already evaluated 
 
 * *Seth Carbon*, Berkeley BBOP, Lawrence Berkeley National Laboratory
 * *Robin Champieux*, OHSU Library, Oregon Health & Science University
-* *Melissa Haendel*, Center for Genome Research and Biocomputing, OSU; Oregon Clinical & Translational Research Institute, OHSU
-* *Julie McMurry*, Center for Genome Research and Biocomputing, OSU
+* *Melissa Haendel*, University of North Carolina Chapel Hill, NC
+* *Julie McMurry*, University of North Carolina Chapel Hill, NC
 * *Lilly Winfree*, Open Knowledge International
 * *Letisha Wyatt*, OHSU Library, Oregon Health & Science University
 * *Alex H. Wagner*, Nationwide Children's Hospital; Ohio State University
