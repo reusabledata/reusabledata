@@ -24,7 +24,7 @@
       "markdown": "0.5.0",
       "minimist": "1.2.0",
       "mustache": "2.3.0",
-      "pug": "2.0.0-rc.3",
+      "pug": "3.0.2",
       "underscore": "1.8.3",
       "yamljs": "0.2.8"
    },
