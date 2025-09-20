@@ -12,13 +12,13 @@ data-categories:
     - 'variant disease associations'
 data-access:
     - type: download
-      location: https://civic.genome.wustl.edu/releases
+      location: https://civicdb.org/releases/main
     - type: api
-      location: https://griffithlab.github.io/civic-api-docs/
+      location: https://civic.readthedocs.io/en/latest/api.html
 license: CC0-1.0
 license-type: permissive
-license-link: 'https://civic.genome.wustl.edu/about'
+license-link: 'https://civicdb.org/releases/licensing'
 license-issues: []
 license-commentary: []
 contacts:
-    - https://civic.genome.wustl.edu/contact
+    - https://civic.readthedocs.io/en/latest/help.html
