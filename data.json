@@ -543,6 +543,7 @@
         "source-link": "https://civicdb.org",
         "status": "complete",
         "description": "CIViC is an open access, open source, community-driven web resource for Clinical Interpretation of Variants in Cancer. Our goal is to enable precision medicine by providing an educational forum for dissemination of knowledge and active discussion of the clinical significance of cancer genome alterations.",
+        "last-curated": "2025-09-22T00:00:00.000Z",
         "data-field": "biomedical",
         "data-type": "human",
         "data-categories": [
@@ -554,20 +555,28 @@
         "data-access": [
             {
                 "type": "download",
-                "location": "https://civic.genome.wustl.edu/releases"
+                "location": "https://civicdb.org/releases/main"
             },
             {
                 "type": "api",
-                "location": "https://griffithlab.github.io/civic-api-docs/"
+                "location": "https://civic.readthedocs.io/en/latest/api.html"
             }
         ],
         "license": "CC0-1.0",
         "license-type": "permissive",
-        "license-link": "https://civic.genome.wustl.edu/about",
+        "license-link": "https://civicdb.org/releases/licensing",
         "license-issues": [],
         "license-commentary": [],
+        "was-controversial": false,
+        "provisional": false,
         "contacts": [
-            "https://civic.genome.wustl.edu/contact"
+            "https://civic.readthedocs.io/en/latest/help.html",
+            "help@civicdb.org"
+        ],
+        "grants": [
+            {
+                "label": "National Human Genome Research Institute (NHGRI) of the National Institutes of Health (NIH), R00HG007940; National Cancer Institute (NCI) of NIH, K22CA188163; NCI including a funding supplement from the Childhood Cancer Data Initiative (CCDI), U24CA237719 (previously: U01CA209936); Washington University Institute of Clinical and Translational Sciences from National Center for Advancing Translational Sciences (NCATS) of NIH, UL1TR002345; National Cancer Institute (NCI) of NIH, U24CA258115; National Cancer Institute (NCI) of NIH, U24CA275783; Children’s Discovery Institute (CDI) of the St. Louis Children’s Hospital and Washington University School of Medicine; NIH Cloud Credits Model Pilot of the NIH Big Data to Knowledge (BD2K) program; Google"
+            }
         ],
         "license-commentary-embeddable": "",
         "data-tags": "biomedical, human, cancer, precision medicine, variants, variant disease associations",
