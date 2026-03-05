@@ -29,18 +29,9 @@
       "yamljs": "0.2.8"
    },
    "devDependencies": {
-      "browserify": "13.0.1",
-      "browserify-shim": "3.8.12",
+      "esbuild": "^0.27.3",
       "jshint": "2.9.3"
    },
-   "browserify": {
-      "transform": [
-         "browserify-shim"
-      ]
-   },
-   "browser": {},
-   "browserify-shim": {},
-   "bundleDependencies": [],
    "private": false,
    "main": null,
    "bugs": {
@@ -48,7 +39,7 @@
    },
    "directories": {},
    "scripts": {
-      "build": "./node_modules/.bin/browserify src/RUD.js --standalone RUD -o docs/RUDBundle.js",
+      "build": "esbuild src/RUD.js --bundle --global-name=RUD --outfile=docs/RUDBundle.js",
       "check": "kwalify -E -f ./scripts/source.schema.yaml ./data-sources/*.yaml",
       "yamls2json": "node ./scripts/yamls2json.js -i ./data-sources/ -o ./data-sources/compiled.json",
       "json2yamls": "node ./scripts/json2yamls.js -i ./data-sources/compiled.json -o ./data-sources/",
