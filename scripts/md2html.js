@@ -8,7 +8,7 @@
 
 var us = require('underscore');
 var fs = require("fs");
-var md = require('markdown');
+var marked = require('marked');
 
 ///
 /// Helpers.
@@ -72,7 +72,7 @@ if( ! out_file ){
 ///
 
 var md_raw = fs.readFileSync(in_data).toString();
-var html = md.markdown.toHTML(md_raw);
+var html = marked.parse(md_raw);
 
 // Convert the escaped HTML back.
 var rehtml = html.replace(/\&gt\;/g, '>');

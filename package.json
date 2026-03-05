@@ -21,16 +21,15 @@
       "cytoscape": "3.2.6",
       "cytoscape-cose-bilkent": "2.1.0",
       "glob": "7.1.2",
-      "markdown": "0.5.0",
+      "marked": "^17.0.4",
       "minimist": "1.2.8",
       "mustache": "2.3.0",
-      "pug": "2.0.4",
+      "pug": "^3.0.3",
       "underscore": "1.13.8",
       "yamljs": "0.2.8"
    },
    "devDependencies": {
-      "esbuild": "^0.27.3",
-      "jshint": "2.13.6"
+      "esbuild": "^0.27.3"
    },
    "private": false,
    "main": null,

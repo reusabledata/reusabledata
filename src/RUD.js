@@ -2,13 +2,6 @@
 ////
 ////
 
-// Let jshint pass over over our external globals (browserify takes
-// care of it all).
-/* global jQuery */
-/* global Plotly */
-/* global global_data */
-/* global global_summary_data */
-
 var us = require('underscore');
 var cytoscape = require('cytoscape');
 var regCose = require('cytoscape-cose-bilkent');
@@ -16,12 +9,6 @@ regCose( cytoscape ); // register extension
 
 // Aliases
 var each = us.each;
-
-// Code here will be ignored by JSHint, as we are technically
-// "redefining" jQuery (although we are not).
-/* jshint ignore:start */
-// var jQuery = require('jquery');
-/* jshint ignore:end */
 
 ///
 /// ...
