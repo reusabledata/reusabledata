@@ -18,7 +18,6 @@ data-access:
     location: 'https://gdc.cancer.gov/developers/gdc-application-programming-interface-api'
 license: "unlicensed"
 license-type: "copyright"
-#license-link: 'http://'
 license-hat-used: "false"
 license-issues:
   - criteria: 'A.1.2'
