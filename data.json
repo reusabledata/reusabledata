@@ -2505,7 +2505,7 @@
     {
         "id": "panther",
         "source": "Protein ANalysis THrough Evolutionary Relationships Classification System (PANTHER)",
-        "source-link": "http://pantherdb.org/",
+        "source-link": "https://pantherdb.org/",
         "status": "complete",
         "description": "The PANTHER (Protein ANalysis THrough Evolutionary Relationships) Classification System was designed to classify proteins (and their genes) according to evolutionary family/subfamily, molecular function, biological process, and pathway. The PANTHER Classifications are the result of human curation as well as sophisticated bioinformatics algorithms.",
         "data-field": "biology",
@@ -2516,32 +2516,27 @@
         "data-access": [
             {
                 "type": "download",
-                "location": "http://pantherdb.org/downloads/index.jsp"
+                "location": "https://pantherdb.org/downloads/index.jsp"
             }
         ],
-        "license": "all rights reserved",
-        "license-type": "copyright",
-        "license-issues": [
-            {
-                "criteria": "D.1.2",
-                "comment": "Given the all rights reserved copyright statement, any downstream reuse would require negotiation."
-            },
-            {
-                "criteria": "E.1.2",
-                "comment": "Given the all rights reserved copyright statement, all user/agent types would need to negotiate downstream reuse."
-            }
-        ],
+        "license": "CC-BY-4.0",
+        "license-type": "permissive",
+        "license-link": "https://pantherdb.org/tou.jsp",
+        "license-hat-used": "false",
+        "license-issues": [],
         "license-commentary": [
-            "There is an alternate curation for this resource that bases itself off of 'http://www.pantherdb.org/tou.jsp', which was found using a narrow Google search and not given consideration due to the difficulties in finding it--we have found no access to this document yet except for the Google search.",
-            "Considering the alternate license, downloads are under a permissive minimal license that states '...as long as the following copyright statement is placed at the top of each file: Copyright © 2005 SRI International', which besides being likely out of data, is custom and does not cover APIs, remixing, and the like. It is hard to interpret the consequences of this license."
+            "The Terms of Use page at pantherdb.org/tou.jsp states: \"PANTHER data and data products are licensed under the Creative Commons Attribution 4.0 International License.\""
         ],
+        "was-controversial": "false",
+        "provisional": "true",
+        "last-curated": "2026-03-05",
         "contacts": [
             "feedback@pantherdb.org",
             "pdthomas@usc.edu"
         ],
-        "license-commentary-embeddable": "There is an alternate curation for this resource that bases itself off of 'http://www.pantherdb.org/tou.jsp', which was found using a narrow Google search and not given consideration due to the difficulties in finding it--we have found no access to this document yet except for the Google search.<hr />Considering the alternate license, downloads are under a permissive minimal license that states '...as long as the following copyright statement is placed at the top of each file: Copyright © 2005 SRI International', which besides being likely out of data, is custom and does not cover APIs, remixing, and the like. It is hard to interpret the consequences of this license.",
+        "license-commentary-embeddable": "The Terms of Use page at pantherdb.org/tou.jsp states: \"PANTHER data and data products are licensed under the Creative Commons Attribution 4.0 International License.\"",
         "data-tags": "biology, genomic resource, orthology",
-        "grade-automatic": 3
+        "grade-automatic": 5
     },
     {
         "id": "pfam",
