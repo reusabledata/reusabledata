@@ -40,18 +40,20 @@ Licenses use SPDX identifiers where possible, or: `inconsistent`, `public domain
 - **kwalify** - YAML schema validation
 - **Mustache** - HTML templating
 - **esbuild** - JS bundling for explore page
+- **Playwright** (dev) - headless browser for rendering JS-heavy pages during evaluation
 
 ## Evaluation Guidelines
 
 - Determinations are based on public information in the resource web presence, made at a fixed point in time and updated when the website changes.
 - All criteria scoring must refer to text found (or not found) in the resource web presence. Whenever possible, specific passages should be quoted.
 - Criteria: `criteria.md` (https://reusabledata.org/criteria.html). Schema: `schema.md` / `source.schema.yaml`.
-- Evaluations are specifically about **data and data access**. Software/tool licensing at a resource is out of scope and should not be discussed in commentary or flagged as issues.
+- Evaluations are specifically about **data and data access**. Software/tool licensing at a resource is out of scope and should not be discussed in commentary or flagged as issues. License statements on software/API documentation pages (e.g. Swagger/OpenAPI specs) describe the software, not the data served through them.
 - Each evaluation is **point-in-time** and stands on its own. Do not reference or compare against previous evaluations in commentary.
 - `was-controversial` only applies when human reviewers disagree on the **current** evaluation, not when a re-evaluation differs from a prior one.
 - Licensing information must be available by normal human web presence navigation.
 - Common human web friction like CAPTCHAs does not warrant commentary.
 - Commentary should only note findings and inconsistencies, not confirm expected or unremarkable details (e.g. standard clauses being consistent with each other).
+- WebFetch cannot render JavaScript, so client-side rendered pages (e.g. Swagger/OpenAPI UIs) may appear empty. Use Playwright (available as a dev dependency) to render such pages, or flag the limitation to the user.
 
 ## Contributing
 
