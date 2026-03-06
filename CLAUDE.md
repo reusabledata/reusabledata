@@ -3,18 +3,6 @@
 Evaluates and scores the reusability of biomedical data resources
 based on their publicly documented or inferred licensing.
 
-These determinations are done by curators interacting with public
-information available in the resource web presence. These
-determinations are made at a fixed point in time for the purposes of
-evaluation and should be updated when the website updates.
-
-All criteria scoring must refer to text found (or not found) in the
-resource web presence. Whenever possible, specific passages should be
-quoted when scoring. The criteria are publicly available in
-criteria.md (same as https://reusabledata.org/criteria.html). The
-schema that we adhere to is informally defined in schema.md and
-formally (but weakly) defined in source.schema.yaml.
-
 Website: reusabledata.org | Repo: github.com/reusabledata/reusabledata
 
 ## Architecture
@@ -31,7 +19,7 @@ Deployed via GitHub Pages from the `docs/` directory in the GitHub repo.
 
 - `make` - Full build (compile YAML, generate HTML, validate)
 - `make check` - Validate YAML files against schema (`kwalify` + consistency check)
-- `npm run build` - Browserify the explore page JS bundle
+- `npm run build` - esbuild the explore page JS bundle
 - `npm run check` - Just kwalify validation
 - `npm run yamls2json` - Compile YAML sources to JSON
 
@@ -50,8 +38,19 @@ Licenses use SPDX identifiers where possible, or: `inconsistent`, `public domain
 
 - **Node.js** (>= 4.4) with npm - all scripts are JavaScript
 - **kwalify** - YAML schema validation
-- **Mustache/Pug** - HTML templating
-- **Browserify** - JS bundling for explore page
+- **Mustache** - HTML templating
+- **esbuild** - JS bundling for explore page
+
+## Evaluation Guidelines
+
+- Determinations are based on public information in the resource web presence, made at a fixed point in time and updated when the website changes.
+- All criteria scoring must refer to text found (or not found) in the resource web presence. Whenever possible, specific passages should be quoted.
+- Criteria: `criteria.md` (https://reusabledata.org/criteria.html). Schema: `schema.md` / `source.schema.yaml`.
+- Evaluations are specifically about **data and data access**. Software/tool licensing at a resource is out of scope and should not be discussed in commentary or flagged as issues.
+- Each evaluation is **point-in-time** and stands on its own. Do not reference or compare against previous evaluations in commentary.
+- `was-controversial` only applies when human reviewers disagree on the **current** evaluation, not when a re-evaluation differs from a prior one.
+- Licensing information must be available by normal human web presence navigation.
+- Common human web friction like CAPTCHAs does not warrant commentary.
 
 ## Contributing
 
