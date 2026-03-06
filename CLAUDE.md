@@ -51,6 +51,7 @@ Licenses use SPDX identifiers where possible, or: `inconsistent`, `public domain
 - `was-controversial` only applies when human reviewers disagree on the **current** evaluation, not when a re-evaluation differs from a prior one.
 - Licensing information must be available by normal human web presence navigation.
 - Common human web friction like CAPTCHAs does not warrant commentary.
+- Commentary should only note findings and inconsistencies, not confirm expected or unremarkable details (e.g. standard clauses being consistent with each other).
 
 ## Contributing
 
