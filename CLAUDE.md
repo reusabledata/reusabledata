@@ -1,7 +1,21 @@
 # (Re)usable Data Project
 
-Evaluates and scores the reusability/openness of biomedical data resources based on
-their licensing. Website: reusabledata.org | Repo: github.com/reusabledata/reusabledata
+Evaluates and scores the reusability of biomedical data resources
+based on their publicly documented or inferred licensing.
+
+These determinations are done by curators interacting with public
+information available in the resource web presence. These
+determinations are made at a fixed point in time for the purposes of
+evaluation and should be updated when the website updates.
+
+All criteria scoring must refer to text found (or not found) in the
+resource web presence. Whenever possible, specific passages should be
+quoted when scoring. The criteria are publicly available in
+criteria.md (same as https://reusabledata.org/criteria.html). The
+schema that we adhere to is informally defined in schema.md and
+formally (but weakly) defined in source.schema.yaml.
+
+Website: reusabledata.org | Repo: github.com/reusabledata/reusabledata
 
 ## Architecture
 
