@@ -11,6 +11,7 @@ YAML data source files → compiled JSON → static HTML site (hosted in `docs/`
 Deployed via GitHub Pages from the `docs/` directory in the GitHub repo.
 
 - `data-sources/*.yaml` - Individual resource evaluations (the core data)
+- `data-traces/*.trace.md` - Evaluation audit trails (navigation paths + per-criterion evidence)
 - `scripts/` - Node.js build scripts, schema, templates
 - `docs/` - Generated static site output (served by GitHub Pages)
 - `Makefile` - Orchestrates the full build pipeline
@@ -52,6 +53,92 @@ Licenses use SPDX identifiers where possible, or: `inconsistent`, `public domain
 - Licensing information must be available by normal human web presence navigation.
 - Common human web friction like CAPTCHAs does not warrant commentary.
 - Commentary should only note findings and inconsistencies, not confirm expected or unremarkable details (e.g. standard clauses being consistent with each other).
+
+## Evaluation Trace Files
+
+Every evaluation produced by Claude must have a companion trace file in
+`data-traces/` named `{resource-id}.trace.md`. The trace is an audit trail
+that allows a human reviewer to reproduce and verify the evaluation.
+
+### Producing an evaluation with trace
+
+When asked to evaluate (or re-evaluate) a resource:
+
+1. **Start from the resource root URL.** Fetch the root page and catalog
+   all navigation links (text, location on page, destination URL).
+2. **Follow links to find licensing and data-access information.** Record
+   every hop as a navigation path (see format below). Only pages reachable
+   by normal human navigation from the root count as evidence.
+3. **Evaluate each criterion** (A.1.1 through E.1.2, per `docs/criteria.md`)
+   and record the verdict, source URL, quoted text, and reasoning.
+4. **Write two files:**
+   - `data-sources/{id}.yaml` — the evaluation YAML (schema: `scripts/source.schema.yaml`)
+   - `data-traces/{id}.trace.md` — the trace file (format below)
+
+### Trace file format
+
+```markdown
+# Evaluation Trace: {resource-id}
+
+- **Resource**: {name}
+- **Root URL**: {url}
+- **Evaluated**: {YYYY-MM-DD}
+- **Evaluator**: Claude (automated)
+
+## Navigation Paths
+
+### Path N: Root → {destination description}
+
+1. **{page URL}**
+   - Found link: "{exact link text}" ({location on page, e.g. footer, top nav "About" dropdown})
+   → {destination URL}
+2. **{destination URL}**
+   - Found link: "{exact link text}" ({location on page})
+   → {next URL}
+
+(one path per page used as evidence; deeper pages need multiple steps)
+
+## Criteria Evaluation
+
+### {criterion ID} — {short description}
+
+- **Verdict**: pass | fail | not-applicable
+- **Source**: {URL} (via Path N)
+- **Quote**: "{relevant passage from the page}"
+- **Reasoning**: {why this text satisfies or fails the criterion}
+
+(one section per criterion: A.1.1, A.1.2, A.2.1, A.2.2, B.1, B.2.1,
+B.2.2, C.1, C.2, D.1, D.1.1, D.1.2, E.1, E.1.1, E.1.2)
+
+## Summary
+
+| Criterion | Verdict | Stars |
+|-----------|---------|-------|
+| ...       | ...     | ...   |
+| **Total** |         | **N** |
+```
+
+### Key rules for traces
+
+- Every source URL in the trace must be reachable via a documented
+  navigation path from the root. No URL may appear without showing how
+  a human would navigate to it.
+- Quotes must be verbatim text from the fetched page.
+- Each criterion section must reference which navigation path led to
+  the evidence (e.g. "via Path 1").
+- If a criterion is not triggered (e.g. D.1.1 when D.1 awards a full
+  star), note it briefly with reasoning.
+- See `data-traces/reactome-test.trace.md` for a complete example.
+
+## Skills (Slash Commands)
+
+- **`/evaluate [resource-url]`** — Create a provisional evaluation and trace
+  for a new resource. Produces both `data-sources/{id}.yaml` and
+  `data-traces/{id}.trace.md`, validates with `make check`.
+- **`/cross-check [resource-id]`** — Re-examine an existing evaluation by
+  generating a fresh trace from the resource website. Reports differences
+  between the existing YAML and current website state without modifying
+  the YAML.
 
 ## Contributing
 
