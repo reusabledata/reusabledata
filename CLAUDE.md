@@ -87,7 +87,7 @@ duplicating validation logic.
 - Determinations are based on public information in the resource web presence, made at a fixed point in time and updated when the website changes.
 - All criteria scoring must refer to text found (or not found) in the resource web presence. Whenever possible, specific passages should be quoted.
 - Criteria: `criteria.md` (https://reusabledata.org/criteria.html). Schema: `schema.md` / `source.schema.yaml`.
-- Evaluations are specifically about **data and data access**. Software/tool licensing at a resource is out of scope and should not be discussed in commentary or flagged as issues.
+- Evaluations are specifically about **data and data access**. Software/tool licensing at a resource is out of scope and should not be mentioned in any YAML field (`license-commentary`, `license-issues`, etc.) or flagged as issues.
 - Each evaluation is **point-in-time** and stands on its own. Do not reference or compare against previous evaluations in commentary.
 - `was-controversial` only applies when human reviewers disagree on the **current** evaluation, not when a re-evaluation differs from a prior one.
 - Licensing information must be available by normal human web presence navigation.
