@@ -56,6 +56,9 @@ Cross-check the existing evaluation for resource **$ARGUMENTS**.
      - The relevant quote and URL from the trace
    - Do NOT modify the evaluation YAML — only report. The user decides
      whether to update.
+   - If proposing YAML field changes, verify they would pass validation
+     by running `make check` against a temporary copy or consulting the
+     license → license-type mapping in CLAUDE.md.
 
 ## Rules
 
