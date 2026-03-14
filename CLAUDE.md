@@ -35,6 +35,37 @@ Required fields: `id`, `description`, `source`, `source-link`, `status`,
 Licenses use SPDX identifiers where possible, or: `inconsistent`, `public domain`,
 `unlicensed`, `all rights reserved`, `custom`.
 
+### License → license-type mapping
+
+The `license-type` field must match the license per
+`scripts/inconsistency_check.js`. `make check` will reject mismatches.
+
+| license | license-type |
+|---------|-------------|
+| `unlicensed` | `copyright` |
+| `inconsistent` | `unknown` |
+| `all rights reserved` | `copyright` |
+| `custom` | (any — determined case-by-case) |
+| `CC-BY-ND-3.0` | `restrictive` |
+| `CC-BY-NC-4.0` | `restrictive` |
+| `CC-BY-NC-SA-4.0` | `restrictive` |
+| `GPL-3.0` | `copyleft` |
+| `LGPL-2.0-or-later` | `copyleft` |
+| `CC-BY-SA-3.0` | `copyleft` |
+| `CC-BY-SA-4.0` | `copyleft` |
+| `ODbL-1.0` | `copyleft` |
+| `CC-BY-3.0` | `permissive` |
+| `CC-BY-4.0` | `permissive` |
+| `CC-BY` | `permissive` |
+| `CC0-1.0` | `permissive` |
+| `MIT` | `permissive` |
+| `public domain` | `permissive` |
+
+**Important**: `CC0-1.0` and `public domain` are both classified as
+`permissive`, not `public domain`. The `license-type` enum does not
+include a "public domain" value — valid values are: `unknown`,
+`copyleft`, `permissive`, `copyright`, `restrictive`, `private pool`.
+
 ## Tech Stack
 
 - **Node.js** (>= 4.4) with npm - all scripts are JavaScript
