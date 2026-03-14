@@ -73,6 +73,15 @@ include a "public domain" value — valid values are: `unknown`,
 - **Mustache** - HTML templating
 - **esbuild** - JS bundling for explore page
 
+## Validation
+
+When writing or modifying evaluation YAML files, always run `make check`
+to validate schema conformance and consistency (license/type mappings,
+required license-issues, etc.). Fix any errors before reporting success.
+The `Makefile` is the authoritative source for available validation and
+build commands — skills should invoke these commands rather than
+duplicating validation logic.
+
 ## Evaluation Guidelines
 
 - Determinations are based on public information in the resource web presence, made at a fixed point in time and updated when the website changes.
