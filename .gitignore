@@ -21,6 +21,12 @@ node_modules
 data-drafts/*
 !data-drafts/README.md
 
+## Prevent accidental commits of secrets and keys.
+.env*
+*.pem
+*.key
+*.p12
+
 ## Do not commit our TAGS
 TAGS
 
