@@ -11,7 +11,7 @@ YAML data source files → compiled JSON → static HTML site (hosted in `docs/`
 Deployed via GitHub Pages from the `docs/` directory in the GitHub repo.
 
 - `data-sources/*.yaml` - Individual resource evaluations (the core data)
-- `data-traces/*.trace.md` - Evaluation audit trails (navigation paths + per-criterion evidence)
+- `data-drafts/{id}/` - Per-resource evaluation workspace (traces, critiques, harmonization reports)
 - `scripts/` - Node.js build scripts, schema, templates
 - `docs/` - Generated static site output (served by GitHub Pages)
 - `Makefile` - Orchestrates the full build pipeline
@@ -91,13 +91,14 @@ duplicating validation logic.
 - Each evaluation is **point-in-time** and stands on its own. Do not reference or compare against previous evaluations in commentary.
 - `was-controversial` only applies when human reviewers disagree on the **current** evaluation, not when a re-evaluation differs from a prior one.
 - Licensing information must be available by normal human web presence navigation.
-- Common human web friction like CAPTCHAs does not warrant commentary.
+- **All evidence must come from pages directly fetched starting from the resource root URL and following links.** Do not use search engines (Google, Bing, etc.), web archives (Wayback Machine), or any other external discovery mechanism to find or verify page content. If the root URL or a linked page cannot be fetched (e.g. due to CAPTCHA, bot blocking, or downtime), report the fetch failure — do not work around it by finding the content elsewhere.
+- Common human web friction like CAPTCHAs does not warrant commentary, but **does** prevent using a page as evidence if the content cannot actually be fetched.
 - Commentary should only note findings and inconsistencies, not confirm expected or unremarkable details (e.g. standard clauses being consistent with each other).
 
 ## Evaluation Trace Files
 
 Every evaluation produced by Claude must have a companion trace file in
-`data-traces/` named `{resource-id}.trace.md`. The trace is an audit trail
+`data-drafts/{resource-id}/trace.md`. The trace is an audit trail
 that allows a human reviewer to reproduce and verify the evaluation.
 
 ### Producing an evaluation with trace
@@ -113,7 +114,7 @@ When asked to evaluate (or re-evaluate) a resource:
    and record the verdict, source URL, quoted text, and reasoning.
 4. **Write two files:**
    - `data-sources/{id}.yaml` — the evaluation YAML (schema: `scripts/source.schema.yaml`)
-   - `data-traces/{id}.trace.md` — the trace file (format below)
+   - `data-drafts/{id}/trace.md` — the trace file (format below)
 
 ### Trace file format
 
@@ -162,19 +163,38 @@ B.2.2, C.1, C.2, D.1, D.1.1, D.1.2, E.1, E.1.1, E.1.2)
 
 - Every source URL in the trace must be reachable via a documented
   navigation path from the root. No URL may appear without showing how
-  a human would navigate to it.
+  a human would navigate to it. Do not use search engines or web
+  archives to discover or verify content — only direct fetches from
+  the root URL and its linked pages are valid evidence.
 - Quotes must be verbatim text from the fetched page.
 - Each criterion section must reference which navigation path led to
   the evidence (e.g. "via Path 1").
 - If a criterion is not triggered (e.g. D.1.1 when D.1 awards a full
   star), note it briefly with reasoning.
-- See `data-traces/reactome-test.trace.md` for a complete example.
+- See `data-drafts/reactome-test/trace.md` for a complete example.
 
 ## Skills (Slash Commands)
 
-- **`/evaluate [resource-url]`** — Create a provisional evaluation and trace
-  for a new resource. Produces both `data-sources/{id}.yaml` and
-  `data-traces/{id}.trace.md`, validates with `make check`.
+### Evaluation pipeline
+
+- **`/evaluate [resource-url]`** — Full three-phase evaluation pipeline
+  (draft → critique → harmonize). Spawns each phase as a separate agent
+  for context isolation. Produces `data-sources/{id}.yaml` and multiple
+  trace files, validates with `make check`.
+
+Individual phases can be run manually:
+
+- **`/eval-draft [resource-url]`** — Phase 1: Navigate the resource website
+  and produce an initial evaluation and trace (`data-drafts/{id}/draft.md` + YAML).
+- **`/eval-critique [resource-id]`** — Phase 2: Adversarial review of the
+  draft. Searches the resource website for evidence that contradicts the
+  draft's conclusions. Produces `data-drafts/{id}/critique.md`.
+- **`/eval-harmonize [resource-id]`** — Phase 3: Reconcile draft and
+  critique into a final evaluation. Produces `data-drafts/{id}/trace.md`,
+  `data-drafts/{id}/harmonize.md`, and updates the YAML.
+
+### Other
+
 - **`/cross-check [resource-id]`** — Re-examine an existing evaluation by
   generating a fresh trace from the resource website. Reports differences
   between the existing YAML and current website state without modifying

@@ -30,7 +30,7 @@ Cross-check the existing evaluation for resource **$ARGUMENTS**.
      recording verdict, source URL, quoted text, and reasoning.
 
 4. **Write the trace file.**
-   Write (or overwrite) `data-traces/$ARGUMENTS.trace.md` using the format
+   Write (or overwrite) `data-drafts/$ARGUMENTS/trace.md` using the format
    documented in CLAUDE.md. Every source URL must have a navigation path
    from the root. Quotes must be verbatim.
 
