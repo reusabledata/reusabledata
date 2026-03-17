@@ -20,10 +20,10 @@
    "dependencies": {
       "cytoscape": "3.2.6",
       "cytoscape-cose-bilkent": "2.1.0",
-      "glob": "7.1.2",
+      "glob": "^8.1.0",
       "marked": "^17.0.4",
       "minimist": "1.2.8",
-      "mustache": "2.3.0",
+      "mustache": "^4.2.0",
       "pug": "^3.0.3",
       "underscore": "1.13.8",
       "yamljs": "0.2.8"
