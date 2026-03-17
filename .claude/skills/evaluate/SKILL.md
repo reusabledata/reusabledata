@@ -1,86 +1,80 @@
 ---
 name: evaluate
-description: Create a provisional evaluation draft and trace for a new resource given its URL. Use when adding a new resource to the (Re)usable Data Project.
-disable-model-invocation: true
+description: "Full three-phase evaluation pipeline: draft → critique → harmonize. Runs each phase as a separate agent for context isolation. Individual phases can also be run manually via /eval-draft, /eval-critique, /eval-harmonize."
 argument-hint: [resource-url]
 ---
 
-# Evaluate New Resource
+# Evaluate New Resource (Three-Phase Pipeline)
 
-Create a provisional evaluation and trace for the resource at **$ARGUMENTS**.
+Run the full evaluation pipeline for the resource at **$ARGUMENTS**.
 
-## Steps
+This orchestrates three phases, each as a separate agent with its own
+context window. This isolation is intentional — the critic should not be
+primed by the drafter's reasoning.
 
-1. **Read project context.**
-   - Read `docs/criteria.md` for the full evaluation rubric.
-   - Read `scripts/source.schema.yaml` for the YAML schema.
-   - Glance at 2–3 existing `data-sources/*.yaml` files to pick up idioms
-     (field formatting, commentary style, description style).
+## Phase 1 — Draft
 
-2. **Determine the resource ID.**
-   Derive an ID from the resource name following existing conventions:
-   lowercase, hyphenated, concise (e.g. "UniProt" → `uniprot`,
-   "Gene Ontology Annotations" → `go-ann`). Check that
-   `data-sources/{id}.yaml` does not already exist. If it does, stop and
-   tell the user — they may want `/cross-check` instead.
+Launch an agent to run `/eval-draft $ARGUMENTS`.
 
-3. **Navigate the resource website and build the trace.**
-   Follow the process documented in CLAUDE.md under "Evaluation Trace Files":
-   - Start from the provided URL (this is the resource root / `source-link`).
-   - Fetch the root page. Catalog all navigation links (text, location, URL).
-   - Follow links to find licensing, terms of use, data download, and API
-     information. Record every hop as a navigation path.
-   - Evaluate each criterion (A.1.1 through E.1.2) against what you find,
-     recording verdict, source URL, quoted text, and reasoning.
+The agent will:
+- Navigate the resource website from the root URL
+- Score each criterion (A.1.1 through E.1.2)
+- Write `data-drafts/{id}/draft.md` and `data-sources/{id}.yaml`
+- Validate with `make check`
 
-4. **Write the trace file.**
-   Write `data-traces/{id}.trace.md` using the format documented in
-   CLAUDE.md. Every source URL must have a navigation path from the root.
-   Quotes must be verbatim.
+**Wait for Phase 1 to complete before proceeding.** You need the resource
+ID and the draft files to exist before launching Phase 2.
 
-5. **Write the evaluation YAML.**
-   Write `data-sources/{id}.yaml` with all required and applicable fields:
-   - `id`: the resource ID from step 2
-   - `source`: human-readable resource name
-   - `source-link`: the provided URL (use https if available)
-   - `status`: `complete`
-   - `description`: use the resource's own description of itself, quoted
-   - `data-field`: the broad domain (e.g. biology, chemistry, genomics)
-   - `data-type`: the specific data type (e.g. pathway, variant, expression)
-   - `data-categories`: list of data category tags
-   - `data-access`: download and/or API entries with URLs
-   - `license`: SPDX identifier, or `unlicensed`/`custom`/`all rights reserved`/etc.
-   - `license-type`: `permissive`, `copyleft`, `restrictive`, `copyright`, `unknown`
-   - `license-link`: URL to the license page
-   - `license-issues`: list of `{criteria, comment}` for any failed criteria.
-     Use `[]` if none.
-   - `license-commentary`: list of strings noting findings. Follow the style
-     of existing evaluations — quote relevant passages, note only findings
-     and inconsistencies, do not confirm expected/unremarkable details.
-   - `was-controversial`: `"false"`
-   - `provisional`: `"true"`
-   - `last-curated`: today's date (YYYY-MM-DD)
-   - `contacts`: resource contact email if found
+Read the draft YAML to extract the resource ID, then report Phase 1
+status to the user before continuing.
 
-6. **Validate.**
-   Run `make check` and confirm the new YAML passes schema validation.
-   If it fails, fix the YAML and re-run until it passes.
+## Phase 2 — Critique
 
-7. **Report to the user.**
-   Summarize:
-   - The resource name and ID
-   - The license found (or not found)
-   - The star score from the trace
-   - Any notable findings or issues
-   - Remind them the evaluation is `provisional: "true"` and needs review
+Launch a **separate** agent to run `/eval-critique {id}` (using the
+resource ID from Phase 1).
 
-## Rules
+The agent will:
+- Read the draft trace and YAML
+- Search the resource website for contradicting evidence
+- Write `data-drafts/{id}/critique.md`
 
-- Follow all guidelines in CLAUDE.md under "Evaluation Guidelines" and
-  "Evaluation Trace Files."
-- Evaluations are about data and data access only. Ignore software licensing.
-- Each evaluation is point-in-time and stands on its own.
-- Commentary should only note findings and inconsistencies.
-- Quotes must be verbatim text from fetched pages.
-- Every URL in the trace must be reachable via a documented navigation path.
-- The YAML must pass `make check` before reporting success.
+**Wait for Phase 2 to complete before proceeding.**
+
+Report Phase 2 status to the user before continuing.
+
+## Phase 3 — Harmonize
+
+Launch a **separate** agent to run `/eval-harmonize {id}`.
+
+The agent will:
+- Read the draft, critique, and criteria
+- Adjudicate each criterion
+- Write the final `data-drafts/{id}/trace.md` and update the YAML
+- Write `data-drafts/{id}/harmonize.md`
+- Validate with `make check`
+
+Report Phase 3 status and the final summary to the user.
+
+## Final Report
+
+After all three phases, present:
+- Resource name and ID
+- Final license and star score
+- Whether any draft verdicts were overturned by the critique
+- Whether any contradictions need human review
+- List of all files produced:
+  - `data-sources/{id}.yaml` — evaluation YAML
+  - `data-drafts/{id}/draft.md` — Phase 1 draft trace
+  - `data-drafts/{id}/critique.md` — Phase 2 critique
+  - `data-drafts/{id}/harmonize.md` — Phase 3 harmonization report
+  - `data-drafts/{id}/trace.md` — final consolidated trace
+- Remind the user the evaluation is `provisional: "true"` and needs review
+
+## Notes
+
+- Each phase is also available as a standalone skill:
+  `/eval-draft`, `/eval-critique`, `/eval-harmonize`
+- To re-run just the critique (e.g. after tuning the critique skill),
+  use `/eval-critique {id}` directly, then `/eval-harmonize {id}`
+- The orchestrator uses the Agent tool to spawn each phase. Each agent
+  gets its own context window and tool access.
