@@ -16,6 +16,11 @@ deploy
 ## Node modules are handled by "npm install" and out package.json
 node_modules
 
+## data-drafts is a local workspace for evaluation agents and curators.
+## Only the README is tracked.
+data-drafts/*
+!data-drafts/README.md
+
 ## Do not commit our TAGS
 TAGS
 

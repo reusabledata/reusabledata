@@ -11,7 +11,7 @@ YAML data source files → compiled JSON → static HTML site (hosted in `docs/`
 Deployed via GitHub Pages from the `docs/` directory in the GitHub repo.
 
 - `data-sources/*.yaml` - Individual resource evaluations (the core data)
-- `data-drafts/{id}/` - Per-resource evaluation workspace (traces, critiques, harmonization reports)
+- `data-drafts/{id}/` - Local evaluation workspace (not tracked; traces, critiques, harmonization reports)
 - `scripts/` - Node.js build scripts, schema, templates
 - `docs/` - Generated static site output (served by GitHub Pages)
 - `Makefile` - Orchestrates the full build pipeline
