@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """Batch-validate all YAML data-source files against a LinkML schema.
 
+Validates each file against the LinkML-generated JSON Schema, then checks
+that license values are either project-specific custom values (declared in
+the schema's LicenseEnum) or valid SPDX identifiers (from
+spdx-licenses.json, bundled from https://spdx.org/licenses/).
+
 Usage:
     python3 scripts/validate_all.py -s scripts/source.linkml.yaml -d data-sources/
 """
@@ -8,11 +13,38 @@ Usage:
 import argparse
 import datetime
 import glob
+import json
 import os
 import sys
 
 import yaml
 from linkml.validators import JsonSchemaDataValidator
+
+
+# Project-specific (non-SPDX) license values declared in LicenseEnum.
+CUSTOM_LICENSE_VALUES = frozenset([
+    "inconsistent",
+    "public domain",
+    "unlicensed",
+    "all rights reserved",
+    "custom",
+    "CC-BY",
+])
+
+
+def _load_spdx_ids(schema_path):
+    """Load the set of valid SPDX license IDs from the bundled JSON file.
+
+    Looks for spdx-licenses.json in the same directory as the schema.
+    """
+    spdx_path = os.path.join(os.path.dirname(schema_path), "spdx-licenses.json")
+    if not os.path.isfile(spdx_path):
+        print(f"Warning: {spdx_path} not found; SPDX license validation disabled",
+              file=sys.stderr)
+        return None
+    with open(spdx_path) as fh:
+        data = json.load(fh)
+    return frozenset(data["licenses"])
 
 
 def _normalize_keys(obj):
@@ -31,6 +63,19 @@ def _normalize_keys(obj):
     if isinstance(obj, (datetime.date, datetime.datetime)):
         return obj.isoformat()
     return obj
+
+
+def _validate_license(license_val, spdx_ids):
+    """Check that a license value is either a custom value or a valid SPDX ID.
+
+    Returns an error message string, or None if valid.
+    """
+    if license_val in CUSTOM_LICENSE_VALUES:
+        return None
+    if spdx_ids is not None and license_val not in spdx_ids:
+        return (f"'{license_val}' is not a recognized license "
+                f"(not in SPDX registry or project custom values)")
+    return None
 
 
 def main():
@@ -59,6 +104,9 @@ def main():
     # Load the schema once and build the validator.
     validator = JsonSchemaDataValidator(schema_path)
 
+    # Load SPDX license IDs for license field validation.
+    spdx_ids = _load_spdx_ids(schema_path)
+
     yaml_files = sorted(glob.glob(os.path.join(data_dir, "*.yaml")))
 
     if not yaml_files:
@@ -77,6 +125,7 @@ def main():
             continue
 
         total += 1
+        file_errors = []
 
         try:
             with open(filepath, "r") as fh:
@@ -91,11 +140,22 @@ def main():
             errors_by_file[basename] = ["File is empty or contains no YAML data"]
             continue
 
+        # LinkML JSON Schema validation.
         try:
             validator.validate_dict(_normalize_keys(data), target_class="DataSource")
         except Exception as exc:
+            file_errors.append(str(exc))
+
+        # License value validation (SPDX + custom).
+        license_val = data.get("license")
+        if license_val is not None:
+            err = _validate_license(str(license_val), spdx_ids)
+            if err:
+                file_errors.append(err)
+
+        if file_errors:
             failed += 1
-            errors_by_file[basename] = [str(exc)]
+            errors_by_file[basename] = file_errors
 
     # Report errors.
     if errors_by_file:
