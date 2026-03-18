@@ -19,7 +19,7 @@ Launch an agent to run `/eval-draft $ARGUMENTS`.
 The agent will:
 - Navigate the resource website from the root URL
 - Score each criterion (A.1.1 through E.1.2)
-- Write `data-drafts/{id}/draft.md` and `data-sources/{id}.yaml`
+- Write `data-drafts/{id}/draft.md` and `data-drafts/{id}/{id}.yaml`
 - Validate with `make check`
 
 **Wait for Phase 1 to complete before proceeding.** You need the resource
@@ -63,7 +63,7 @@ After all three phases, present:
 - Whether any draft verdicts were overturned by the critique
 - Whether any contradictions need human review
 - List of all files produced:
-  - `data-sources/{id}.yaml` — evaluation YAML
+  - `data-drafts/{id}/{id}.yaml` — evaluation YAML (draft, needs human review to promote to `data-sources/`)
   - `data-drafts/{id}/draft.md` — Phase 1 draft trace
   - `data-drafts/{id}/critique.md` — Phase 2 critique
   - `data-drafts/{id}/harmonize.md` — Phase 3 harmonization report

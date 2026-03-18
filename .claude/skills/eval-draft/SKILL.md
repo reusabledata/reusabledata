@@ -47,7 +47,7 @@ over-reach. Stick to what you can find via normal navigation from the root.
    Quotes must be verbatim.
 
 5. **Write the draft evaluation YAML.**
-   Write `data-sources/{id}.yaml` with all required and applicable fields:
+   Write `data-drafts/{id}/{id}.yaml` with all required and applicable fields:
    - `id`: the resource ID from step 2
    - `source`: human-readable resource name
    - `source-link`: the provided URL (use https if available)
@@ -71,8 +71,9 @@ over-reach. Stick to what you can find via normal navigation from the root.
    - `contacts`: resource contact email if found
 
 6. **Validate.**
-   Run `make check` and confirm the new YAML passes schema validation.
-   If it fails, fix the YAML and re-run until it passes.
+   Temporarily copy the YAML to `data-sources/{id}.yaml`, run `make check`,
+   then remove it. The draft YAML stays in `data-drafts/` until a human
+   curator promotes it. Fix any validation errors before reporting success.
 
 7. **Report.**
    Summarize: resource name/ID, license found, star score, notable findings.

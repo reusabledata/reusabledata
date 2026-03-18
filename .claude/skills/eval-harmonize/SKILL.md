@@ -18,7 +18,7 @@ a change — always grounded in the RDP criteria.
 ## Steps
 
 1. **Read all inputs.**
-   - Read `data-sources/$ARGUMENTS.yaml` (the draft YAML).
+   - Read `data-drafts/$ARGUMENTS/$ARGUMENTS.yaml` (the draft YAML).
    - Read `data-drafts/$ARGUMENTS/draft.md` (the Phase 1 trace).
    - Read `data-drafts/$ARGUMENTS/critique.md` (the Phase 2 critique).
    - Read `docs/criteria.md` for the full rubric.
@@ -53,7 +53,7 @@ a change — always grounded in the RDP criteria.
      challenge was accepted or rejected.
 
 5. **Update the evaluation YAML.**
-   Update `data-sources/$ARGUMENTS.yaml` to reflect the final verdicts.
+   Update `data-drafts/$ARGUMENTS/$ARGUMENTS.yaml` to reflect the final verdicts.
    If verdicts changed from the draft:
    - Update `license`, `license-type`, `license-link` if needed.
    - Update `license-issues` to match the final criterion verdicts.
@@ -62,7 +62,9 @@ a change — always grounded in the RDP criteria.
    - Update `last-curated` to today's date.
 
 6. **Validate.**
-   Run `make check` and confirm the YAML passes. Fix any errors.
+   Temporarily copy the YAML to `data-sources/$ARGUMENTS.yaml`, run
+   `make check`, then remove it. The YAML stays in `data-drafts/` until
+   a human curator promotes it. Fix any validation errors.
 
 7. **Write the harmonization report.**
    Write `data-drafts/$ARGUMENTS/harmonize.md` in this format:

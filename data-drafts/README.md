@@ -7,14 +7,16 @@ the pipeline creates a subdirectory here named after the resource ID:
 
 ```
 data-drafts/{resource-id}/
-  draft.md       — Phase 1: initial evaluation trace
-  critique.md    — Phase 2: adversarial critique
-  harmonize.md   — Phase 3: reconciliation report
-  trace.md       — Final consolidated trace
+  {resource-id}.yaml  — Draft evaluation YAML
+  draft.md            — Phase 1: initial evaluation trace
+  critique.md         — Phase 2: adversarial critique
+  harmonize.md        — Phase 3: reconciliation report
+  trace.md            — Final consolidated trace
 ```
 
 These files are **not tracked by git** — they are working artifacts for
-review. The canonical evaluation output is `data-sources/{id}.yaml`.
+review. The draft YAML stays here until a human curator reviews and
+promotes it to `data-sources/{id}.yaml`.
 
 ## Usage
 

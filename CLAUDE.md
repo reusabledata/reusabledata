@@ -112,8 +112,9 @@ When asked to evaluate (or re-evaluate) a resource:
    by normal human navigation from the root count as evidence.
 3. **Evaluate each criterion** (A.1.1 through E.1.2, per `docs/criteria.md`)
    and record the verdict, source URL, quoted text, and reasoning.
-4. **Write two files:**
-   - `data-sources/{id}.yaml` — the evaluation YAML (schema: `scripts/source.schema.yaml`)
+4. **Write files to the drafts workspace:**
+   - `data-drafts/{id}/{id}.yaml` — the evaluation YAML (schema: `scripts/source.schema.yaml`).
+     This stays in `data-drafts/` until a human curator promotes it to `data-sources/`.
    - `data-drafts/{id}/trace.md` — the trace file (format below)
 
 ### Trace file format

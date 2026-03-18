@@ -17,7 +17,7 @@ an independent evaluation — you are stress-testing an existing one.
 ## Steps
 
 1. **Read the draft.**
-   - Read `data-sources/$ARGUMENTS.yaml` for the current field values.
+   - Read `data-drafts/$ARGUMENTS/$ARGUMENTS.yaml` for the current field values.
    - Read `data-drafts/$ARGUMENTS/draft.md` for the draft trace — note
      which pages were visited, which criteria got which verdicts, and what
      evidence was cited.
