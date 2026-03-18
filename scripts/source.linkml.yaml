@@ -14,6 +14,11 @@ prefixes:
   spdx: http://spdx.org/licenses/
   dcat: http://www.w3.org/ns/dcat#
   dcterms: http://purl.org/dc/terms/
+  sepio: http://purl.obolibrary.org/obo/SEPIO_
+  pav: http://purl.org/pav/
+  prov: http://www.w3.org/ns/prov#
+  eco: http://purl.obolibrary.org/obo/ECO_
+  oa: http://www.w3.org/ns/oa#
   reusabledata: https://reusabledata.org/schema/
 
 default_prefix: reusabledata
@@ -41,9 +46,11 @@ classes:
         description: Unique identifier for the data source.
       description:
         required: true
+        slot_uri: dcterms:description
         description: Human-readable description of the resource.
       last-curated:
         required: false
+        slot_uri: pav:lastUpdateOn
         pattern: "^\\d{4}-\\d{2}-\\d{2}$"
         description: Date the evaluation was last curated (YYYY-MM-DD).
       source:
@@ -51,6 +58,7 @@ classes:
         description: Name of the data source organization or project.
       source-link:
         required: true
+        slot_uri: dcat:landingPage
         pattern: "^(TODO|(ht|f)tps?://\\w[\\w/.\\-:=?&_+#]+)$"
         description: URL of the data source, or TODO if not yet known.
       source-type:
@@ -90,6 +98,7 @@ classes:
         description: Broad classification of the license.
       license-link:
         required: false
+        slot_uri: dcterms:license
         pattern: "^(TODO|(ht|f)tps?://\\w[\\w/.\\-:=?&_+#]+)$"
         description: URL to the license text, or TODO if not yet known.
       license-hat-used:
@@ -125,6 +134,30 @@ classes:
         inlined_as_list: true
         range: Grant
         description: Grants funding the resource.
+      # --- SEPIO/PAV provenance fields (all optional) ---
+      assessments:
+        required: false
+        multivalued: true
+        inlined_as_list: true
+        range: CriterionAssessment
+        slot_uri: sepio:0000006
+        description: >-
+          Structured per-criterion assessments with full provenance.
+          Richer alternative to license-issues; both may coexist.
+      contributions:
+        required: false
+        multivalued: true
+        inlined_as_list: true
+        range: EvaluationContribution
+        slot_uri: prov:qualifiedAssociation
+        description: >-
+          Who evaluated this resource, when, and in what role.
+      evaluation-method:
+        required: false
+        slot_uri: sepio:0000021
+        description: >-
+          URI reference to the evaluation methodology
+          (e.g. https://reusabledata.org/criteria.html).
     rules:
       - description: unlicensed implies copyright
         preconditions:
@@ -318,6 +351,150 @@ classes:
         pattern: "^(TODO|(ht|f)tps?://\\w[\\w/.\\-:=?&_+#]+)$"
         description: URL with grant information.
 
+  # --- SEPIO/PAV provenance classes ---
+
+  CriterionAssessment:
+    class_uri: sepio:0000001
+    description: >-
+      A structured assessment of a single evaluation criterion, with
+      verdict, evidence, and provenance. Models a SEPIO Statement about
+      whether a criterion is satisfied or violated.
+    attributes:
+      criteria:
+        required: true
+        range: CriteriaEnum
+        slot_uri: sepio:0000389
+        description: The criterion being assessed.
+      verdict:
+        required: true
+        range: VerdictEnum
+        slot_uri: sepio:0000391
+        description: Whether the criterion is satisfied, violated, or not applicable.
+      comment:
+        required: false
+        description: Free-text explanation of the verdict.
+      evidence-lines:
+        required: false
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceLine
+        slot_uri: sepio:0000006
+        description: Evidence supporting or disputing this assessment.
+      harmonization-note:
+        required: false
+        description: >-
+          How the draft and critique were reconciled for this criterion
+          during the harmonization phase.
+
+  EvidenceLine:
+    class_uri: sepio:0000002
+    description: >-
+      A collection of evidence items that collectively support or dispute
+      a criterion assessment. Models a SEPIO EvidenceLine.
+    attributes:
+      direction:
+        required: false
+        range: VerdictEnum
+        description: Whether this evidence line supports or disputes the criterion.
+      evidence-items:
+        required: false
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceItem
+        slot_uri: sepio:0000084
+        description: Individual pieces of evidence in this line.
+
+  EvidenceItem:
+    class_uri: sepio:0000149
+    description: >-
+      A single piece of evidence: a verbatim quote from a web page,
+      a navigational observation, or an absence of expected information.
+    attributes:
+      evidence-type:
+        required: false
+        range: EvidenceTypeEnum
+        description: Classification of the evidence (ECO-aligned).
+      source-url:
+        required: false
+        slot_uri: dcterms:source
+        pattern: "^(ht|f)tps?://\\w[\\w/.\\-:=?&_+#]+$"
+        description: URL of the web page where the evidence was found.
+      quote:
+        required: false
+        slot_uri: oa:hasBody
+        description: Verbatim text extracted from the source page.
+      reasoning:
+        required: false
+        description: How this evidence relates to the criterion.
+      navigation-path:
+        required: false
+        range: NavigationPath
+        inlined: true
+        description: How a human would navigate from the root URL to this page.
+
+  NavigationPath:
+    description: >-
+      A sequence of navigation steps from the resource root URL to an
+      evidence page, documenting how a human would discover it.
+    attributes:
+      label:
+        required: false
+        description: "Short description (e.g. 'Root -> License page')."
+      steps:
+        required: false
+        multivalued: true
+        inlined_as_list: true
+        range: NavigationStep
+        description: Ordered sequence of page-to-page hops.
+
+  NavigationStep:
+    description: A single hop in a navigation path.
+    attributes:
+      page-url:
+        required: true
+        pattern: "^(ht|f)tps?://\\w[\\w/.\\-:=?&_+#]+$"
+        description: URL of the page being visited.
+      link-text:
+        required: false
+        description: Exact text of the link that was followed.
+      link-location:
+        required: false
+        description: >-
+          Where on the page the link appears (e.g. footer, top nav,
+          sidebar).
+      destination-url:
+        required: false
+        pattern: "^(ht|f)tps?://\\w[\\w/.\\-:=?&_+#]+$"
+        description: URL the link points to (the next step's page-url).
+
+  EvaluationContribution:
+    class_uri: prov:Activity
+    description: >-
+      Records who performed an evaluation action and when.
+      Models a PROV Activity with PAV contribution metadata.
+    attributes:
+      contributor:
+        required: true
+        slot_uri: pav:createdBy
+        description: >-
+          Identifier of the evaluator (e.g. 'Claude (automated)',
+          ORCID, or GitHub handle).
+      role:
+        required: false
+        range: ContributorRoleEnum
+        description: Role of the contributor in this evaluation.
+      date:
+        required: false
+        slot_uri: pav:createdOn
+        pattern: "^\\d{4}-\\d{2}-\\d{2}$"
+        description: Date of the contribution (YYYY-MM-DD).
+      method:
+        required: false
+        slot_uri: sepio:0000021
+        description: >-
+          URI reference to the evaluation methodology used
+          (e.g. https://reusabledata.org/criteria.html).
+
 # ---------------------------------------------------------------------------
 # Enums
 # ---------------------------------------------------------------------------
@@ -401,6 +578,47 @@ enums:
         description: Criterion E.1.1
       E.1.2:
         description: Criterion E.1.2
+
+  VerdictEnum:
+    description: >-
+      Outcome of a criterion assessment. Aligned with SEPIO assertion
+      direction concepts.
+    permissible_values:
+      pass:
+        description: Criterion is satisfied.
+        meaning: sepio:0000401
+      fail:
+        description: Criterion is not satisfied (violation).
+        meaning: sepio:0000404
+      not-applicable:
+        description: Criterion does not apply in this evaluation path.
+        meaning: sepio:0000398
+
+  EvidenceTypeEnum:
+    description: >-
+      Classification of evidence type, aligned with ECO
+      (Evidence and Conclusion Ontology).
+    permissible_values:
+      webpage-content:
+        description: Evidence from content found on a web page.
+        meaning: eco:0007653
+      absence-of-information:
+        description: Evidence based on failure to find expected information.
+        meaning: eco:0000307
+      web-navigation:
+        description: Evidence from navigability of the web presence.
+        meaning: eco:0000302
+
+  ContributorRoleEnum:
+    description: >-
+      Role of a contributor in an evaluation, aligned with PAV/PROV.
+    permissible_values:
+      evaluator:
+        description: Performed the initial evaluation.
+        meaning: pav:createdBy
+      reviewer:
+        description: Reviewed or critiqued the evaluation.
+        meaning: pav:curatedBy
 
   LicenseEnum:
     description: >-
