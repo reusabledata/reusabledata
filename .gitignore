@@ -16,6 +16,9 @@ deploy
 ## Node modules are handled by "npm install" and out package.json
 node_modules
 
+## Python bytecode cache
+__pycache__/
+
 ## data-drafts is a local workspace for evaluation agents and curators.
 ## Only the README is tracked.
 data-drafts/*
