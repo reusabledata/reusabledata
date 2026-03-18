@@ -19,6 +19,12 @@ node_modules
 ## Python bytecode cache
 __pycache__/
 
+## Symlinked skills from external repos (local-only)
+.claude/skills/ai4curation-configuration
+.claude/skills/configure-w3id
+.claude/skills/ontology-access-kit
+.claude/skills/robot-obo-tool
+
 ## data-drafts is a local workspace for evaluation agents and curators.
 ## Only the README is tracked.
 data-drafts/*
