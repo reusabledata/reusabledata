@@ -19,7 +19,7 @@ data-access:
 license: "custom"
 license-type: "restrictive"
 license-link: 'http://biocyc.org/all-reg.shtml'
-license-hat-used: "false"
+license-hat-used: false
 license-issues:
   - criteria: 'A.2.2'
     comment: 'Non-standard/custom license.'
@@ -32,8 +32,8 @@ license-commentary:
   - 'All data access to the downloads is mediated by an individual URL/password/login combination that is obtained by filling out a form and waiting for a response. The curator waited a little over two business days for their response. I do not believe this constitutes a violation of C.2 by itself.'
   - 'The core of the license seems to be essentially: "...you may use, modify and redistribute the BIOCYC DATABASES on a royalty-free basis, worldwide, and for any purpose; provided that[...]" changes are identified and BioCyc is credited in a couple of specific ways, including branding.'
   - 'The terms are very interesting. I believe the D.1.2 violation could also be interpreted as a D.1.1 violation.'
-was-controversial: "true"
-provisional: "true"
+was-controversial: true
+provisional: true
 contacts:
   - 'biocyc-support@sri.com'
   - 'https://www.biocyc.org/contact.shtml'

@@ -16,11 +16,11 @@ data-access:
 license: "CC-BY-4.0"
 license-type: "permissive"
 license-link: 'https://www.uniprot.org/help/license'
-license-hat-used: "false"
+license-hat-used: false
 license-commentary:
   - "We have chosen to apply the Creative Commons Attribution (CC BY 4.0) License to all copyrightable parts of our databases."
-was-controversial: "false"
-provisional: "true"
+was-controversial: false
+provisional: true
 contacts:
   - 'help@uniprot.org'
 grants:

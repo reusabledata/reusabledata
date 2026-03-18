@@ -17,14 +17,14 @@ data-access:
 license: "CC0-1.0"
 license-type: "permissive"
 license-link: 'ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/COPYING'
-license-hat-used: "false"
+license-hat-used: false
 license-issues: []
 license-commentary:
   - 'While one would "pass" the license on the way to the data downloads, I could not find mention any other location except a pointer at https://rfam.readthedocs.io/en/latest/ftp-help.html.'
   - 'License only found within COPYING in release FTP.'
   - 'Did not evaluate API.'
-was-controversial: "false"
-provisional: "true"
+was-controversial: false
+provisional: true
 contacts:
   - 'rfam-help@ebi.ac.uk'
 grants:

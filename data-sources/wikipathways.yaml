@@ -24,12 +24,12 @@ data-access:
 license: "CC0-1.0"
 license-type: "permissive"
 license-link: 'https://www.wikipathways.org/index.php/WikiPathways:License_Terms'
-license-hat-used: "false"
+license-hat-used: false
 license-issues: []
 license-commentary:
   - "I would note that the terms page makes an interesting and clear distinction between legal code and social norms, with an interesting list of social expectation that they would like users to adhere to."
   - "Not explicitly referenced except by external link, but using CC0 1.0."
-was-controversial: "false"
+was-controversial: false
 contacts:
   - 'https://www.wikipathways.org/index.php/Contact_Us'
 grants:

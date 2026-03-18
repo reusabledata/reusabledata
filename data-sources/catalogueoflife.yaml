@@ -21,7 +21,7 @@ data-access:
 license: "custom"
 license-type: "restrictive"
 license-link: 'http://catalogueoflife.org/content/terms-use'
-license-hat-used: "false"
+license-hat-used: false
 license-issues:
   - criteria: 'A.2.2'
     comment: 'The resource uses custom terms.'
@@ -39,6 +39,6 @@ license-commentary:
   - 'The custom licensing terms do not seem to make clear rights around derivation and modification.'
   - 'The download is actually a Linux virtual machine in a custom wrapper that tries to drive interaction with a browser on port 8080; this is rather onerous and I do not think this could be considered a \"download\" so much as an \"offline\" site clone or application.'
   - 'Embedded in the \"download\" is further elaboration on the license, which seem to contain terms about internal use as well: \"Use of this compilation or any of the databases contained within it by commercial organisations requires a written agreement from Species 2000 and ITIS. This applies when it is used commercially for external services, products or publications and when it is used to provide internal services within an organisation.\"'
-was-controversial: "false"
+was-controversial: false
 contacts:
   - 'sp2000@sp2000.org'

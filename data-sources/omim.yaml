@@ -19,7 +19,7 @@ data-access:
 license: custom
 license-type: restrictive
 license-link: 'http://www.omim.org/help/agreement'
-license-hat-used: "false"
+license-hat-used: false
 license-issues:
     - criteria: A.2.2
       comment: 'The license at link is custom.'
@@ -35,7 +35,7 @@ license-commentary:
     - 'Assuming that one registered, it seems that data access would be relatively pain-free; so no C.1 violation.'
     - 'See also: https://omim.org/downloads and https://omim.org/api for additional access information.'
     - 'It is worth reading through the linked agreement; there are many sections that are restrictive or would be best interpreted with legal advice.'
-was-controversial: "false"
+was-controversial: false
 contacts:
     - JHTT-Communications@jhmi.edu
 grants:

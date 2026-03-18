@@ -18,12 +18,12 @@ data-access:
 license: "CC0-1.0"
 license-type: "permissive"
 license-link: 'https://www.cancergenomeinterpreter.org/biomarkers'
-license-hat-used: "false"
+license-hat-used: false
 license-issues: []
 license-commentary:
   - "Noting that the footer has a \"Legal advice\" link to more restrictive terms; it seems clear from the context that this is site boilerplate, with the resource hosted within. Similarly for the \"API\" and \"License\" links."
   - "License information (as well as data) are all available on the landing page."
-was-controversial: "false"
+was-controversial: false
 contacts:
   - 'http://goo.gl/forms/gV47GKakVvJD3iTz2'
 grants:

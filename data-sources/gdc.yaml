@@ -1,5 +1,5 @@
 id: 'gdc'
-description: "The NCI\'s Genomic Data Commons (GDC) provides the cancer research community with a unified data repository that enables data sharing across cancer genomic studies in support of precision medicine."
+description: "The NCI's Genomic Data Commons (GDC) provides the cancer research community with a unified data repository that enables data sharing across cancer genomic studies in support of precision medicine."
 last-curated: '2017-12-03'
 source: 'Genomic Data Commons (GDC)'
 source-link: 'https://gdc.cancer.gov/'
@@ -18,7 +18,7 @@ data-access:
     location: 'https://gdc.cancer.gov/developers/gdc-application-programming-interface-api'
 license: "unlicensed"
 license-type: "copyright"
-license-hat-used: "false"
+license-hat-used: false
 license-issues:
   - criteria: 'A.1.2'
     comment: 'After searching around GDC and cancer.gov, no centralized licensing or terms could be found.'
@@ -29,6 +29,6 @@ license-commentary:
   - 'Some data would seem to require additional controls: \"GDC data is stored in a secure FISMA-compliant facility. Access to controlled data requires authorization via dbGaP. See Data Access Processes and Tools for more information.\"'
   - 'While some terms information was found at https://www.cancer.gov/policies/copyright-reuse, it seemed to be about site content rather than data.'
   - 'While licensing information could not be found, access was not problematic.'
-was-controversial: "false"
+was-controversial: false
 contacts:
   - 'support@nci-gdc.datacommons.io'

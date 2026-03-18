@@ -18,7 +18,7 @@ data-access:
 license: "CC-BY-SA-4.0"
 license-type: "copyleft"
 license-link: 'ftp://ftp.jcvi.org/pub/data/TIGRFAMs/COPYRIGHT'
-license-hat-used: "false"
+license-hat-used: false
 license-issues:
   - criteria: D.1.2
     comment: 'By using a copyleft-style license, there may be issues in mixing and redistributing this data with licenses that have incompatible terms.'
@@ -29,8 +29,8 @@ license-commentary:
     "TIGRFAMs data are made available under a Creative Commons Attribution-ShareAlike 4.0 license."
   - >
     TIGRFAMs used to be at a different location; ownership was apparently formally transferred to NCBI in April 2018: https://ftp.ncbi.nlm.nih.gov/hmm/TIGRFAMs/license_and_availability.txt
-was-controversial: "false"
-provisional: "true"
+was-controversial: false
+provisional: true
 contacts:
   - 'https://support.nlm.nih.gov/'
 grants: []

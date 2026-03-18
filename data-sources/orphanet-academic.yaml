@@ -19,7 +19,7 @@ data-access: []
 license: custom
 license-type: restrictive
 license-link: 'http://www.orphadata.org/cgi-bin/contact.php'
-license-hat-used: 'true'
+license-hat-used: true
 license-commentary:
     - 'The was based on the Academic DTA from Orphanet; there is also a commercial version of the Data Transfer Agreement (DTA), but we will not evaluate that for the time being.'
     - 'Note that the license link above is to the contact request form as one must actively pursue the DTA--it was not apparently available directly from the site. Whether this is a A.1.2 violation is under consideration.'
@@ -34,7 +34,7 @@ license-issues:
       comment: 'The user \"...may freely use the Data only for data analysis...any other use of the Data must receive the authorization of Orphanet management board...\"'
     - criteria: 'E.1.2'
       comment: 'The license is \"personal, non-transferable and non-communicable\", so cannot be freely reused.'
-was-controversial: 'false'
+was-controversial: false
 contacts:
     - 'http://www.orphadata.org/cgi-bin/contact.php'
 grants:

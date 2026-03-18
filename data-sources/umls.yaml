@@ -15,7 +15,7 @@ data-access: []
 license: "custom"
 license-type: "restrictive"
 license-link: 'https://uts.nlm.nih.gov/uts/assets/LicenseAgreement.pdf'
-license-hat-used: "true"
+license-hat-used: true
 license-issues:
   - criteria: 'A.2.2'
     comment: 'Non-standard/custom license.'
@@ -34,8 +34,8 @@ license-issues:
 license-commentary:
   - 'Could not access C categories as proceeding to access demanded signing up for giving reports: "[...]I will provide an annual report[...]", https://uts.nlm.nih.gov/uts/signUp'
   - '"License hat" was required to be used as "UMLS licenses are issued only to individuals and not to groups or organizations[...]", https://www.nlm.nih.gov/databases/umls.html'
-was-controversial: "false"
-provisional: "true"
+was-controversial: false
+provisional: true
 contacts:
   - 'https://www.nlm.nih.gov/research/umls/support.html'
 grants: []

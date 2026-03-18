@@ -19,15 +19,15 @@ Deployed via GitHub Pages from the `docs/` directory in the GitHub repo.
 ## Key Commands
 
 - `make` - Full build (compile YAML, generate HTML, validate)
-- `make check` - Validate YAML files against schema (`kwalify` + consistency check)
+- `make check` - Validate YAML files against schema (LinkML + consistency check)
 - `npm run build` - esbuild the explore page JS bundle
-- `npm run check` - Just kwalify validation
+- `npm run check` - Just LinkML schema validation
 - `npm run yamls2json` - Compile YAML sources to JSON
 
 ## Data Source Files
 
 Each resource is a YAML file in `data-sources/` named after its resource ID.
-Schema: `scripts/source.schema.yaml` | Docs: `docs/schema.md`
+Schema: `scripts/source.linkml.yaml` | Docs: `docs/schema.md`
 
 Required fields: `id`, `description`, `source`, `source-link`, `status`,
 `data-field`, `data-type`, `license`, `license-type`
@@ -38,7 +38,7 @@ Licenses use SPDX identifiers where possible, or: `inconsistent`, `public domain
 ### License → license-type mapping
 
 The `license-type` field must match the license per
-`scripts/inconsistency_check.js`. `make check` will reject mismatches.
+`scripts/consistency_check.py`. `make check` will reject mismatches.
 
 | license | license-type |
 |---------|-------------|
@@ -68,8 +68,8 @@ include a "public domain" value — valid values are: `unknown`,
 
 ## Tech Stack
 
-- **Node.js** (>= 4.4) with npm - all scripts are JavaScript
-- **kwalify** - YAML schema validation
+- **Node.js** (>= 4.4) with npm - build scripts are JavaScript
+- **Python 3** with LinkML - schema validation (`scripts/source.linkml.yaml`)
 - **Mustache** - HTML templating
 - **esbuild** - JS bundling for explore page
 
@@ -86,7 +86,7 @@ duplicating validation logic.
 
 - Determinations are based on public information in the resource web presence, made at a fixed point in time and updated when the website changes.
 - All criteria scoring must refer to text found (or not found) in the resource web presence. Whenever possible, specific passages should be quoted.
-- Criteria: `criteria.md` (https://reusabledata.org/criteria.html). Schema: `schema.md` / `source.schema.yaml`.
+- Criteria: `criteria.md` (https://reusabledata.org/criteria.html). Schema: `schema.md` / `source.linkml.yaml`.
 - Evaluations are specifically about **data and data access**. Software/tool licensing at a resource is out of scope and should not be mentioned in any YAML field (`license-commentary`, `license-issues`, etc.) or flagged as issues.
 - Each evaluation is **point-in-time** and stands on its own. Do not reference or compare against previous evaluations in commentary.
 - `was-controversial` only applies when human reviewers disagree on the **current** evaluation, not when a re-evaluation differs from a prior one.
@@ -113,7 +113,7 @@ When asked to evaluate (or re-evaluate) a resource:
 3. **Evaluate each criterion** (A.1.1 through E.1.2, per `docs/criteria.md`)
    and record the verdict, source URL, quoted text, and reasoning.
 4. **Write files to the drafts workspace:**
-   - `data-drafts/{id}/{id}.yaml` — the evaluation YAML (schema: `scripts/source.schema.yaml`).
+   - `data-drafts/{id}/{id}.yaml` — the evaluation YAML (schema: `scripts/source.linkml.yaml`).
      This stays in `data-drafts/` until a human curator promotes it to `data-sources/`.
    - `data-drafts/{id}/trace.md` — the trace file (format below)
 

@@ -20,7 +20,7 @@ data-access:
 license: "CC-BY-NC-4.0"
 license-type: "restrictive"
 license-link: 'https://www.drugbank.ca/releases/latest'
-license-hat-used: "false"
+license-hat-used: false
 license-issues:
   - criteria: 'D.1.1'
     comment: 'The NC license allows for liberal non-commercial reuse.'
@@ -30,7 +30,7 @@ license-commentary:
   - 'There is also an open (CC0) data subset for vocabulary and structures that could be evaluated separately; it is ~5mb vs ~150mb for the complete "academic" set(about 3%).'
   - 'This seems to be mostly a standard NC/commercial licensing split, with DrugBank+ supporting commerical licensing for fees.'
   - 'To download the full academic set, one must create an account (https://go.drugbank.com/public_users/sign_up), which is a multi-step and human mediated process, with varying turnaround times and follow-up questions.'
-was-controversial: "false"
+was-controversial: false
 contacts:
   - 'https://go.drugbank.com/contact'
   - 'info@drugbank.com'

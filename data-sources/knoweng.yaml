@@ -22,7 +22,7 @@ data-access:
 license: "CC-BY-NC-SA-4.0"
 license-type: "restrictive"
 license-link: 'https://knoweng.org/kn-overview/'
-license-hat-used: "false"
+license-hat-used: false
 license-issues:
   - criteria: 'B.2.1'
     comment: 'Explicit statement that license only applies to new work.'
@@ -44,8 +44,8 @@ license-commentary:
   - 'Licensing: "This work is licensed under a Commons Attribution-Non-Commercial-ShareAlike license for academic uses only (https://creativecommons.org/license/by-nc-sa/4.0/, CC BY-NC-SA 4). Where work is the Derivative Works created by KN team from the various databases. We recommend that the researchers contact owners of the data sources directly to obtain necessary permissions and licenses to download data and/or use it in ways not envisioned in our license. The intent is for the KnowEnG system including KN and Tools to be available for free for academic use only."'
   - 'Evaluation by taking the latter at face value, assuming that it is an encompassing license for all new work, and the remaining requires negotiation with upstream.'
   - 'The major question is whether this is an A.1.1 violation or not; also, whether NC-SA is "restrictive" or "copyleft" for our purposes.'
-was-controversial: "false"
-provisional: "true"
+was-controversial: false
+provisional: true
 contacts:
   - 'knoweng@illinois.edu'
 grants:

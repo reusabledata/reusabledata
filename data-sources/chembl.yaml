@@ -17,7 +17,7 @@ data-access:
 license: "CC-BY-SA-3.0"
 license-type: "copyleft"
 license-link: 'ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_23/LICENSE'
-license-hat-used: "false"
+license-hat-used: false
 license-issues:
   - criteria: 'D.1.2'
     comment: 'CC SA prevents some types of reuse, such and modification and redistribution with data from different license types.'
@@ -25,7 +25,7 @@ license-issues:
     comment: 'CC SA prevents all parties from reusing the data as D.1.2.'
 license-commentary:
   - 'There was no centralized licensing/terms information on the main site, but all download FTP directories we looked at contained terms for the CC SA 3.0; we used as single example as the license link.'
-was-controversial: "false"
+was-controversial: false
 contacts:
   - 'https://www.ebi.ac.uk/support/'
 grants:

@@ -16,7 +16,7 @@ data-access:
 license: "custom"
 license-type: "restrictive"
 license-link: 'http://myvariant.info/terms/'
-license-hat-used: "false"
+license-hat-used: false
 license-commentary:
   - 'MyVariant.info may contain information from third party websites, which may or may not be marked with the name of the source. Such information does not necessarily represent the views or opinions of TSRI, and TSRI shall have no responsibility whatsoever for such information.'
   - 'You also agree that you will ensure that any copies of documents you generate by using MyVariant.info shall retain and display all copyright and other proprietary notices contained therein.'
@@ -31,6 +31,6 @@ license-issues:
       comment: No re-use allowed, just use.
     - criteria: E.1.2
       comment: No re-use allowed, just use.
-was-controversial: "false"
+was-controversial: false
 contacts:
   - 'help@myvariant.info'

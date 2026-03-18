@@ -24,15 +24,15 @@
         "license": "CC-BY-4.0",
         "license-type": "permissive",
         "license-link": "https://www.alliancegenome.org/privacy-warranty-licensing",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [],
         "license-commentary": [
             "The licensing page easily linked through footer.",
             "The licensing page makes a distinction between ontologies used in annotation and other data; we will focus on the data portion.",
             "For this re-evaluation, the API was not persued as the downloads were straightforward and did not seem to include ontology repackaging."
         ],
-        "was-controversial": "false",
-        "provisional": "true",
+        "was-controversial": false,
+        "provisional": true,
         "contacts": [
             "help@alliancegenome.org"
         ],
@@ -74,7 +74,7 @@
         "license": "custom",
         "license-type": "permissive",
         "license-link": "https://www.ebi.ac.uk/arrayexpress/help/FAQ.html#data_restrictions",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "A.2.2",
@@ -87,7 +87,7 @@
             "While there are distinctions occasionally made between \"private\" and \"public\" data, it seems that \"private\" is just staging data before publication and does not affect evaluation.",
             "There is an interesting section (https://www.ebi.ac.uk/arrayexpress/help/data_availability.html#removal) that describes situations where data needs to be retracted. This section, while alarmingly titled, is has no effect on the license determination."
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "arrayexpress@ebi.ac.uk",
             "https://www.ebi.ac.uk/arrayexpress/help/contact_us.html"
@@ -142,8 +142,8 @@
             "A little unclear on how this practically interacts with the sources list on /about/sources, but does not affect evaluation with current standards.",
             "While there is manual iteration needed for the TSVs, the mysql and rdf available on the data-dumps page sufficiently bridges the bulk criteria in C.1."
         ],
-        "was-controversial": "false",
-        "provisional": "true",
+        "was-controversial": false,
+        "provisional": true,
         "last-curated": "2024-07-18",
         "grants": [
             {
@@ -180,7 +180,7 @@
         "license": "custom",
         "license-type": "restrictive",
         "license-link": "http://biocyc.org/all-reg.shtml",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "A.2.2",
@@ -201,8 +201,8 @@
             "The core of the license seems to be essentially: \"...you may use, modify and redistribute the BIOCYC DATABASES on a royalty-free basis, worldwide, and for any purpose; provided that[...]\" changes are identified and BioCyc is credited in a couple of specific ways, including branding.",
             "The terms are very interesting. I believe the D.1.2 violation could also be interpreted as a D.1.1 violation."
         ],
-        "was-controversial": "true",
-        "provisional": "true",
+        "was-controversial": true,
+        "provisional": true,
         "contacts": [
             "biocyc-support@sri.com",
             "https://www.biocyc.org/contact.shtml"
@@ -262,7 +262,7 @@
         "license": "custom",
         "license-type": "permissive",
         "license-link": "http://www.brenda-enzymes.info/ontology/tissue/tree/update/update_files/BrendaTissueOBO",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "A.2.2",
@@ -278,7 +278,7 @@
             "Typcial of this is: \\\"Use of this online version of BRENDA is free for academic research only. Commercial use or download access requires a license. See terms of use.\\\" (http://bto.brenda-enzymes.org/copy.php)",
             "The \\\"CC-BY\\\" declaration in the ontology file header should be versioned or linked. Due to not knowing what version, we have marked it as a custom; obviously intended to be under very permissive terms."
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "http://support.brenda-enzymes.org/open.php"
         ],
@@ -313,13 +313,13 @@
         "license": "CC0-1.0",
         "license-type": "permissive",
         "license-link": "https://www.cancergenomeinterpreter.org/biomarkers",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [],
         "license-commentary": [
             "Noting that the footer has a \"Legal advice\" link to more restrictive terms; it seems clear from the context that this is site boilerplate, with the resource hosted within. Similarly for the \"API\" and \"License\" links.",
             "License information (as well as data) are all available on the landing page."
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "http://goo.gl/forms/gV47GKakVvJD3iTz2"
         ],
@@ -359,7 +359,7 @@
         "license": "custom",
         "license-type": "restrictive",
         "license-link": "http://catalogueoflife.org/content/terms-use",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "A.2.2",
@@ -389,7 +389,7 @@
             "The download is actually a Linux virtual machine in a custom wrapper that tries to drive interaction with a browser on port 8080; this is rather onerous and I do not think this could be considered a \\\"download\\\" so much as an \\\"offline\\\" site clone or application.",
             "Embedded in the \\\"download\\\" is further elaboration on the license, which seem to contain terms about internal use as well: \\\"Use of this compilation or any of the databases contained within it by commercial organisations requires a written agreement from Species 2000 and ITIS. This applies when it is used commercially for external services, products or publications and when it is used to provide internal services within an organisation.\\\""
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "sp2000@sp2000.org"
         ]
@@ -419,7 +419,7 @@
         "license": "CC-BY-4.0",
         "license-type": "permissive",
         "license-link": "http://cathdb.info",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [],
         "license-commentary": [
             "After browsing the site and checking the usual locations, the footer was the only place the licensing information was found.",
@@ -428,8 +428,8 @@
             "Did not evaluate API.",
             "We take their licensing at face value; we note that this is a derivative of the Protein Data Bank (PDB)."
         ],
-        "was-controversial": "false",
-        "provisional": "true",
+        "was-controversial": false,
+        "provisional": true,
         "contacts": [
             "http://cathdb.info/support"
         ],
@@ -465,7 +465,7 @@
         "license": "CC-BY-SA-3.0",
         "license-type": "copyleft",
         "license-link": "ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_23/LICENSE",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "D.1.2",
@@ -479,7 +479,7 @@
         "license-commentary": [
             "There was no centralized licensing/terms information on the main site, but all download FTP directories we looked at contained terms for the CC SA 3.0; we used as single example as the license link."
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "https://www.ebi.ac.uk/support/"
         ],
@@ -573,7 +573,7 @@
         "license": "public domain",
         "license-type": "permissive",
         "license-link": "http://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "A.2.1",
@@ -595,7 +595,7 @@
             "The license page section \\\"Molecular Data Usage\\\" states that\\: \\\"NCBI is not in a position to assess the validity of such claims and since there is no transfer of rights from submitters to NCBI, NCBI has no rights to transfer to a third party. Therefore, NCBI cannot provide comment or unrestricted permission concerning the use, copying, or distribution of the information contained in the molecular databases.\\\"",
             "We also considered the wording at https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/ , but decided that the one we chose above was mostly likely indended and correct."
         ],
-        "was-controversial": "true",
+        "was-controversial": true,
         "contacts": [
             "info@ncbi.nlm.nih.gov"
         ]
@@ -623,7 +623,7 @@
         ],
         "license": "unlicensed",
         "license-type": "copyright",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "A.1.2",
@@ -633,8 +633,8 @@
         "license-commentary": [
             "I could find no licensing information, including in the most recent publication covering the most current FTP downloads."
         ],
-        "was-controversial": "false",
-        "provisional": "true",
+        "was-controversial": false,
+        "provisional": true,
         "contacts": [
             "cogs@ncbi.nlm.nih.gov",
             "koonin@ncbi.nlm.nih.gov"
@@ -911,7 +911,7 @@
         "license": "CC-BY-NC-4.0",
         "license-type": "restrictive",
         "license-link": "https://www.drugbank.ca/releases/latest",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "D.1.1",
@@ -927,7 +927,7 @@
             "This seems to be mostly a standard NC/commercial licensing split, with DrugBank+ supporting commerical licensing for fees.",
             "To download the full academic set, one must create an account (https://go.drugbank.com/public_users/sign_up), which is a multi-step and human mediated process, with varying turnaround times and follow-up questions."
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "https://go.drugbank.com/contact",
             "info@drugbank.com"
@@ -958,7 +958,7 @@
         "license": "CC-BY-SA-4.0",
         "license-type": "copyleft",
         "license-link": "http://drugcentral.org/privacy",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "D.1.2",
@@ -972,7 +972,7 @@
         "license-commentary": [
             "While there is upstream data integtration, there seems to be no mention of upstream licenses or terms. Not necessarily our issue here."
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "For questions and comments please contact Oleg Ursu or Jayme Holmes."
         ]
@@ -1000,14 +1000,14 @@
         "license": "CC0-1.0",
         "license-type": "permissive",
         "license-link": "https://datadryad.org/pages/policies#publication",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [],
         "license-commentary": [
             "Main API information found from the landing page under \\\"About\\\" -> \\\"Repository features and technology\\\": https://datadryad.org/pages/repository",
             "Also note more detailed API information in the wiki: http://wiki.datadryad.org/Data_Access",
             "\\\"Dryad will make Accepted Content available to the public under a CC0 Waiver\\\""
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "help@datadryad.org"
         ]
@@ -1124,7 +1124,7 @@
     },
     {
         "id": "gdc",
-        "description": "The NCI\\'s Genomic Data Commons (GDC) provides the cancer research community with a unified data repository that enables data sharing across cancer genomic studies in support of precision medicine.",
+        "description": "The NCI's Genomic Data Commons (GDC) provides the cancer research community with a unified data repository that enables data sharing across cancer genomic studies in support of precision medicine.",
         "last-curated": "2017-12-03",
         "source": "Genomic Data Commons (GDC)",
         "source-link": "https://gdc.cancer.gov/",
@@ -1149,7 +1149,7 @@
         ],
         "license": "unlicensed",
         "license-type": "copyright",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "A.1.2",
@@ -1164,7 +1164,7 @@
             "While some terms information was found at https://www.cancer.gov/policies/copyright-reuse, it seemed to be about site content rather than data.",
             "While licensing information could not be found, access was not problematic."
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "support@nci-gdc.datacommons.io"
         ]
@@ -1194,7 +1194,7 @@
         "license": "custom",
         "license-type": "private pool",
         "license-link": "https://www.gisaid.org/registration/terms-of-use/",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "A.2.2",
@@ -1229,8 +1229,8 @@
             "While the license is quite readable, it has many interesting terms trying to control the behavior (e.g. 2b) of those under the agreement that may be best understood by law professionals.",
             "While not a current criteria violation, I feel it is worth noting that there was a 26 day waiting period between request and account creation."
         ],
-        "was-controversial": "false",
-        "provisional": "true",
+        "was-controversial": false,
+        "provisional": true,
         "contacts": [
             "https://www.gisaid.org/help/contact/"
         ],
@@ -1265,7 +1265,7 @@
         "license": "ODbL-1.0",
         "license-type": "copyleft",
         "license-link": "http://gnomad.broadinstitute.org/terms",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "D.1.2",
@@ -1279,7 +1279,7 @@
         "license-commentary": [
             "All data available under: https://opendatacommons.org/licenses/odbl/1.0/"
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "http://gnomad.broadinstitute.org/contact"
         ],
@@ -1439,7 +1439,7 @@
         "license": "custom",
         "license-type": "restrictive",
         "license-link": "http://www.hmdb.ca/about#cite",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "A.2.2",
@@ -1458,7 +1458,7 @@
             "While the terms are minimal, they seem intended to act a bit the CC-BY-NC; it was evaluated similarly.",
             "Given their upstream resources mentioned in http://www.hmdb.ca/sources , it would be interesting to know their pass-through negotiations and differences with Canadian law.."
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "https://twitter.com/WishartLab"
         ],
@@ -1609,7 +1609,7 @@
             "While we did not go through the registration process, C.2 seems like it would be cleared by the implied straighforward FTP access post licensing.",
             "Also see KEGG API and KEGG REST resources."
         ],
-        "was-controversial": "true",
+        "was-controversial": true,
         "last-curated": "2017-10-17",
         "contacts": [
             "http://www.genome.jp/feedback/"
@@ -1644,7 +1644,7 @@
         "license": "CC-BY-NC-SA-4.0",
         "license-type": "restrictive",
         "license-link": "https://knoweng.org/kn-overview/",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "B.2.1",
@@ -1680,8 +1680,8 @@
             "Evaluation by taking the latter at face value, assuming that it is an encompassing license for all new work, and the remaining requires negotiation with upstream.",
             "The major question is whether this is an A.1.1 violation or not; also, whether NC-SA is \"restrictive\" or \"copyleft\" for our purposes."
         ],
-        "was-controversial": "false",
-        "provisional": "true",
+        "was-controversial": false,
+        "provisional": true,
         "contacts": [
             "knoweng@illinois.edu"
         ],
@@ -1786,7 +1786,7 @@
         "source": "Mouse Phenome Database (MPD)",
         "source-link": "https://phenome.jax.org/",
         "status": "complete",
-        "description": "The Mouse Phenome Database is a collaborative standardized collection of measured data on laboratory mouse strains, and includes: baseline phenotype data sets; studies of drug, diet, disease and aging effect; protocols, projects, and publications; and SNP, variation and gene expression studies. MPD collects data for classical inbred strains, other fixed-genotype strains, derived lines and populations that are openly acquirable (strain panel examples). Strains can be from JAX-Mice or from any other vendor that\\'s a recognized breeding source.",
+        "description": "The Mouse Phenome Database is a collaborative standardized collection of measured data on laboratory mouse strains, and includes: baseline phenotype data sets; studies of drug, diet, disease and aging effect; protocols, projects, and publications; and SNP, variation and gene expression studies. MPD collects data for classical inbred strains, other fixed-genotype strains, derived lines and populations that are openly acquirable (strain panel examples). Strains can be from JAX-Mice or from any other vendor that's a recognized breeding source.",
         "data-field": "biology",
         "data-type": "MOD",
         "data-categories": [
@@ -1809,10 +1809,10 @@
         ],
         "license-commentary": [
             "-MPD data contributors waive copyright and related rights, making their data freely available whereby MPD users may freely build upon, enhance and reuse those data for any purpose without restriction. Scholarly citation norms must be followed for content reuse.",
-            "-The Jackson Laboratory\\'s web site privacy policy applies to all use of this resource.",
+            "-The Jackson Laboratory's web site privacy policy applies to all use of this resource.",
             "-The Mouse Phenome Database (MPD) is an NIH-funded data sharing repository and adheres to the NIH Genomic Data Sharing Policy.",
             "-Any reproduction of JAX(R) Mice mouse images is prohibited without prior express written permission (see the JAX(R) Mice Terms of Use for details).",
-            "-Data contributors and data users may not use MPD in any unlawful manner, or in any manner that would impair MPD\\'s services, security or functionality. Automated usage (webcrawlers and similar) must observe each page\\'s \"meta robots\" html tags and space requests by ≥ 2 seconds. We reserve the right to block violators and to take any other action as we deem necessary."
+            "-Data contributors and data users may not use MPD in any unlawful manner, or in any manner that would impair MPD's services, security or functionality. Automated usage (webcrawlers and similar) must observe each page's \"meta robots\" html tags and space requests by ≥ 2 seconds. We reserve the right to block violators and to take any other action as we deem necessary."
         ],
         "contacts": [
             "phenome@jax.org"
@@ -1920,7 +1920,7 @@
         "license": "custom",
         "license-type": "restrictive",
         "license-link": "http://myvariant.info/terms/",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-commentary": [
             "MyVariant.info may contain information from third party websites, which may or may not be marked with the name of the source. Such information does not necessarily represent the views or opinions of TSRI, and TSRI shall have no responsibility whatsoever for such information.",
             "You also agree that you will ensure that any copies of documents you generate by using MyVariant.info shall retain and display all copyright and other proprietary notices contained therein.",
@@ -1945,7 +1945,7 @@
                 "comment": "No re-use allowed, just use."
             }
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "help@myvariant.info"
         ]
@@ -2017,12 +2017,12 @@
         "license": "CC-BY-4.0",
         "license-type": "permissive",
         "license-link": "https://evs.nci.nih.gov/ftp1/NCI_Thesaurus/ThesaurusTermsofUse.htm",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [],
         "license-commentary": [
             "The Terms of Use puts a trademark restriction on re-releasing the data using the name \"NCI Thesaurus\".  This was evaluated as be outside the scope of data (re)use.\n"
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "https://ncithesaurus-stage.nci.nih.gov/ncitbrowser/pages/contact_us.jsf",
             "NCIAppSupport@nih.gov",
@@ -2067,12 +2067,12 @@
         "license": "CC-BY-4.0",
         "license-type": "permissive",
         "license-link": "ftp://ftp.nextprot.org/pub/README",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [],
         "license-commentary": [
             "Using the license most proximate to the download--in the downloads directory itself. There is a somewhat ambiguous ARR statement at https://www.nextprot.org/copyright."
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "support@nextprot.org"
         ]
@@ -2171,7 +2171,7 @@
         "license": "custom",
         "license-type": "restrictive",
         "license-link": "http://www.omim.org/help/agreement",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "A.2.2",
@@ -2199,7 +2199,7 @@
             "See also: https://omim.org/downloads and https://omim.org/api for additional access information.",
             "It is worth reading through the linked agreement; there are many sections that are restrictive or would be best interpreted with legal advice."
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "JHTT-Communications@jhmi.edu"
         ],
@@ -2276,7 +2276,7 @@
         "license": "custom",
         "license-type": "restrictive",
         "license-link": "http://www.orphadata.org/cgi-bin/contact.php",
-        "license-hat-used": "true",
+        "license-hat-used": true,
         "license-commentary": [
             "The was based on the Academic DTA from Orphanet; there is also a commercial version of the Data Transfer Agreement (DTA), but we will not evaluate that for the time being.",
             "Note that the license link above is to the contact request form as one must actively pursue the DTA--it was not apparently available directly from the site. Whether this is a A.1.2 violation is under consideration.",
@@ -2301,7 +2301,7 @@
                 "comment": "The license is \\\"personal, non-transferable and non-communicable\\\", so cannot be freely reused."
             }
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "http://www.orphadata.org/cgi-bin/contact.php"
         ],
@@ -2378,13 +2378,13 @@
         "license": "CC-BY-4.0",
         "license-type": "permissive",
         "license-link": "https://pantherdb.org/tou.jsp",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [],
         "license-commentary": [
             "The Terms of Use page at pantherdb.org/tou.jsp states: \"PANTHER data and data products are licensed under the Creative Commons Attribution 4.0 International License.\""
         ],
-        "was-controversial": "false",
-        "provisional": "true",
+        "was-controversial": false,
+        "provisional": true,
         "last-curated": "2026-03-05",
         "contacts": [
             "feedback@pantherdb.org",
@@ -2414,18 +2414,18 @@
         "license": "CC0-1.0",
         "license-type": "permissive",
         "license-link": "http://pfam.xfam.org/about",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [],
         "license-commentary": [
             "Pfam is freely available under the Creative Commons Zero (\"CC0\") licence."
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "pfam-help@ebi.ac.uk"
         ],
         "grants": [
             {
-                "label": "EMBL is EMBL-EBI\\'s parent organisation. It provides core funding (staff, space, equipment) for Pfam."
+                "label": "EMBL is EMBL-EBI's parent organisation. It provides core funding (staff, space, equipment) for Pfam."
             },
             {
                 "label": "The Wellcome Trust has supported Pfam since the database inception, via core funding when based at the Wellcome Trust Sanger Institute. As well as providing and maintaining the campus on which the EMBL-EBI is located, the Wellcome Trust also now provides significant funding for Pfam (grant 108433/Z/15/Z). The current grant runs from October 2015 to September 2020."
@@ -2466,7 +2466,7 @@
         "license": "inconsistent",
         "license-type": "unknown",
         "license-link": "http://juniper.health.unm.edu/tcrd/download/README",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "A.1.1",
@@ -2479,7 +2479,7 @@
             "Given the variety and terms of the upstream resources, the inconsistency is not unexpected.",
             "The license is also found here at https://pharos.nih.gov/idg/about, which has similar wording to the README on the downloads page, but makes no note of the user responsibility to adhere to licenses from original data sources."
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "pharos@mail.nih.gov"
         ],
@@ -2514,7 +2514,7 @@
         "license-link": "https://www.pombase.org/about/terms-of-use",
         "license-commentary": [],
         "last-curated": "2019-03-01",
-        "provisional": "true",
+        "provisional": true,
         "grants": [
             {
                 "label": "PomBase is funded by the Wellcome Trust [104967/Z/14/Z]."
@@ -2580,15 +2580,15 @@
         "license": "CC0-1.0",
         "license-type": "permissive",
         "license-link": "ftp://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/COPYING",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [],
         "license-commentary": [
             "While one would \"pass\" the license on the way to the data downloads, I could not find mention any other location except a pointer at https://rfam.readthedocs.io/en/latest/ftp-help.html.",
             "License only found within COPYING in release FTP.",
             "Did not evaluate API."
         ],
-        "was-controversial": "false",
-        "provisional": "true",
+        "was-controversial": false,
+        "provisional": true,
         "contacts": [
             "rfam-help@ebi.ac.uk"
         ],
@@ -2666,10 +2666,10 @@
         "license": "CC-BY-4.0",
         "license-type": "permissive",
         "license-link": "http://www.rhea-db.org/licensedisclaimer",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [],
         "license-commentary": [],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "http://www.rhea-db.org/feedback"
         ],
@@ -2725,8 +2725,8 @@
             "The API did not seem to offer any way of filter out things with other licenses.",
             "Without ascending, noting that various upstream for the SGD API could have other terms: https://yeastmine.yeastgenome.org/yeastmine/dataCategories.do"
         ],
-        "was-controversial": "false",
-        "provisional": "true",
+        "was-controversial": false,
+        "provisional": true,
         "last-curated": "2019-03-01",
         "grants": [
             {
@@ -2756,7 +2756,7 @@
         "license": "custom",
         "license-type": "restrictive",
         "license-link": "https://software.embl-em.de/stream/license_pdf/24/56fb8ca3363b8_License_Academic_SMART.pdf",
-        "license-hat-used": "true",
+        "license-hat-used": true,
         "license-issues": [
             {
                 "criteria": "A.2.2",
@@ -2792,8 +2792,8 @@
             "From license: \"...agrees to cite the use of the Licensed Software on all related scientific publications, posters, grant applications, institutional reports or brochures\"",
             "From FAQ: \"If you are a commerical user, please contact biobyte solutions GmbH. They provide the commercial version of SMART...\""
         ],
-        "was-controversial": "false",
-        "provisional": "true",
+        "was-controversial": false,
+        "provisional": true,
         "contacts": [
             "smart@embl.de"
         ],
@@ -2863,7 +2863,7 @@
         "license": "custom",
         "license-type": "permissive",
         "license-link": "http://www.supfam.org/about",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "A.2.2",
@@ -2879,8 +2879,8 @@
             "Only other notice was in footer: \"© The SUPERFAMILY authors and Julian Gough 2001-2019.\"; taking this a an elaboration on above.",
             "Very minimal website."
         ],
-        "was-controversial": "false",
-        "provisional": "true",
+        "was-controversial": false,
+        "provisional": true,
         "contacts": [
             "http://www.supfam.org/contact"
         ],
@@ -2911,12 +2911,12 @@
         "license": "CC-BY-4.0",
         "license-type": "permissive",
         "license-link": "http://www.arabidopsis.org/download_files/Public_Data_Releases/README.txt",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [],
         "license-commentary": [
             "This curation is for the post one-year embargo window data; data within that window is available for a subscription. The data sets are clearly separately available."
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "curator@arabidopsis.org"
         ]
@@ -2945,7 +2945,7 @@
         "license": "CC-BY-SA-4.0",
         "license-type": "copyleft",
         "license-link": "ftp://ftp.jcvi.org/pub/data/TIGRFAMs/COPYRIGHT",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [
             {
                 "criteria": "D.1.2",
@@ -2960,8 +2960,8 @@
             "\"TIGRFAMs data are made available under a Creative Commons Attribution-ShareAlike 4.0 license.\"\n",
             "TIGRFAMs used to be at a different location; ownership was apparently formally transferred to NCBI in April 2018: https://ftp.ncbi.nlm.nih.gov/hmm/TIGRFAMs/license_and_availability.txt\n"
         ],
-        "was-controversial": "false",
-        "provisional": "true",
+        "was-controversial": false,
+        "provisional": true,
         "contacts": [
             "https://support.nlm.nih.gov/"
         ],
@@ -2986,7 +2986,7 @@
         "license": "custom",
         "license-type": "restrictive",
         "license-link": "https://uts.nlm.nih.gov/uts/assets/LicenseAgreement.pdf",
-        "license-hat-used": "true",
+        "license-hat-used": true,
         "license-issues": [
             {
                 "criteria": "A.2.2",
@@ -3021,8 +3021,8 @@
             "Could not access C categories as proceeding to access demanded signing up for giving reports: \"[...]I will provide an annual report[...]\", https://uts.nlm.nih.gov/uts/signUp",
             "\"License hat\" was required to be used as \"UMLS licenses are issued only to individuals and not to groups or organizations[...]\", https://www.nlm.nih.gov/databases/umls.html"
         ],
-        "was-controversial": "false",
-        "provisional": "true",
+        "was-controversial": false,
+        "provisional": true,
         "contacts": [
             "https://www.nlm.nih.gov/research/umls/support.html"
         ],
@@ -3051,12 +3051,12 @@
         "license": "CC-BY-4.0",
         "license-type": "permissive",
         "license-link": "https://www.uniprot.org/help/license",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-commentary": [
             "We have chosen to apply the Creative Commons Attribution (CC BY 4.0) License to all copyrightable parts of our databases."
         ],
-        "was-controversial": "false",
-        "provisional": "true",
+        "was-controversial": false,
+        "provisional": true,
         "contacts": [
             "help@uniprot.org"
         ],
@@ -3099,13 +3099,13 @@
         "license": "CC0-1.0",
         "license-type": "permissive",
         "license-link": "https://www.wikipathways.org/index.php/WikiPathways:License_Terms",
-        "license-hat-used": "false",
+        "license-hat-used": false,
         "license-issues": [],
         "license-commentary": [
             "I would note that the terms page makes an interesting and clear distinction between legal code and social norms, with an interesting list of social expectation that they would like users to adhere to.",
             "Not explicitly referenced except by external link, but using CC0 1.0."
         ],
-        "was-controversial": "false",
+        "was-controversial": false,
         "contacts": [
             "https://www.wikipathways.org/index.php/Contact_Us"
         ],
