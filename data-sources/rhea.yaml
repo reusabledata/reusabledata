@@ -19,10 +19,10 @@ data-access:
 license: "CC-BY-4.0"
 license-type: "permissive"
 license-link: 'http://www.rhea-db.org/licensedisclaimer'
-license-hat-used: "false"
+license-hat-used: false
 license-issues: []
 license-commentary: []
-was-controversial: "false"
+was-controversial: false
 contacts:
   - 'http://www.rhea-db.org/feedback'
 grants:

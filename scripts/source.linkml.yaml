@@ -1,0 +1,647 @@
+id: https://reusabledata.org/schema/
+name: reusabledata
+title: (Re)usable Data Project Schema
+description: >-
+  Schema for evaluating and scoring the reusability of biomedical data
+  resources based on their publicly documented or inferred licensing.
+version: 1.0.0
+
+license: CC-BY-4.0
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  spdx: http://spdx.org/licenses/
+  dcat: http://www.w3.org/ns/dcat#
+  dcterms: http://purl.org/dc/terms/
+  sepio: http://purl.obolibrary.org/obo/SEPIO_
+  pav: http://purl.org/pav/
+  prov: http://www.w3.org/ns/prov#
+  eco: http://purl.obolibrary.org/obo/ECO_
+  oa: http://www.w3.org/ns/oa#
+  reusabledata: https://reusabledata.org/schema/
+
+default_prefix: reusabledata
+default_range: string
+
+imports:
+  - linkml:types
+
+# ---------------------------------------------------------------------------
+# Classes
+# ---------------------------------------------------------------------------
+
+classes:
+
+  DataSource:
+    tree_root: true
+    class_uri: dcat:Dataset
+    description: >-
+      A single resource evaluation record describing a biomedical data
+      resource and its licensing reusability score.
+    attributes:
+      id:
+        identifier: true
+        required: true
+        description: Unique identifier for the data source.
+      description:
+        required: true
+        slot_uri: dcterms:description
+        description: Human-readable description of the resource.
+      last-curated:
+        required: false
+        slot_uri: pav:lastUpdateOn
+        pattern: "^\\d{4}-\\d{2}-\\d{2}$"
+        description: Date the evaluation was last curated (YYYY-MM-DD).
+      source:
+        required: true
+        description: Name of the data source organization or project.
+      source-link:
+        required: true
+        slot_uri: dcat:landingPage
+        pattern: "^(TODO|(ht|f)tps?://\\w[\\w/.\\-:=?&_+#]+)$"
+        description: URL of the data source, or TODO if not yet known.
+      source-type:
+        required: false
+        range: SourceTypeEnum
+        description: Classification of the source type.
+      status:
+        required: true
+        range: StatusEnum
+        description: Evaluation completeness status.
+      data-field:
+        required: true
+        description: Scientific field or domain of the data.
+      data-type:
+        required: true
+        description: Type of data provided by the resource.
+      data-categories:
+        required: false
+        multivalued: true
+        description: Categories of data provided.
+      data-access:
+        required: false
+        multivalued: true
+        inlined_as_list: true
+        range: DataAccess
+        description: Download or API access points for the data.
+      license:
+        required: true
+        range: string
+        description: >-
+          The license under which the data is released. Must be either
+          a valid SPDX identifier (validated against spdx-licenses.json
+          at runtime) or a project-specific value from LicenseEnum.
+      license-type:
+        required: true
+        range: LicenseTypeEnum
+        description: Broad classification of the license.
+      license-link:
+        required: false
+        slot_uri: dcterms:license
+        pattern: "^(TODO|(ht|f)tps?://\\w[\\w/.\\-:=?&_+#]+)$"
+        description: URL to the license text, or TODO if not yet known.
+      license-hat-used:
+        required: false
+        range: boolean
+        description: Whether the license hat heuristic was used.
+      license-issues:
+        required: false
+        multivalued: true
+        inlined_as_list: true
+        range: LicenseIssue
+        description: Criteria violations found during evaluation.
+      license-commentary:
+        required: false
+        multivalued: true
+        description: Free-text commentary about the licensing situation.
+      was-controversial:
+        required: false
+        range: boolean
+        description: >-
+          Whether human reviewers disagreed on the current evaluation.
+      provisional:
+        required: false
+        range: boolean
+        description: Whether this evaluation is provisional.
+      contacts:
+        required: false
+        multivalued: true
+        description: Contact identifiers for the resource.
+      grants:
+        required: false
+        multivalued: true
+        inlined_as_list: true
+        range: Grant
+        description: Grants funding the resource.
+      # --- SEPIO/PAV provenance fields (all optional) ---
+      assessments:
+        required: false
+        multivalued: true
+        inlined_as_list: true
+        range: CriterionAssessment
+        slot_uri: sepio:0000006
+        description: >-
+          Structured per-criterion assessments with full provenance.
+          Richer alternative to license-issues; both may coexist.
+      contributions:
+        required: false
+        multivalued: true
+        inlined_as_list: true
+        range: EvaluationContribution
+        slot_uri: prov:qualifiedAssociation
+        description: >-
+          Who evaluated this resource, when, and in what role.
+      evaluation-method:
+        required: false
+        slot_uri: sepio:0000021
+        description: >-
+          URI reference to the evaluation methodology
+          (e.g. https://reusabledata.org/criteria.html).
+    rules:
+      - description: unlicensed implies copyright
+        preconditions:
+          slot_conditions:
+            license:
+              equals_string: "unlicensed"
+        postconditions:
+          slot_conditions:
+            license-type:
+              equals_string: "copyright"
+      - description: inconsistent implies unknown
+        preconditions:
+          slot_conditions:
+            license:
+              equals_string: "inconsistent"
+        postconditions:
+          slot_conditions:
+            license-type:
+              equals_string: "unknown"
+      - description: all rights reserved implies copyright
+        preconditions:
+          slot_conditions:
+            license:
+              equals_string: "all rights reserved"
+        postconditions:
+          slot_conditions:
+            license-type:
+              equals_string: "copyright"
+      - description: CC-BY-ND-3.0 implies restrictive
+        preconditions:
+          slot_conditions:
+            license:
+              equals_string: "CC-BY-ND-3.0"
+        postconditions:
+          slot_conditions:
+            license-type:
+              equals_string: "restrictive"
+      - description: CC-BY-NC-4.0 implies restrictive
+        preconditions:
+          slot_conditions:
+            license:
+              equals_string: "CC-BY-NC-4.0"
+        postconditions:
+          slot_conditions:
+            license-type:
+              equals_string: "restrictive"
+      - description: CC-BY-NC-SA-4.0 implies restrictive
+        preconditions:
+          slot_conditions:
+            license:
+              equals_string: "CC-BY-NC-SA-4.0"
+        postconditions:
+          slot_conditions:
+            license-type:
+              equals_string: "restrictive"
+      - description: GPL-3.0 implies copyleft
+        preconditions:
+          slot_conditions:
+            license:
+              equals_string: "GPL-3.0"
+        postconditions:
+          slot_conditions:
+            license-type:
+              equals_string: "copyleft"
+      - description: LGPL-2.0-or-later implies copyleft
+        preconditions:
+          slot_conditions:
+            license:
+              equals_string: "LGPL-2.0-or-later"
+        postconditions:
+          slot_conditions:
+            license-type:
+              equals_string: "copyleft"
+      - description: CC-BY-SA-3.0 implies copyleft
+        preconditions:
+          slot_conditions:
+            license:
+              equals_string: "CC-BY-SA-3.0"
+        postconditions:
+          slot_conditions:
+            license-type:
+              equals_string: "copyleft"
+      - description: CC-BY-SA-4.0 implies copyleft
+        preconditions:
+          slot_conditions:
+            license:
+              equals_string: "CC-BY-SA-4.0"
+        postconditions:
+          slot_conditions:
+            license-type:
+              equals_string: "copyleft"
+      - description: ODbL-1.0 implies copyleft
+        preconditions:
+          slot_conditions:
+            license:
+              equals_string: "ODbL-1.0"
+        postconditions:
+          slot_conditions:
+            license-type:
+              equals_string: "copyleft"
+      - description: CC-BY-3.0 implies permissive
+        preconditions:
+          slot_conditions:
+            license:
+              equals_string: "CC-BY-3.0"
+        postconditions:
+          slot_conditions:
+            license-type:
+              equals_string: "permissive"
+      - description: CC-BY-4.0 implies permissive
+        preconditions:
+          slot_conditions:
+            license:
+              equals_string: "CC-BY-4.0"
+        postconditions:
+          slot_conditions:
+            license-type:
+              equals_string: "permissive"
+      - description: CC-BY implies permissive
+        preconditions:
+          slot_conditions:
+            license:
+              equals_string: "CC-BY"
+        postconditions:
+          slot_conditions:
+            license-type:
+              equals_string: "permissive"
+      - description: CC0-1.0 implies permissive
+        preconditions:
+          slot_conditions:
+            license:
+              equals_string: "CC0-1.0"
+        postconditions:
+          slot_conditions:
+            license-type:
+              equals_string: "permissive"
+      - description: MIT implies permissive
+        preconditions:
+          slot_conditions:
+            license:
+              equals_string: "MIT"
+        postconditions:
+          slot_conditions:
+            license-type:
+              equals_string: "permissive"
+      - description: public domain implies permissive
+        preconditions:
+          slot_conditions:
+            license:
+              equals_string: "public domain"
+        postconditions:
+          slot_conditions:
+            license-type:
+              equals_string: "permissive"
+
+  DataAccess:
+    class_uri: dcat:Distribution
+    description: A download or API access point for data.
+    attributes:
+      label:
+        required: false
+        description: Human-readable label for this access point.
+      type:
+        required: true
+        range: DataAccessTypeEnum
+        description: Whether this is a download or API endpoint.
+      location:
+        required: true
+        pattern: "^(ht|f)tps?://\\w[\\w/.\\-:=?&_+#]+$"
+        description: URL of the access point.
+
+  LicenseIssue:
+    description: A criteria violation found during license evaluation.
+    attributes:
+      criteria:
+        required: true
+        range: CriteriaEnum
+        description: The criterion ID that was violated.
+      comment:
+        required: false
+        description: Explanation of the issue.
+
+  Grant:
+    description: A funding grant associated with the resource.
+    attributes:
+      label:
+        required: true
+        description: Human-readable label for the grant.
+      url:
+        required: false
+        pattern: "^(TODO|(ht|f)tps?://\\w[\\w/.\\-:=?&_+#]+)$"
+        description: URL with grant information.
+
+  # --- SEPIO/PAV provenance classes ---
+
+  CriterionAssessment:
+    class_uri: sepio:0000001
+    description: >-
+      A structured assessment of a single evaluation criterion, with
+      verdict, evidence, and provenance. Models a SEPIO Statement about
+      whether a criterion is satisfied or violated.
+    attributes:
+      criteria:
+        required: true
+        range: CriteriaEnum
+        slot_uri: sepio:0000389
+        description: The criterion being assessed.
+      verdict:
+        required: true
+        range: VerdictEnum
+        slot_uri: sepio:0000391
+        description: Whether the criterion is satisfied, violated, or not applicable.
+      comment:
+        required: false
+        description: Free-text explanation of the verdict.
+      evidence-lines:
+        required: false
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceLine
+        slot_uri: sepio:0000006
+        description: Evidence supporting or disputing this assessment.
+      harmonization-note:
+        required: false
+        description: >-
+          How the draft and critique were reconciled for this criterion
+          during the harmonization phase.
+
+  EvidenceLine:
+    class_uri: sepio:0000002
+    description: >-
+      A collection of evidence items that collectively support or dispute
+      a criterion assessment. Models a SEPIO EvidenceLine.
+    attributes:
+      direction:
+        required: false
+        range: VerdictEnum
+        description: Whether this evidence line supports or disputes the criterion.
+      evidence-items:
+        required: false
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceItem
+        slot_uri: sepio:0000084
+        description: Individual pieces of evidence in this line.
+
+  EvidenceItem:
+    class_uri: sepio:0000149
+    description: >-
+      A single piece of evidence: a verbatim quote from a web page,
+      a navigational observation, or an absence of expected information.
+    attributes:
+      evidence-type:
+        required: false
+        range: EvidenceTypeEnum
+        description: Classification of the evidence (ECO-aligned).
+      source-url:
+        required: false
+        slot_uri: dcterms:source
+        pattern: "^(ht|f)tps?://\\w[\\w/.\\-:=?&_+#]+$"
+        description: URL of the web page where the evidence was found.
+      quote:
+        required: false
+        slot_uri: oa:hasBody
+        description: Verbatim text extracted from the source page.
+      reasoning:
+        required: false
+        description: How this evidence relates to the criterion.
+      navigation-path:
+        required: false
+        range: NavigationPath
+        inlined: true
+        description: How a human would navigate from the root URL to this page.
+
+  NavigationPath:
+    description: >-
+      A sequence of navigation steps from the resource root URL to an
+      evidence page, documenting how a human would discover it.
+    attributes:
+      label:
+        required: false
+        description: "Short description (e.g. 'Root -> License page')."
+      steps:
+        required: false
+        multivalued: true
+        inlined_as_list: true
+        range: NavigationStep
+        description: Ordered sequence of page-to-page hops.
+
+  NavigationStep:
+    description: A single hop in a navigation path.
+    attributes:
+      page-url:
+        required: true
+        pattern: "^(ht|f)tps?://\\w[\\w/.\\-:=?&_+#]+$"
+        description: URL of the page being visited.
+      link-text:
+        required: false
+        description: Exact text of the link that was followed.
+      link-location:
+        required: false
+        description: >-
+          Where on the page the link appears (e.g. footer, top nav,
+          sidebar).
+      destination-url:
+        required: false
+        pattern: "^(ht|f)tps?://\\w[\\w/.\\-:=?&_+#]+$"
+        description: URL the link points to (the next step's page-url).
+
+  EvaluationContribution:
+    class_uri: prov:Activity
+    description: >-
+      Records who performed an evaluation action and when.
+      Models a PROV Activity with PAV contribution metadata.
+    attributes:
+      contributor:
+        required: true
+        slot_uri: pav:createdBy
+        description: >-
+          Identifier of the evaluator (e.g. 'Claude (automated)',
+          ORCID, or GitHub handle).
+      role:
+        required: false
+        range: ContributorRoleEnum
+        description: Role of the contributor in this evaluation.
+      date:
+        required: false
+        slot_uri: pav:createdOn
+        pattern: "^\\d{4}-\\d{2}-\\d{2}$"
+        description: Date of the contribution (YYYY-MM-DD).
+      method:
+        required: false
+        slot_uri: sepio:0000021
+        description: >-
+          URI reference to the evaluation methodology used
+          (e.g. https://reusabledata.org/criteria.html).
+
+# ---------------------------------------------------------------------------
+# Enums
+# ---------------------------------------------------------------------------
+
+enums:
+
+  StatusEnum:
+    description: Evaluation completeness status.
+    permissible_values:
+      complete:
+        description: Evaluation is complete.
+      incomplete:
+        description: Evaluation is not yet finished.
+      nonpublic:
+        description: Resource is not publicly accessible.
+
+  SourceTypeEnum:
+    description: Classification of the data source type.
+    permissible_values:
+      integrator:
+        description: Integrates data from multiple sources.
+      unknown:
+        description: Source type is unknown.
+      repository:
+        description: A data repository.
+      source:
+        description: An original/primary data source.
+      warehouse:
+        description: A data warehouse.
+
+  DataAccessTypeEnum:
+    description: Type of data access point.
+    permissible_values:
+      download:
+        description: Bulk download access.
+      api:
+        description: Programmatic API access.
+
+  LicenseTypeEnum:
+    description: Broad classification of the license type.
+    permissible_values:
+      unknown:
+        description: License type could not be determined.
+      copyleft:
+        description: Copyleft license requiring derivative works to use the same license.
+      permissive:
+        description: Permissive license allowing broad reuse.
+      copyright:
+        description: Standard copyright with no reuse license.
+      restrictive:
+        description: License with significant restrictions on reuse.
+      private pool:
+        description: License restricting use to a private pool of participants.
+
+  CriteriaEnum:
+    description: Evaluation criteria identifiers.
+    permissible_values:
+      A.1.1:
+        description: Criterion A.1.1
+      A.1.2:
+        description: Criterion A.1.2
+      A.2.1:
+        description: Criterion A.2.1
+      A.2.2:
+        description: Criterion A.2.2
+      B.1:
+        description: Criterion B.1
+      B.2.1:
+        description: Criterion B.2.1
+      B.2.2:
+        description: Criterion B.2.2
+      C.1:
+        description: Criterion C.1
+      C.2:
+        description: Criterion C.2
+      D.1.1:
+        description: Criterion D.1.1
+      D.1.2:
+        description: Criterion D.1.2
+      E.1.1:
+        description: Criterion E.1.1
+      E.1.2:
+        description: Criterion E.1.2
+
+  VerdictEnum:
+    description: >-
+      Outcome of a criterion assessment. Aligned with SEPIO assertion
+      direction concepts.
+    permissible_values:
+      pass:
+        description: Criterion is satisfied.
+        meaning: sepio:0000401
+      fail:
+        description: Criterion is not satisfied (violation).
+        meaning: sepio:0000404
+      not-applicable:
+        description: Criterion does not apply in this evaluation path.
+        meaning: sepio:0000398
+
+  EvidenceTypeEnum:
+    description: >-
+      Classification of evidence type, aligned with ECO
+      (Evidence and Conclusion Ontology).
+    permissible_values:
+      webpage-content:
+        description: Evidence from content found on a web page.
+        meaning: eco:0007653
+      absence-of-information:
+        description: Evidence based on failure to find expected information.
+        meaning: eco:0000307
+      web-navigation:
+        description: Evidence from navigability of the web presence.
+        meaning: eco:0000302
+
+  ContributorRoleEnum:
+    description: >-
+      Role of a contributor in an evaluation, aligned with PAV/PROV.
+    permissible_values:
+      evaluator:
+        description: Performed the initial evaluation.
+        meaning: pav:createdBy
+      reviewer:
+        description: Reviewed or critiqued the evaluation.
+        meaning: pav:curatedBy
+
+  LicenseEnum:
+    description: >-
+      Project-specific (non-SPDX) license values. Standard SPDX
+      identifiers (e.g. CC-BY-4.0, MIT) are also valid but are not
+      enumerated here — they are validated against the SPDX registry
+      at runtime by validate_all.py.
+    permissible_values:
+      inconsistent:
+        description: License information is inconsistent across the resource.
+        meaning: reusabledata:inconsistent
+      public domain:
+        description: Data is in the public domain (no formal license).
+        meaning: reusabledata:public-domain
+      unlicensed:
+        description: No license is provided.
+        meaning: reusabledata:unlicensed
+      all rights reserved:
+        description: Standard copyright with all rights reserved.
+        meaning: reusabledata:all-rights-reserved
+      custom:
+        description: A custom license not matching any standard identifier.
+        meaning: reusabledata:custom
+      CC-BY:
+        description: Creative Commons Attribution (unversioned, non-standard identifier).
+        meaning: reusabledata:CC-BY

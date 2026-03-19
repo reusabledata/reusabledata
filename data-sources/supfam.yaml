@@ -22,7 +22,7 @@ data-access:
 license: "custom"
 license-type: "permissive"
 license-link: 'http://www.supfam.org/about'
-license-hat-used: "false"
+license-hat-used: false
 license-issues:
   - criteria: A.2.2
     comment: 'No formal license used, just a declaration that: "All annotation, models and the database dump are freely available for download to everyone."'
@@ -32,8 +32,8 @@ license-commentary:
   - 'The relatively high score hinges on the positive or negative evaluation of whether the declaration of "freely available...to everyone" constitutes a wnough of license; I have decided that it does, but it is a close call.'
   - 'Only other notice was in footer: "© The SUPERFAMILY authors and Julian Gough 2001-2019."; taking this a an elaboration on above.'
   - 'Very minimal website.'
-was-controversial: "false"
-provisional: "true"
+was-controversial: false
+provisional: true
 contacts:
   - 'http://www.supfam.org/contact'
 grants: []

@@ -17,7 +17,7 @@ data-access:
 license: "custom"
 license-type: "restrictive"
 license-link: 'http://www.hmdb.ca/about#cite'
-license-hat-used: "false"
+license-hat-used: false
 license-issues:
   - criteria: 'A.2.2'
     comment: 'Custom terms at linked license and on downloads page.'
@@ -28,7 +28,7 @@ license-issues:
 license-commentary:
   - 'While the terms are minimal, they seem intended to act a bit the CC-BY-NC; it was evaluated similarly.'
   - 'Given their upstream resources mentioned in http://www.hmdb.ca/sources , it would be interesting to know their pass-through negotiations and differences with Canadian law..'
-was-controversial: "false"
+was-controversial: false
 contacts:
   - 'https://twitter.com/WishartLab'
 grants:

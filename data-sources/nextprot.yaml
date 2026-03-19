@@ -24,10 +24,10 @@ data-access:
 license: "CC-BY-4.0"
 license-type: "permissive"
 license-link: 'ftp://ftp.nextprot.org/pub/README'
-license-hat-used: "false"
+license-hat-used: false
 license-issues: []
 license-commentary:
   - Using the license most proximate to the download--in the downloads directory itself. There is a somewhat ambiguous ARR statement at https://www.nextprot.org/copyright.
-was-controversial: "false"
+was-controversial: false
 contacts:
   - 'support@nextprot.org'

@@ -18,14 +18,14 @@ data-access:
 license: "CC-BY-4.0"
 license-type: "permissive"
 license-link: "https://www.alliancegenome.org/privacy-warranty-licensing"
-license-hat-used: "false"
+license-hat-used: false
 license-issues: []
 license-commentary:
   - 'The licensing page easily linked through footer.'
   - 'The licensing page makes a distinction between ontologies used in annotation and other data; we will focus on the data portion.'
   - 'For this re-evaluation, the API was not persued as the downloads were straightforward and did not seem to include ontology repackaging.'
-was-controversial: "false"
-provisional: "true"
+was-controversial: false
+provisional: true
 contacts:
   - 'help@alliancegenome.org'
 grants:

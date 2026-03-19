@@ -21,7 +21,7 @@ data-access: []
 license: custom
 license-type: private pool
 license-link: 'https://www.gisaid.org/registration/terms-of-use/'
-license-hat-used: 'false'
+license-hat-used: false
 license-issues:
   - criteria: A.2.2
     comment: 'The resource uses an extensive custom license.'
@@ -42,8 +42,8 @@ license-commentary:
   - 'The fact that the license agreement itself has terms makes conversation possibly difficult.'
   - 'While the license is quite readable, it has many interesting terms trying to control the behavior (e.g. 2b) of those under the agreement that may be best understood by law professionals.'
   - 'While not a current criteria violation, I feel it is worth noting that there was a 26 day waiting period between request and account creation.'
-was-controversial: "false"
-provisional: "true"
+was-controversial: false
+provisional: true
 contacts:
   - https://www.gisaid.org/help/contact/
 grants:

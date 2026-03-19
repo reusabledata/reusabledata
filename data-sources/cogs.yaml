@@ -17,14 +17,14 @@ data-access:
 license: unlicensed
 license-type: copyright
 #license-link: NONE
-license-hat-used: "false"
+license-hat-used: false
 license-issues:
   - criteria: A.1.2
     comment: "Could not find any clear terms on any searched pages. See commentary."
 license-commentary:
   - 'I could find no licensing information, including in the most recent publication covering the most current FTP downloads.'
-was-controversial: "false"
-provisional: "true"
+was-controversial: false
+provisional: true
 contacts:
   - 'cogs@ncbi.nlm.nih.gov'
   - 'koonin@ncbi.nlm.nih.gov'

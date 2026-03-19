@@ -1,0 +1,2 @@
+linkml>=1.9.6
+pyyaml>=6.0

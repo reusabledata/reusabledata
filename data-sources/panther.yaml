@@ -13,12 +13,12 @@ data-access:
 license: CC-BY-4.0
 license-type: permissive
 license-link: https://pantherdb.org/tou.jsp
-license-hat-used: "false"
+license-hat-used: false
 license-issues: []
 license-commentary:
     - 'The Terms of Use page at pantherdb.org/tou.jsp states: "PANTHER data and data products are licensed under the Creative Commons Attribution 4.0 International License."'
-was-controversial: "false"
-provisional: "true"
+was-controversial: false
+provisional: true
 last-curated: "2026-03-05"
 contacts:
     - feedback@pantherdb.org

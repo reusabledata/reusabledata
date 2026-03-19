@@ -16,12 +16,12 @@ data-access:
 license: "CC0-1.0"
 license-type: "permissive"
 license-link: 'https://datadryad.org/pages/policies#publication'
-license-hat-used: "false"
+license-hat-used: false
 license-issues: []
 license-commentary:
   - 'Main API information found from the landing page under \"About\" -> \"Repository features and technology\": https://datadryad.org/pages/repository'
   - 'Also note more detailed API information in the wiki: http://wiki.datadryad.org/Data_Access'
   - '\"Dryad will make Accepted Content available to the public under a CC0 Waiver\"'
-was-controversial: "false"
+was-controversial: false
 contacts:
   - 'help@datadryad.org'

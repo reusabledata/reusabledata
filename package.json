@@ -39,7 +39,7 @@
    "directories": {},
    "scripts": {
       "build": "esbuild src/RUD.js --bundle --global-name=RUD --outfile=docs/RUDBundle.js",
-      "check": "kwalify -E -f ./scripts/source.schema.yaml ./data-sources/*.yaml",
+      "check": "python3 ./scripts/validate_all.py -s ./scripts/source.linkml.yaml -d ./data-sources/",
       "yamls2json": "node ./scripts/yamls2json.js -i ./data-sources/ -o ./data-sources/compiled.json",
       "json2yamls": "node ./scripts/json2yamls.js -i ./data-sources/compiled.json -o ./data-sources/",
       "tmp-gen-static": "node ./scripts/tmp_static_output_gen.js -i ./data-sources/compiled.json -t ./scripts/tmp_static_output_gen.tmpl -o ./docs/index.html",

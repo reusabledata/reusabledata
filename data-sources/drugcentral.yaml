@@ -17,7 +17,7 @@ data-access:
 license: "CC-BY-SA-4.0"
 license-type: "copyleft"
 license-link: 'http://drugcentral.org/privacy'
-license-hat-used: "false"
+license-hat-used: false
 license-issues:
   - criteria: D.1.2
     comment: 'By using a copyleft-style license, there may be issues in mixing and redistributing this data with licenses that have incompatible terms.'
@@ -25,6 +25,6 @@ license-issues:
     comment: 'By using a copyleft-style license, there may be some parties with issues in mixing and redistributing this data with licenses that have incompatible terms.'
 license-commentary:
   - 'While there is upstream data integtration, there seems to be no mention of upstream licenses or terms. Not necessarily our issue here.'
-was-controversial: "false"
+was-controversial: false
 contacts:
   - 'For questions and comments please contact Oleg Ursu or Jayme Holmes.'

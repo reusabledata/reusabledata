@@ -9,9 +9,12 @@ all: index.html criteria.html license-types.html reading.html about.html schema.
 
 .PHONY: check
 check: compiled.json
-	kwalify -E -m ./scripts/source.schema.yaml
-	kwalify -E -f ./scripts/source.schema.yaml ./data-sources/*.yaml
-	node ./scripts/inconsistency_check.js -i ./data-sources/compiled.json
+	@echo "=== LinkML schema self-check ==="
+	gen-json-schema ./scripts/source.linkml.yaml > /dev/null
+	@echo "=== LinkML schema validation ==="
+	python3 ./scripts/validate_all.py -s ./scripts/source.linkml.yaml -d ./data-sources/
+	@echo "=== Consistency check ==="
+	python3 ./scripts/consistency_check.py -i ./data-sources/compiled.json
 
 ###
 ### index.html, with the table, has extra compilation steps to take it
