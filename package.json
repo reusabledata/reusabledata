@@ -29,7 +29,7 @@
       "yamljs": "0.2.8"
    },
    "devDependencies": {
-      "esbuild": "^0.27.3"
+      "esbuild": "^0.28.1"
    },
    "private": false,
    "main": null,
